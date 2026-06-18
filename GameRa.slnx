@@ -1,0 +1,18 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/API/" />
+  <Folder Name="/src/API/GameRA.API/">
+    <Project Path="GameFa/GameRa.csproj" />
+  </Folder>
+  <Folder Name="/src/Common/" />
+  <Folder Name="/src/Modules/" />
+  <Folder Name="/src/Modules/Games/">
+    <Project Path="GameRa.Modules.Games.Application/GameRa.Modules.Games.Application.csproj" Id="7b801b10-7e45-4a8f-a973-717bcbcaf9f6" />
+    <Project Path="GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj" Id="9b1b9feb-868d-4ff2-921d-80902882f7b1" />
+    <Project Path="GameRa.Modules.Games.Infrastructure/GameRa.Modules.Games.Infrastructure.csproj" Id="f97638bd-8ab4-40e6-96c9-c6d474ef6dd6" />
+    <Project Path="GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj" Id="834f6e4c-69f9-4edc-88d2-b07e4fbf3f98" />
+  </Folder>
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
+</Solution>

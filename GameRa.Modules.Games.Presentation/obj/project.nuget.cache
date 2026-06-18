@@ -1,0 +1,57 @@
+{
+  "version": 2,
+  "dgSpecHash": "+Gmr6hqAg14=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ROSE PC\\.nuget\\packages\\dapper\\2.1.79\\dapper.2.1.79.nupkg.sha512",
+    "C:\\Users\\ROSE PC\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
+    "C:\\Users\\ROSE PC\\.nuget\\packages\\mediatr\\14.1.0\\mediatr.14.1.0.nupkg.sha512",
+    "C:\\Users\\ROSE PC\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\ROSE PC\\.nuget\\packages\\microsoft.aspnetcore.http\\2.3.11\\microsoft.aspnetcore.http.2.3.11.nupkg.sha512",
+    "C:\\Users\\ROSE PC\\.nuget\\packages\\microsoft.aspnetcore.routing\\2.3.11\\microsoft.aspnetcore.routing.2.3.11.nupkg.sha512",
+    "C:\\Users\\ROSE PC\\.nuget\\packages\\microsoft.aspnetcore.routing.abstractions\\2.3.10\\microsoft.aspnetcore.routing.abstractions.2.3.10.nupkg.sha512",
+    "C:\\Users\\ROSE PC\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.14.0\\microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
+    "C:\\Users\\ROSE PC\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.14.0\\microsoft.identitymodel.jsonwebtokens.8.14.0.nupkg.sha512",
+    "C:\\Users\\ROSE PC\\.nuget\\packages\\microsoft.identitymodel.logging\\8.14.0\\microsoft.identitymodel.logging.8.14.0.nupkg.sha512",
+    "C:\\Users\\ROSE PC\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.14.0\\microsoft.identitymodel.tokens.8.14.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.AspNetCore.Routing will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj",
+      "libraryId": "Microsoft.AspNetCore.Routing",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.AspNetCore.Http will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj",
+      "libraryId": "Microsoft.AspNetCore.Http",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.AspNetCore.Routing.Abstractions will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj",
+      "libraryId": "Microsoft.AspNetCore.Routing.Abstractions",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}

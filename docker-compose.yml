@@ -1,0 +1,23 @@
+services:
+  gamera:
+    image: ${DOCKER_REGISTRY-}gamera
+    container_name: GameRa.Api
+    build:
+      context: .
+      dockerfile: GameFa\Dockerfile
+    ports:
+    - 5000:8080
+    - 5001:8081
+
+  GameRa.database:
+   image: postgres:latest
+   container_name: GameRa.Database
+   environment:
+    - POSTGRES_DB=GameRa
+    - POSTGRES_USER=postgres
+    - POSTGRES_PASSWORD=postgres
+   volumes:
+      - ./containers/db:var/lab/postgresql/data
+   ports:
+      - 5432:5432
+  
