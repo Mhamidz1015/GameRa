@@ -8,5 +8,9 @@ public static class GameEndpoints
     {
         AddGame.MapEndpoint(app);
         GetGames.MapEndpoint(app);
+        GetGame.MapEndpoint(app);
+        DelistGame.MapEndpoint(app);
+        ReleaseGame.MapEndpoint(app);
+        SearchGames.MapEndpoint(app);
     }
 }

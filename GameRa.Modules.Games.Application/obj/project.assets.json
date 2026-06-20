@@ -464,11 +464,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Application\\GameRa.Modules.Games.Application.csproj",
+      "projectUniqueName": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Application\\GameRa.Modules.Games.Application.csproj",
       "projectName": "GameRa.Modules.Games.Application",
-      "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Application\\GameRa.Modules.Games.Application.csproj",
+      "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Application\\GameRa.Modules.Games.Application.csproj",
       "packagesPath": "C:\\Users\\ROSE PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Application\\obj\\",
+      "outputPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -490,8 +490,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Domain\\GameRa.Modules.Games.Domain.csproj": {
-              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Domain\\GameRa.Modules.Games.Domain.csproj"
+            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Domain\\GameRa.Modules.Games.Domain.csproj": {
+              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Domain\\GameRa.Modules.Games.Domain.csproj"
             }
           }
         }

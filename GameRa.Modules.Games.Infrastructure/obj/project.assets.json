@@ -256,6 +256,22 @@
         "runtime": {
           "bin/placeholder/GameRa.Modules.Games.Domain.dll": {}
         }
+      },
+      "GameRa.Modules.Games.Presentation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GameRa.Modules.Games.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GameRa.Modules.Games.Presentation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameRa.Modules.Games.Presentation.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -560,6 +576,11 @@
       "type": "project",
       "path": "../GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj",
       "msbuildProject": "../GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj"
+    },
+    "GameRa.Modules.Games.Presentation/1.0.0": {
+      "type": "project",
+      "path": "../GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj",
+      "msbuildProject": "../GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -567,6 +588,7 @@
       "EFCore.NamingConventions >= 10.0.1",
       "FluentValidation.DependencyInjectionExtensions >= 12.1.1",
       "GameRa.Modules.Games.Application >= 1.0.0",
+      "GameRa.Modules.Games.Presentation >= 1.0.0",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 10.0.2"
     ]
   },
@@ -577,11 +599,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Infrastructure\\GameRa.Modules.Games.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Infrastructure\\GameRa.Modules.Games.Infrastructure.csproj",
       "projectName": "GameRa.Modules.Games.Infrastructure",
-      "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Infrastructure\\GameRa.Modules.Games.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Infrastructure\\GameRa.Modules.Games.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\ROSE PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -603,8 +625,11 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Application\\GameRa.Modules.Games.Application.csproj": {
-              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Application\\GameRa.Modules.Games.Application.csproj"
+            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Application\\GameRa.Modules.Games.Application.csproj": {
+              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Application\\GameRa.Modules.Games.Application.csproj"
+            },
+            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj": {
+              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj"
             }
           }
         }

@@ -4,7 +4,11 @@
   <Folder Name="/src/API/GameRA.API/">
     <Project Path="GameFa/GameRa.csproj" />
   </Folder>
-  <Folder Name="/src/Common/" />
+  <Folder Name="/src/Common/">
+    <Project Path="../GameRa.Common.Application/GameRa.Common.Application.csproj" Id="826d6037-307e-4bec-b0be-684c12b023ca" />
+    <Project Path="../GameRa.Common.Domain/GameRa.Common.Domain.csproj" Id="34f29fcc-05fc-4d72-8870-9243ecffbcd7" />
+    <Project Path="../GameRa.Common.Infrastructure/GameRa.Common.Infrastructure.csproj" Id="e5fd81e9-a0c2-433c-93f6-693f6ea507a5" />
+  </Folder>
   <Folder Name="/src/Modules/" />
   <Folder Name="/src/Modules/Games/">
     <Project Path="GameRa.Modules.Games.Application/GameRa.Modules.Games.Application.csproj" Id="7b801b10-7e45-4a8f-a973-717bcbcaf9f6" />

@@ -14,7 +14,7 @@ public sealed class Game : Entity
 
     public string Description { get; private set; }
 
-    public  string Developer { get; private set; }
+    public string Developer { get; private set; }
 
     public DateTime ReleaseDate { get; private set; }
 
@@ -43,8 +43,36 @@ public sealed class Game : Entity
             CoverImageUrl = Coverimgageurl
         };
 
-        Game.Raise(new GameCreatedDomainEvent(Game.Id));
+        Game.Raise(new GameAddedDomainEvent(Game.Id));
 
         return Game;
     }
+    public Result Release()
+    {
+        if (Status != GameStatus.ComingSoon)
+        {
+            return Result.Failure(GameErrors.Released);
+        }
+
+        Status = GameStatus.Released;
+
+        Raise(new GameReleasedDomainEvent(Id));
+
+        return Result.Success();
+    }
+    public Result Delist(DateTime utcNow)
+    {
+        if (Status == GameStatus.Delisted)
+        {
+            return Result.Failure(GameErrors.AlreadyDelisted);
+        }
+
+        Status = GameStatus.Delisted;
+
+        Raise(new GameDelistedDomainEvent(Id));
+
+        return Result.Success();
+
+    }
+
 }

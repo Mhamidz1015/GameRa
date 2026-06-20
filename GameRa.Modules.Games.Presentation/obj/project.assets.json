@@ -58,45 +58,6 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Http/2.3.11": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.Routing/2.3.11": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.Routing.Abstractions/2.3.10": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/_._": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.IdentityModel.Abstractions/8.14.0": {
         "type": "package",
         "compile": {
@@ -261,45 +222,6 @@
         "mediatr.contracts.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http/2.3.11": {
-      "sha512": "3H7dPd3knHBMQRvVPYsGlAd7cPI4wk0Hf5H5qhoxoQiEkJ0QdJDNIr34GcKA4CtOw0akQ7US67UpRxWMUeCy2w==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.http/2.3.11",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Http.xml",
-        "microsoft.aspnetcore.http.2.3.11.nupkg.sha512",
-        "microsoft.aspnetcore.http.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Routing/2.3.11": {
-      "sha512": "fibdFOHuWAsTzYokKefT0JKdiA+uxSdlb4/nDubA67uardt9kbgGq7p7G6urZ8lbf0G7Dva0JSaCSi5/gISNKw==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.routing/2.3.11",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Routing.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Routing.xml",
-        "microsoft.aspnetcore.routing.2.3.11.nupkg.sha512",
-        "microsoft.aspnetcore.routing.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Routing.Abstractions/2.3.10": {
-      "sha512": "cHVPZEzSIkRTCWluI4zPhmA+Fapv6Erx4yNvApm0n2E2L6+fJZ87qXvwDFnCxYnFXc+NnkfguczqaavszvWfEw==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.routing.abstractions/2.3.10",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Routing.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Routing.Abstractions.xml",
-        "microsoft.aspnetcore.routing.abstractions.2.3.10.nupkg.sha512",
-        "microsoft.aspnetcore.routing.abstractions.nuspec"
-      ]
-    },
     "Microsoft.IdentityModel.Abstractions/8.14.0": {
       "sha512": "iwbCpSjD3ehfTwBhtSNEtKPK0ICun6ov7Ibx6ISNA9bfwIyzI2Siwyi9eJFCJBwxowK9xcA1mj+jBWiigeqgcQ==",
       "type": "package",
@@ -409,10 +331,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "GameRa.Modules.Games.Application >= 1.0.0",
-      "Microsoft.AspNetCore.Http >= 2.3.11",
-      "Microsoft.AspNetCore.Routing >= 2.3.11",
-      "Microsoft.AspNetCore.Routing.Abstractions >= 2.3.10"
+      "GameRa.Modules.Games.Application >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -422,11 +341,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj",
+      "projectUniqueName": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj",
       "projectName": "GameRa.Modules.Games.Presentation",
-      "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj",
+      "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj",
       "packagesPath": "C:\\Users\\ROSE PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Presentation\\obj\\",
+      "outputPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Presentation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -448,8 +367,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Application\\GameRa.Modules.Games.Application.csproj": {
-              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GameFa\\GameRa.Modules.Games.Application\\GameRa.Modules.Games.Application.csproj"
+            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Application\\GameRa.Modules.Games.Application.csproj": {
+              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Application\\GameRa.Modules.Games.Application.csproj"
             }
           }
         }
@@ -470,20 +389,6 @@
       "net10.0": {
         "framework": "net10.0",
         "targetAlias": "net10.0",
-        "dependencies": {
-          "Microsoft.AspNetCore.Http": {
-            "target": "Package",
-            "version": "[2.3.11, )"
-          },
-          "Microsoft.AspNetCore.Routing": {
-            "target": "Package",
-            "version": "[2.3.11, )"
-          },
-          "Microsoft.AspNetCore.Routing.Abstractions": {
-            "target": "Package",
-            "version": "[2.3.10, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",
@@ -920,37 +825,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1510",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "PackageReference Microsoft.AspNetCore.Routing will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
-      "libraryId": "Microsoft.AspNetCore.Routing",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1510",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "PackageReference Microsoft.AspNetCore.Http will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
-      "libraryId": "Microsoft.AspNetCore.Http",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1510",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "PackageReference Microsoft.AspNetCore.Routing.Abstractions will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
-      "libraryId": "Microsoft.AspNetCore.Routing.Abstractions",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  }
 }

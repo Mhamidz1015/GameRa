@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GameRa.Modules.Games.Application\GameRa.Modules.Games.Application.csproj" />
+    <ProjectReference Include="..\GameRa.Modules.Games.Presentation\GameRa.Modules.Games.Presentation.csproj" />
   </ItemGroup>
 
 </Project>

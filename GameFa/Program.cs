@@ -1,13 +1,13 @@
 using GameRa.Extensions;
 using GameRa.Modules.Games.Infrastructure;
-using GameRa.Modules.Games.Presentation;
-using GameRa.Modules.Games.Presentation.Games;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
-
-builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.CustomSchemaIds(t => t.FullName?.Replace("+", "."));
+});
 
 builder.Services.AddGamesModule(builder.Configuration);
 
@@ -15,9 +15,12 @@ WebApplication app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
+
     app.ApplyMigrations();
 }
-GameEndpoints.MapEndpoints(app);
+
+GamesModule.MapEndpoints(app);
 
 app.Run();

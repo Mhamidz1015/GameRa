@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Routing;
 
 namespace GameRa.Modules.Games.Presentation.Games;
 
-internal static class GetGames
+internal static class GetGame
 {
     public static void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapGet("Games/{id}", async (Guid id, ISender sender) =>
+        app.MapGet("Game/{id}", async (Guid id, ISender sender) =>
         {
             GameResponse game = await sender.Send(new GetGameQuery(id));
 
