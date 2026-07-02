@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "FL8ylOwfNyY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Common\\GameRa.Common.Presentation\\GameRa.Common.Presentation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ROSE PC\\.nuget\\packages\\masstransit\\9.1.2\\masstransit.9.1.2.nupkg.sha512",
+    "C:\\Users\\ROSE PC\\.nuget\\packages\\masstransit.abstractions\\9.1.2\\masstransit.abstractions.9.1.2.nupkg.sha512",
+    "C:\\Users\\ROSE PC\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

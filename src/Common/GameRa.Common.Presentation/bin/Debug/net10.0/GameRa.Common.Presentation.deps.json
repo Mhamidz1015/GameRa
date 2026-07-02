@@ -1,0 +1,91 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "GameRa.Common.Presentation/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Domain": "1.0.0",
+          "MassTransit": "9.1.2"
+        },
+        "runtime": {
+          "GameRa.Common.Presentation.dll": {}
+        }
+      },
+      "MassTransit/9.1.2": {
+        "dependencies": {
+          "MassTransit.Abstractions": "9.1.2"
+        },
+        "runtime": {
+          "lib/net10.0/MassTransit.dll": {
+            "assemblyVersion": "9.1.2.0",
+            "fileVersion": "9.1.2.0"
+          }
+        }
+      },
+      "MassTransit.Abstractions/9.1.2": {
+        "runtime": {
+          "lib/net10.0/MassTransit.Abstractions.dll": {
+            "assemblyVersion": "9.1.2.0",
+            "fileVersion": "9.1.2.0"
+          }
+        }
+      },
+      "MediatR.Contracts/2.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.1.0"
+          }
+        }
+      },
+      "GameRa.Common.Domain/1.0.0": {
+        "dependencies": {
+          "MediatR.Contracts": "2.0.1"
+        },
+        "runtime": {
+          "GameRa.Common.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GameRa.Common.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MassTransit/9.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7rHsXnvoQ+YpKBlWhkBPwkkbq9kK+mK2hro3Z7m1CfCqVUZPsDh/lmkuVkEXKsr+mY6fgG3rxQLaLTYVYaqsEw==",
+      "path": "masstransit/9.1.2",
+      "hashPath": "masstransit.9.1.2.nupkg.sha512"
+    },
+    "MassTransit.Abstractions/9.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o2MymiTaxaJ0LUNm6W/8taD1u6Q/hyee1FwM/XvJ8l4IHgGBOVllPLuViYiI/XDu/t86ErjXOJqXrkOB/+ZrCg==",
+      "path": "masstransit.abstractions/9.1.2",
+      "hashPath": "masstransit.abstractions.9.1.2.nupkg.sha512"
+    },
+    "MediatR.Contracts/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FYv95bNT4UwcNA+G/J1oX5OpRiSUxteXaUt2BJbRSdRNiIUNbggJF69wy6mnk2wYToaanpdXZdCwVylt96MpwQ==",
+      "path": "mediatr.contracts/2.0.1",
+      "hashPath": "mediatr.contracts.2.0.1.nupkg.sha512"
+    },
+    "GameRa.Common.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,99 @@
+name: dockercompose5951834904515712787
+services:
+  GameRa.database:
+    container_name: GameRa.Database
+    environment:
+      POSTGRES_DB: GameRa
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    image: postgres:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5432"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\ROSE PC\source\repos\GamRa\GameRa\containers\db
+        target: var/lab/postgresql/data
+        bind: {}
+  gamera:
+    build:
+      context: C:\Users\ROSE PC\source\repos\GamRa\GameRa
+      dockerfile: GameFa\Dockerfile
+    container_name: GameRa.Api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+      ASPNETCORE_HTTPS_PORTS: "8081"
+    image: gamera
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 8080
+        published: "5000"
+        protocol: tcp
+      - mode: ingress
+        target: 8081
+        published: "5001"
+        protocol: tcp
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+      - mode: ingress
+        target: 8081
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\ROSE PC\AppData\Roaming/Microsoft/UserSecrets
+        target: C:\Users\ContainerUser\AppData\Roaming\Microsoft\UserSecrets
+        read_only: true
+        bind: {}
+      - type: bind
+        source: C:\Users\ROSE PC\AppData\Roaming/Microsoft/UserSecrets
+        target: C:\Users\ContainerAdministrator\AppData\Roaming\Microsoft\UserSecrets
+        read_only: true
+        bind: {}
+      - type: bind
+        source: C:\Users\ROSE PC\AppData\Roaming/ASP.NET/Https
+        target: C:\Users\ContainerUser\AppData\Roaming\ASP.NET\Https
+        read_only: true
+        bind: {}
+      - type: bind
+        source: C:\Users\ROSE PC\AppData\Roaming/ASP.NET/Https
+        target: C:\Users\ContainerAdministrator\AppData\Roaming\ASP.NET\Https
+        read_only: true
+        bind: {}
+  gamera.redis:
+    container_name: GameRa.Redis
+    image: redis:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 6379
+        published: "6379"
+        protocol: tcp
+    restart: always
+  gamera.seq:
+    container_name: GameRa.Seq
+    environment:
+      ACCEPT_EULA: "Y"
+    image: datalust/seq:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5341
+        published: "5341"
+        protocol: tcp
+      - mode: ingress
+        target: 80
+        published: "8081"
+        protocol: tcp
+networks:
+  default:
+    name: dockercompose5951834904515712787_default

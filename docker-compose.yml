@@ -9,7 +9,7 @@ services:
     - 5000:8080
     - 5001:8081
 
-  GameRa.database:
+  gamera.database:
    image: postgres:latest
    container_name: GameRa.Database
    environment:
@@ -20,4 +20,20 @@ services:
       - ./containers/db:var/lab/postgresql/data
    ports:
       - 5432:5432
+
+  gamera.seq:
+    image: datalust/seq:latest
+    container_name: GameRa.Seq
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - 5341:5341
+      - 8081:80
+
+  gamera.redis:
+    image: redis:latest
+    container_name: GameRa.Redis
+    restart: always
+    ports:
+      - 6379:6379
   

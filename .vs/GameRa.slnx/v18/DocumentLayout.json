@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F97638BD-8AB4-40E6-96C9-C6D474EF6DD6}|GameRa.Modules.Games.Infrastructure\\GameRa.Modules.Games.Infrastructure.csproj|c:\\users\\rose pc\\source\\repos\\gamra\\gamera\\gamera.modules.games.infrastructure\\gamesmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F97638BD-8AB4-40E6-96C9-C6D474EF6DD6}|GameRa.Modules.Games.Infrastructure\\GameRa.Modules.Games.Infrastructure.csproj|solutionrelative:gamera.modules.games.infrastructure\\gamesmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{27F82808-C16A-039F-61D2-1A7C6E3C05D3}|src\\Modules\\Games\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj|c:\\users\\rose pc\\source\\repos\\gamra\\gamera\\src\\modules\\games\\gamera.modules.games.presentation\\games\\addgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27F82808-C16A-039F-61D2-1A7C6E3C05D3}|src\\Modules\\Games\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj|solutionrelative:src\\modules\\games\\gamera.modules.games.presentation\\games\\addgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3EEA678-A174-5723-C3F5-1F9322716210}|GameFa\\GameRa.csproj|c:\\users\\rose pc\\source\\repos\\gamra\\gamera\\gamefa\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3EEA678-A174-5723-C3F5-1F9322716210}|GameFa\\GameRa.csproj|solutionrelative:gamefa\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{834F6E4C-69F9-4EDC-88D2-B07E4FBF3F98}|GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj|c:\\users\\rose pc\\source\\repos\\gamra\\gamera\\gamera.modules.games.presentation\\gamera.modules.games.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{834F6E4C-69F9-4EDC-88D2-B07E4FBF3F98}|GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj|solutionrelative:gamera.modules.games.presentation\\gamera.modules.games.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{1B23F3C3-F790-A7D1-2490-1C0430867767}|src\\Modules\\Games\\GameRa.Modules.Games.Domain\\GameRa.Modules.Games.Domain.csproj|c:\\users\\rose pc\\source\\repos\\gamra\\gamera\\src\\modules\\games\\gamera.modules.games.domain\\categories\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B23F3C3-F790-A7D1-2490-1C0430867767}|src\\Modules\\Games\\GameRa.Modules.Games.Domain\\GameRa.Modules.Games.Domain.csproj|solutionrelative:src\\modules\\games\\gamera.modules.games.domain\\categories\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,6 +22,10 @@
           "Children": [
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
@@ -33,45 +33,29 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GamesModule.cs",
-              "DocumentMoniker": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Infrastructure\\GamesModule.cs",
-              "RelativeDocumentMoniker": "GameRa.Modules.Games.Infrastructure\\GamesModule.cs",
-              "ToolTip": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Infrastructure\\GamesModule.cs",
-              "RelativeToolTip": "GameRa.Modules.Games.Infrastructure\\GamesModule.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAiwEgAAAABAAAAAAAAAA==",
+              "Title": "AddGame.cs",
+              "DocumentMoniker": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Presentation\\Games\\AddGame.cs",
+              "RelativeDocumentMoniker": "src\\Modules\\Games\\GameRa.Modules.Games.Presentation\\Games\\AddGame.cs",
+              "ToolTip": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Presentation\\Games\\AddGame.cs",
+              "RelativeToolTip": "src\\Modules\\Games\\GameRa.Modules.Games.Presentation\\Games\\AddGame.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAMwCAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-20T17:12:19.403Z",
+              "WhenOpened": "2026-07-02T06:49:37.899Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameRa.Modules.Games.Presentation.csproj",
-              "DocumentMoniker": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj",
-              "RelativeDocumentMoniker": "GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj",
-              "ToolTip": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj",
-              "RelativeToolTip": "GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-06-20T16:59:28.591Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameFa\\Program.cs",
-              "RelativeDocumentMoniker": "GameFa\\Program.cs",
-              "ToolTip": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\GameFa\\Program.cs",
-              "RelativeToolTip": "GameFa\\Program.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAwwBgAAAAAAAAAAAAAAA==",
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Domain\\Categories\\Category.cs",
+              "RelativeDocumentMoniker": "src\\Modules\\Games\\GameRa.Modules.Games.Domain\\Categories\\Category.cs",
+              "ToolTip": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Domain\\Categories\\Category.cs",
+              "RelativeToolTip": "src\\Modules\\Games\\GameRa.Modules.Games.Domain\\Categories\\Category.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwAQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-20T16:43:59.575Z",
+              "WhenOpened": "2026-07-02T06:49:31.246Z",
               "EditorCaption": ""
             }
           ]

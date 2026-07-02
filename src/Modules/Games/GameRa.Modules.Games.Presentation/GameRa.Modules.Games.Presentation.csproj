@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="10.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\GameRa.Common.Presentation\GameRa.Common.Presentation.csproj" />
+    <ProjectReference Include="..\GameRa.Modules.Games.Application\GameRa.Modules.Games.Application.csproj" />
+  </ItemGroup>
+
+</Project>

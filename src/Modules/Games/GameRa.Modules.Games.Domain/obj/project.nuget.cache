@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "pp//XMD2dSg=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Domain\\GameRa.Modules.Games.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ROSE PC\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

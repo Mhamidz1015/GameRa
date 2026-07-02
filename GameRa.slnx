@@ -2,19 +2,35 @@
   <Folder Name="/src/" />
   <Folder Name="/src/API/" />
   <Folder Name="/src/API/GameRA.API/">
-    <Project Path="GameFa/GameRa.csproj" />
+    <Project Path="src/API/GameRa/GameRa.csproj" />
   </Folder>
   <Folder Name="/src/Common/">
-    <Project Path="../GameRa.Common.Application/GameRa.Common.Application.csproj" Id="826d6037-307e-4bec-b0be-684c12b023ca" />
-    <Project Path="../GameRa.Common.Domain/GameRa.Common.Domain.csproj" Id="34f29fcc-05fc-4d72-8870-9243ecffbcd7" />
-    <Project Path="../GameRa.Common.Infrastructure/GameRa.Common.Infrastructure.csproj" Id="e5fd81e9-a0c2-433c-93f6-693f6ea507a5" />
+    <Project Path="src/Common/GameRa.Common.Application/GameRa.Common.Application.csproj" />
+    <Project Path="src/Common/GameRa.Common.Domain/GameRa.Common.Domain.csproj" />
+    <Project Path="src/Common/GameRa.Common.Infrastructure/GameRa.Common.Infrastructure.csproj" />
+    <Project Path="src/Common/GameRa.Common.Presentation/GameRa.Common.Presentation.csproj" />
   </Folder>
   <Folder Name="/src/Modules/" />
   <Folder Name="/src/Modules/Games/">
-    <Project Path="GameRa.Modules.Games.Application/GameRa.Modules.Games.Application.csproj" Id="7b801b10-7e45-4a8f-a973-717bcbcaf9f6" />
-    <Project Path="GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj" Id="9b1b9feb-868d-4ff2-921d-80902882f7b1" />
-    <Project Path="GameRa.Modules.Games.Infrastructure/GameRa.Modules.Games.Infrastructure.csproj" Id="f97638bd-8ab4-40e6-96c9-c6d474ef6dd6" />
-    <Project Path="GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj" Id="834f6e4c-69f9-4edc-88d2-b07e4fbf3f98" />
+    <Project Path="src/Modules/Games/GameRa,Modules.Games.publicApi/GameRa,Modules.Games.publicApi.csproj" />
+    <Project Path="src/Modules/Games/GameRa.Modules.Games.Application/GameRa.Modules.Games.Application.csproj" />
+    <Project Path="src/Modules/Games/GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj" />
+    <Project Path="src/Modules/Games/GameRa.Modules.Games.Infrastructure/GameRa.Modules.Games.Infrastructure.csproj" />
+    <Project Path="src/Modules/Games/GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/Store/">
+    <Project Path="src/Modules/Store/GameRa.Modules.Store.Application/GameRa.Modules.Store.Application.csproj" />
+    <Project Path="src/Modules/Store/GameRa.Modules.Store.Domain/GameRa.Modules.Store.Domain.csproj" />
+    <Project Path="src/Modules/Store/GameRa.Modules.Store.Infrastructure/GameRa.Modules.Store.Infrastructure.csproj" />
+    <Project Path="src/Modules/Store/GameRa.Modules.Store.Presentation/GameRa.Modules.Store.Presentation.csproj" />
+    <Project Path="src/Modules/Store/GameRa.Modules.Store.PublicApi/GameRa.Modules.Store.PublicApi.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/User/">
+    <Project Path="src/Modules/User/GameRa.Modules.Users.Application/GameRa.Modules.Users.Application.csproj" />
+    <Project Path="src/Modules/User/GameRa.Modules.Users.Domain/GameRa.Modules.Users.Domain.csproj" />
+    <Project Path="src/Modules/User/GameRa.Modules.Users.Infrastructure/GameRa.Modules.Users.Infrastructure.csproj" />
+    <Project Path="src/Modules/User/GameRa.Modules.Users.integrationGames/GameRa.Modules.Users.integrationEvents.csproj" />
+    <Project Path="src/Modules/User/GameRa.Modules.Users.Presentation/GameRa.Modules.Users.Presentation.csproj" />
   </Folder>
   <Project Path="docker-compose.dcproj">
     <Build />

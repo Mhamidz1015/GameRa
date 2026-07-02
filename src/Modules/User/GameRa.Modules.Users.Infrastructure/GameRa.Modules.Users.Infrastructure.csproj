@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\GameRa.Common.Infrastructure\GameRa.Common.Infrastructure.csproj" />
+    <ProjectReference Include="..\GameRa.Modules.Users.Application\GameRa.Modules.Users.Application.csproj" />
+    <ProjectReference Include="..\GameRa.Modules.Users.Presentation\GameRa.Modules.Users.Presentation.csproj" />
+  </ItemGroup>
+
+</Project>
