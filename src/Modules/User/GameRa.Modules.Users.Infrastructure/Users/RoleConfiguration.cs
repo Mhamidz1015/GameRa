@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Evently.Modules.Users.Infrastructure.Users;
+namespace GameRa.Modules.Users.Infrastructure.Users;
 
 internal sealed class RoleConfiguration : IEntityTypeConfiguration<Role>
 {

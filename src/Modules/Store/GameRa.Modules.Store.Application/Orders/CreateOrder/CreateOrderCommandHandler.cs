@@ -42,7 +42,7 @@ internal sealed class CreateOrderCommandHandler(
 
         foreach (CartItem cartItem in cart.Items)
         {
-            Game? game = await gameRepository.GetWithLockAsync(
+            Game? game = await gameRepository.GetAsync(
                 cartItem.GameId,
                 cancellationToken);
 

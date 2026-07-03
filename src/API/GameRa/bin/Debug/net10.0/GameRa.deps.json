@@ -1053,9 +1053,7 @@
       "GameRa.Modules.Store.Presentation/1.0.0": {
         "dependencies": {
           "GameRa.Common.Presentation": "1.0.0",
-          "GameRa.Modules.Games.Application": "1.0.0",
-          "GameRa.Modules.Store.Application": "1.0.0",
-          "GameRa.Modules.Users.integrationEvents": "1.0.0"
+          "GameRa.Modules.Store.Application": "1.0.0"
         },
         "runtime": {
           "GameRa.Modules.Store.Presentation.dll": {

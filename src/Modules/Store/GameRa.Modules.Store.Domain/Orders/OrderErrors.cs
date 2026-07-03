@@ -8,7 +8,7 @@ public static class OrderErrors
         Error.NotFound("Orders.NotFound", $"The order with the identifier {orderId} was not found");
 
 
-    public static readonly Error TicketsHasIssues = Error.Problem(
-        "Order.TicketsHasIssued",
-        "The tickets for this order were already issued");
+    public static readonly Error OrderHasIssues = Error.Problem(
+        "Order.ordersHasIssued",
+        "The orders for this order were already issued");
 }

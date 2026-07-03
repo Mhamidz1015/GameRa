@@ -22,7 +22,7 @@ public sealed class Order : Entity
 
     public string Currency { get; private set; }
 
-    public bool TicketsIssued { get; private set; }
+    public bool OrderCompleted { get; private set; }
 
     public DateTime CreatedAtUtc { get; private set; }
 
@@ -53,16 +53,16 @@ public sealed class Order : Entity
         Currency = currency;
     }
 
-    public Result IssueTickets()
+    public Result CompleteOrder()
     {
-        if (TicketsIssued)
+        if (OrderCompleted)
         {
-            return Result.Failure(OrderErrors.TicketsHasIssues);
+            return Result.Failure(OrderErrors.OrderHasIssues);
         }
 
-        TicketsIssued = true;
+        OrderCompleted = true;
 
-        Raise(new OrderTicketsIssuedDomainEvent(Id));
+        Raise(new OrderCompletedDomainEvent(Id));
 
         return Result.Success();
     }

@@ -162,6 +162,9 @@
         }
       },
       "GameRa.Modules.Games.Domain/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Domain": "1.0.0"
+        },
         "runtime": {
           "GameRa.Modules.Games.Domain.dll": {
             "assemblyVersion": "1.0.0.0",

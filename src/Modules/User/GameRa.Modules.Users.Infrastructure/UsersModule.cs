@@ -1,10 +1,10 @@
-﻿using Evently.Modules.Users.Infrastructure.Authorization;
-using GameRa.Common.Application.Authorization;
+﻿using GameRa.Common.Application.Authorization;
 using GameRa.Common.Application.Data;
 using GameRa.Common.Infrastructure.Interceptors;
 using GameRa.Common.Presentation.Endpoints;
 using GameRa.Modules.Users.Application.Abstractions.Identity;
 using GameRa.Modules.Users.Domain.Users;
+using GameRa.Modules.Users.Infrastructure.Authorization;
 using GameRa.Modules.Users.Infrastructure.Database;
 using GameRa.Modules.Users.Infrastructure.Identity;
 using GameRa.Modules.Users.Infrastructure.Users;

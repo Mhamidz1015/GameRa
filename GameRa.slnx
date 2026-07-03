@@ -16,14 +16,22 @@
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Application/GameRa.Modules.Games.Application.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Infrastructure/GameRa.Modules.Games.Infrastructure.csproj" />
+    <Project Path="src/Modules/Games/GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/Games/test/">
+    <Project Path="src/Modules/Games/test/GameRa.Modules.Games.Architecture/GameRa.Modules.Games.ArchitectureTests.csproj" Id="8067ea1a-dbe7-4d6d-905f-111aaf9bba58" />
   </Folder>
   <Folder Name="/src/Modules/Store/">
     <Project Path="src/Modules/Store/GameRa.Modules.Store.Application/GameRa.Modules.Store.Application.csproj" />
     <Project Path="src/Modules/Store/GameRa.Modules.Store.Domain/GameRa.Modules.Store.Domain.csproj" />
     <Project Path="src/Modules/Store/GameRa.Modules.Store.Infrastructure/GameRa.Modules.Store.Infrastructure.csproj" />
+    <Project Path="src/Modules/Store/GameRa.Modules.Store.integrationEvents/GameRa.Modules.Store.integrationEvents.csproj" />
     <Project Path="src/Modules/Store/GameRa.Modules.Store.Presentation/GameRa.Modules.Store.Presentation.csproj" />
     <Project Path="src/Modules/Store/GameRa.Modules.Store.PublicApi/GameRa.Modules.Store.PublicApi.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/Store/test/">
+    <Project Path="src/Modules/Store/test/GameRa.Modules.Store.Architecture/GameRa.Modules.Store.ArchitectureTests.csproj" Id="5837dcc9-89a6-44b8-a2d4-7499548dd8dd" />
   </Folder>
   <Folder Name="/src/Modules/User/">
     <Project Path="src/Modules/User/GameRa.Modules.Users.Application/GameRa.Modules.Users.Application.csproj" />
@@ -31,6 +39,12 @@
     <Project Path="src/Modules/User/GameRa.Modules.Users.Infrastructure/GameRa.Modules.Users.Infrastructure.csproj" />
     <Project Path="src/Modules/User/GameRa.Modules.Users.integrationGames/GameRa.Modules.Users.integrationEvents.csproj" />
     <Project Path="src/Modules/User/GameRa.Modules.Users.Presentation/GameRa.Modules.Users.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/User/test/">
+    <Project Path="src/Modules/User/test/GameRa.Modules.Users.Architecture.Tests/GameRa.Modules.Users.ArchitectureTests.csproj" />
+  </Folder>
+  <Folder Name="/Test/">
+    <Project Path="test/GameRa.ArchitectureTests/GameRa.ArchitectureTests.csproj" />
   </Folder>
   <Project Path="docker-compose.dcproj">
     <Build />

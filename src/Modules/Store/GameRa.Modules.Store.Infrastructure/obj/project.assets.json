@@ -765,33 +765,6 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "GameRa.Modules.Games.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "dependencies": {
-          "GameRa.Common.Application": "1.0.0",
-          "GameRa.Modules.Games.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/GameRa.Modules.Games.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GameRa.Modules.Games.Application.dll": {}
-        }
-      },
-      "GameRa.Modules.Games.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "dependencies": {
-          "GameRa.Common.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/GameRa.Modules.Games.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GameRa.Modules.Games.Domain.dll": {}
-        }
-      },
       "GameRa.Modules.Store.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -824,7 +797,6 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "GameRa.Common.Presentation": "1.0.0",
-          "GameRa.Modules.Games.Application": "1.0.0",
           "GameRa.Modules.Store.Application": "1.0.0",
           "GameRa.Modules.Users.integrationEvents": "1.0.0"
         },
@@ -1856,16 +1828,6 @@
       "path": "../../../Common/GameRa.Common.Presentation/GameRa.Common.Presentation.csproj",
       "msbuildProject": "../../../Common/GameRa.Common.Presentation/GameRa.Common.Presentation.csproj"
     },
-    "GameRa.Modules.Games.Application/1.0.0": {
-      "type": "project",
-      "path": "../../Games/GameRa.Modules.Games.Application/GameRa.Modules.Games.Application.csproj",
-      "msbuildProject": "../../Games/GameRa.Modules.Games.Application/GameRa.Modules.Games.Application.csproj"
-    },
-    "GameRa.Modules.Games.Domain/1.0.0": {
-      "type": "project",
-      "path": "../../Games/GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj",
-      "msbuildProject": "../../Games/GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj"
-    },
     "GameRa.Modules.Store.Application/1.0.0": {
       "type": "project",
       "path": "../GameRa.Modules.Store.Application/GameRa.Modules.Store.Application.csproj",
@@ -1971,7 +1933,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

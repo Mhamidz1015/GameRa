@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameRa.Common.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b5b14a1788e8ca2cf0b333ece869f39373b9ac1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e2d2b70934c1fa541bc00294a8173cbf08f6f1a")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameRa.Common.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameRa.Common.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

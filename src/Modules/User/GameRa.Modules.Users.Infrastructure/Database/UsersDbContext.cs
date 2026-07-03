@@ -1,5 +1,4 @@
-﻿using Evently.Modules.Users.Infrastructure.Users;
-using GameRa.Common.Application.Data;
+﻿using GameRa.Common.Application.Data;
 using GameRa.Modules.Users.Domain.Users;
 using GameRa.Modules.Users.Infrastructure.Users;
 using Microsoft.EntityFrameworkCore;

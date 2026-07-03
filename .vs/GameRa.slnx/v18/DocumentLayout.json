@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{27F82808-C16A-039F-61D2-1A7C6E3C05D3}|src\\Modules\\Games\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj|c:\\users\\rose pc\\source\\repos\\gamra\\gamera\\src\\modules\\games\\gamera.modules.games.presentation\\games\\addgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27F82808-C16A-039F-61D2-1A7C6E3C05D3}|src\\Modules\\Games\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj|solutionrelative:src\\modules\\games\\gamera.modules.games.presentation\\games\\addgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B23F3C3-F790-A7D1-2490-1C0430867767}|src\\Modules\\Games\\GameRa.Modules.Games.Domain\\GameRa.Modules.Games.Domain.csproj|c:\\users\\rose pc\\source\\repos\\gamra\\gamera\\src\\modules\\games\\gamera.modules.games.domain\\categories\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B23F3C3-F790-A7D1-2490-1C0430867767}|src\\Modules\\Games\\GameRa.Modules.Games.Domain\\GameRa.Modules.Games.Domain.csproj|solutionrelative:src\\modules\\games\\gamera.modules.games.domain\\categories\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,11 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{f4fc5ff1-28ef-4b04-ad02-6b298310ccc7}"
             },
             {
               "$type": "Bookmark",
@@ -31,32 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AddGame.cs",
-              "DocumentMoniker": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Presentation\\Games\\AddGame.cs",
-              "RelativeDocumentMoniker": "src\\Modules\\Games\\GameRa.Modules.Games.Presentation\\Games\\AddGame.cs",
-              "ToolTip": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Presentation\\Games\\AddGame.cs",
-              "RelativeToolTip": "src\\Modules\\Games\\GameRa.Modules.Games.Presentation\\Games\\AddGame.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAMwCAAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T06:49:37.899Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Domain\\Categories\\Category.cs",
-              "RelativeDocumentMoniker": "src\\Modules\\Games\\GameRa.Modules.Games.Domain\\Categories\\Category.cs",
-              "ToolTip": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Domain\\Categories\\Category.cs",
-              "RelativeToolTip": "src\\Modules\\Games\\GameRa.Modules.Games.Domain\\Categories\\Category.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAwAQAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-02T06:49:31.246Z",
-              "EditorCaption": ""
             }
           ]
         }

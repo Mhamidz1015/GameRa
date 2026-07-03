@@ -10,12 +10,6 @@ internal sealed class GameRepository(StoreDbContext context) : IGameRepository
     {
         return await context.Games.SingleOrDefaultAsync(e => e.Id == id, cancellationToken);
     }
-
-    public Task<Game?> GetWithLockAsync(Guid id, CancellationToken cancellationToken = default)
-    {
-        throw new NotImplementedException();
-    }
-
     public void Insert(Game @event)
     {
         context.Games.Add(@event);

@@ -41,8 +41,6 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Stor
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\bin\Debug\net10.0\GameRa.Common.Domain.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\bin\Debug\net10.0\GameRa.Common.Infrastructure.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\bin\Debug\net10.0\GameRa.Common.Presentation.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\bin\Debug\net10.0\GameRa.Modules.Games.Application.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\bin\Debug\net10.0\GameRa.Modules.Games.Domain.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\bin\Debug\net10.0\GameRa.Modules.Store.Application.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\bin\Debug\net10.0\GameRa.Modules.Store.Domain.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\bin\Debug\net10.0\GameRa.Modules.Store.Presentation.dll
@@ -53,8 +51,6 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Stor
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\bin\Debug\net10.0\GameRa.Common.Application.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\bin\Debug\net10.0\GameRa.Common.Domain.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\bin\Debug\net10.0\GameRa.Common.Presentation.pdb
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\bin\Debug\net10.0\GameRa.Modules.Games.Application.pdb
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\bin\Debug\net10.0\GameRa.Modules.Games.Domain.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\bin\Debug\net10.0\GameRa.Modules.Store.Domain.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\bin\Debug\net10.0\GameRa.Modules.Users.integrationEvents.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Infrastructure\obj\Debug\net10.0\GameRa.M.825454C8.Up2Date
