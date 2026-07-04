@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using NetArchTest.Rules;
 
-namespace GameRa.Modules.Users.Architecture.Tests.Abstractions;
+namespace GameRa.Modules.Users.ArchitectureTests.Abstractions;
 
 internal static class TestResultExtensions
 {

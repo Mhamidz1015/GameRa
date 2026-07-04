@@ -9,10 +9,12 @@ using MediatR;
 
 namespace GameRa.Modules.Users.Application.Users.RegisterUser;
 
-internal sealed class UserRegisteredDomainEventHandler(ISender sender, IGameBus gameBus)
-    : IDomainEventHandler<UserRegisteredDomainEvent>
+internal sealed class UserRegisteredDomainEventHandler(ISender sender, IEventBus eventBus)
+    : DomainEventHandler<UserRegisteredDomainEvent>
 {
-    public async Task Handle(UserRegisteredDomainEvent notification, CancellationToken cancellationToken)
+    public override async Task Handle
+        (UserRegisteredDomainEvent notification,
+        CancellationToken cancellationToken = default)
     {
         Result<UserResponse> result = await sender.Send(new GetUserByIdQuery(notification.UserId), cancellationToken);
 
@@ -21,7 +23,7 @@ internal sealed class UserRegisteredDomainEventHandler(ISender sender, IGameBus 
             throw new GameRaException(nameof(GetUserByIdQuery), result.Error);
         }
 
-        await gameBus.PublishAsync(
+        await eventBus.PublishAsync(
             new UserRegisteredIntegrationGame(
                 notification.Id,
                 notification.OccurredOnUtc,

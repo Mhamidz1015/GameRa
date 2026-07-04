@@ -1,8 +1,9 @@
 ﻿using GameRa.Modules.Users.Domain.Users;
 using GameRa.Modules.Users.Infrastructure;
+using StackExchange.Redis;
 using System.Reflection;
 
-namespace GameRa.Modules.Users.Architecture.Tests.Abstractions;
+namespace GameRa.Modules.Users.ArchitectureTests.Abstractions;
 
 public abstract class BaseTest
 {

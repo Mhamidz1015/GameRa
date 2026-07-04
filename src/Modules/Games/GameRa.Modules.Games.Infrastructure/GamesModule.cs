@@ -1,16 +1,18 @@
-﻿using GameRa.Modules.Games.Domain.Categories;
+﻿using GameRa.Common.Application.Data;
+using GameRa.Common.Application.Messaging;
+using GameRa.Common.Infrastructure.Outbox;
+using GameRa.Common.Presentation.Endpoints;
+using GameRa.Modules.Games.Domain.Categories;
 using GameRa.Modules.Games.Domain.Games;
-using GameRa.Modules.Games.Infrastructure.Games;
 using GameRa.Modules.Games.Infrastructure.Categories;
 using GameRa.Modules.Games.Infrastructure.Database;
-using Microsoft.AspNetCore.Routing;
+using GameRa.Modules.Games.Infrastructure.Games;
+using GameRa.Modules.Games.Infrastructure.Outbox;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using GameRa.Common.Application.Data;
-using GameRa.Common.Application.Clock;
-using GameRa.Common.Presentation.Endpoints;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace GameRa.Modules.Games.Infrastructure;
 
@@ -21,6 +23,8 @@ public static class GamesModule
         this IServiceCollection services,
         IConfiguration configuration)
     {
+        services.AddDomainEventHandlers();
+
         services.AddEndpoints(Presentation.AssemblyReference.Assembly);
 
         services.AddInfrastructure(configuration);
@@ -30,20 +34,44 @@ public static class GamesModule
 
     private static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        string databaseConnectionString = configuration.GetConnectionString("Database")!;
-
-        services.AddDbContext<GamesDbContext>(options =>
+        services.AddDbContext<GamesDbContext>((sp, options) =>
             options
                 .UseNpgsql(
-                    databaseConnectionString,
+                    configuration.GetConnectionString("Database"),
                     npgsqlOptions => npgsqlOptions
                         .MigrationsHistoryTable(HistoryRepository.DefaultTableName, Schemas.Games))
                 .UseSnakeCaseNamingConvention()
-                .AddInterceptors());
+                .AddInterceptors(sp.GetRequiredService<InsertOutboxMessagesInterceptor>()));
 
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<GamesDbContext>());
 
         services.AddScoped<IGameRepository, GameRepository>();
         services.AddScoped<ICategoryRepository, CategoryRepository>();
+
+        services.Configure<OutboxOptions>(configuration.GetSection("Games:Outbox"));
+
+        services.ConfigureOptions<ConfigureProcessOutboxJob>();
+    }
+    private static void AddDomainEventHandlers(this IServiceCollection services)
+    {
+        Type[] domainEventHandlers = Application.AssemblyReference.Assembly
+            .GetTypes()
+            .Where(t => t.IsAssignableTo(typeof(IDomainEventHandler)))
+            .ToArray();
+
+        foreach (Type domainEventHandler in domainEventHandlers)
+        {
+            services.TryAddScoped(domainEventHandler);
+
+            Type domainEvent = domainEventHandler
+                .GetInterfaces()
+                .Single(i => i.IsGenericType)
+                .GetGenericArguments()
+                .Single();
+
+            Type closedIdempotentHandler = typeof(IdempotentDomainEventHandler<>).MakeGenericType(domainEvent);
+
+            services.Decorate(domainEventHandler, closedIdempotentHandler);
+        }
     }
 }

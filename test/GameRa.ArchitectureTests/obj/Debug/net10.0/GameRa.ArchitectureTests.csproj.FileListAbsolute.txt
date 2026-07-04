@@ -174,3 +174,10 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\test\GameRa.ArchitectureTests\obj\Deb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\test\GameRa.ArchitectureTests\obj\Debug\net10.0\GameRa.ArchitectureTests.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\test\GameRa.ArchitectureTests\obj\Debug\net10.0\GameRa.ArchitectureTests.genruntimeconfig.cache
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\test\GameRa.ArchitectureTests\obj\Debug\net10.0\ref\GameRa.ArchitectureTests.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\test\GameRa.ArchitectureTests\bin\Debug\net10.0\Quartz.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\test\GameRa.ArchitectureTests\bin\Debug\net10.0\Quartz.Extensions.DependencyInjection.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\test\GameRa.ArchitectureTests\bin\Debug\net10.0\Quartz.Extensions.Hosting.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\test\GameRa.ArchitectureTests\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\test\GameRa.ArchitectureTests\bin\Debug\net10.0\Scrutor.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\test\GameRa.ArchitectureTests\bin\Debug\net10.0\GameRa.Modules.Games.integrationEvents.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\test\GameRa.ArchitectureTests\bin\Debug\net10.0\GameRa.Modules.Games.integrationEvents.pdb

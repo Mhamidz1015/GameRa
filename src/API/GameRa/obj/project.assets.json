@@ -852,7 +852,7 @@
       "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
         },
@@ -903,6 +903,67 @@
         "runtime": {
           "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "Quartz/3.18.2": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Quartz.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Quartz.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Quartz.Extensions.DependencyInjection/3.18.2": {
+        "type": "package",
+        "dependencies": {
+          "Quartz": "3.18.2"
+        },
+        "compile": {
+          "lib/net10.0/Quartz.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Quartz.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Quartz.Extensions.Hosting/3.18.2": {
+        "type": "package",
+        "dependencies": {
+          "Quartz.Extensions.DependencyInjection": "3.18.2"
+        },
+        "compile": {
+          "lib/net10.0/Quartz.Extensions.Hosting.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Quartz.Extensions.Hosting.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Scrutor/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyModel": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Scrutor.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Scrutor.dll": {
+            "related": ".pdb;.xml"
           }
         }
       },
@@ -1346,7 +1407,10 @@
           "MassTransit": "9.1.2",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.9",
           "Microsoft.Extensions.Caching.StackExchangeRedis": "10.0.9",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.2"
+          "Newtonsoft.Json": "13.0.3",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.2",
+          "Quartz.Extensions.Hosting": "3.18.2",
+          "Scrutor": "7.0.0"
         },
         "compile": {
           "bin/placeholder/GameRa.Common.Infrastructure.dll": {}
@@ -1423,6 +1487,19 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "GameRa.Modules.Games.integrationEvents/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GameRa.Modules.Games.integrationEvents.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameRa.Modules.Games.integrationEvents.dll": {}
+        }
+      },
       "GameRa.Modules.Games.Presentation/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -1485,6 +1562,7 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "GameRa.Common.Presentation": "1.0.0",
+          "GameRa.Modules.Games.integrationEvents": "1.0.0",
           "GameRa.Modules.Store.Application": "1.0.0",
           "GameRa.Modules.Users.integrationEvents": "1.0.0"
         },
@@ -3702,6 +3780,97 @@
         "pipelines.sockets.unofficial.nuspec"
       ]
     },
+    "Quartz/3.18.2": {
+      "sha512": "/KaRLj7jv84RSIR/UtAWnzYRmS7o/mA6CdEuoLwxhLa9Nfl7Q1keMA7Fe/r2BzRfDf+7YpN1QNEYSSU89DA3OA==",
+      "type": "package",
+      "path": "quartz/3.18.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net10.0/Quartz.dll",
+        "lib/net10.0/Quartz.xml",
+        "lib/net462/Quartz.dll",
+        "lib/net462/Quartz.xml",
+        "lib/net472/Quartz.dll",
+        "lib/net472/Quartz.xml",
+        "lib/net8.0/Quartz.dll",
+        "lib/net8.0/Quartz.xml",
+        "lib/net9.0/Quartz.dll",
+        "lib/net9.0/Quartz.xml",
+        "lib/netstandard2.0/Quartz.dll",
+        "lib/netstandard2.0/Quartz.xml",
+        "quartz-logo-small.png",
+        "quartz.3.18.2.nupkg.sha512",
+        "quartz.nuspec"
+      ]
+    },
+    "Quartz.Extensions.DependencyInjection/3.18.2": {
+      "sha512": "+P0z/WUQZF/QrY5wB1wgvl9/VkiWqGR/K5bdtjW1qiFBraEoe/dqfNTxXQPnSZHnha1qmSBRoa5oA7kwHPsTqA==",
+      "type": "package",
+      "path": "quartz.extensions.dependencyinjection/3.18.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net10.0/Quartz.Extensions.DependencyInjection.dll",
+        "lib/net10.0/Quartz.Extensions.DependencyInjection.xml",
+        "lib/net8.0/Quartz.Extensions.DependencyInjection.dll",
+        "lib/net8.0/Quartz.Extensions.DependencyInjection.xml",
+        "lib/net9.0/Quartz.Extensions.DependencyInjection.dll",
+        "lib/net9.0/Quartz.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Quartz.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Quartz.Extensions.DependencyInjection.xml",
+        "quartz-logo-small.png",
+        "quartz.extensions.dependencyinjection.3.18.2.nupkg.sha512",
+        "quartz.extensions.dependencyinjection.nuspec"
+      ]
+    },
+    "Quartz.Extensions.Hosting/3.18.2": {
+      "sha512": "6uSMAm4FArjtVoxBjlkA+gHL1Eln2ngIOnRTrVrYxtSlM5PpLQd2aV+fc/OOwfwt+AyDm69HOAybEFqVvyyG2A==",
+      "type": "package",
+      "path": "quartz.extensions.hosting/3.18.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net10.0/Quartz.Extensions.Hosting.dll",
+        "lib/net10.0/Quartz.Extensions.Hosting.xml",
+        "lib/net8.0/Quartz.Extensions.Hosting.dll",
+        "lib/net8.0/Quartz.Extensions.Hosting.xml",
+        "lib/net9.0/Quartz.Extensions.Hosting.dll",
+        "lib/net9.0/Quartz.Extensions.Hosting.xml",
+        "lib/netstandard2.0/Quartz.Extensions.Hosting.dll",
+        "lib/netstandard2.0/Quartz.Extensions.Hosting.xml",
+        "quartz-logo-small.png",
+        "quartz.extensions.hosting.3.18.2.nupkg.sha512",
+        "quartz.extensions.hosting.nuspec"
+      ]
+    },
+    "Scrutor/7.0.0": {
+      "sha512": "wHWaroody48jnlLoq/REwUltIFLxplXyHTP+sttrc8P7+jkiVqf38afDidJNv4qgD/6zz2NKOYg06xLZ1bG7wQ==",
+      "type": "package",
+      "path": "scrutor/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net10.0/Scrutor.dll",
+        "lib/net10.0/Scrutor.pdb",
+        "lib/net10.0/Scrutor.xml",
+        "lib/net462/Scrutor.dll",
+        "lib/net462/Scrutor.pdb",
+        "lib/net462/Scrutor.xml",
+        "lib/net8.0/Scrutor.dll",
+        "lib/net8.0/Scrutor.pdb",
+        "lib/net8.0/Scrutor.xml",
+        "lib/netstandard2.0/Scrutor.dll",
+        "lib/netstandard2.0/Scrutor.pdb",
+        "lib/netstandard2.0/Scrutor.xml",
+        "scrutor.7.0.0.nupkg.sha512",
+        "scrutor.nuspec"
+      ]
+    },
     "Serilog/4.3.1": {
       "sha512": "savYe7h5yRlkqBVOwP8cIRDOdqKiPmYCU4W87JH38sBmcKD5EBoXvQIw6bNEvZ/pTe1gsiye3VFCzBsoppGkXQ==",
       "type": "package",
@@ -4303,6 +4472,11 @@
       "type": "project",
       "path": "../../Modules/Games/GameRa.Modules.Games.Infrastructure/GameRa.Modules.Games.Infrastructure.csproj",
       "msbuildProject": "../../Modules/Games/GameRa.Modules.Games.Infrastructure/GameRa.Modules.Games.Infrastructure.csproj"
+    },
+    "GameRa.Modules.Games.integrationEvents/1.0.0": {
+      "type": "project",
+      "path": "../../Modules/Games/GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj",
+      "msbuildProject": "../../Modules/Games/GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj"
     },
     "GameRa.Modules.Games.Presentation/1.0.0": {
       "type": "project",

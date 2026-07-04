@@ -1,9 +1,9 @@
 ﻿using FluentValidation;
 using GameRa.Common.Application.Messaging;
-using GameRa.Modules.Users.Architecture.Tests.Abstractions;
+using GameRa.Modules.Users.ArchitectureTests.Abstractions;
 using NetArchTest.Rules;
 
-namespace GameRa.Modules.Users.Architecture.Tests.Application;
+namespace GameRa.Modules.Users.ArchitectureTests.Application;
 
 public class ApplicationTests : BaseTest
 {
@@ -179,6 +179,8 @@ public class ApplicationTests : BaseTest
         Types.InAssembly(ApplicationAssembly)
             .That()
             .ImplementInterface(typeof(IDomainEventHandler<>))
+            .Or()
+            .Inherit(typeof(IDomainEventHandler<>))
             .Should()
             .NotBePublic()
             .GetResult()
@@ -191,6 +193,8 @@ public class ApplicationTests : BaseTest
         Types.InAssembly(ApplicationAssembly)
             .That()
             .ImplementInterface(typeof(IDomainEventHandler<>))
+            .Or()
+            .Inherit(typeof(IDomainEventHandler<>))
             .Should()
             .BeSealed()
             .GetResult()
@@ -203,6 +207,8 @@ public class ApplicationTests : BaseTest
         Types.InAssembly(ApplicationAssembly)
             .That()
             .ImplementInterface(typeof(IDomainEventHandler<>))
+            .Or()
+            .Inherit(typeof(IDomainEventHandler<>))
             .Should()
             .HaveNameEndingWith("DomainEventHandler")
             .GetResult()

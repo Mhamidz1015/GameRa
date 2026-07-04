@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
 using FluentAssertions;
 using GameRa.Common.Domain.Abstractions;
-using GameRa.Modules.Users.Architecture.Tests.Abstractions;
+using GameRa.Modules.Users.ArchitectureTests.Abstractions;
 using NetArchTest.Rules;
 
-namespace GameRa.Modules.Users.Architecture.Tests.Domain;
+namespace GameRa.Modules.Users.ArchitectureTests.Domain;
 
 public class DomainTests : BaseTest
 {

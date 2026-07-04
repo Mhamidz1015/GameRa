@@ -1,4 +1,5 @@
 ﻿using GameRa.Common.Application.Data;
+using GameRa.Common.Infrastructure.Outbox;
 using GameRa.Modules.Users.Domain.Users;
 using GameRa.Modules.Users.Infrastructure.Users;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,7 @@ public sealed class UsersDbContext(DbContextOptions<UsersDbContext> options) : D
     {
         modelBuilder.HasDefaultSchema(Schemas.Users);
 
+        modelBuilder.ApplyConfiguration(new OutboxMessageConfiguration());
         modelBuilder.ApplyConfiguration(new UserConfiguration());
         modelBuilder.ApplyConfiguration(new RoleConfiguration());
         modelBuilder.ApplyConfiguration(new PermissionConfiguration());

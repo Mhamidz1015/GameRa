@@ -1,17 +1,20 @@
-﻿using GameRa.Common.Application.Caching;
+﻿using Dapper;
+using GameRa.Common.Application.Caching;
 using GameRa.Common.Application.Clock;
 using GameRa.Common.Application.Data;
 using GameRa.Common.Application.MessagingGameBus;
 using GameRa.Common.Infrastructure.Authentication;
+using GameRa.Common.Infrastructure.Authorization;
 using GameRa.Common.Infrastructure.Caching;
 using GameRa.Common.Infrastructure.Clock;
 using GameRa.Common.Infrastructure.Data;
-using GameRa.Common.Infrastructure.Interceptors;
-using GameRa.Common.Infrastructure.MassagingGamebus;
+using GameRa.Common.Infrastructure.MassagingEventbus;
+using GameRa.Common.Infrastructure.Outbox;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Npgsql;
+using Quartz;
 using StackExchange.Redis;
 
 namespace GameRa.Common.Infrastructure;
@@ -26,14 +29,24 @@ public static class InfrastructureConfiguration
     {
         services.AddAuthenticationInternal();
 
+        services.AddAuthorizationInternal();
+
+        services.TryAddSingleton<IDateTimeProvider, DateTimeProvider>();
+
+        services.TryAddSingleton<IEventBus, EventBus>();
+
+        services.TryAddSingleton<InsertOutboxMessagesInterceptor>();
+
         NpgsqlDataSource npgsqlDataSource = new NpgsqlDataSourceBuilder(databaseConnectionString).Build();
         services.TryAddSingleton(npgsqlDataSource);
 
-        services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
+        services.TryAddScoped<IDbConnectionFactory, DbConnectionFactory>();
 
-        services.TryAddSingleton<PublishDomainEventsInterceptor>();
+        SqlMapper.AddTypeHandler(new GenericArrayHandler<string>());
 
-        services.TryAddSingleton<IDateTimeProvider, DateTimeProvider>();
+        services.AddQuartz();
+
+        services.AddQuartzHostedService(options => options.WaitForJobsToComplete = true);
 
         try
         {
@@ -50,20 +63,18 @@ public static class InfrastructureConfiguration
 
         services.TryAddSingleton<ICacheService, CacheService>();
 
-        services.TryAddSingleton<IGameBus, GameBus>();
-
         services.AddMassTransit(configure =>
         {
-            foreach (Action<IRegistrationConfigurator> configureConsumer in moduleConfigureConsumers)
+            foreach (Action<IRegistrationConfigurator> configureConsumers in moduleConfigureConsumers)
             {
-                configureConsumer(configure);
+                configureConsumers(configure);
             }
 
             configure.SetKebabCaseEndpointNameFormatter();
 
-            configure.UsingInMemory((Context, cfg) =>
+            configure.UsingInMemory((context, cfg) =>
             {
-                cfg.ConfigureEndpoints(Context);
+                cfg.ConfigureEndpoints(context);
             });
         });
 

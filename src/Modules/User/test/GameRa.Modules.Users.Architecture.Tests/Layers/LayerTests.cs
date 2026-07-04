@@ -1,7 +1,7 @@
-﻿using GameRa.Modules.Users.Architecture.Tests.Abstractions;
+﻿using GameRa.Modules.Users.ArchitectureTests.Abstractions;
 using NetArchTest.Rules;
 
-namespace GameRa.Modules.Users.Architecture.Tests.Layers;
+namespace GameRa.Modules.Users.ArchitectureTests.Layers;
 
 public class LayerTests : BaseTest
 {

@@ -1,24 +1,5 @@
 name: dockercompose5951834904515712787
 services:
-  GameRa.database:
-    container_name: GameRa.Database
-    environment:
-      POSTGRES_DB: GameRa
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_USER: postgres
-    image: postgres:latest
-    networks:
-      default: null
-    ports:
-      - mode: ingress
-        target: 5432
-        published: "5432"
-        protocol: tcp
-    volumes:
-      - type: bind
-        source: C:\Users\ROSE PC\source\repos\GamRa\GameRa\containers\db
-        target: var/lab/postgresql/data
-        bind: {}
   gamera:
     build:
       context: C:\Users\ROSE PC\source\repos\GamRa\GameRa
@@ -66,6 +47,25 @@ services:
         source: C:\Users\ROSE PC\AppData\Roaming/ASP.NET/Https
         target: C:\Users\ContainerAdministrator\AppData\Roaming\ASP.NET\Https
         read_only: true
+        bind: {}
+  gamera.database:
+    container_name: GameRa.Database
+    environment:
+      POSTGRES_DB: GameRa
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    image: postgres:latest
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 5432
+        published: "5432"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: C:\Users\ROSE PC\source\repos\GamRa\GameRa\containers\db
+        target: var/lab/postgresql/data
         bind: {}
   gamera.redis:
     container_name: GameRa.Redis

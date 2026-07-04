@@ -176,6 +176,14 @@
           }
         }
       },
+      "Microsoft.Extensions.DependencyModel/10.0.0": {
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.DependencyModel.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
+          }
+        }
+      },
       "Microsoft.IdentityModel.Abstractions/8.14.0": {
         "runtime": {
           "lib/net9.0/Microsoft.IdentityModel.Abstractions.dll": {
@@ -557,6 +565,47 @@
           }
         }
       },
+      "Quartz/3.18.2": {
+        "runtime": {
+          "lib/net10.0/Quartz.dll": {
+            "assemblyVersion": "3.18.2.0",
+            "fileVersion": "3.18.2.0"
+          }
+        }
+      },
+      "Quartz.Extensions.DependencyInjection/3.18.2": {
+        "dependencies": {
+          "Quartz": "3.18.2"
+        },
+        "runtime": {
+          "lib/net10.0/Quartz.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "3.18.2.0",
+            "fileVersion": "3.18.2.0"
+          }
+        }
+      },
+      "Quartz.Extensions.Hosting/3.18.2": {
+        "dependencies": {
+          "Quartz.Extensions.DependencyInjection": "3.18.2"
+        },
+        "runtime": {
+          "lib/net10.0/Quartz.Extensions.Hosting.dll": {
+            "assemblyVersion": "3.18.2.0",
+            "fileVersion": "3.18.2.0"
+          }
+        }
+      },
+      "Scrutor/7.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyModel": "10.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/Scrutor.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.0.0"
+          }
+        }
+      },
       "Serilog/4.3.1": {
         "runtime": {
           "lib/net10.0/Serilog.dll": {
@@ -672,7 +721,10 @@
           "MassTransit": "9.1.2",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.9",
           "Microsoft.Extensions.Caching.StackExchangeRedis": "10.0.9",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.2"
+          "Newtonsoft.Json": "13.0.3",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.2",
+          "Quartz.Extensions.Hosting": "3.18.2",
+          "Scrutor": "7.0.0"
         },
         "runtime": {
           "GameRa.Common.Infrastructure.dll": {
@@ -688,6 +740,17 @@
         },
         "runtime": {
           "GameRa.Common.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GameRa.Modules.Games.integrationEvents/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
+        "runtime": {
+          "GameRa.Modules.Games.integrationEvents.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -732,7 +795,9 @@
       "GameRa.Modules.Store.Presentation/1.0.0": {
         "dependencies": {
           "GameRa.Common.Presentation": "1.0.0",
-          "GameRa.Modules.Store.Application": "1.0.0"
+          "GameRa.Modules.Games.integrationEvents": "1.0.0",
+          "GameRa.Modules.Store.Application": "1.0.0",
+          "GameRa.Modules.Users.integrationEvents": "1.0.0"
         },
         "runtime": {
           "GameRa.Modules.Store.Presentation.dll": {
@@ -741,7 +806,10 @@
           }
         }
       },
-      "GameRa.Modules.Users.integrationEvents/1.0.0.0": {
+      "GameRa.Modules.Users.integrationEvents/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
         "runtime": {
           "GameRa.Modules.Users.integrationEvents.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -869,6 +937,13 @@
       "path": "microsoft.extensions.caching.stackexchangeredis/10.0.9",
       "hashPath": "microsoft.extensions.caching.stackexchangeredis.10.0.9.nupkg.sha512"
     },
+    "Microsoft.Extensions.DependencyModel/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RFYJR7APio/BiqdQunRq6DB+nDB6nc2qhHr77mlvZ0q0BT8PubMXN7XicmfzCbrDE/dzhBnUKBRXLTcqUiZDGg==",
+      "path": "microsoft.extensions.dependencymodel/10.0.0",
+      "hashPath": "microsoft.extensions.dependencymodel.10.0.0.nupkg.sha512"
+    },
     "Microsoft.IdentityModel.Abstractions/8.14.0": {
       "type": "package",
       "serviceable": true,
@@ -974,6 +1049,34 @@
       "path": "pipelines.sockets.unofficial/2.2.8",
       "hashPath": "pipelines.sockets.unofficial.2.2.8.nupkg.sha512"
     },
+    "Quartz/3.18.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/KaRLj7jv84RSIR/UtAWnzYRmS7o/mA6CdEuoLwxhLa9Nfl7Q1keMA7Fe/r2BzRfDf+7YpN1QNEYSSU89DA3OA==",
+      "path": "quartz/3.18.2",
+      "hashPath": "quartz.3.18.2.nupkg.sha512"
+    },
+    "Quartz.Extensions.DependencyInjection/3.18.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+P0z/WUQZF/QrY5wB1wgvl9/VkiWqGR/K5bdtjW1qiFBraEoe/dqfNTxXQPnSZHnha1qmSBRoa5oA7kwHPsTqA==",
+      "path": "quartz.extensions.dependencyinjection/3.18.2",
+      "hashPath": "quartz.extensions.dependencyinjection.3.18.2.nupkg.sha512"
+    },
+    "Quartz.Extensions.Hosting/3.18.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6uSMAm4FArjtVoxBjlkA+gHL1Eln2ngIOnRTrVrYxtSlM5PpLQd2aV+fc/OOwfwt+AyDm69HOAybEFqVvyyG2A==",
+      "path": "quartz.extensions.hosting/3.18.2",
+      "hashPath": "quartz.extensions.hosting.3.18.2.nupkg.sha512"
+    },
+    "Scrutor/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wHWaroody48jnlLoq/REwUltIFLxplXyHTP+sttrc8P7+jkiVqf38afDidJNv4qgD/6zz2NKOYg06xLZ1bG7wQ==",
+      "path": "scrutor/7.0.0",
+      "hashPath": "scrutor.7.0.0.nupkg.sha512"
+    },
     "Serilog/4.3.1": {
       "type": "package",
       "serviceable": true,
@@ -1057,6 +1160,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "GameRa.Modules.Games.integrationEvents/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "GameRa.Modules.Store.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1077,8 +1185,8 @@
       "serviceable": false,
       "sha512": ""
     },
-    "GameRa.Modules.Users.integrationEvents/1.0.0.0": {
-      "type": "reference",
+    "GameRa.Modules.Users.integrationEvents/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

@@ -1,8 +1,8 @@
-﻿using GameRa.Modules.Users.Architecture.Tests.Abstractions;
+﻿using GameRa.Modules.Users.ArchitectureTests.Abstractions;
 using MassTransit;
 using NetArchTest.Rules;
 
-namespace GameRa.Modules.Users.Architecture.Tests.Presentation;
+namespace GameRa.Modules.Users.ArchitectureTests.Presentation;
 
 public class PresentationTests : BaseTest
 {
