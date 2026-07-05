@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{722727E8-309C-F5A4-3B23-D3DFE97F3DA1}|src\\Modules\\Store\\GameRa.Modules.Store.Infrastructure\\GameRa.Modules.Store.Infrastructure.csproj|c:\\users\\rose pc\\source\\repos\\gamra\\gamera\\src\\modules\\store\\gamera.modules.store.infrastructure\\storemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{722727E8-309C-F5A4-3B23-D3DFE97F3DA1}|src\\Modules\\Store\\GameRa.Modules.Store.Infrastructure\\GameRa.Modules.Store.Infrastructure.csproj|solutionrelative:src\\modules\\store\\gamera.modules.store.infrastructure\\storemodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,8 +9,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{f4fc5ff1-28ef-4b04-ad02-6b298310ccc7}"
@@ -27,19 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "StoreModule.cs",
-              "DocumentMoniker": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.Infrastructure\\StoreModule.cs",
-              "RelativeDocumentMoniker": "src\\Modules\\Store\\GameRa.Modules.Store.Infrastructure\\StoreModule.cs",
-              "ToolTip": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.Infrastructure\\StoreModule.cs",
-              "RelativeToolTip": "src\\Modules\\Store\\GameRa.Modules.Store.Infrastructure\\StoreModule.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAwwCwAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-04T12:07:38.291Z",
-              "EditorCaption": ""
             }
           ]
         }

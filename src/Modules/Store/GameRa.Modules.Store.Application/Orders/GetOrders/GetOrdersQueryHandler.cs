@@ -23,7 +23,7 @@ internal sealed class GetOrdersQueryHandler(IDbConnectionFactory dbConnectionFac
                  status AS {nameof(OrderResponse.Status)},
                  total_price AS {nameof(OrderResponse.TotalPrice)},
                  created_at_utc AS {nameof(OrderResponse.CreatedAtUtc)}
-             FROM ticketing.orders
+             FROM Store.orders
              WHERE customer_id = @CustomerId
              """;
 

@@ -5,15 +5,15 @@ using GameRa.Modules.Store.Application.Abstractions.Data;
 using GameRa.Modules.Store.Domain.Games;
 using GameRa.Modules.Store.Domain.Payments;
 
-namespace GameRa.Modules.Store.Application.Payments.RefundPaymentsForEvent;
+namespace GameRa.Modules.Store.Application.Payments.RefundPaymentsForGame;
 
-internal sealed class RefundPaymentsForEventCommandHandler(
+internal sealed class RefundPaymentsForGameCommandHandler(
     IGameRepository eventRepository,
     IPaymentRepository paymentRepository,
     IUnitOfWork unitOfWork)
-    : ICommandHandler<RefundPaymentsForEventCommand>
+    : ICommandHandler<RefundPaymentsForGameCommand>
 {
-    public async Task<Result> Handle(RefundPaymentsForEventCommand request, CancellationToken cancellationToken)
+    public async Task<Result> Handle(RefundPaymentsForGameCommand request, CancellationToken cancellationToken)
     {
         await using DbTransaction transaction = await unitOfWork.BeginTransactionAsync(cancellationToken);
 
@@ -24,7 +24,7 @@ internal sealed class RefundPaymentsForEventCommandHandler(
             return Result.Failure(GameErrors.NotFound(request.GameId));
         }
 
-        IEnumerable<Payment> payments = await paymentRepository.GetForEventAsync(game, cancellationToken);
+        IEnumerable<Payment> payments = await paymentRepository.GetForGameAsync(game, cancellationToken);
 
         foreach (Payment payment in payments)
         {

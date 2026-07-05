@@ -1,6 +1,7 @@
 ﻿using GameRa.Common.Application.Authorization;
 using GameRa.Common.Application.Data;
 using GameRa.Common.Application.Messaging;
+using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Infrastructure.Outbox;
 using GameRa.Common.Presentation.Endpoints;
 using GameRa.Modules.Users.Application.Abstractions.Identity;
@@ -8,6 +9,7 @@ using GameRa.Modules.Users.Domain.Users;
 using GameRa.Modules.Users.Infrastructure.Authorization;
 using GameRa.Modules.Users.Infrastructure.Database;
 using GameRa.Modules.Users.Infrastructure.Identity;
+using GameRa.Modules.Users.Infrastructure.Inbox;
 using GameRa.Modules.Users.Infrastructure.Outbox;
 using GameRa.Modules.Users.Infrastructure.Users;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +28,8 @@ public static class UsersModule
         IConfiguration configuration)
     {
         services.AddDomainEventHandlers();
+
+        services.AddIntegrationEventHandlers();
 
         services.AddInfrastructure(configuration);
 
@@ -70,6 +74,10 @@ public static class UsersModule
         services.Configure<OutboxOptions>(configuration.GetSection("Users:Outbox"));
 
         services.ConfigureOptions<ConfigureProcessOutboxJob>();
+
+        services.Configure<InboxOptions>(configuration.GetSection("Users:Inbox"));
+
+        services.ConfigureOptions<ConfigureProcessInboxJob>();
     }
     private static void AddDomainEventHandlers(this IServiceCollection services)
     {
@@ -91,6 +99,30 @@ public static class UsersModule
             Type closedIdempotentHandler = typeof(IdempotentDomainEventHandler<>).MakeGenericType(domainEvent);
 
             services.Decorate(domainEventHandler, closedIdempotentHandler);
+        }
+    }
+
+    private static void AddIntegrationEventHandlers(this IServiceCollection services)
+    {
+        Type[] integrationEventHandlers = Presentation.AssemblyReference.Assembly
+            .GetTypes()
+            .Where(t => t.IsAssignableTo(typeof(IIntegrationEventHandler)))
+            .ToArray();
+
+        foreach (Type integrationEventHandler in integrationEventHandlers)
+        {
+            services.TryAddScoped(integrationEventHandler);
+
+            Type integrationEvent = integrationEventHandler
+                .GetInterfaces()
+                .Single(i => i.IsGenericType)
+                .GetGenericArguments()
+                .Single();
+
+            Type closedIdempotentHandler =
+                typeof(IdempotentIntegrationEventHandler<>).MakeGenericType(integrationEvent);
+
+            services.Decorate(integrationEventHandler, closedIdempotentHandler);
         }
     }
 }

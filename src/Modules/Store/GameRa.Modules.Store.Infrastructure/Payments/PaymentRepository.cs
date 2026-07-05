@@ -12,7 +12,7 @@ internal sealed class PaymentRepository(StoreDbContext context) : IPaymentReposi
         return await context.Payments.SingleOrDefaultAsync(p => p.Id == id, cancellationToken);
     }
 
-    public async Task<IEnumerable<Payment>> GetForEventAsync(
+    public async Task<IEnumerable<Payment>> GetForGameAsync(
         Game game,
         CancellationToken cancellationToken = default)
     {

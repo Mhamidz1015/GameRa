@@ -1,4 +1,4 @@
-﻿using GameRa.Common.Application.MessagingGameBus;
+﻿using GameRa.Common.Application.MessagingEventBus;
 using MassTransit;
 
 namespace GameRa.Common.Infrastructure.MassagingEventbus;

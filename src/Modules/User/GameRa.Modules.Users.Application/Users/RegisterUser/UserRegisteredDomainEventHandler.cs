@@ -1,6 +1,6 @@
 ﻿using GameRa.Common.Application.Exceptions;
 using GameRa.Common.Application.Messaging;
-using GameRa.Common.Application.MessagingGameBus;
+using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Users.Application.Users.GetUserById;
 using GameRa.Modules.Users.Domain.Users;
@@ -24,7 +24,7 @@ internal sealed class UserRegisteredDomainEventHandler(ISender sender, IEventBus
         }
 
         await eventBus.PublishAsync(
-            new UserRegisteredIntegrationGame(
+            new UserRegisteredIntegrationEvent(
                 notification.Id,
                 notification.OccurredOnUtc,
                 result.Value.Id,

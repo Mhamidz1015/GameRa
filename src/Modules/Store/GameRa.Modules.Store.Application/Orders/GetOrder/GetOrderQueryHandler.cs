@@ -28,8 +28,8 @@ internal sealed class GetOrderQueryHandler(IDbConnectionFactory dbConnectionFact
                  oi.unit_price AS {nameof(OrderItemResponse.UnitPrice)},
                  oi.price AS {nameof(OrderItemResponse.Price)},
                  oi.currency AS {nameof(OrderItemResponse.Currency)}
-             FROM ticketing.orders o
-             JOIN ticketing.order_items oi ON oi.order_id = o.id
+             FROM store.orders o
+             JOIN store.order_items oi ON oi.order_id = o.id
              WHERE o.id = @OrderId
              """;
 

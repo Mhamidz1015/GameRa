@@ -1,23 +1,25 @@
 ﻿using GameRa.Common.Application.Exceptions;
+using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Store.Application.Customers.CreateCustomer;
 using GameRa.Modules.Users.integrationEvents;
-using MassTransit;
 using MediatR;
 
 namespace GameRa.Modules.Store.Presentation.Customers;
 
-public sealed class UserRegisteredIntegrationEventConsumer(ISender sender)
-    : IConsumer<UserRegisteredIntegrationGame>
+internal sealed class UserRegisteredIntegrationEventHandler(ISender sender)
+    : IntegrationEventHandler<UserRegisteredIntegrationEvent>
 {
-    public async Task Consume(ConsumeContext<UserRegisteredIntegrationGame> context)
+    public override async Task Handle(
+        UserRegisteredIntegrationEvent integrationEvent,
+        CancellationToken cancellationToken = default)
     {
         Result result = await sender.Send(
             new CreateCustomerCommand(
-                context.Message.UserId,
-                context.Message.Email,
-                context.Message.Username),
-            context.CancellationToken);
+                integrationEvent.UserId,
+                integrationEvent.Email,
+                integrationEvent.Username),
+            cancellationToken);
 
         if (result.IsFailure)
         {

@@ -1,10 +1,10 @@
-﻿using GameRa.Common.Application.MessagingGameBus;
+﻿using GameRa.Common.Application.MessagingEventBus;
 
 namespace GameRa.Modules.Users.integrationEvents;
 
-public sealed class UserRegisteredIntegrationGame : IntegrationEvent
+public sealed class UserRegisteredIntegrationEvent : IntegrationEvent
 {
-    public UserRegisteredIntegrationGame(
+    public UserRegisteredIntegrationEvent(
         Guid id,
         DateTime occurredOnUtc,
         Guid userId,

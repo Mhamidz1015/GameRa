@@ -1,4 +1,4 @@
-﻿using GameRa.Common.Application.MessagingGameBus;
+﻿using GameRa.Common.Application.MessagingEventBus;
 
 namespace GameRa.Modules.Games.integrationEvents;
 
@@ -12,8 +12,8 @@ public sealed class ReleaseGameIntegrationEvent : IntegrationEvent
         string description,
         string developer,
         DateTime releaseDate,
-        decimal baseprice,
-        string coverimgageurl)
+        string coverimgageurl,
+        decimal baseprice)
         : base(id, occurredOnUtc)
     {
         GameId = gameId;
@@ -21,8 +21,8 @@ public sealed class ReleaseGameIntegrationEvent : IntegrationEvent
         Description = description;
         Developer = developer;
         ReleaseDate = releaseDate;
-        Baseprice = baseprice;
         Coverimgageurl = coverimgageurl;
+        Baseprice = baseprice;
     }
 
     public Guid GameId { get; init; }

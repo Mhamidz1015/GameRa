@@ -1,4 +1,4 @@
-﻿namespace GameRa.Common.Application.MessagingGameBus;
+﻿namespace GameRa.Common.Application.MessagingEventBus;
 
 public interface IEventBus
 {

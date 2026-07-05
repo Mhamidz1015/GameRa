@@ -1,4 +1,4 @@
-﻿using GameRa.Common.Application.MessagingGameBus;
+﻿using GameRa.Common.Application.MessagingEventBus;
 
 namespace GameRa.Modules.Users.integrationEvents;
 

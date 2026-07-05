@@ -2,7 +2,7 @@
 using GameRa.Common.Application.Caching;
 using GameRa.Common.Application.Clock;
 using GameRa.Common.Application.Data;
-using GameRa.Common.Application.MessagingGameBus;
+using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Infrastructure.Authentication;
 using GameRa.Common.Infrastructure.Authorization;
 using GameRa.Common.Infrastructure.Caching;

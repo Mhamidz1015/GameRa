@@ -1,9 +1,9 @@
-﻿using Evently.Modules.Ticketing.Presentation.Customers;
-using Evently.Modules.Ticketing.Presentation.Events;
-using GameRa.Common.Application.Data;
+﻿using GameRa.Common.Application.Data;
 using GameRa.Common.Application.Messaging;
+using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Infrastructure.Outbox;
 using GameRa.Common.Presentation.Endpoints;
+using GameRa.Modules.Games.integrationEvents;
 using GameRa.Modules.Store.Application.Abstractions.Authentication;
 using GameRa.Modules.Store.Application.Abstractions.Payments;
 using GameRa.Modules.Store.Application.Carts;
@@ -15,10 +15,13 @@ using GameRa.Modules.Store.Infrastructure.Authentication;
 using GameRa.Modules.Store.Infrastructure.Customers;
 using GameRa.Modules.Store.Infrastructure.Database;
 using GameRa.Modules.Store.Infrastructure.Games;
+using GameRa.Modules.Store.Infrastructure.Inbox;
 using GameRa.Modules.Store.Infrastructure.Orders;
 using GameRa.Modules.Store.Infrastructure.Outbox;
 using GameRa.Modules.Store.Infrastructure.Payments;
 using GameRa.Modules.Store.Presentation.Customers;
+using GameRa.Modules.Store.Presentation.Events;
+using GameRa.Modules.Users.integrationEvents;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
@@ -36,6 +39,8 @@ public static class StoreModule
     {
         services.AddDomainEventHandlers();
 
+        services.AddIntegrationEventHandlers();
+
         services.AddInfrastructure(configuration);
 
         services.AddEndpoints(Presentation.AssemblyReference.Assembly);
@@ -44,9 +49,9 @@ public static class StoreModule
     }
     public static void ConfigureConsumers(IRegistrationConfigurator registrationConfigurator)
     {
-        registrationConfigurator.AddConsumer<UserRegisteredIntegrationEventConsumer>();
-        registrationConfigurator.AddConsumer<UserProfileUpdatedIntegrationEventConsumer>();
-        registrationConfigurator.AddConsumer<ReleaseGameIntegrationEventConsumer>();
+        registrationConfigurator.AddConsumer<IntegrationEventConsumer<UserRegisteredIntegrationEvent>>();
+        registrationConfigurator.AddConsumer<IntegrationEventConsumer<UserProfileUpdatedIntegrationEvent>>();
+        registrationConfigurator.AddConsumer<IntegrationEventConsumer<ReleaseGameIntegrationEvent>>();
     }
 
     private static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
@@ -75,6 +80,10 @@ public static class StoreModule
         services.Configure<OutboxOptions>(configuration.GetSection("Store:Outbox"));
 
         services.ConfigureOptions<ConfigureProcessOutboxJob>();
+
+        services.Configure<InboxOptions>(configuration.GetSection("Ticketing:Inbox"));
+
+        services.ConfigureOptions<ConfigureProcessInboxJob>();
     }
     private static void AddDomainEventHandlers(this IServiceCollection services)
     {
@@ -96,6 +105,29 @@ public static class StoreModule
             Type closedIdempotentHandler = typeof(IdempotentDomainEventHandler<>).MakeGenericType(domainEvent);
 
             services.Decorate(domainEventHandler, closedIdempotentHandler);
+        }
+    }
+    private static void AddIntegrationEventHandlers(this IServiceCollection services)
+    {
+        Type[] integrationEventHandlers = Presentation.AssemblyReference.Assembly
+            .GetTypes()
+            .Where(t => t.IsAssignableTo(typeof(IIntegrationEventHandler)))
+            .ToArray();
+
+        foreach (Type integrationEventHandler in integrationEventHandlers)
+        {
+            services.TryAddScoped(integrationEventHandler);
+
+            Type integrationEvent = integrationEventHandler
+                .GetInterfaces()
+                .Single(i => i.IsGenericType)
+                .GetGenericArguments()
+                .Single();
+
+            Type closedIdempotentHandler =
+                typeof(IdempotentIntegrationEventHandler<>).MakeGenericType(integrationEvent);
+
+            services.Decorate(integrationEventHandler, closedIdempotentHandler);
         }
     }
 }
