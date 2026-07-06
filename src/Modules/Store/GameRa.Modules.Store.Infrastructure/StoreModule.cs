@@ -1,9 +1,9 @@
-﻿using GameRa.Common.Application.Data;
+﻿using Evently.Modules.Game.IntegrationEvents;
+using GameRa.Common.Application.Data;
 using GameRa.Common.Application.Messaging;
 using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Infrastructure.Outbox;
 using GameRa.Common.Presentation.Endpoints;
-using GameRa.Modules.Games.integrationEvents;
 using GameRa.Modules.Store.Application.Abstractions.Authentication;
 using GameRa.Modules.Store.Application.Abstractions.Payments;
 using GameRa.Modules.Store.Application.Carts;
@@ -51,7 +51,7 @@ public static class StoreModule
     {
         registrationConfigurator.AddConsumer<IntegrationEventConsumer<UserRegisteredIntegrationEvent>>();
         registrationConfigurator.AddConsumer<IntegrationEventConsumer<UserProfileUpdatedIntegrationEvent>>();
-        registrationConfigurator.AddConsumer<IntegrationEventConsumer<ReleaseGameIntegrationEvent>>();
+        registrationConfigurator.AddConsumer<IntegrationEventConsumer<GameAddedIntegrationEvent>>();
     }
 
     private static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
@@ -81,7 +81,7 @@ public static class StoreModule
 
         services.ConfigureOptions<ConfigureProcessOutboxJob>();
 
-        services.Configure<InboxOptions>(configuration.GetSection("Ticketing:Inbox"));
+        services.Configure<InboxOptions>(configuration.GetSection("Store:Inbox"));
 
         services.ConfigureOptions<ConfigureProcessInboxJob>();
     }

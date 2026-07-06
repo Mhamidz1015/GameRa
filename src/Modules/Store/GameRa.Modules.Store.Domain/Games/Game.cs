@@ -62,9 +62,4 @@ public sealed class Game : Entity
     {
         Raise(new GamePaymentsRefundedDomainEvent(Id));
     }
-
-    public void GameArchived()
-    {
-        Raise(new GameArchivedDomainEvent(Id));
-    }
 }

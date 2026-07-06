@@ -12,11 +12,11 @@
   </Folder>
   <Folder Name="/src/Modules/" />
   <Folder Name="/src/Modules/Games/">
+    <Project Path="../Evently.Modules.Game.IntegrationEvents/Evently.Modules.Game.IntegrationEvents.csproj" Id="67dadd7d-9ad1-4aed-b512-0238ee0bbf7c" />
     <Project Path="src/Modules/Games/GameRa,Modules.Games.publicApi/GameRa,Modules.Games.publicApi.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Application/GameRa.Modules.Games.Application.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Infrastructure/GameRa.Modules.Games.Infrastructure.csproj" />
-    <Project Path="src/Modules/Games/GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj" />
   </Folder>
   <Folder Name="/src/Modules/Games/test/">

@@ -1,49 +1,57 @@
+using GameRa.Extensions;
+using GameRa.Middleware;
 using GameRa.Common.Application;
 using GameRa.Common.Infrastructure;
 using GameRa.Common.Presentation.Endpoints;
-using GameRa.Extensions;
-using GameRa.Middleware;
 using GameRa.Modules.Games.Infrastructure;
-using GameRa.Modules.Users.Infrastructure;
 using GameRa.Modules.Store.Infrastructure;
+using GameRa.Modules.Users.Infrastructure;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Serilog;
+using System.Reflection;
+using GameRa.Common.Infrastructure.Configuration;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-builder.Host.UseSerilog((context, LoggerConfig) => LoggerConfig.ReadFrom.Configuration(context.Configuration));
+builder.Host.UseSerilog((context, loggerConfig) => loggerConfig.ReadFrom.Configuration(context.Configuration));
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>
-{
-    options.CustomSchemaIds(t => t.FullName?.Replace("+", "."));
-});
-builder.Services.AddApplication([
-    GameRa.Modules.Games.Application.AssemblyReference.Assembly,
-    GameRa.Modules.Users.Application.AssemblyReference.Assembly,
-    GameRa.Modules.Store.Application.AssemblyReference.Assembly]);
+builder.Services.AddSwaggerDocumentation();
 
-string databaseConnectionString = builder.Configuration.GetConnectionString("Database")!;
-string redisConnectionString = builder.Configuration.GetConnectionString("Cache")!;
+Assembly[] moduleApplicationAssemblies = [
+    GameRa.Modules.Users.Application.AssemblyReference.Assembly,
+    GameRa.Modules.Games.Application.AssemblyReference.Assembly,
+    GameRa.Modules.Store.Application.AssemblyReference.Assembly];
+
+builder.Services.AddApplication(moduleApplicationAssemblies);
+
+string databaseConnectionString = builder.Configuration.GetConnectionStringOrThrow("Database");
+string redisConnectionString = builder.Configuration.GetConnectionStringOrThrow("Cache");
 
 builder.Services.AddInfrastructure(
-    [StoreModule.ConfigureConsumers],
+    [
+        StoreModule.ConfigureConsumers,
+    ],
     databaseConnectionString,
     redisConnectionString);
 
-builder.Configuration.AddModuleConfiguration(["games" , "user" , "store"]);
+Uri keyCloakHealthUrl = builder.Configuration.GetKeyCloakHealthUrl();
 
 builder.Services.AddHealthChecks()
     .AddNpgSql(databaseConnectionString)
     .AddRedis(redisConnectionString)
-    .AddUrlGroup(new Uri(builder.Configuration.GetValue<string>("KeyCloak:HealthUrl")!), HttpMethod.Get, "keycloak");
+    .AddKeyCloak(keyCloakHealthUrl);
+
+builder.Configuration.AddModuleConfiguration(["users", "games", "store"]);
 
 builder.Services.AddGamesModule(builder.Configuration);
+
 builder.Services.AddUsersModule(builder.Configuration);
+
 builder.Services.AddStoreModule(builder.Configuration);
 
 WebApplication app = builder.Build();
@@ -55,8 +63,6 @@ if (app.Environment.IsDevelopment())
 
     app.ApplyMigrations();
 }
-
-app.MapEndpoints();
 
 app.MapHealthChecks("health", new HealthCheckOptions
 {
@@ -71,4 +77,8 @@ app.UseAuthentication();
 
 app.UseAuthorization();
 
+app.MapEndpoints();
+
 app.Run();
+
+public partial class Program;

@@ -56,7 +56,7 @@ public static class GamesModule
 
         services.ConfigureOptions<ConfigureProcessOutboxJob>();
 
-        services.Configure<InboxOptions>(configuration.GetSection("Events:Inbox"));
+        services.Configure<InboxOptions>(configuration.GetSection("Games:Inbox"));
 
         services.ConfigureOptions<ConfigureProcessInboxJob>();
     }

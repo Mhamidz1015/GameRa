@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Evently.Modules.Game.IntegrationEvents\Evently.Modules.Game.IntegrationEvents.csproj" />
     <ProjectReference Include="..\..\..\Common\GameRa.Common.Application\GameRa.Common.Application.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Games.Domain\GameRa.Modules.Games.Domain.csproj" />
   </ItemGroup>

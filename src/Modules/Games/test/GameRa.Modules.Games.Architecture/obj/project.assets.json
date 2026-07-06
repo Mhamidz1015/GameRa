@@ -1263,6 +1263,19 @@
           "build/net8.0/xunit.runner.visualstudio.props": {}
         }
       },
+      "Evently.Modules.Game.IntegrationEvents/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Evently.Modules.Game.IntegrationEvents.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Evently.Modules.Game.IntegrationEvents.dll": {}
+        }
+      },
       "GameRa.Common.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -1340,6 +1353,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
+          "Evently.Modules.Game.IntegrationEvents": "1.0.0",
           "GameRa.Common.Application": "1.0.0",
           "GameRa.Modules.Games.Domain": "1.0.0"
         },
@@ -1390,6 +1404,7 @@
         "dependencies": {
           "GameRa.Common.Presentation": "1.0.0",
           "GameRa.Modules.Games.Application": "1.0.0",
+          "GameRa.Modules.Store.integrationEvents": "1.0.0",
           "Swashbuckle.AspNetCore.Swagger": "10.2.3"
         },
         "compile": {
@@ -1410,6 +1425,19 @@
         },
         "runtime": {
           "bin/placeholder/GameRa.Modules.Store.Domain.dll": {}
+        }
+      },
+      "GameRa.Modules.Store.integrationEvents/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GameRa.Modules.Store.integrationEvents.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameRa.Modules.Store.integrationEvents.dll": {}
         }
       }
     }
@@ -3132,6 +3160,11 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
+    "Evently.Modules.Game.IntegrationEvents/1.0.0": {
+      "type": "project",
+      "path": "../../../../../../Evently.Modules.Game.IntegrationEvents/Evently.Modules.Game.IntegrationEvents.csproj",
+      "msbuildProject": "../../../../../../Evently.Modules.Game.IntegrationEvents/Evently.Modules.Game.IntegrationEvents.csproj"
+    },
     "GameRa.Common.Application/1.0.0": {
       "type": "project",
       "path": "../../../../Common/GameRa.Common.Application/GameRa.Common.Application.csproj",
@@ -3176,6 +3209,11 @@
       "type": "project",
       "path": "../../../Store/GameRa.Modules.Store.Domain/GameRa.Modules.Store.Domain.csproj",
       "msbuildProject": "../../../Store/GameRa.Modules.Store.Domain/GameRa.Modules.Store.Domain.csproj"
+    },
+    "GameRa.Modules.Store.integrationEvents/1.0.0": {
+      "type": "project",
+      "path": "../../../Store/GameRa.Modules.Store.integrationEvents/GameRa.Modules.Store.integrationEvents.csproj",
+      "msbuildProject": "../../../Store/GameRa.Modules.Store.integrationEvents/GameRa.Modules.Store.integrationEvents.csproj"
     }
   },
   "projectFileDependencyGroups": {

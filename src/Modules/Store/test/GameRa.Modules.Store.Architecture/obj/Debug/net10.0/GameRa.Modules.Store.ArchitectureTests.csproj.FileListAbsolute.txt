@@ -152,5 +152,5 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\Quartz.Extensions.Hosting.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\Scrutor.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Games.integrationEvents.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Games.integrationEvents.pdb
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\Evently.Modules.Game.IntegrationEvents.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\Evently.Modules.Game.IntegrationEvents.pdb
