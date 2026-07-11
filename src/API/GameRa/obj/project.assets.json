@@ -1367,19 +1367,6 @@
           }
         }
       },
-      "Evently.Modules.Game.IntegrationEvents/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "dependencies": {
-          "GameRa.Common.Application": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Evently.Modules.Game.IntegrationEvents.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Evently.Modules.Game.IntegrationEvents.dll": {}
-        }
-      },
       "GameRa.Common.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -1456,9 +1443,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "Evently.Modules.Game.IntegrationEvents": "1.0.0",
           "GameRa.Common.Application": "1.0.0",
-          "GameRa.Modules.Games.Domain": "1.0.0"
+          "GameRa.Modules.Games.Domain": "1.0.0",
+          "GameRa.Modules.Games.integrationEvents": "1.0.0"
         },
         "compile": {
           "bin/placeholder/GameRa.Modules.Games.Application.dll": {}
@@ -1501,6 +1488,19 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "GameRa.Modules.Games.integrationEvents/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GameRa.Modules.Games.integrationEvents.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameRa.Modules.Games.integrationEvents.dll": {}
+        }
+      },
       "GameRa.Modules.Games.Presentation/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -1515,6 +1515,71 @@
         },
         "runtime": {
           "bin/placeholder/GameRa.Modules.Games.Presentation.dll": {}
+        }
+      },
+      "GameRa.Modules.Library.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0",
+          "GameRa.Modules.Library.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GameRa.Modules.Library.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameRa.Modules.Library.Application.dll": {}
+        }
+      },
+      "GameRa.Modules.Library.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0",
+          "GameRa.Common.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GameRa.Modules.Library.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameRa.Modules.Library.Domain.dll": {}
+        }
+      },
+      "GameRa.Modules.Library.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GameRa.Common.Infrastructure": "1.0.0",
+          "GameRa.Common.Presentation": "1.0.0",
+          "GameRa.Modules.Games.integrationEvents": "1.0.0",
+          "GameRa.Modules.Library.Application": "1.0.0",
+          "GameRa.Modules.Library.Domain": "1.0.0",
+          "GameRa.Modules.Library.Presentation": "1.0.0",
+          "GameRa.Modules.Users.integrationEvents": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.9"
+        },
+        "compile": {
+          "bin/placeholder/GameRa.Modules.Library.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameRa.Modules.Library.Infrastructure.dll": {}
+        }
+      },
+      "GameRa.Modules.Library.Presentation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GameRa.Common.Infrastructure": "1.0.0",
+          "GameRa.Common.Presentation": "1.0.0",
+          "GameRa.Modules.Library.Application": "1.0.0",
+          "GameRa.Modules.Store.integrationEvents": "1.0.0",
+          "GameRa.Modules.Users.integrationEvents": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GameRa.Modules.Library.Presentation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameRa.Modules.Library.Presentation.dll": {}
         }
       },
       "GameRa.Modules.Store.Application/1.0.0": {
@@ -1549,6 +1614,7 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "GameRa.Common.Infrastructure": "1.0.0",
+          "GameRa.Modules.Games.integrationEvents": "1.0.0",
           "GameRa.Modules.Store.Application": "1.0.0",
           "GameRa.Modules.Store.Presentation": "1.0.0"
         },
@@ -1576,8 +1642,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "Evently.Modules.Game.IntegrationEvents": "1.0.0",
           "GameRa.Common.Presentation": "1.0.0",
+          "GameRa.Modules.Games.integrationEvents": "1.0.0",
           "GameRa.Modules.Store.Application": "1.0.0",
           "GameRa.Modules.Users.integrationEvents": "1.0.0"
         },
@@ -1651,6 +1717,7 @@
           "GameRa.Common.Infrastructure": "1.0.0",
           "GameRa.Common.Presentation": "1.0.0",
           "GameRa.Modules.Users.Application": "1.0.0",
+          "GameRa.Modules.Users.Domain": "1.0.0",
           "MediatR": "14.1.0"
         },
         "compile": {
@@ -4453,11 +4520,6 @@
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     },
-    "Evently.Modules.Game.IntegrationEvents/1.0.0": {
-      "type": "project",
-      "path": "../../../../Evently.Modules.Game.IntegrationEvents/Evently.Modules.Game.IntegrationEvents.csproj",
-      "msbuildProject": "../../../../Evently.Modules.Game.IntegrationEvents/Evently.Modules.Game.IntegrationEvents.csproj"
-    },
     "GameRa.Common.Application/1.0.0": {
       "type": "project",
       "path": "../../Common/GameRa.Common.Application/GameRa.Common.Application.csproj",
@@ -4493,10 +4555,35 @@
       "path": "../../Modules/Games/GameRa.Modules.Games.Infrastructure/GameRa.Modules.Games.Infrastructure.csproj",
       "msbuildProject": "../../Modules/Games/GameRa.Modules.Games.Infrastructure/GameRa.Modules.Games.Infrastructure.csproj"
     },
+    "GameRa.Modules.Games.integrationEvents/1.0.0": {
+      "type": "project",
+      "path": "../../Modules/Games/GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj",
+      "msbuildProject": "../../Modules/Games/GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj"
+    },
     "GameRa.Modules.Games.Presentation/1.0.0": {
       "type": "project",
       "path": "../../Modules/Games/GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj",
       "msbuildProject": "../../Modules/Games/GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj"
+    },
+    "GameRa.Modules.Library.Application/1.0.0": {
+      "type": "project",
+      "path": "../../Modules/Library/GameRa.Modules.Library.Application/GameRa.Modules.Library.Application.csproj",
+      "msbuildProject": "../../Modules/Library/GameRa.Modules.Library.Application/GameRa.Modules.Library.Application.csproj"
+    },
+    "GameRa.Modules.Library.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Modules/Library/GameRa.Modules.Library.Domain/GameRa.Modules.Library.Domain.csproj",
+      "msbuildProject": "../../Modules/Library/GameRa.Modules.Library.Domain/GameRa.Modules.Library.Domain.csproj"
+    },
+    "GameRa.Modules.Library.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../Modules/Library/GameRa.Modules.Library.Infrastructure/GameRa.Modules.Library.Infrastructure.csproj",
+      "msbuildProject": "../../Modules/Library/GameRa.Modules.Library.Infrastructure/GameRa.Modules.Library.Infrastructure.csproj"
+    },
+    "GameRa.Modules.Library.Presentation/1.0.0": {
+      "type": "project",
+      "path": "../../Modules/Library/GameRa.Modules.Library.Presentation/GameRa.Modules.Library.Presentation.csproj",
+      "msbuildProject": "../../Modules/Library/GameRa.Modules.Library.Presentation/GameRa.Modules.Library.Presentation.csproj"
     },
     "GameRa.Modules.Store.Application/1.0.0": {
       "type": "project",
@@ -4556,6 +4643,7 @@
       "AspNetCore.HealthChecks.Uris >= 9.0.0",
       "GameRa.Common.Infrastructure >= 1.0.0",
       "GameRa.Modules.Games.Infrastructure >= 1.0.0",
+      "GameRa.Modules.Library.Infrastructure >= 1.0.0",
       "GameRa.Modules.Store.Infrastructure >= 1.0.0",
       "GameRa.Modules.Users.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.9",
@@ -4605,6 +4693,9 @@
             },
             "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Infrastructure\\GameRa.Modules.Games.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Infrastructure\\GameRa.Modules.Games.Infrastructure.csproj"
+            },
+            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Library\\GameRa.Modules.Library.Infrastructure\\GameRa.Modules.Library.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Library\\GameRa.Modules.Library.Infrastructure\\GameRa.Modules.Library.Infrastructure.csproj"
             },
             "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.Infrastructure\\GameRa.Modules.Store.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.Infrastructure\\GameRa.Modules.Store.Infrastructure.csproj"

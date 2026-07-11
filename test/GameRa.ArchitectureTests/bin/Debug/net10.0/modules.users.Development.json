@@ -1,0 +1,15 @@
+{
+  "Users": {
+    "Outbox": {
+      "IntervalInSeconds": 15,
+      "BatchSize": 20
+    },
+    "KeyCloak": {
+      "AdminUrl": "http://gamera.identity:8080/admin/realms/gamera/",
+      "TokenUrl": "http://gamera.identity:8080/realms/gamera/protocol/openid-connect/token",
+      "ConfidentialClientId": "gamera-confidential-client",
+      "ConfidentialClientSecret": "PzotcrvZRF9BHCKcUxdKfHWlIPECG49k",
+      "PublicClientId": "gamera-public-client"
+    }
+  }
+}

@@ -3,6 +3,7 @@ using GameRa.Common.Application.Messaging;
 using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Infrastructure.Outbox;
 using GameRa.Common.Presentation.Endpoints;
+using GameRa.Modules.Games.Application.Abstractions.Data;
 using GameRa.Modules.Games.Domain.Categories;
 using GameRa.Modules.Games.Domain.Games;
 using GameRa.Modules.Games.Infrastructure.Categories;

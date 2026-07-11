@@ -30,7 +30,7 @@ public sealed class Game : Entity
         string developer,
         DateTime releaseDate,
         decimal baseprice,
-        string Coverimgageurl)
+        string Coverimageurl)
     {
         var Game = new Game
         {
@@ -40,7 +40,7 @@ public sealed class Game : Entity
             Developer = developer,
             ReleaseDate = releaseDate,
             BasePrice = baseprice,
-            CoverImageUrl = Coverimgageurl
+            CoverImageUrl = Coverimageurl
         };
 
         Game.Raise(new GameAddedDomainEvent(Game.Id));

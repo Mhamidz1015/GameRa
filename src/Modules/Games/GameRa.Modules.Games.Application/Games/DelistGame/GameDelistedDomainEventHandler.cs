@@ -1,7 +1,7 @@
-﻿using Evently.Modules.Game.IntegrationEvents;
-using GameRa.Common.Application.Messaging;
+﻿using GameRa.Common.Application.Messaging;
 using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Modules.Games.Domain.Games;
+using GameRa.Modules.Games.integrationEvents;
 
 namespace GameRa.Modules.Games.Application.Games.DelistGame;
 

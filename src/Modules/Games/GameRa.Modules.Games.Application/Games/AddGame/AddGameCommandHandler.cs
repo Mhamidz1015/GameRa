@@ -1,4 +1,5 @@
 ﻿using GameRa.Common.Application.Data;
+using GameRa.Modules.Games.Application.Abstractions.Data;
 using GameRa.Modules.Games.Domain.Games;
 using MediatR;
 

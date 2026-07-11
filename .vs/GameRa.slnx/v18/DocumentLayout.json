@@ -1,20 +1,21 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{81253333-7C1F-8B84-8B1B-5E72713CA5DE}|src\\API\\GameRa\\GameRa.csproj|c:\\users\\rose pc\\source\\repos\\gamra\\gamera\\src\\api\\gamera\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81253333-7C1F-8B84-8B1B-5E72713CA5DE}|src\\API\\GameRa\\GameRa.csproj|solutionrelative:src\\api\\gamera\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 290,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{f4fc5ff1-28ef-4b04-ad02-6b298310ccc7}"
@@ -26,6 +27,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\API\\GameRa\\Program.cs",
+              "RelativeDocumentMoniker": "src\\API\\GameRa\\Program.cs",
+              "ToolTip": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\API\\GameRa\\Program.cs",
+              "RelativeToolTip": "src\\API\\GameRa\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-11T16:51:47.227Z",
+              "EditorCaption": ""
             }
           ]
         }

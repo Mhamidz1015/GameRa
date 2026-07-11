@@ -1,8 +1,8 @@
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\.msCoverageSourceRootsMapping_GameRa.Modules.Users.ArchitectureTests
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\CoverletSourceRootsMapping_GameRa.Modules.Users.ArchitectureTests
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\testhost.exe
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\testhost.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\xunit.abstractions.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\testhost.exe
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\xunit.runner.visualstudio.testadapter.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\GameRa.Modules.Users.ArchitectureTests.deps.json
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\GameRa.Modules.Users.ArchitectureTests.runtimeconfig.json
@@ -24,6 +24,7 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
@@ -46,6 +47,10 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Npgsql.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Quartz.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Quartz.Extensions.DependencyInjection.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Quartz.Extensions.Hosting.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Scrutor.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Serilog.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\StackExchange.Redis.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
@@ -147,8 +152,3 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\obj\Debug\net10.0\GameRa.Modules.Users.ArchitectureTests.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\obj\Debug\net10.0\GameRa.Modules.Users.ArchitectureTests.genruntimeconfig.cache
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\obj\Debug\net10.0\ref\GameRa.Modules.Users.ArchitectureTests.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Quartz.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Quartz.Extensions.DependencyInjection.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Quartz.Extensions.Hosting.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\test\GameRa.Modules.Users.Architecture.Tests\bin\Debug\net10.0\Scrutor.dll

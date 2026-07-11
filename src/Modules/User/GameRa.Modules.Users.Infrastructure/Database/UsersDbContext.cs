@@ -1,6 +1,7 @@
 ﻿using GameRa.Common.Application.Data;
 using GameRa.Common.Infrastructure.Inbox;
 using GameRa.Common.Infrastructure.Outbox;
+using GameRa.Modules.Users.Application.Abstractions.Data;
 using GameRa.Modules.Users.Domain.Users;
 using GameRa.Modules.Users.Infrastructure.Users;
 using Microsoft.EntityFrameworkCore;

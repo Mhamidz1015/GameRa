@@ -1,7 +1,7 @@
 ﻿using GameRa.Common.Application.Data;
 using GameRa.Common.Application.Messaging;
 using GameRa.Common.Domain.Abstractions;
-
+using GameRa.Modules.Games.Application.Abstractions.Data;
 using GameRa.Modules.Games.Domain.Categories;
 
 namespace GameRa.Modules.Games.Application.Categories.UpdateCategory;

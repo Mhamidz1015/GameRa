@@ -8,9 +8,9 @@
     ".NETCoreApp,Version=v10.0": {
       "GameRa.Modules.Games.Application/1.0.0": {
         "dependencies": {
-          "Evently.Modules.Game.IntegrationEvents": "1.0.0",
           "GameRa.Common.Application": "1.0.0",
-          "GameRa.Modules.Games.Domain": "1.0.0"
+          "GameRa.Modules.Games.Domain": "1.0.0",
+          "GameRa.Modules.Games.integrationEvents": "1.0.0"
         },
         "runtime": {
           "GameRa.Modules.Games.Application.dll": {}
@@ -135,17 +135,6 @@
           }
         }
       },
-      "Evently.Modules.Game.IntegrationEvents/1.0.0": {
-        "dependencies": {
-          "GameRa.Common.Application": "1.0.0"
-        },
-        "runtime": {
-          "Evently.Modules.Game.IntegrationEvents.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "GameRa.Common.Application/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.79",
@@ -179,6 +168,17 @@
         },
         "runtime": {
           "GameRa.Modules.Games.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GameRa.Modules.Games.integrationEvents/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
+        "runtime": {
+          "GameRa.Modules.Games.integrationEvents.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -276,11 +276,6 @@
       "path": "serilog/4.3.1",
       "hashPath": "serilog.4.3.1.nupkg.sha512"
     },
-    "Evently.Modules.Game.IntegrationEvents/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "GameRa.Common.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -292,6 +287,11 @@
       "sha512": ""
     },
     "GameRa.Modules.Games.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Games.integrationEvents/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

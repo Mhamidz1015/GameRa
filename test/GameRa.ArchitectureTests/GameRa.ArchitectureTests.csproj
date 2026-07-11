@@ -23,12 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Modules\Games\GameRa,Modules.Games.publicApi\GameRa,Modules.Games.publicApi.csproj" />
-    <ProjectReference Include="..\..\src\Modules\Games\GameRa.Modules.Games.Infrastructure\GameRa.Modules.Games.Infrastructure.csproj" />
-    <ProjectReference Include="..\..\src\Modules\Store\GameRa.Modules.Store.Domain\GameRa.Modules.Store.Domain.csproj" />
-    <ProjectReference Include="..\..\src\Modules\Store\GameRa.Modules.Store.Infrastructure\GameRa.Modules.Store.Infrastructure.csproj" />
-    <ProjectReference Include="..\..\src\Modules\User\GameRa.Modules.Users.Domain\GameRa.Modules.Users.Domain.csproj" />
-    <ProjectReference Include="..\..\src\Modules\User\GameRa.Modules.Users.Infrastructure\GameRa.Modules.Users.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\API\GameRa\GameRa.csproj" />
   </ItemGroup>
 
   <ItemGroup>

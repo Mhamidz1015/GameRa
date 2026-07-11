@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="LibraryItems\CheckGameOwnership\CheckGameOwnershipQuery.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\GameRa.Common.Application\GameRa.Common.Application.csproj" />
+    <ProjectReference Include="..\GameRa.Modules.Library.Domain\GameRa.Modules.Library.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

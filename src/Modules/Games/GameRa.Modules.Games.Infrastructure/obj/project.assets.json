@@ -528,19 +528,6 @@
           }
         }
       },
-      "Evently.Modules.Game.IntegrationEvents/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "dependencies": {
-          "GameRa.Common.Application": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Evently.Modules.Game.IntegrationEvents.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Evently.Modules.Game.IntegrationEvents.dll": {}
-        }
-      },
       "GameRa.Common.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -617,9 +604,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
-          "Evently.Modules.Game.IntegrationEvents": "1.0.0",
           "GameRa.Common.Application": "1.0.0",
-          "GameRa.Modules.Games.Domain": "1.0.0"
+          "GameRa.Modules.Games.Domain": "1.0.0",
+          "GameRa.Modules.Games.integrationEvents": "1.0.0"
         },
         "compile": {
           "bin/placeholder/GameRa.Modules.Games.Application.dll": {}
@@ -639,6 +626,19 @@
         },
         "runtime": {
           "bin/placeholder/GameRa.Modules.Games.Domain.dll": {}
+        }
+      },
+      "GameRa.Modules.Games.integrationEvents/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GameRa.Modules.Games.integrationEvents.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameRa.Modules.Games.integrationEvents.dll": {}
         }
       },
       "GameRa.Modules.Games.Presentation/1.0.0": {
@@ -1394,11 +1394,6 @@
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     },
-    "Evently.Modules.Game.IntegrationEvents/1.0.0": {
-      "type": "project",
-      "path": "../../../../../Evently.Modules.Game.IntegrationEvents/Evently.Modules.Game.IntegrationEvents.csproj",
-      "msbuildProject": "../../../../../Evently.Modules.Game.IntegrationEvents/Evently.Modules.Game.IntegrationEvents.csproj"
-    },
     "GameRa.Common.Application/1.0.0": {
       "type": "project",
       "path": "../../../Common/GameRa.Common.Application/GameRa.Common.Application.csproj",
@@ -1428,6 +1423,11 @@
       "type": "project",
       "path": "../GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj",
       "msbuildProject": "../GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj"
+    },
+    "GameRa.Modules.Games.integrationEvents/1.0.0": {
+      "type": "project",
+      "path": "../GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj",
+      "msbuildProject": "../GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj"
     },
     "GameRa.Modules.Games.Presentation/1.0.0": {
       "type": "project",

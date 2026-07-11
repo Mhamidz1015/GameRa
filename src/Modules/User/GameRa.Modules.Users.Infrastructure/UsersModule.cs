@@ -4,6 +4,7 @@ using GameRa.Common.Application.Messaging;
 using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Infrastructure.Outbox;
 using GameRa.Common.Presentation.Endpoints;
+using GameRa.Modules.Users.Application.Abstractions.Data;
 using GameRa.Modules.Users.Application.Abstractions.Identity;
 using GameRa.Modules.Users.Domain.Users;
 using GameRa.Modules.Users.Infrastructure.Authorization;

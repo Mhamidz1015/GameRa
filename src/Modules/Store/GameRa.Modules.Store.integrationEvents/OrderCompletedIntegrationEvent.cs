@@ -9,17 +9,17 @@ public sealed class OrderCompletedIntegrationEvent : IntegrationEvent
         DateTime occurredOnUtc,
         Guid customerId,
         Guid gameId,
-        string code)
+        string gametitle)
         : base(id, occurredOnUtc)
     {
         CustomerId = customerId;
         GameId = gameId;
-        Code = code;
+        GameTitle = gametitle;
     }
 
     public Guid CustomerId { get; init; }
 
     public Guid GameId { get; init; }
 
-    public string Code { get; init; }
+    public string GameTitle { get; init; }
 }

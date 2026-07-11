@@ -1,5 +1,6 @@
 ﻿using System.Data.Common;
 using GameRa.Common.Application.Data;
+using GameRa.Modules.Store.Application.Abstractions.Data;
 using GameRa.Modules.Store.Domain.Customers;
 using GameRa.Modules.Store.Domain.Games;
 using GameRa.Modules.Store.Domain.Orders;

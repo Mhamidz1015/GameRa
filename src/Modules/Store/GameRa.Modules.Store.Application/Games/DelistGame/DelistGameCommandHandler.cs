@@ -2,6 +2,7 @@
 using GameRa.Common.Domain.Abstractions;
 using GameRa.Common.Application.Data;
 using GameRa.Modules.Store.Domain.Games;
+using GameRa.Modules.Store.Application.Abstractions.Data;
 
 namespace GameRa.Modules.Store.Application.Games.DelistGame;
 

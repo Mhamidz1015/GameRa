@@ -12,15 +12,25 @@
   </Folder>
   <Folder Name="/src/Modules/" />
   <Folder Name="/src/Modules/Games/">
-    <Project Path="../Evently.Modules.Game.IntegrationEvents/Evently.Modules.Game.IntegrationEvents.csproj" Id="67dadd7d-9ad1-4aed-b512-0238ee0bbf7c" />
     <Project Path="src/Modules/Games/GameRa,Modules.Games.publicApi/GameRa,Modules.Games.publicApi.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Application/GameRa.Modules.Games.Application.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Infrastructure/GameRa.Modules.Games.Infrastructure.csproj" />
+    <Project Path="src/Modules/Games/GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj" />
   </Folder>
   <Folder Name="/src/Modules/Games/test/">
     <Project Path="src/Modules/Games/test/GameRa.Modules.Games.Architecture/GameRa.Modules.Games.ArchitectureTests.csproj" Id="8067ea1a-dbe7-4d6d-905f-111aaf9bba58" />
+  </Folder>
+  <Folder Name="/src/Modules/LibraryItem/">
+    <Project Path="src/Modules/Library/GameRa.Modules.Library.Application/GameRa.Modules.Library.Application.csproj" />
+    <Project Path="src/Modules/Library/GameRa.Modules.Library.Domain/GameRa.Modules.Library.Domain.csproj" />
+    <Project Path="src/Modules/Library/GameRa.Modules.Library.Infrastructure/GameRa.Modules.Library.Infrastructure.csproj" />
+    <Project Path="src/Modules/Library/GameRa.Modules.Library.IntegrationEvents/GameRa.Modules.Library.IntegrationEvents.csproj" />
+    <Project Path="src/Modules/Library/GameRa.Modules.Library.Presentation/GameRa.Modules.Library.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/LibraryItem/test/">
+    <Project Path="src/Modules/Library/test/Evently.Modules.Library.ArchitectureTests/Evently.Modules.Library.ArchitectureTests.csproj" Id="71eefb3b-fd9f-4fec-b467-44be8c67ada5" />
   </Folder>
   <Folder Name="/src/Modules/Store/">
     <Project Path="src/Modules/Store/GameRa.Modules.Store.Application/GameRa.Modules.Store.Application.csproj" />

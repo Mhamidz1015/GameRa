@@ -6,6 +6,7 @@ using GameRa.Common.Presentation.Endpoints;
 using GameRa.Modules.Games.Infrastructure;
 using GameRa.Modules.Store.Infrastructure;
 using GameRa.Modules.Users.Infrastructure;
+using GameRa.Modules.Library.Infrastructure;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Serilog;
@@ -25,7 +26,8 @@ builder.Services.AddSwaggerDocumentation();
 Assembly[] moduleApplicationAssemblies = [
     GameRa.Modules.Users.Application.AssemblyReference.Assembly,
     GameRa.Modules.Games.Application.AssemblyReference.Assembly,
-    GameRa.Modules.Store.Application.AssemblyReference.Assembly];
+    GameRa.Modules.Store.Application.AssemblyReference.Assembly,
+    GameRa.Modules.Library.Application.AssemblyReference.Assembly];
 
 builder.Services.AddApplication(moduleApplicationAssemblies);
 
@@ -35,6 +37,7 @@ string redisConnectionString = builder.Configuration.GetConnectionStringOrThrow(
 builder.Services.AddInfrastructure(
     [
         StoreModule.ConfigureConsumers,
+        LibraryItemModule.ConfigureConsumers
     ],
     databaseConnectionString,
     redisConnectionString);
@@ -46,13 +49,15 @@ builder.Services.AddHealthChecks()
     .AddRedis(redisConnectionString)
     .AddKeyCloak(keyCloakHealthUrl);
 
-builder.Configuration.AddModuleConfiguration(["users", "games", "store"]);
+builder.Configuration.AddModuleConfiguration(["users", "games", "store" , "LibraryItem"]);
 
 builder.Services.AddGamesModule(builder.Configuration);
 
 builder.Services.AddUsersModule(builder.Configuration);
 
 builder.Services.AddStoreModule(builder.Configuration);
+
+builder.Services.AddLibraryItemModule(builder.Configuration);
 
 WebApplication app = builder.Build();
 

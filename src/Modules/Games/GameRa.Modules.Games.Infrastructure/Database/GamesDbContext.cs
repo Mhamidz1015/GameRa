@@ -3,6 +3,7 @@ using GameRa.Modules.Games.Domain.Categories;
 using GameRa.Modules.Games.Domain.Games;
 using Microsoft.EntityFrameworkCore;
 using GameRa.Common.Application.Data;
+using GameRa.Modules.Games.Application.Abstractions.Data;
 
 namespace GameRa.Modules.Games.Infrastructure.Database;
 

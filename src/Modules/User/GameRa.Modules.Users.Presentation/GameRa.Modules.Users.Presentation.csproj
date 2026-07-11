@@ -14,6 +14,7 @@
     <ProjectReference Include="..\..\..\Common\GameRa.Common.Infrastructure\GameRa.Common.Infrastructure.csproj" />
     <ProjectReference Include="..\..\..\Common\GameRa.Common.Presentation\GameRa.Common.Presentation.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Users.Application\GameRa.Modules.Users.Application.csproj" />
+    <ProjectReference Include="..\GameRa.Modules.Users.Domain\GameRa.Modules.Users.Domain.csproj" />
   </ItemGroup>
 
 </Project>

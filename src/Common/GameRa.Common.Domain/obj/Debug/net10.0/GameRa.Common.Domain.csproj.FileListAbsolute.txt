@@ -1,15 +1,3 @@
-C:\Users\ROSE PC\source\repos\GamRa\GameRa.Common.Domain\bin\Debug\net10.0\GameRa.Common.Domain.deps.json
-C:\Users\ROSE PC\source\repos\GamRa\GameRa.Common.Domain\bin\Debug\net10.0\GameRa.Common.Domain.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa.Common.Domain\bin\Debug\net10.0\GameRa.Common.Domain.pdb
-C:\Users\ROSE PC\source\repos\GamRa\GameRa.Common.Domain\obj\Debug\net10.0\GameRa.Common.Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ROSE PC\source\repos\GamRa\GameRa.Common.Domain\obj\Debug\net10.0\GameRa.Common.Domain.AssemblyInfoInputs.cache
-C:\Users\ROSE PC\source\repos\GamRa\GameRa.Common.Domain\obj\Debug\net10.0\GameRa.Common.Domain.AssemblyInfo.cs
-C:\Users\ROSE PC\source\repos\GamRa\GameRa.Common.Domain\obj\Debug\net10.0\GameRa.Common.Domain.csproj.CoreCompileInputs.cache
-C:\Users\ROSE PC\source\repos\GamRa\GameRa.Common.Domain\obj\Debug\net10.0\GameRa.Common.Domain.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa.Common.Domain\obj\Debug\net10.0\refint\GameRa.Common.Domain.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa.Common.Domain\obj\Debug\net10.0\GameRa.Common.Domain.pdb
-C:\Users\ROSE PC\source\repos\GamRa\GameRa.Common.Domain\obj\Debug\net10.0\ref\GameRa.Common.Domain.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa.Common.Domain\obj\Debug\net10.0\GameRa.Common.Domain.csproj.AssemblyReference.cache
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Common\GameRa.Common.Domain\bin\Debug\net10.0\GameRa.Common.Domain.deps.json
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Common\GameRa.Common.Domain\bin\Debug\net10.0\GameRa.Common.Domain.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Common\GameRa.Common.Domain\bin\Debug\net10.0\GameRa.Common.Domain.pdb

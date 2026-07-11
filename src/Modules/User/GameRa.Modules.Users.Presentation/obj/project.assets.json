@@ -2085,6 +2085,7 @@
       "GameRa.Common.Infrastructure >= 1.0.0",
       "GameRa.Common.Presentation >= 1.0.0",
       "GameRa.Modules.Users.Application >= 1.0.0",
+      "GameRa.Modules.Users.Domain >= 1.0.0",
       "MediatR >= 14.1.0"
     ]
   },
@@ -2129,6 +2130,9 @@
             },
             "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\User\\GameRa.Modules.Users.Application\\GameRa.Modules.Users.Application.csproj": {
               "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\User\\GameRa.Modules.Users.Application\\GameRa.Modules.Users.Application.csproj"
+            },
+            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\User\\GameRa.Modules.Users.Domain\\GameRa.Modules.Users.Domain.csproj": {
+              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\User\\GameRa.Modules.Users.Domain\\GameRa.Modules.Users.Domain.csproj"
             }
           }
         }

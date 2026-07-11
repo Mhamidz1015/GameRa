@@ -1,6 +1,7 @@
 ﻿using GameRa.Common.Application.Data;
 using GameRa.Common.Application.Messaging;
 using GameRa.Common.Domain.Abstractions;
+using GameRa.Modules.Users.Application.Abstractions.Data;
 using GameRa.Modules.Users.Domain.Users;
 
 namespace GameRa.Modules.Users.Application.Users.UpdateUser;
