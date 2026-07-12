@@ -893,30 +893,17 @@
           "bin/placeholder/GameRa.Modules.Library.Domain.dll": {}
         }
       },
-      "GameRa.Modules.Store.integrationEvents/1.0.0": {
+      "GameRa.Modules.Store.IntegrationEvents/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "GameRa.Common.Application": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/GameRa.Modules.Store.integrationEvents.dll": {}
+          "bin/placeholder/GameRa.Modules.Store.IntegrationEvents.dll": {}
         },
         "runtime": {
-          "bin/placeholder/GameRa.Modules.Store.integrationEvents.dll": {}
-        }
-      },
-      "GameRa.Modules.Users.integrationEvents/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "dependencies": {
-          "GameRa.Common.Application": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/GameRa.Modules.Users.integrationEvents.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GameRa.Modules.Users.integrationEvents.dll": {}
+          "bin/placeholder/GameRa.Modules.Store.IntegrationEvents.dll": {}
         }
       }
     }
@@ -2087,15 +2074,10 @@
       "path": "../GameRa.Modules.Library.Domain/GameRa.Modules.Library.Domain.csproj",
       "msbuildProject": "../GameRa.Modules.Library.Domain/GameRa.Modules.Library.Domain.csproj"
     },
-    "GameRa.Modules.Store.integrationEvents/1.0.0": {
+    "GameRa.Modules.Store.IntegrationEvents/1.0.0": {
       "type": "project",
       "path": "../../Store/GameRa.Modules.Store.integrationEvents/GameRa.Modules.Store.integrationEvents.csproj",
       "msbuildProject": "../../Store/GameRa.Modules.Store.integrationEvents/GameRa.Modules.Store.integrationEvents.csproj"
-    },
-    "GameRa.Modules.Users.integrationEvents/1.0.0": {
-      "type": "project",
-      "path": "../../User/GameRa.Modules.Users.integrationGames/GameRa.Modules.Users.integrationEvents.csproj",
-      "msbuildProject": "../../User/GameRa.Modules.Users.integrationGames/GameRa.Modules.Users.integrationEvents.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2103,8 +2085,7 @@
       "GameRa.Common.Infrastructure >= 1.0.0",
       "GameRa.Common.Presentation >= 1.0.0",
       "GameRa.Modules.Library.Application >= 1.0.0",
-      "GameRa.Modules.Store.integrationEvents >= 1.0.0",
-      "GameRa.Modules.Users.integrationEvents >= 1.0.0"
+      "GameRa.Modules.Store.IntegrationEvents >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2149,11 +2130,8 @@
             "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Library\\GameRa.Modules.Library.Application\\GameRa.Modules.Library.Application.csproj": {
               "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Library\\GameRa.Modules.Library.Application\\GameRa.Modules.Library.Application.csproj"
             },
-            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.integrationEvents\\GameRa.Modules.Store.integrationEvents.csproj": {
-              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.integrationEvents\\GameRa.Modules.Store.integrationEvents.csproj"
-            },
-            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\User\\GameRa.Modules.Users.integrationGames\\GameRa.Modules.Users.integrationEvents.csproj": {
-              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\User\\GameRa.Modules.Users.integrationGames\\GameRa.Modules.Users.integrationEvents.csproj"
+            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.integrationEvents\\GameRa.Modules.Store.IntegrationEvents.csproj": {
+              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.integrationEvents\\GameRa.Modules.Store.IntegrationEvents.csproj"
             }
           }
         }

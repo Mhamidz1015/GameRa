@@ -2,7 +2,7 @@
 using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Store.Application.Customers.CreateCustomer;
-using GameRa.Modules.Users.integrationEvents;
+using GameRa.Modules.Users.IntegrationEvents;
 using MediatR;
 
 namespace GameRa.Modules.Store.Presentation.Customers;

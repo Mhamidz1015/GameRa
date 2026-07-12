@@ -4,7 +4,7 @@ using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Games.Application.Games.GetGame;
 using GameRa.Modules.Games.Domain.Games;
-using GameRa.Modules.Games.integrationEvents;
+using GameRa.Modules.Games.IntegrationEvents;
 using MediatR;
 
 namespace GameRa.Modules.Games.Application.Games.AddGame;

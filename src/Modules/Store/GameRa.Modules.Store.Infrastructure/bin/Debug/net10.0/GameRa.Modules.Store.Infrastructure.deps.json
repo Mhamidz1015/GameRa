@@ -9,7 +9,6 @@
       "GameRa.Modules.Store.Infrastructure/1.0.0": {
         "dependencies": {
           "GameRa.Common.Infrastructure": "1.0.0",
-          "GameRa.Modules.Games.integrationEvents": "1.0.0",
           "GameRa.Modules.Store.Application": "1.0.0",
           "GameRa.Modules.Store.Presentation": "1.0.0"
         },
@@ -397,14 +396,13 @@
           }
         }
       },
-      "GameRa.Modules.Games.integrationEvents/1.0.0": {
+      "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
         "dependencies": {
           "GameRa.Common.Application": "1.0.0"
         },
         "runtime": {
-          "GameRa.Modules.Games.integrationEvents.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+          "GameRa.Modules.Games.IntegrationEvents.dll": {
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -434,9 +432,9 @@
       "GameRa.Modules.Store.Presentation/1.0.0": {
         "dependencies": {
           "GameRa.Common.Presentation": "1.0.0",
-          "GameRa.Modules.Games.integrationEvents": "1.0.0",
+          "GameRa.Modules.Games.IntegrationEvents": "1.0.0",
           "GameRa.Modules.Store.Application": "1.0.0",
-          "GameRa.Modules.Users.integrationEvents": "1.0.0"
+          "GameRa.Modules.Users.IntegrationEvents": "1.0.0"
         },
         "runtime": {
           "GameRa.Modules.Store.Presentation.dll": {
@@ -445,14 +443,13 @@
           }
         }
       },
-      "GameRa.Modules.Users.integrationEvents/1.0.0": {
+      "GameRa.Modules.Users.IntegrationEvents/1.0.0": {
         "dependencies": {
           "GameRa.Common.Application": "1.0.0"
         },
         "runtime": {
-          "GameRa.Modules.Users.integrationEvents.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+          "GameRa.Modules.Users.IntegrationEvents.dll": {
+            "fileVersion": "0.0.0.0"
           }
         }
       }
@@ -708,7 +705,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "GameRa.Modules.Games.integrationEvents/1.0.0": {
+    "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -728,7 +725,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "GameRa.Modules.Users.integrationEvents/1.0.0": {
+    "GameRa.Modules.Users.IntegrationEvents/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -3,7 +3,7 @@ services:
   gamera:
     build:
       context: C:\Users\ROSE PC\source\repos\GamRa\GameRa
-      dockerfile: GameFa\Dockerfile
+      dockerfile: src/API/GameRa/Dockerfile
     container_name: GameRa.Api
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -65,7 +65,7 @@ services:
     volumes:
       - type: bind
         source: C:\Users\ROSE PC\source\repos\GamRa\GameRa\containers\db
-        target: var/lab/postgresql/data
+        target: /var/lib/postgresql/data
         bind: {}
   gamera.redis:
     container_name: GameRa.Redis

@@ -4,7 +4,7 @@ using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Users.Application.Users.GetUserById;
 using GameRa.Modules.Users.Domain.Users;
-using GameRa.Modules.Users.integrationEvents;
+using GameRa.Modules.Users.IntegrationEvents;
 using MediatR;
 
 namespace GameRa.Modules.Users.Application.Users.RegisterUser;

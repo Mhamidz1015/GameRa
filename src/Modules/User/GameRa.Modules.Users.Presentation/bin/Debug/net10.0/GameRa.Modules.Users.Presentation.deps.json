@@ -402,7 +402,7 @@
         "dependencies": {
           "GameRa.Common.Application": "1.0.0",
           "GameRa.Modules.Users.Domain": "1.0.0",
-          "GameRa.Modules.Users.integrationEvents": "1.0.0"
+          "GameRa.Modules.Users.IntegrationEvents": "1.0.0"
         },
         "runtime": {
           "GameRa.Modules.Users.Application.dll": {
@@ -422,14 +422,13 @@
           }
         }
       },
-      "GameRa.Modules.Users.integrationEvents/1.0.0": {
+      "GameRa.Modules.Users.IntegrationEvents/1.0.0": {
         "dependencies": {
           "GameRa.Common.Application": "1.0.0"
         },
         "runtime": {
-          "GameRa.Modules.Users.integrationEvents.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+          "GameRa.Modules.Users.IntegrationEvents.dll": {
+            "fileVersion": "0.0.0.0"
           }
         }
       }
@@ -695,7 +694,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "GameRa.Modules.Users.integrationEvents/1.0.0": {
+    "GameRa.Modules.Users.IntegrationEvents/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

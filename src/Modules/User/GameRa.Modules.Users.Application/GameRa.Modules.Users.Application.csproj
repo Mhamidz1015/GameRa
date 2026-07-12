@@ -9,7 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\GameRa.Common.Application\GameRa.Common.Application.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Users.Domain\GameRa.Modules.Users.Domain.csproj" />
-    <ProjectReference Include="..\GameRa.Modules.Users.integrationGames\GameRa.Modules.Users.integrationEvents.csproj" />
+    <ProjectReference Include="..\GameRa.Modules.Users.integrationEvents\GameRa.Modules.Users.IntegrationEvents.csproj" />
   </ItemGroup>
 
 </Project>

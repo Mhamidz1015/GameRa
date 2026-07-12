@@ -972,7 +972,7 @@
         "dependencies": {
           "GameRa.Common.Application": "1.0.0",
           "GameRa.Modules.Games.Domain": "1.0.0",
-          "GameRa.Modules.Games.integrationEvents": "1.0.0"
+          "GameRa.Modules.Games.IntegrationEvents": "1.0.0"
         },
         "runtime": {
           "GameRa.Modules.Games.Application.dll": {
@@ -1008,14 +1008,13 @@
           }
         }
       },
-      "GameRa.Modules.Games.integrationEvents/1.0.0": {
+      "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
         "dependencies": {
           "GameRa.Common.Application": "1.0.0"
         },
         "runtime": {
-          "GameRa.Modules.Games.integrationEvents.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+          "GameRa.Modules.Games.IntegrationEvents.dll": {
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -1023,7 +1022,6 @@
         "dependencies": {
           "GameRa.Common.Presentation": "1.0.0",
           "GameRa.Modules.Games.Application": "1.0.0",
-          "GameRa.Modules.Store.integrationEvents": "1.0.0",
           "Swashbuckle.AspNetCore.Swagger": "10.2.3"
         },
         "runtime": {
@@ -1061,11 +1059,10 @@
         "dependencies": {
           "GameRa.Common.Infrastructure": "1.0.0",
           "GameRa.Common.Presentation": "1.0.0",
-          "GameRa.Modules.Games.integrationEvents": "1.0.0",
+          "GameRa.Modules.Games.IntegrationEvents": "1.0.0",
           "GameRa.Modules.Library.Application": "1.0.0",
           "GameRa.Modules.Library.Domain": "1.0.0",
           "GameRa.Modules.Library.Presentation": "1.0.0",
-          "GameRa.Modules.Users.integrationEvents": "1.0.0",
           "Microsoft.EntityFrameworkCore": "10.0.9"
         },
         "runtime": {
@@ -1080,8 +1077,7 @@
           "GameRa.Common.Infrastructure": "1.0.0",
           "GameRa.Common.Presentation": "1.0.0",
           "GameRa.Modules.Library.Application": "1.0.0",
-          "GameRa.Modules.Store.integrationEvents": "1.0.0",
-          "GameRa.Modules.Users.integrationEvents": "1.0.0"
+          "GameRa.Modules.Store.IntegrationEvents": "1.0.0"
         },
         "runtime": {
           "GameRa.Modules.Library.Presentation.dll": {
@@ -1116,7 +1112,6 @@
       "GameRa.Modules.Store.Infrastructure/1.0.0": {
         "dependencies": {
           "GameRa.Common.Infrastructure": "1.0.0",
-          "GameRa.Modules.Games.integrationEvents": "1.0.0",
           "GameRa.Modules.Store.Application": "1.0.0",
           "GameRa.Modules.Store.Presentation": "1.0.0"
         },
@@ -1127,23 +1122,22 @@
           }
         }
       },
-      "GameRa.Modules.Store.integrationEvents/1.0.0": {
+      "GameRa.Modules.Store.IntegrationEvents/1.0.0": {
         "dependencies": {
           "GameRa.Common.Application": "1.0.0"
         },
         "runtime": {
-          "GameRa.Modules.Store.integrationEvents.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+          "GameRa.Modules.Store.IntegrationEvents.dll": {
+            "fileVersion": "0.0.0.0"
           }
         }
       },
       "GameRa.Modules.Store.Presentation/1.0.0": {
         "dependencies": {
           "GameRa.Common.Presentation": "1.0.0",
-          "GameRa.Modules.Games.integrationEvents": "1.0.0",
+          "GameRa.Modules.Games.IntegrationEvents": "1.0.0",
           "GameRa.Modules.Store.Application": "1.0.0",
-          "GameRa.Modules.Users.integrationEvents": "1.0.0"
+          "GameRa.Modules.Users.IntegrationEvents": "1.0.0"
         },
         "runtime": {
           "GameRa.Modules.Store.Presentation.dll": {
@@ -1156,7 +1150,7 @@
         "dependencies": {
           "GameRa.Common.Application": "1.0.0",
           "GameRa.Modules.Users.Domain": "1.0.0",
-          "GameRa.Modules.Users.integrationEvents": "1.0.0"
+          "GameRa.Modules.Users.IntegrationEvents": "1.0.0"
         },
         "runtime": {
           "GameRa.Modules.Users.Application.dll": {
@@ -1189,14 +1183,13 @@
           }
         }
       },
-      "GameRa.Modules.Users.integrationEvents/1.0.0": {
+      "GameRa.Modules.Users.IntegrationEvents/1.0.0": {
         "dependencies": {
           "GameRa.Common.Application": "1.0.0"
         },
         "runtime": {
-          "GameRa.Modules.Users.integrationEvents.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+          "GameRa.Modules.Users.IntegrationEvents.dll": {
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -1711,7 +1704,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "GameRa.Modules.Games.integrationEvents/1.0.0": {
+    "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1756,7 +1749,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "GameRa.Modules.Store.integrationEvents/1.0.0": {
+    "GameRa.Modules.Store.IntegrationEvents/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1781,7 +1774,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "GameRa.Modules.Users.integrationEvents/1.0.0": {
+    "GameRa.Modules.Users.IntegrationEvents/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

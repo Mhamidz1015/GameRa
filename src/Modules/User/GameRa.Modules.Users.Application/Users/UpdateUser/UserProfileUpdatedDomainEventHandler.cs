@@ -1,7 +1,7 @@
 ﻿using GameRa.Common.Application.Messaging;
 using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Modules.Users.Domain.Users;
-using GameRa.Modules.Users.integrationEvents;
+using GameRa.Modules.Users.IntegrationEvents;
 
 namespace GameRa.Modules.Users.Application.Users.UpdateUser;
 

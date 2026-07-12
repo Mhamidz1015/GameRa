@@ -234,17 +234,17 @@
           "bin/placeholder/GameRa.Modules.Games.Domain.dll": {}
         }
       },
-      "GameRa.Modules.Games.integrationEvents/1.0.0": {
+      "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "GameRa.Common.Application": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/GameRa.Modules.Games.integrationEvents.dll": {}
+          "bin/placeholder/GameRa.Modules.Games.IntegrationEvents.dll": {}
         },
         "runtime": {
-          "bin/placeholder/GameRa.Modules.Games.integrationEvents.dll": {}
+          "bin/placeholder/GameRa.Modules.Games.IntegrationEvents.dll": {}
         }
       }
     }
@@ -582,7 +582,7 @@
       "path": "../GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj",
       "msbuildProject": "../GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj"
     },
-    "GameRa.Modules.Games.integrationEvents/1.0.0": {
+    "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
       "type": "project",
       "path": "../GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj",
       "msbuildProject": "../GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj"
@@ -592,7 +592,7 @@
     "net10.0": [
       "GameRa.Common.Application >= 1.0.0",
       "GameRa.Modules.Games.Domain >= 1.0.0",
-      "GameRa.Modules.Games.integrationEvents >= 1.0.0"
+      "GameRa.Modules.Games.IntegrationEvents >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -634,8 +634,8 @@
             "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Domain\\GameRa.Modules.Games.Domain.csproj": {
               "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Domain\\GameRa.Modules.Games.Domain.csproj"
             },
-            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.integrationEvents\\GameRa.Modules.Games.integrationEvents.csproj": {
-              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.integrationEvents\\GameRa.Modules.Games.integrationEvents.csproj"
+            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.integrationEvents\\GameRa.Modules.Games.IntegrationEvents.csproj": {
+              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.integrationEvents\\GameRa.Modules.Games.IntegrationEvents.csproj"
             }
           }
         }

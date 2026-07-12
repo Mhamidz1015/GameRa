@@ -3,27 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{81253333-7C1F-8B84-8B1B-5E72713CA5DE}|src\\API\\GameRa\\GameRa.csproj|c:\\users\\rose pc\\source\\repos\\gamra\\gamera\\src\\api\\gamera\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81253333-7C1F-8B84-8B1B-5E72713CA5DE}|src\\API\\GameRa\\GameRa.csproj|solutionrelative:src\\api\\gamera\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{81253333-7C1F-8B84-8B1B-5E72713CA5DE}|src\\API\\GameRa\\GameRa.csproj|c:\\users\\rose pc\\source\\repos\\gamra\\gamera\\src\\api\\gamera\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{81253333-7C1F-8B84-8B1B-5E72713CA5DE}|src\\API\\GameRa\\GameRa.csproj|solutionrelative:src\\api\\gamera\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 290,
-          "SelectedChildIndex": 3,
+          "DockedHeight": 325,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{f4fc5ff1-28ef-4b04-ad02-6b298310ccc7}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -31,15 +23,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\API\\GameRa\\Program.cs",
-              "RelativeDocumentMoniker": "src\\API\\GameRa\\Program.cs",
-              "ToolTip": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\API\\GameRa\\Program.cs",
-              "RelativeToolTip": "src\\API\\GameRa\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-11T16:51:47.227Z",
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\API\\GameRa\\Dockerfile",
+              "RelativeDocumentMoniker": "src\\API\\GameRa\\Dockerfile",
+              "ToolTip": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\API\\GameRa\\Dockerfile",
+              "RelativeToolTip": "src\\API\\GameRa\\Dockerfile",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAGgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-07-12T11:50:25.591Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 75,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{9a7cebbb-dc5c-4986-bc49-962da46aa506}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f4fc5ff1-28ef-4b04-ad02-6b298310ccc7}"
             }
           ]
         }

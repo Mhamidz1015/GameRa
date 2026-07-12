@@ -11,8 +11,7 @@
           "GameRa.Common.Infrastructure": "1.0.0",
           "GameRa.Common.Presentation": "1.0.0",
           "GameRa.Modules.Library.Application": "1.0.0",
-          "GameRa.Modules.Store.integrationEvents": "1.0.0",
-          "GameRa.Modules.Users.integrationEvents": "1.0.0"
+          "GameRa.Modules.Store.IntegrationEvents": "1.0.0"
         },
         "runtime": {
           "GameRa.Modules.Library.Presentation.dll": {}
@@ -422,25 +421,13 @@
           }
         }
       },
-      "GameRa.Modules.Store.integrationEvents/1.0.0": {
+      "GameRa.Modules.Store.IntegrationEvents/1.0.0": {
         "dependencies": {
           "GameRa.Common.Application": "1.0.0"
         },
         "runtime": {
-          "GameRa.Modules.Store.integrationEvents.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "GameRa.Modules.Users.integrationEvents/1.0.0": {
-        "dependencies": {
-          "GameRa.Common.Application": "1.0.0"
-        },
-        "runtime": {
-          "GameRa.Modules.Users.integrationEvents.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+          "GameRa.Modules.Store.IntegrationEvents.dll": {
+            "fileVersion": "0.0.0.0"
           }
         }
       }
@@ -706,12 +693,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "GameRa.Modules.Store.integrationEvents/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "GameRa.Modules.Users.integrationEvents/1.0.0": {
+    "GameRa.Modules.Store.IntegrationEvents/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

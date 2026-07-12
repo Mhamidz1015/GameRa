@@ -2,7 +2,7 @@
 using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Library.Application.LibraryItems.AddGameToLibrary;
-using GameRa.Modules.Store.integrationEvents;
+using GameRa.Modules.Store.IntegrationEvents;
 using MediatR;
 
 namespace GameRa.Modules.Library.Presentation.LibraryItem;

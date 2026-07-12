@@ -4,10 +4,10 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\GameRa.Modules.Users
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\GameRa.Modules.Users.Application\bin\Debug\net10.0\GameRa.Common.Application.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\GameRa.Modules.Users.Application\bin\Debug\net10.0\GameRa.Common.Domain.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\GameRa.Modules.Users.Application\bin\Debug\net10.0\GameRa.Modules.Users.Domain.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\GameRa.Modules.Users.Application\bin\Debug\net10.0\GameRa.Modules.Users.integrationEvents.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\GameRa.Modules.Users.Application\bin\Debug\net10.0\GameRa.Modules.Users.IntegrationEvents.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\GameRa.Modules.Users.Application\bin\Debug\net10.0\GameRa.Common.Application.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\GameRa.Modules.Users.Application\bin\Debug\net10.0\GameRa.Modules.Users.Domain.pdb
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\GameRa.Modules.Users.Application\bin\Debug\net10.0\GameRa.Modules.Users.integrationEvents.pdb
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\GameRa.Modules.Users.Application\bin\Debug\net10.0\GameRa.Modules.Users.IntegrationEvents.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\GameRa.Modules.Users.Application\bin\Debug\net10.0\GameRa.Common.Domain.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\GameRa.Modules.Users.Application\obj\Debug\net10.0\GameRa.Modules.Users.Application.csproj.AssemblyReference.cache
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\User\GameRa.Modules.Users.Application\obj\Debug\net10.0\GameRa.Modules.Users.Application.GeneratedMSBuildEditorConfig.editorconfig

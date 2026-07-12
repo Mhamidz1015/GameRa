@@ -9,8 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\GameRa.Common.Infrastructure\GameRa.Common.Infrastructure.csproj" />
     <ProjectReference Include="..\..\..\Common\GameRa.Common.Presentation\GameRa.Common.Presentation.csproj" />
-    <ProjectReference Include="..\..\Store\GameRa.Modules.Store.integrationEvents\GameRa.Modules.Store.integrationEvents.csproj" />
-    <ProjectReference Include="..\..\User\GameRa.Modules.Users.integrationGames\GameRa.Modules.Users.integrationEvents.csproj" />
+    <ProjectReference Include="..\..\Store\GameRa.Modules.Store.integrationEvents\GameRa.Modules.Store.IntegrationEvents.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Library.Application\GameRa.Modules.Library.Application.csproj" />
   </ItemGroup>
 

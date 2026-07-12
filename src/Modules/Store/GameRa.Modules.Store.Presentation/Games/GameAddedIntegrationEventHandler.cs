@@ -1,7 +1,7 @@
 ﻿using GameRa.Common.Application.Exceptions;
 using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Domain.Abstractions;
-using GameRa.Modules.Games.integrationEvents;
+using GameRa.Modules.Games.IntegrationEvents;
 using GameRa.Modules.Store.Application.Games.AddGame;
 using MediatR;
 

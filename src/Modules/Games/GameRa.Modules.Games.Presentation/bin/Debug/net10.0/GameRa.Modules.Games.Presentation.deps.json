@@ -10,7 +10,6 @@
         "dependencies": {
           "GameRa.Common.Presentation": "1.0.0",
           "GameRa.Modules.Games.Application": "1.0.0",
-          "GameRa.Modules.Store.integrationEvents": "1.0.0",
           "Swashbuckle.AspNetCore.Swagger": "10.2.3"
         },
         "runtime": {
@@ -193,7 +192,7 @@
         "dependencies": {
           "GameRa.Common.Application": "1.0.0",
           "GameRa.Modules.Games.Domain": "1.0.0",
-          "GameRa.Modules.Games.integrationEvents": "1.0.0"
+          "GameRa.Modules.Games.IntegrationEvents": "1.0.0"
         },
         "runtime": {
           "GameRa.Modules.Games.Application.dll": {
@@ -213,25 +212,13 @@
           }
         }
       },
-      "GameRa.Modules.Games.integrationEvents/1.0.0": {
+      "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
         "dependencies": {
           "GameRa.Common.Application": "1.0.0"
         },
         "runtime": {
-          "GameRa.Modules.Games.integrationEvents.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "GameRa.Modules.Store.integrationEvents/1.0.0": {
-        "dependencies": {
-          "GameRa.Common.Application": "1.0.0"
-        },
-        "runtime": {
-          "GameRa.Modules.Store.integrationEvents.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+          "GameRa.Modules.Games.IntegrationEvents.dll": {
+            "fileVersion": "0.0.0.0"
           }
         }
       }
@@ -366,12 +353,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "GameRa.Modules.Games.integrationEvents/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "GameRa.Modules.Store.integrationEvents/1.0.0": {
+    "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
