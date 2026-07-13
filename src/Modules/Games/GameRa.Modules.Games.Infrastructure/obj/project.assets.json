@@ -1412,8 +1412,8 @@
     },
     "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
       "type": "project",
-      "path": "../GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj",
-      "msbuildProject": "../GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj"
+      "path": "../GameRa.Modules.Games.IntegrationEvents/GameRa.Modules.Games.IntegrationEvents.csproj",
+      "msbuildProject": "../GameRa.Modules.Games.IntegrationEvents/GameRa.Modules.Games.IntegrationEvents.csproj"
     },
     "GameRa.Modules.Games.Presentation/1.0.0": {
       "type": "project",

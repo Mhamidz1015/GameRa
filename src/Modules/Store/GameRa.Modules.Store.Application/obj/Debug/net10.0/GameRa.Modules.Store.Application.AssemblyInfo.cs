@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameRa.Modules.Store.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+448513fc1cfc70f5dcc627e8dbbdf40b260ca4f2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+787713503e3e5bdbe9509b1ea25d76d7c0bbcd66")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameRa.Modules.Store.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameRa.Modules.Store.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

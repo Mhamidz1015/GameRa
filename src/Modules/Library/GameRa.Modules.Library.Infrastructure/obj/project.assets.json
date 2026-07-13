@@ -2095,8 +2095,8 @@
     },
     "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
       "type": "project",
-      "path": "../../Games/GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj",
-      "msbuildProject": "../../Games/GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj"
+      "path": "../../Games/GameRa.Modules.Games.IntegrationEvents/GameRa.Modules.Games.IntegrationEvents.csproj",
+      "msbuildProject": "../../Games/GameRa.Modules.Games.IntegrationEvents/GameRa.Modules.Games.IntegrationEvents.csproj"
     },
     "GameRa.Modules.Library.Application/1.0.0": {
       "type": "project",
@@ -2115,8 +2115,8 @@
     },
     "GameRa.Modules.Store.IntegrationEvents/1.0.0": {
       "type": "project",
-      "path": "../../Store/GameRa.Modules.Store.integrationEvents/GameRa.Modules.Store.integrationEvents.csproj",
-      "msbuildProject": "../../Store/GameRa.Modules.Store.integrationEvents/GameRa.Modules.Store.integrationEvents.csproj"
+      "path": "../../Store/GameRa.Modules.Store.IntegrationEvents/GameRa.Modules.Store.IntegrationEvents.csproj",
+      "msbuildProject": "../../Store/GameRa.Modules.Store.IntegrationEvents/GameRa.Modules.Store.IntegrationEvents.csproj"
     }
   },
   "projectFileDependencyGroups": {

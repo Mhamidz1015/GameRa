@@ -604,8 +604,8 @@
     },
     "GameRa.Modules.Store.IntegrationEvents/1.0.0": {
       "type": "project",
-      "path": "../../Store/GameRa.Modules.Store.integrationEvents/GameRa.Modules.Store.integrationEvents.csproj",
-      "msbuildProject": "../../Store/GameRa.Modules.Store.integrationEvents/GameRa.Modules.Store.integrationEvents.csproj"
+      "path": "../../Store/GameRa.Modules.Store.IntegrationEvents/GameRa.Modules.Store.IntegrationEvents.csproj",
+      "msbuildProject": "../../Store/GameRa.Modules.Store.IntegrationEvents/GameRa.Modules.Store.IntegrationEvents.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -650,8 +650,8 @@
             "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Library\\GameRa.Modules.Library.Application\\GameRa.Modules.Library.Application.csproj": {
               "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Library\\GameRa.Modules.Library.Application\\GameRa.Modules.Library.Application.csproj"
             },
-            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.integrationEvents\\GameRa.Modules.Store.IntegrationEvents.csproj": {
-              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.integrationEvents\\GameRa.Modules.Store.IntegrationEvents.csproj"
+            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.IntegrationEvents\\GameRa.Modules.Store.IntegrationEvents.csproj": {
+              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.IntegrationEvents\\GameRa.Modules.Store.IntegrationEvents.csproj"
             }
           }
         }

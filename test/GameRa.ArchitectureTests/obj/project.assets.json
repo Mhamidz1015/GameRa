@@ -4792,8 +4792,8 @@
     },
     "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
       "type": "project",
-      "path": "../../src/Modules/Games/GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj",
-      "msbuildProject": "../../src/Modules/Games/GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj"
+      "path": "../../src/Modules/Games/GameRa.Modules.Games.IntegrationEvents/GameRa.Modules.Games.IntegrationEvents.csproj",
+      "msbuildProject": "../../src/Modules/Games/GameRa.Modules.Games.IntegrationEvents/GameRa.Modules.Games.IntegrationEvents.csproj"
     },
     "GameRa.Modules.Games.Presentation/1.0.0": {
       "type": "project",
@@ -4837,8 +4837,8 @@
     },
     "GameRa.Modules.Store.IntegrationEvents/1.0.0": {
       "type": "project",
-      "path": "../../src/Modules/Store/GameRa.Modules.Store.integrationEvents/GameRa.Modules.Store.integrationEvents.csproj",
-      "msbuildProject": "../../src/Modules/Store/GameRa.Modules.Store.integrationEvents/GameRa.Modules.Store.integrationEvents.csproj"
+      "path": "../../src/Modules/Store/GameRa.Modules.Store.IntegrationEvents/GameRa.Modules.Store.IntegrationEvents.csproj",
+      "msbuildProject": "../../src/Modules/Store/GameRa.Modules.Store.IntegrationEvents/GameRa.Modules.Store.IntegrationEvents.csproj"
     },
     "GameRa.Modules.Store.Presentation/1.0.0": {
       "type": "project",
@@ -4862,8 +4862,8 @@
     },
     "GameRa.Modules.Users.IntegrationEvents/1.0.0": {
       "type": "project",
-      "path": "../../src/Modules/User/GameRa.Modules.Users.integrationEvents/GameRa.Modules.Users.integrationEvents.csproj",
-      "msbuildProject": "../../src/Modules/User/GameRa.Modules.Users.integrationEvents/GameRa.Modules.Users.integrationEvents.csproj"
+      "path": "../../src/Modules/User/GameRa.Modules.Users.IntegrationEvents/GameRa.Modules.Users.IntegrationEvents.csproj",
+      "msbuildProject": "../../src/Modules/User/GameRa.Modules.Users.IntegrationEvents/GameRa.Modules.Users.IntegrationEvents.csproj"
     },
     "GameRa.Modules.Users.Presentation/1.0.0": {
       "type": "project",

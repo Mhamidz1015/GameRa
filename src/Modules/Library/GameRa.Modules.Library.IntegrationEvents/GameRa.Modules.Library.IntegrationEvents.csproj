@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Store\GameRa.Modules.Store.integrationEvents\GameRa.Modules.Store.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\..\Store\GameRa.Modules.Store.IntegrationEvents\GameRa.Modules.Store.IntegrationEvents.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Library.Application\GameRa.Modules.Library.Application.csproj" />
   </ItemGroup>
 

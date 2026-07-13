@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N/4FzJwVtko=",
+  "dgSpecHash": "N+uPaXe6hKw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.integrationEvents\\GameRa.Modules.Store.integrationEvents.csproj",
+  "projectFilePath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.IntegrationEvents\\GameRa.Modules.Store.IntegrationEvents.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ROSE PC\\.nuget\\packages\\dapper\\2.1.79\\dapper.2.1.79.nupkg.sha512",
     "C:\\Users\\ROSE PC\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
