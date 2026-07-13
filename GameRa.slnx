@@ -12,11 +12,11 @@
   </Folder>
   <Folder Name="/src/Modules/" />
   <Folder Name="/src/Modules/Games/">
-    <Project Path="src/Modules/Games/GameRa,Modules.Games.publicApi/GameRa,Modules.Games.publicApi.csproj" DisplayName="GameRa,Modules.Games.PublicApi" />
+    <Project Path="src/Modules/Games/GameRa,Modules.Games.publicApi/GameRa,Modules.Games.publicApi.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Application/GameRa.Modules.Games.Application.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Infrastructure/GameRa.Modules.Games.Infrastructure.csproj" />
-    <Project Path="src/Modules/Games/GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj" DisplayName="GameRa.Modules.Games.IntegrationEvents" />
+    <Project Path="src/Modules/Games/GameRa.Modules.Games.integrationEvents/GameRa.Modules.Games.integrationEvents.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj" />
   </Folder>
   <Folder Name="/src/Modules/Games/test/">
@@ -36,7 +36,7 @@
     <Project Path="src/Modules/Store/GameRa.Modules.Store.Application/GameRa.Modules.Store.Application.csproj" />
     <Project Path="src/Modules/Store/GameRa.Modules.Store.Domain/GameRa.Modules.Store.Domain.csproj" />
     <Project Path="src/Modules/Store/GameRa.Modules.Store.Infrastructure/GameRa.Modules.Store.Infrastructure.csproj" />
-    <Project Path="src/Modules/Store/GameRa.Modules.Store.integrationEvents/GameRa.Modules.Store.integrationEvents.csproj" DisplayName="GameRa.Modules.Store.IntegrationEvents" />
+    <Project Path="src/Modules/Store/GameRa.Modules.Store.integrationEvents/GameRa.Modules.Store.integrationEvents.csproj" />
     <Project Path="src/Modules/Store/GameRa.Modules.Store.Presentation/GameRa.Modules.Store.Presentation.csproj" />
     <Project Path="src/Modules/Store/GameRa.Modules.Store.PublicApi/GameRa.Modules.Store.PublicApi.csproj" />
   </Folder>

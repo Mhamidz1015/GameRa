@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Evently.Modules.Library.ArchitectureTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+448513fc1cfc70f5dcc627e8dbbdf40b260ca4f2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24ff7c5021df52ab17e7f9f03e399eee4db7c8cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Evently.Modules.Library.ArchitectureTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Evently.Modules.Library.ArchitectureTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
