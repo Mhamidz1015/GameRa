@@ -1053,7 +1053,8 @@
         },
         "runtime": {
           "GameRa.Modules.Games.IntegrationEvents.dll": {
-            "fileVersion": "0.0.0.0"
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -1166,7 +1167,7 @@
           "GameRa.Common.Application": "1.0.0"
         },
         "runtime": {
-          "GameRa.Modules.Store.integrationEvents.dll": {
+          "GameRa.Modules.Store.IntegrationEvents.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1228,7 +1229,7 @@
           "GameRa.Common.Application": "1.0.0"
         },
         "runtime": {
-          "GameRa.Modules.Users.integrationEvents.dll": {
+          "GameRa.Modules.Users.IntegrationEvents.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }

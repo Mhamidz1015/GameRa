@@ -103,7 +103,7 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 
 COPY --from=build /src/src/API/GameRa/modules.games.json .
-COPY --from=build /src/src/API/GameRa/modules.libraryItem.json .
+COPY --from=build /src/src/API/GameRa/modules.LibraryItem.json .
 COPY --from=build /src/src/API/GameRa/modules.store.json .
 COPY --from=build /src/src/API/GameRa/modules.users.json .
 

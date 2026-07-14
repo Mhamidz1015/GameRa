@@ -402,7 +402,8 @@
         },
         "runtime": {
           "GameRa.Modules.Games.IntegrationEvents.dll": {
-            "fileVersion": "0.0.0.0"
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -449,7 +450,8 @@
         },
         "runtime": {
           "GameRa.Modules.Users.IntegrationEvents.dll": {
-            "fileVersion": "0.0.0.0"
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       }

@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "GameRa.Modules.Games.integrationEvents/1.0.0": {
+      "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
         "dependencies": {
           "GameRa.Common.Application": "1.0.0"
         },
         "runtime": {
-          "GameRa.Modules.Games.integrationEvents.dll": {}
+          "GameRa.Modules.Games.IntegrationEvents.dll": {}
         }
       },
       "Dapper/2.1.79": {
@@ -163,7 +163,7 @@
     }
   },
   "libraries": {
-    "GameRa.Modules.Games.integrationEvents/1.0.0": {
+    "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

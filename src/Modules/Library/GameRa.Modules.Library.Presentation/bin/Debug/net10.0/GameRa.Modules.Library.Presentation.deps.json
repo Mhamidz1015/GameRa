@@ -426,7 +426,7 @@
           "GameRa.Common.Application": "1.0.0"
         },
         "runtime": {
-          "GameRa.Modules.Store.integrationEvents.dll": {
+          "GameRa.Modules.Store.IntegrationEvents.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
