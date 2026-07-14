@@ -22,7 +22,7 @@ services:
       - 5432:5432
 
   gamera.seq:
-    image: datalust/seq:latest
+    image: datalust/seq:2024.3
     container_name: GameRa.Seq
     environment:
       - ACCEPT_EULA=Y
