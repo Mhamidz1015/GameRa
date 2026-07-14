@@ -1326,7 +1326,7 @@
             },
             "MassTransit": {
               "target": "Package",
-              "version": "[9.1.2, )"
+              "version": "[8.3.6, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -1844,7 +1844,7 @@
           "dependencies": {
             "MassTransit": {
               "target": "Package",
-              "version": "[9.1.2, )"
+              "version": "[8.3.6, )"
             }
           },
           "imports": [
