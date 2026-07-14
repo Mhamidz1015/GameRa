@@ -37,3 +37,9 @@ services:
     ports:
       - 6379:6379
   
+  gamera.rabbitmq:
+    image: rabbitmq:3-management
+    container_name: GameRa.RabbitMQ
+    ports:
+     - "5672:5672"
+     - "15672:15672"
