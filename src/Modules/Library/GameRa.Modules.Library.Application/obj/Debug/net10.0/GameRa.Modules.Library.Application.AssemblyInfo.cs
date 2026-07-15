@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameRa.Modules.Library.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6225e551b4b662671493d8cd05ce32fcf201ed80")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e759d8441fd0274442b86e5d30f159a6a7fc6dd8")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameRa.Modules.Library.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameRa.Modules.Library.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

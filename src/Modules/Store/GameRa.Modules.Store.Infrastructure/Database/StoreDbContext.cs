@@ -1,5 +1,6 @@
-﻿using System.Data.Common;
-using GameRa.Common.Application.Data;
+﻿using GameRa.Common.Application.Data;
+using GameRa.Common.Infrastructure.Inbox;
+using GameRa.Common.Infrastructure.Outbox;
 using GameRa.Modules.Store.Application.Abstractions.Data;
 using GameRa.Modules.Store.Domain.Customers;
 using GameRa.Modules.Store.Domain.Games;
@@ -11,6 +12,7 @@ using GameRa.Modules.Store.Infrastructure.Orders;
 using GameRa.Modules.Store.Infrastructure.Payments;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
+using System.Data.Common;
 
 namespace GameRa.Modules.Store.Infrastructure.Database;
 
@@ -35,6 +37,10 @@ public sealed class StoreDbContext(DbContextOptions<StoreDbContext> options)
         modelBuilder.ApplyConfiguration(new GameConfiguration());
         modelBuilder.ApplyConfiguration(new OrderConfiguration());
         modelBuilder.ApplyConfiguration(new OrderItemConfiguration());
+        modelBuilder.ApplyConfiguration(new OutboxMessageConfiguration());
+        modelBuilder.ApplyConfiguration(new OutboxMessageConsumerConfiguration());
+        modelBuilder.ApplyConfiguration(new InboxMessageConfiguration());
+        modelBuilder.ApplyConfiguration(new InboxMessageConsumerConfiguration());
         modelBuilder.ApplyConfiguration(new PaymentConfiguration());
     }
 

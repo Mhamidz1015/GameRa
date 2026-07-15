@@ -1,9 +1,11 @@
-﻿using GameRa.Modules.Games.Infrastructure.Games;
+﻿using GameRa.Common.Application.Data;
+using GameRa.Common.Infrastructure.Inbox;
+using GameRa.Common.Infrastructure.Outbox;
+using GameRa.Modules.Games.Application.Abstractions.Data;
 using GameRa.Modules.Games.Domain.Categories;
 using GameRa.Modules.Games.Domain.Games;
+using GameRa.Modules.Games.Infrastructure.Games;
 using Microsoft.EntityFrameworkCore;
-using GameRa.Common.Application.Data;
-using GameRa.Modules.Games.Application.Abstractions.Data;
 
 namespace GameRa.Modules.Games.Infrastructure.Database;
 
@@ -17,5 +19,9 @@ public sealed class GamesDbContext(DbContextOptions<GamesDbContext> options) : D
         modelBuilder.HasDefaultSchema(Schemas.Games);
 
         modelBuilder.ApplyConfiguration(new GameConfiguration());
+        modelBuilder.ApplyConfiguration(new OutboxMessageConfiguration());
+        modelBuilder.ApplyConfiguration(new OutboxMessageConsumerConfiguration());
+        modelBuilder.ApplyConfiguration(new InboxMessageConfiguration());
+        modelBuilder.ApplyConfiguration(new InboxMessageConsumerConfiguration());
     }
 }
