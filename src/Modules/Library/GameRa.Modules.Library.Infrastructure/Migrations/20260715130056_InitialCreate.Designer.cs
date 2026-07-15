@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GameRa.Modules.Library.Infrastructure.Migrations
 {
     [DbContext(typeof(LibraryItemDbContext))]
-    [Migration("20260715125137_InitialCreate")]
+    [Migration("20260715130056_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace GameRa.Modules.Library.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasDefaultSchema("libraryItem")
+                .HasDefaultSchema("libraryitem")
                 .HasAnnotation("ProductVersion", "10.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
@@ -59,7 +59,7 @@ namespace GameRa.Modules.Library.Infrastructure.Migrations
                     b.HasKey("Id")
                         .HasName("pk_inbox_messages");
 
-                    b.ToTable("inbox_messages", "libraryItem");
+                    b.ToTable("inbox_messages", "libraryitem");
                 });
 
             modelBuilder.Entity("GameRa.Common.Infrastructure.Inbox.InboxMessageConsumer", b =>
@@ -76,7 +76,7 @@ namespace GameRa.Modules.Library.Infrastructure.Migrations
                     b.HasKey("InboxMessageId", "Name")
                         .HasName("pk_inbox_message_consumers");
 
-                    b.ToTable("inbox_message_consumers", "libraryItem");
+                    b.ToTable("inbox_message_consumers", "libraryitem");
                 });
 
             modelBuilder.Entity("GameRa.Common.Infrastructure.Outbox.OutboxMessage", b =>
@@ -112,7 +112,7 @@ namespace GameRa.Modules.Library.Infrastructure.Migrations
                     b.HasKey("Id")
                         .HasName("pk_outbox_messages");
 
-                    b.ToTable("outbox_messages", "libraryItem");
+                    b.ToTable("outbox_messages", "libraryitem");
                 });
 
             modelBuilder.Entity("GameRa.Common.Infrastructure.Outbox.OutboxMessageConsumer", b =>
@@ -129,7 +129,7 @@ namespace GameRa.Modules.Library.Infrastructure.Migrations
                     b.HasKey("OutboxMessageId", "Name")
                         .HasName("pk_outbox_message_consumers");
 
-                    b.ToTable("outbox_message_consumers", "libraryItem");
+                    b.ToTable("outbox_message_consumers", "libraryitem");
                 });
 
             modelBuilder.Entity("GameRa.Modules.Library.Domain.LibraryItems.LibraryItem", b =>
@@ -163,7 +163,7 @@ namespace GameRa.Modules.Library.Infrastructure.Migrations
                         .IsUnique()
                         .HasDatabaseName("ix_library_items_user_id_game_id");
 
-                    b.ToTable("library_items", "libraryItem");
+                    b.ToTable("library_items", "libraryitem");
                 });
 #pragma warning restore 612, 618
         }

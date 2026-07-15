@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameRa.Modules.Games.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbbb4f0c0e8c1ca6bb20291ff34e775bdb53f4b6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7589134deb046501dcb4415452ee19c12cc2326e")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameRa.Modules.Games.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameRa.Modules.Games.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

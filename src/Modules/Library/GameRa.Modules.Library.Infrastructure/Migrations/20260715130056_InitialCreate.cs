@@ -12,11 +12,11 @@ namespace GameRa.Modules.Library.Infrastructure.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.EnsureSchema(
-                name: "libraryItem");
+                name: "libraryitem");
 
             migrationBuilder.CreateTable(
                 name: "inbox_message_consumers",
-                schema: "libraryItem",
+                schema: "libraryitem",
                 columns: table => new
                 {
                     inbox_message_id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -29,7 +29,7 @@ namespace GameRa.Modules.Library.Infrastructure.Migrations
 
             migrationBuilder.CreateTable(
                 name: "inbox_messages",
-                schema: "libraryItem",
+                schema: "libraryitem",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -46,7 +46,7 @@ namespace GameRa.Modules.Library.Infrastructure.Migrations
 
             migrationBuilder.CreateTable(
                 name: "library_items",
-                schema: "libraryItem",
+                schema: "libraryitem",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -62,7 +62,7 @@ namespace GameRa.Modules.Library.Infrastructure.Migrations
 
             migrationBuilder.CreateTable(
                 name: "outbox_message_consumers",
-                schema: "libraryItem",
+                schema: "libraryitem",
                 columns: table => new
                 {
                     outbox_message_id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -75,7 +75,7 @@ namespace GameRa.Modules.Library.Infrastructure.Migrations
 
             migrationBuilder.CreateTable(
                 name: "outbox_messages",
-                schema: "libraryItem",
+                schema: "libraryitem",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -92,7 +92,7 @@ namespace GameRa.Modules.Library.Infrastructure.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "ix_library_items_user_id_game_id",
-                schema: "libraryItem",
+                schema: "libraryitem",
                 table: "library_items",
                 columns: new[] { "user_id", "game_id" },
                 unique: true);
@@ -103,23 +103,23 @@ namespace GameRa.Modules.Library.Infrastructure.Migrations
         {
             migrationBuilder.DropTable(
                 name: "inbox_message_consumers",
-                schema: "libraryItem");
+                schema: "libraryitem");
 
             migrationBuilder.DropTable(
                 name: "inbox_messages",
-                schema: "libraryItem");
+                schema: "libraryitem");
 
             migrationBuilder.DropTable(
                 name: "library_items",
-                schema: "libraryItem");
+                schema: "libraryitem");
 
             migrationBuilder.DropTable(
                 name: "outbox_message_consumers",
-                schema: "libraryItem");
+                schema: "libraryitem");
 
             migrationBuilder.DropTable(
                 name: "outbox_messages",
-                schema: "libraryItem");
+                schema: "libraryitem");
         }
     }
 }
