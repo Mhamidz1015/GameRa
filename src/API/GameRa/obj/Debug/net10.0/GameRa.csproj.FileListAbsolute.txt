@@ -210,7 +210,6 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\obj\Debug\net10.0\stat
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\obj\Debug\net10.0\GameRa.csproj.Up2Date
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\obj\Debug\net10.0\GameRa.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\obj\Debug\net10.0\refint\GameRa.dll

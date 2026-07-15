@@ -43,22 +43,22 @@
           }
         }
       },
-      "MassTransit/9.1.2": {
+      "MassTransit/8.3.6": {
         "dependencies": {
-          "MassTransit.Abstractions": "9.1.2"
+          "MassTransit.Abstractions": "8.3.6"
         },
         "runtime": {
-          "lib/net10.0/MassTransit.dll": {
-            "assemblyVersion": "9.1.2.0",
-            "fileVersion": "9.1.2.0"
+          "lib/net9.0/MassTransit.dll": {
+            "assemblyVersion": "8.3.6.0",
+            "fileVersion": "8.3.6.0"
           }
         }
       },
-      "MassTransit.Abstractions/9.1.2": {
+      "MassTransit.Abstractions/8.3.6": {
         "runtime": {
-          "lib/net10.0/MassTransit.Abstractions.dll": {
-            "assemblyVersion": "9.1.2.0",
-            "fileVersion": "9.1.2.0"
+          "lib/net9.0/MassTransit.Abstractions.dll": {
+            "assemblyVersion": "8.3.6.0",
+            "fileVersion": "8.3.6.0"
           }
         }
       },
@@ -179,7 +179,7 @@
       "GameRa.Common.Presentation/1.0.0": {
         "dependencies": {
           "GameRa.Common.Domain": "1.0.0",
-          "MassTransit": "9.1.2"
+          "MassTransit": "8.3.6"
         },
         "runtime": {
           "GameRa.Common.Presentation.dll": {
@@ -252,19 +252,19 @@
       "path": "fluentvalidation.dependencyinjectionextensions/12.1.1",
       "hashPath": "fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512"
     },
-    "MassTransit/9.1.2": {
+    "MassTransit/8.3.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7rHsXnvoQ+YpKBlWhkBPwkkbq9kK+mK2hro3Z7m1CfCqVUZPsDh/lmkuVkEXKsr+mY6fgG3rxQLaLTYVYaqsEw==",
-      "path": "masstransit/9.1.2",
-      "hashPath": "masstransit.9.1.2.nupkg.sha512"
+      "sha512": "sha512-iQQ02dUJuWlpNai3eDN7WmnstvmB2LAD8YN1i8OFT5BaNpGYYg3v0US3S6f1Zz7us+NnGHm6csg25Ak3z0H7Xg==",
+      "path": "masstransit/8.3.6",
+      "hashPath": "masstransit.8.3.6.nupkg.sha512"
     },
-    "MassTransit.Abstractions/9.1.2": {
+    "MassTransit.Abstractions/8.3.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-o2MymiTaxaJ0LUNm6W/8taD1u6Q/hyee1FwM/XvJ8l4IHgGBOVllPLuViYiI/XDu/t86ErjXOJqXrkOB/+ZrCg==",
-      "path": "masstransit.abstractions/9.1.2",
-      "hashPath": "masstransit.abstractions.9.1.2.nupkg.sha512"
+      "sha512": "sha512-F3R3EFPvUvpsiebnijmpvZ4IhSEcqkEJdrhlFuTOjzIUnMRYBgki/oDfFWj57Ki4b9yq0nilt4Q5bk11pC4ygg==",
+      "path": "masstransit.abstractions/8.3.6",
+      "hashPath": "masstransit.abstractions.8.3.6.nupkg.sha512"
     },
     "MediatR/14.1.0": {
       "type": "package",
