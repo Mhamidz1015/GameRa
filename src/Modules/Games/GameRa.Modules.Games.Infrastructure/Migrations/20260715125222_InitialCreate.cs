@@ -12,11 +12,11 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.EnsureSchema(
-                name: "Games");
+                name: "games");
 
             migrationBuilder.CreateTable(
                 name: "categories",
-                schema: "Games",
+                schema: "games",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -30,7 +30,7 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
 
             migrationBuilder.CreateTable(
                 name: "inbox_message_consumers",
-                schema: "Games",
+                schema: "games",
                 columns: table => new
                 {
                     inbox_message_id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -43,7 +43,7 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
 
             migrationBuilder.CreateTable(
                 name: "inbox_messages",
-                schema: "Games",
+                schema: "games",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -60,7 +60,7 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
 
             migrationBuilder.CreateTable(
                 name: "outbox_message_consumers",
-                schema: "Games",
+                schema: "games",
                 columns: table => new
                 {
                     outbox_message_id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -73,7 +73,7 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
 
             migrationBuilder.CreateTable(
                 name: "outbox_messages",
-                schema: "Games",
+                schema: "games",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -90,7 +90,7 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
 
             migrationBuilder.CreateTable(
                 name: "games",
-                schema: "Games",
+                schema: "games",
                 columns: table => new
                 {
                     id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -109,14 +109,14 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
                     table.ForeignKey(
                         name: "fk_games_categories_category_id",
                         column: x => x.category_id,
-                        principalSchema: "Games",
+                        principalSchema: "games",
                         principalTable: "categories",
                         principalColumn: "id");
                 });
 
             migrationBuilder.CreateIndex(
                 name: "ix_games_category_id",
-                schema: "Games",
+                schema: "games",
                 table: "games",
                 column: "category_id");
         }
@@ -126,27 +126,27 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
         {
             migrationBuilder.DropTable(
                 name: "games",
-                schema: "Games");
+                schema: "games");
 
             migrationBuilder.DropTable(
                 name: "inbox_message_consumers",
-                schema: "Games");
+                schema: "games");
 
             migrationBuilder.DropTable(
                 name: "inbox_messages",
-                schema: "Games");
+                schema: "games");
 
             migrationBuilder.DropTable(
                 name: "outbox_message_consumers",
-                schema: "Games");
+                schema: "games");
 
             migrationBuilder.DropTable(
                 name: "outbox_messages",
-                schema: "Games");
+                schema: "games");
 
             migrationBuilder.DropTable(
                 name: "categories",
-                schema: "Games");
+                schema: "games");
         }
     }
 }

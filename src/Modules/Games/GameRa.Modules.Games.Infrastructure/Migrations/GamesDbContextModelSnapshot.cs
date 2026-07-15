@@ -17,7 +17,7 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasDefaultSchema("Games")
+                .HasDefaultSchema("games")
                 .HasAnnotation("ProductVersion", "10.0.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
@@ -56,7 +56,7 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
                     b.HasKey("Id")
                         .HasName("pk_inbox_messages");
 
-                    b.ToTable("inbox_messages", "Games");
+                    b.ToTable("inbox_messages", "games");
                 });
 
             modelBuilder.Entity("GameRa.Common.Infrastructure.Inbox.InboxMessageConsumer", b =>
@@ -73,7 +73,7 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
                     b.HasKey("InboxMessageId", "Name")
                         .HasName("pk_inbox_message_consumers");
 
-                    b.ToTable("inbox_message_consumers", "Games");
+                    b.ToTable("inbox_message_consumers", "games");
                 });
 
             modelBuilder.Entity("GameRa.Common.Infrastructure.Outbox.OutboxMessage", b =>
@@ -109,7 +109,7 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
                     b.HasKey("Id")
                         .HasName("pk_outbox_messages");
 
-                    b.ToTable("outbox_messages", "Games");
+                    b.ToTable("outbox_messages", "games");
                 });
 
             modelBuilder.Entity("GameRa.Common.Infrastructure.Outbox.OutboxMessageConsumer", b =>
@@ -126,7 +126,7 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
                     b.HasKey("OutboxMessageId", "Name")
                         .HasName("pk_outbox_message_consumers");
 
-                    b.ToTable("outbox_message_consumers", "Games");
+                    b.ToTable("outbox_message_consumers", "games");
                 });
 
             modelBuilder.Entity("GameRa.Modules.Games.Domain.Categories.Category", b =>
@@ -148,7 +148,7 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
                     b.HasKey("Id")
                         .HasName("pk_categories");
 
-                    b.ToTable("categories", "Games");
+                    b.ToTable("categories", "games");
                 });
 
             modelBuilder.Entity("GameRa.Modules.Games.Domain.Games.Game", b =>
@@ -200,7 +200,7 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
                     b.HasIndex("CategoryId")
                         .HasDatabaseName("ix_games_category_id");
 
-                    b.ToTable("games", "Games");
+                    b.ToTable("games", "games");
                 });
 
             modelBuilder.Entity("GameRa.Modules.Games.Domain.Games.Game", b =>
