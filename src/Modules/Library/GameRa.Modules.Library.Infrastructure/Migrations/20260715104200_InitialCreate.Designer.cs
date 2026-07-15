@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace GameRa.Modules.Library.Infrastructure.Migrations
 {
     [DbContext(typeof(LibraryItemDbContext))]
-    [Migration("20260715095949_InitialCreate")]
+    [Migration("20260715104200_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
