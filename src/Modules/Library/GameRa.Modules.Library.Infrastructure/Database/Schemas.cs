@@ -2,5 +2,5 @@
 
 internal static class Schemas
 {
-    internal const string LibraryItem = "libraryItem";
+    internal const string LibraryItem = "libraryitem";
 }
