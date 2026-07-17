@@ -16,5 +16,8 @@
     <ProjectReference Include="..\GameRa.Modules.Users.Application\GameRa.Modules.Users.Application.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Users.Domain\GameRa.Modules.Users.Domain.csproj" />
   </ItemGroup>
+	<ItemGroup>
+		<InternalsVisibleTo Include="GameRa.Modules.Users.IntegrationTests" />
+	</ItemGroup>
 
 </Project>

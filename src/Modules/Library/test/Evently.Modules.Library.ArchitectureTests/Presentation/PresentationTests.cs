@@ -1,8 +1,8 @@
-﻿using Evently.Modules.Library.ArchitectureTests.Abstractions;
-using GameRa.Common.Application.MessagingEventBus;
+﻿using GameRa.Common.Application.MessagingEventBus;
+using GameRa.Modules.Library.ArchitectureTests.Abstractions;
 using NetArchTest.Rules;
 
-namespace Evently.Modules.Library.ArchitectureTests.Presentation;
+namespace GameRa.Modules.Library.ArchitectureTests.Presentation;
 
 public class PresentationTests : BaseTest
 {

@@ -21,6 +21,8 @@
   </Folder>
   <Folder Name="/src/Modules/Games/test/">
     <Project Path="src/Modules/Games/test/GameRa.Modules.Games.Architecture/GameRa.Modules.Games.ArchitectureTests.csproj" Id="8067ea1a-dbe7-4d6d-905f-111aaf9bba58" />
+    <Project Path="src/Modules/Games/test/GameRa.Modules.Games.IntegrationTests/GameRa.Modules.Games.IntegrationTests.csproj" Id="a999ed4d-9056-4ecc-9f2a-fd243adf253f" />
+    <Project Path="src/Modules/Games/test/GameRa.Modules.Games.UnitTests/GameRa.Modules.Games.UnitTests.csproj" Id="521e229b-5654-47f7-b3fe-25bd8eb53440" />
   </Folder>
   <Folder Name="/src/Modules/LibraryItem/">
     <Project Path="src/Modules/Library/GameRa.Modules.Library.Application/GameRa.Modules.Library.Application.csproj" />
@@ -30,7 +32,9 @@
     <Project Path="src/Modules/Library/GameRa.Modules.Library.Presentation/GameRa.Modules.Library.Presentation.csproj" />
   </Folder>
   <Folder Name="/src/Modules/LibraryItem/test/">
-    <Project Path="src/Modules/Library/test/Evently.Modules.Library.ArchitectureTests/Evently.Modules.Library.ArchitectureTests.csproj" Id="71eefb3b-fd9f-4fec-b467-44be8c67ada5" />
+    <Project Path="src/Modules/Library/test/Evently.Modules.Library.ArchitectureTests/GameRa.Modules.Library.ArchitectureTests.csproj" Id="71eefb3b-fd9f-4fec-b467-44be8c67ada5" />
+    <Project Path="src/Modules/Library/test/GameRa.Modules.Library.IntegrationTests/GameRa.Modules.Library.IntegrationTests.csproj" Id="01d0e64d-e473-4407-bda4-2612219193a7" />
+    <Project Path="src/Modules/Library/test/GameRa.Modules.Library.UnitTests/GameRa.Modules.Library.UnitTests.csproj" Id="836826ef-2be0-43bd-b6a8-dd5e8bb0a808" />
   </Folder>
   <Folder Name="/src/Modules/Store/">
     <Project Path="src/Modules/Store/GameRa.Modules.Store.Application/GameRa.Modules.Store.Application.csproj" />
@@ -42,16 +46,20 @@
   </Folder>
   <Folder Name="/src/Modules/Store/test/">
     <Project Path="src/Modules/Store/test/GameRa.Modules.Store.Architecture/GameRa.Modules.Store.ArchitectureTests.csproj" Id="5837dcc9-89a6-44b8-a2d4-7499548dd8dd" />
+    <Project Path="src/Modules/Store/test/GameRa.Modules.Store.IntegrationTests/GameRa.Modules.Store.IntegrationTests.csproj" Id="13997b47-0932-4954-be42-f77c360a2868" />
+    <Project Path="src/Modules/Store/test/GameRa.Modules.Store.UnitTests/GameRa.Modules.Store.UnitTests.csproj" Id="6061de7b-a56f-4801-84b9-6ccd5efdd8ba" />
   </Folder>
   <Folder Name="/src/Modules/User/">
     <Project Path="src/Modules/User/GameRa.Modules.Users.Application/GameRa.Modules.Users.Application.csproj" />
     <Project Path="src/Modules/User/GameRa.Modules.Users.Domain/GameRa.Modules.Users.Domain.csproj" />
     <Project Path="src/Modules/User/GameRa.Modules.Users.Infrastructure/GameRa.Modules.Users.Infrastructure.csproj" />
-    <Project Path="src/Modules/User/GameRa.Modules.Users.IntegrationEvents/GameRa.Modules.Users.IntegrationEvents.csproj" DisplayName="GameRa.Modules.Users.IntegrationEvents" />
+    <Project Path="src/Modules/User/GameRa.Modules.Users.IntegrationEvents/GameRa.Modules.Users.IntegrationEvents.csproj" />
     <Project Path="src/Modules/User/GameRa.Modules.Users.Presentation/GameRa.Modules.Users.Presentation.csproj" />
   </Folder>
   <Folder Name="/src/Modules/User/test/">
+    <Project Path="src/Modules/User/test/GameRa.Modules.User.UnitTests/GameRa.Modules.User.UnitTests.csproj" Id="763faa35-7d74-4c17-827b-7f105b44e99d" />
     <Project Path="src/Modules/User/test/GameRa.Modules.Users.Architecture.Tests/GameRa.Modules.Users.ArchitectureTests.csproj" />
+    <Project Path="src/Modules/User/test/GameRa.Modules.Users.IntegrationTests/GameRa.Modules.Users.IntegrationTests.csproj" Id="5f221613-5128-469c-9274-b356403f562a" />
   </Folder>
   <Folder Name="/Test/">
     <Project Path="test/GameRa.ArchitectureTests/GameRa.ArchitectureTests.csproj" />

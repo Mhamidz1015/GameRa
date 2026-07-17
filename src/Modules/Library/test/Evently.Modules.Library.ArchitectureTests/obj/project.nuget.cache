@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E237iKEHRZw=",
+  "dgSpecHash": "x3TMSzzwSF4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Library\\test\\Evently.Modules.Library.ArchitectureTests\\Evently.Modules.Library.ArchitectureTests.csproj",
+  "projectFilePath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Library\\test\\Evently.Modules.Library.ArchitectureTests\\GameRa.Modules.Library.ArchitectureTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ROSE PC\\.nuget\\packages\\aspnetcore.healthchecks.npgsql\\9.0.0\\aspnetcore.healthchecks.npgsql.9.0.0.nupkg.sha512",
     "C:\\Users\\ROSE PC\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",

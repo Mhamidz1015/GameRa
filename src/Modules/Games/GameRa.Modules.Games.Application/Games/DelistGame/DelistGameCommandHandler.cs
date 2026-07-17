@@ -22,7 +22,7 @@ internal sealed class DelistGameCommandHandler(
             return Result.Failure(GameErrors.NotFound(request.GameId));
         }
 
-        Result result = game.Delist(dateTimeProvider.UtcNow);
+        Result result = game.Delist();
 
         if (result.IsFailure)
         {

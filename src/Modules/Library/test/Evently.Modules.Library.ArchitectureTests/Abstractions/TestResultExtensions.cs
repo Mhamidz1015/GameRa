@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using NetArchTest.Rules;
 
-namespace Evently.Modules.Library.ArchitectureTests.Abstractions;
+namespace GameRa.Modules.Library.ArchitectureTests.Abstractions;
 
 internal static class TestResultExtensions
 {

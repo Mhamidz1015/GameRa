@@ -1,7 +1,7 @@
-﻿using Evently.Modules.Library.ArchitectureTests.Abstractions;
+﻿using GameRa.Modules.Library.ArchitectureTests.Abstractions;
 using NetArchTest.Rules;
 
-namespace Evently.Modules.Library.ArchitectureTests.Layers;
+namespace GameRa.Modules.Library.ArchitectureTests.Layers;
 
 public class LayerTests : BaseTest
 {

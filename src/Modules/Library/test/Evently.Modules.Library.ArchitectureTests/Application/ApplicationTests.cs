@@ -1,9 +1,9 @@
-﻿using Evently.Modules.Library.ArchitectureTests.Abstractions;
-using FluentValidation;
+﻿using FluentValidation;
 using GameRa.Common.Application.Messaging;
+using GameRa.Modules.Library.ArchitectureTests.Abstractions;
 using NetArchTest.Rules;
 
-namespace Evently.Modules.Library.ArchitectureTests.Application;
+namespace GameRa.Modules.Library.ArchitectureTests.Application;
 
 public class ApplicationTests : BaseTest
 {

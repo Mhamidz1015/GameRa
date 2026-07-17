@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
-using Evently.Modules.Library.ArchitectureTests.Abstractions;
 using FluentAssertions;
 using GameRa.Common.Domain.Abstractions;
+using GameRa.Modules.Library.ArchitectureTests.Abstractions;
 using NetArchTest.Rules;
 
-namespace Evently.Modules.Library.ArchitectureTests.Domain;
+namespace GameRa.Modules.Library.ArchitectureTests.Domain;
 
 public class DomainTests : BaseTest
 {

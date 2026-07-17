@@ -3,7 +3,7 @@
 namespace GameRa.Modules.Store.Application.Games.AddGame;
 
 public sealed record AddGameCommand(
-    Guid Id,
+        Guid Id,
         string Title,
         string Description,
         string Developer,

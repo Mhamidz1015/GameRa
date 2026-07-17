@@ -216,3 +216,4 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\obj\Debug\net10.0\refi
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\obj\Debug\net10.0\GameRa.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\obj\Debug\net10.0\GameRa.genruntimeconfig.cache
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\obj\Debug\net10.0\ref\GameRa.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

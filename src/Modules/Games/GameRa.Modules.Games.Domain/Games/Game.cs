@@ -60,7 +60,7 @@ public sealed class Game : Entity
 
         return Result.Success();
     }
-    public Result Delist(DateTime utcNow)
+    public Result Delist()
     {
         if (Status == GameStatus.Delisted)
         {
