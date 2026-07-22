@@ -5,7 +5,7 @@ using GameRa.Modules.Store.Application.Games.AddGame;
 using GameRa.Modules.Store.IntegrationTests.Abstractions;
 using MediatR;
 
-namespace GameRa.Modules.Store.IntegrationTests.Events;
+namespace GameRa.Modules.Store.IntegrationTests.Games;
 
 public class AddGameTests : BaseIntegrationTest
 {

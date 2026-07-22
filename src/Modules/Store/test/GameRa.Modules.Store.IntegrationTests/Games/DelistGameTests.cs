@@ -4,7 +4,7 @@ using GameRa.Modules.Games.Application.Games.DelistGame;
 using GameRa.Modules.Games.Domain.Games;
 using GameRa.Modules.Store.IntegrationTests.Abstractions;
 
-namespace GameRa.Modules.Store.IntegrationTests.Events;
+namespace GameRa.Modules.Store.IntegrationTests.Games;
 
 public class DelistGameTests : BaseIntegrationTest
 {
