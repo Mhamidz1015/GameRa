@@ -17,8 +17,7 @@ internal static class CommandHelpers
 
     internal static async Task<Guid> AddGameAsync(
         this ISender sender,
-        Guid categoryId,
-        DateTime? startsAtUtc = null)
+        Guid categoryId)
     {
         var faker = new Faker();
         Result<Guid> result = await sender.Send(

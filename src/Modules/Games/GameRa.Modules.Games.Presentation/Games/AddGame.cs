@@ -14,6 +14,7 @@ internal sealed class AddGame : IEndpoint
         app.MapPost("Games", async (Request request, ISender sender) =>
         {
             var command = new AddGameCommand(
+                request.CategoryId,
                 request.Title,
                 request.Description,
                 request.Developer,
@@ -41,5 +42,6 @@ internal sealed class AddGame : IEndpoint
         public decimal BasePrice { get; private set; }
 
         public string CoverImageUrl { get; private set; }
+        public Guid CategoryId { get; private set; }
     }
 }
