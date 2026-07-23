@@ -101,32 +101,6 @@ GameRa is designed as an Enterprise Backend application following modern softwar
                PostgreSQL
 ---
 
-# 🧩 Project Structure
-
-GameRa
-
-├── API
-│
-├── Modules
-│     ├── Users
-│     ├── Games
-│     ├── Store
-│     ├── Reviews
-│     └── ...
-│
-├── Common
-│
-├── BuildingBlocks
-│
-├── Docker
-│
-└── Shared
-
-Every module is designed to be isolated and communicates through Integration Events.
-
-
----
-
 # 🏗 Design Patterns
 
 The project implements several Enterprise Design Patterns.
