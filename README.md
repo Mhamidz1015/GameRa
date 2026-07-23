@@ -173,6 +173,7 @@ Repository
 ↓
 
 Database
+
 ---
 
 # 🔄 Event Flow
