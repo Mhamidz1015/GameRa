@@ -35,48 +35,64 @@ Rather than focusing only on business features, this project emphasizes clean ar
 
 # ✨ Features
 
-- User Authentication
-- JWT Authorization
-- ASP.NET Identity
+- User Authentication & Authorization
+- External Identity Provider Integration
+- JWT Authentication
+- OAuth2 & OpenID Connect
 - Game Management
 - Digital Store
 - Shopping Cart
-- Orders
-- Reviews
+- Orders Management
 - User Library
-- Redis Caching
+- Reviews
+- Redis Distributed Caching
+- Background Jobs
+- Quartz.NET Scheduler
 - Event-Driven Communication
+- Inbox / Outbox Pattern
+- Integration Events
+- Domain Events
 - Health Checks
-- API Documentation
+- Unit Testing
+- Integration Testing
 - Docker Support
-
 ---
 
 # 🏛 Architecture
 
-GameRa follows several enterprise architecture patterns:
+GameRa is designed as an Enterprise Backend application following modern software architecture principles.
+
+### Architectural Patterns
 
 - Modular Monolith
-- Domain Driven Design (DDD)
 - Clean Architecture
+- Domain-Driven Design (DDD)
 - CQRS
 - Vertical Slice Architecture
 - Event-Driven Architecture
+- Inbox / Outbox Pattern
 
+### Communication Patterns
+
+- Domain Events
+- Integration Events
+- Asynchronous Messaging
+
+---
                 HTTP Request
                      │
                      ▼
-             ASP.NET API Layer
+              ASP.NET Core API
                      │
                      ▼
-                 MediatR
-              Command / Query
+                  MediatR
+            Command / Query
                      │
                      ▼
              Application Layer
                      │
                      ▼
-              Domain Layer
+               Domain Layer
                      │
                      ▼
           Infrastructure Layer
@@ -105,21 +121,24 @@ GameRa
 ├── Docker
 │
 └── Shared
+
 Every module is designed to be isolated and communicates through Integration Events.
+
 
 ---
 
 # 🏗 Design Patterns
 
-The project applies several enterprise design patterns.
+The project implements several Enterprise Design Patterns.
 
 ## Architectural Patterns
 
 - Modular Monolith
-- Domain Driven Design
+- Clean Architecture
+- Domain-Driven Design (DDD)
 - CQRS
 - Vertical Slice Architecture
-- Clean Architecture
+- Event-Driven Architecture
 
 ## Design Patterns
 
@@ -129,56 +148,27 @@ The project applies several enterprise design patterns.
 - Mediator Pattern
 - Domain Events
 - Integration Events
+- Inbox Pattern
 - Outbox Pattern
 - Options Pattern
-
 ---
 
-# 📦 Technologies
+# ⚙ Tech Stack
 
-## Backend
-
-- ASP.NET Core
-- .NET 9
-- C#
-
-## Database
-
-- PostgreSQL
-- Entity Framework Core
-- Dapper
-
-## Authentication
-
-- ASP.NET Identity
-- JWT Authentication
-
-## Messaging
-
-- RabbitMQ
-- MassTransit
-
-## Cache
-
-- Redis
-
-## Validation
-
-- FluentValidation
-
-## Logging
-
-- Serilog
-
-## API
-
-- Swagger
-- REST API
-
-## Containerization
-
-- Docker
-- Docker Compose
+| Category | Technologies |
+|----------|--------------|
+| Runtime | .NET 10, ASP.NET Core |
+| Language | C# |
+| Architecture | Modular Monolith, Clean Architecture, DDD, CQRS, Vertical Slice |
+| ORM | Entity Framework Core, Dapper |
+| Database | PostgreSQL |
+| Cache | Redis |
+| Messaging | RabbitMQ, MassTransit |
+| Scheduling | Quartz.NET |
+| Authentication | Keycloak, ASP.NET Identity, JWT, OAuth2, OpenID Connect |
+| Testing | xUnit, Integration Tests |
+| Logging | Serilog |
+| Containerization | Docker, Docker Compose |
 
 ---
 
@@ -211,8 +201,9 @@ Repository
 Database
 ---
 
-# 📡 Event Driven Flow
+# 🔄 Event Flow
 
+```text
 Business Action
 
 ↓
@@ -225,7 +216,15 @@ Outbox
 
 ↓
 
+Background Processor
+
+↓
+
 RabbitMQ
+
+↓
+
+Inbox
 
 ↓
 
@@ -237,35 +236,48 @@ Integration Event
 
 ↓
 
-Another Module
+Target Module
+```
 ---
+# 🔐 Authentication & Identity
 
-# 🔐 Authentication
+Authentication and Authorization are implemented using an external Identity Provider.
 
-Authentication is implemented using:
+Technologies:
 
+- Keycloak
 - ASP.NET Identity
 - JWT Bearer Authentication
+- OAuth2
+- OpenID Connect
 
-The architecture separates authentication from business modules while keeping the system modular.
-
----
-
-# ⚡ Caching
-
-Redis is used to improve application performance and reduce unnecessary database queries.
+This approach separates identity management from business modules while improving scalability, maintainability and security.
 
 ---
+# 📡 Messaging
 
-# 📚 API Documentation
-Swagger is integrated for interactive API documentation.
+GameRa uses asynchronous communication between modules.
 
-https://localhost:5001/swagger
+Technologies:
+
+- RabbitMQ
+- MassTransit
+- Integration Events
+- Domain Events
+- Inbox Pattern
+- Outbox Pattern
+
 ---
+# ⏰ Background Jobs
 
-# 🐳 Running with Docker
+GameRa uses Quartz.NET to execute scheduled background jobs.
 
-docker compose up -d
+Typical scenarios include:
+
+- Processing Outbox Messages
+- Cleaning Expired Data
+- Scheduled Synchronization
+- Periodic Maintenance Jobs
 ---
 
 # 🚀 Running Project
@@ -283,16 +295,23 @@ Run application
 
 dotnet run
 ---
+# 🧪 Testing
 
-# 🛠 Engineering Principles
+GameRa follows different testing strategies to ensure code quality.
 
-- SOLID
-- DRY
-- KISS
-- Separation of Concerns
-- Dependency Injection
-- High Cohesion
-- Low Coupling
+### Unit Testing
+
+- xUnit
+- Domain Tests
+- Application Tests
+
+### Integration Testing
+
+- ASP.NET Core Integration Tests
+- End-to-End API Tests
+- Database Integration Tests
+
+The testing approach helps verify business logic, API endpoints and module interactions.
 
 ---
 
@@ -310,19 +329,44 @@ dotnet run
 - File Storage
 
 ---
+# 💾 Infrastructure
 
-# 📚 Learning Objectives
+- PostgreSQL
+- Redis
+- Docker
+- Docker Compose
+---
+# 🛠 Engineering Principles
 
-This project was built to practice and demonstrate:
+- SOLID
+- DRY
+- KISS
+- YAGNI
+- Separation of Concerns
+- Dependency Injection
+- High Cohesion
+- Low Coupling
+- Fail Fast
+---
+# 📚 Enterprise Concepts Demonstrated
 
-- Enterprise Backend Development
-- Domain Driven Design
+This project demonstrates the implementation of several enterprise backend concepts, including:
+
+- Domain-Driven Design (DDD)
 - Clean Architecture
 - Modular Monolith
 - CQRS
+- Vertical Slice Architecture
 - Event-Driven Architecture
-- Distributed Systems Concepts
-- Production-ready ASP.NET Core Applications
+- Domain Events
+- Integration Events
+- Inbox / Outbox Pattern
+- Asynchronous Messaging
+- Distributed Caching
+- Identity Provider Integration
+- Background Job Processing
+- Production-ready API Design
+- Unit & Integration Testing
 
 ---
 
