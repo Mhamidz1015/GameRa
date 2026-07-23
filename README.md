@@ -138,9 +138,9 @@ The project implements several Enterprise Design Patterns.
 | Database | PostgreSQL |
 | Cache | Redis |
 | Messaging | RabbitMQ, MassTransit |
-| Scheduling | Quartz.NET |
+| Background Processing | Quartz.NET |
 | Authentication | Keycloak, ASP.NET Identity, JWT, OAuth2, OpenID Connect |
-| Testing | xUnit, Integration Tests |
+| Testing | xUnit, FluentAssertions, Bogus, Testcontainers for .NET |
 | Logging | Serilog |
 | Containerization | Docker, Docker Compose |
 
@@ -314,9 +314,6 @@ The testing approach helps verify business logic, API endpoints and module inter
 # 🛠 Engineering Principles
 
 - SOLID
-- DRY
-- KISS
-- YAGNI
 - Separation of Concerns
 - Dependency Injection
 - High Cohesion
