@@ -44,7 +44,6 @@ Rather than focusing only on business features, this project emphasizes clean ar
 - Shopping Cart
 - Orders Management
 - User Library
-- Reviews
 - Redis Distributed Caching
 - Background Jobs
 - Quartz.NET Scheduler
