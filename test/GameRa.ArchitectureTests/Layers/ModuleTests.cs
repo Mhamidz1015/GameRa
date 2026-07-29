@@ -1,7 +1,7 @@
 ﻿using GameRa.ArchitectureTests.Abstractions;
 using GameRa.Modules.Games.Infrastructure;
 using GameRa.Modules.Library.Infrastructure;
-using GameRa.Modules.Store.Domain.Games;
+using GameRa.Modules.Games.Domain.Games;
 using GameRa.Modules.Store.Domain.Orders;
 using GameRa.Modules.Store.Infrastructure;
 using GameRa.Modules.Users.Domain.Users;

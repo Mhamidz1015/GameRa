@@ -1,4 +1,6 @@
 ﻿using GameRa.Common.Application.Data;
+using GameRa.Common.Application.Messaging;
+using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Games.Application.Abstractions.Data;
 using GameRa.Modules.Games.Domain.Games;
 using MediatR;
@@ -6,11 +8,11 @@ using MediatR;
 namespace GameRa.Modules.Games.Application.Games.AddGame;
 
 internal sealed class AddGameCommandHandler(IGameRepository GameRepository, IUnitOfWork unitOfWork)
-    : IRequestHandler<AddGameCommand, Guid>
+    : ICommandHandler<AddGameCommand, Guid>
 {
-    public async Task<Guid> Handle(AddGameCommand request, CancellationToken cancellationToken)
+    public async Task<Result<Guid>> Handle(AddGameCommand request, CancellationToken cancellationToken)
     {
-        var game = Game.Create(
+        Result<Game> result = Game.Create(
             request.Title,
             request.Description,
             request.Developer,
@@ -18,10 +20,12 @@ internal sealed class AddGameCommandHandler(IGameRepository GameRepository, IUni
             request.BasePrice,
             request.CoverImageUrl);
 
-        GameRepository.Insert(game);
+        if (result.IsFailure)
+            return Result.Failure<Guid>(result.Error);
 
+        GameRepository.Insert(result.Value);
         await unitOfWork.SaveChangesAsync(cancellationToken);
 
-        return game.Id;
+        return result.Value.Id;
     }
 }

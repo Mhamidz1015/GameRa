@@ -10,4 +10,8 @@ public static class CategoryErrors
     public static readonly Error AlreadyArchived = Error.Problem(
         "Categories.AlreadyArchived",
         "The category was already archived");
+
+    public static readonly Error NameIsEmpty = Error.Problem(
+        "Categories.NameIsEmpty",
+        "The category name cannot be empty");
 }

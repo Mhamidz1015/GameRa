@@ -233,5 +233,5 @@ public class GameTests : BaseTest
             DateTime.UtcNow.AddMonths(3),
             Faker.Random.Decimal(1, 200),
             Faker.Internet.Url()
-        );
+        ).Value;
 }

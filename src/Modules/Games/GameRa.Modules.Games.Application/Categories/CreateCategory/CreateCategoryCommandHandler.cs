@@ -11,12 +11,14 @@ internal sealed class CreateCategoryCommandHandler(ICategoryRepository categoryR
 {
     public async Task<Result<Guid>> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
     {
-        var category = Category.Create(request.Name);
+        Result<Category> result = Category.Create(request.Name);
 
-        categoryRepository.Insert(category);
+        if (result.IsFailure)
+            return Result.Failure<Guid>(result.Error);
 
+        categoryRepository.Insert(result.Value);
         await unitOfWork.SaveChangesAsync(cancellationToken);
 
-        return category.Id;
+        return result.Value.Id;
     }
 }

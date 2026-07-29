@@ -18,7 +18,6 @@ internal sealed class GetGamesQueryHandler(IDbConnectionFactory dbConnectionFact
         const string sql =
             $"""
              SELECT
-                 SELECT
                  id AS {nameof(GameResponse.Id)},
                  title AS {nameof(GameResponse.Title)},
                  description AS {nameof(GameResponse.Description)},

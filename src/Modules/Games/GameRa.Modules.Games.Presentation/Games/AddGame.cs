@@ -1,4 +1,5 @@
-﻿using GameRa.Common.Presentation.Endpoints;
+﻿using GameRa.Common.Domain.Abstractions;
+using GameRa.Common.Presentation.Endpoints;
 using GameRa.Modules.Games.Application.Games.AddGame;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -22,7 +23,11 @@ internal sealed class AddGame : IEndpoint
                 request.BasePrice,
                 request.CoverImageUrl);
 
-            Guid gameId = await sender.Send(command);
+            Result<Guid> result = await sender.Send(command);
+            if (result.IsFailure)
+                return Results.BadRequest(result.Error);
+
+            Guid gameId = result.Value;
 
             return Results.Ok(gameId);
         })

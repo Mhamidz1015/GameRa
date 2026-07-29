@@ -8,6 +8,17 @@ namespace GameRa.Modules.Games.UnitTests.Categories;
 public class CategoryTests : BaseTest
 {
     [Fact]
+    public void Create_ShouldReturnFailure_WhenNameIsEmpty()
+    {
+        // Act
+        Result<Category> result = Category.Create(string.Empty);
+
+        // Assert
+        result.IsFailure.Should().BeTrue();
+        result.Error.Should().Be(CategoryErrors.NameIsEmpty);
+    }
+
+    [Fact]
     public void Create_ShouldRaiseDomainEvent_WhenCategoryIsCreated()
     {
         //Act

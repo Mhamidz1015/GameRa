@@ -24,28 +24,37 @@ public sealed class Game : Entity
 
     public GameStatus Status { get; private set; }
 
-    public static Game Create(
-        string title,
-        string description,
-        string developer,
-        DateTime releaseDate,
-        decimal baseprice,
-        string Coverimageurl)
+    public static Result<Game> Create(
+    string title,
+    string description,
+    string developer,
+    DateTime releaseDate,
+    decimal basePrice,
+    string coverImageUrl)
     {
-        var Game = new Game
+        if (string.IsNullOrWhiteSpace(title))
+            return Result.Failure<Game>(GameErrors.TitleIsEmpty);
+
+        if (string.IsNullOrWhiteSpace(description))
+            return Result.Failure<Game>(GameErrors.DescriptionIsEmpty);
+
+        if (basePrice < 0)
+            return Result.Failure<Game>(GameErrors.PriceCannotBeNegative);
+
+        var game = new Game
         {
             Id = Guid.NewGuid(),
             Title = title,
             Description = description,
             Developer = developer,
             ReleaseDate = releaseDate,
-            BasePrice = baseprice,
-            CoverImageUrl = Coverimageurl
+            BasePrice = basePrice,
+            CoverImageUrl = coverImageUrl
         };
 
-        Game.Raise(new GameAddedDomainEvent(Game.Id));
+        game.Raise(new GameAddedDomainEvent(game.Id));
 
-        return Game;
+        return Result.Success(game);
     }
     public Result Release()
     {

@@ -1,4 +1,4 @@
-﻿using MediatR;
+﻿using GameRa.Common.Application.Messaging;
 
 namespace GameRa.Modules.Games.Application.Games.AddGame;
 
@@ -9,4 +9,4 @@ public sealed record AddGameCommand(
     string Developer,
     DateTime ReleaseDate,
     decimal BasePrice,
-    string CoverImageUrl) : IRequest<Guid>;
+    string CoverImageUrl) : ICommand<Guid>;
