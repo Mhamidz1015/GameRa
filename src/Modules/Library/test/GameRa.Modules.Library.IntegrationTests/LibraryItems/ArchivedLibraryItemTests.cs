@@ -8,7 +8,6 @@ using Xunit;
 
 namespace GameRa.Modules.Library.IntegrationTests.LibraryItems;
 
-[Collection(nameof(IntegrationTestCollection))]
 public class ArchivedLibraryItemTests : BaseIntegrationTest
 {
     protected ArchivedLibraryItemTests(IntegrationTestWebAppFactory factory) : base(factory)

@@ -19,6 +19,7 @@ internal sealed class GetGamesQueryHandler(IDbConnectionFactory dbConnectionFact
             $"""
              SELECT
                  id AS {nameof(GameResponse.Id)},
+                 category_id AS {nameof(GameResponse.CategoryId)},
                  title AS {nameof(GameResponse.Title)},
                  description AS {nameof(GameResponse.Description)},
                  developer AS {nameof(GameResponse.Developer)},

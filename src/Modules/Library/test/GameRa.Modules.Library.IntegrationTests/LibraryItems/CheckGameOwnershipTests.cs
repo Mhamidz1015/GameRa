@@ -7,7 +7,6 @@ using Xunit;
 
 namespace GameRa.Modules.Library.IntegrationTests.LibraryItems;
 
-[Collection(nameof(IntegrationTestCollection))]
 public class CheckGameOwnershipTests : BaseIntegrationTest
 {
     protected CheckGameOwnershipTests(IntegrationTestWebAppFactory factory) : base(factory)

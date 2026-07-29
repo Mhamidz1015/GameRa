@@ -28,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\API\GameRa\GameRa.csproj" />
     <ProjectReference Include="..\..\..\Games\GameRa.Modules.Games.Application\GameRa.Modules.Games.Application.csproj" />
     <ProjectReference Include="..\..\GameRa.Modules.Store.Application\GameRa.Modules.Store.Application.csproj" />
     <ProjectReference Include="..\..\GameRa.Modules.Store.Infrastructure\GameRa.Modules.Store.Infrastructure.csproj" />

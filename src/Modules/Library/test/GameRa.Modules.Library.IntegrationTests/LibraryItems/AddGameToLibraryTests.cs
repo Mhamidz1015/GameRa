@@ -6,7 +6,6 @@ using GameRa.Modules.Library.IntegrationTests.Abstractions;
 
 namespace GameRa.Modules.Library.IntegrationTests.LibraryItems;
 
-[Collection(nameof(IntegrationTestCollection))]
 public class AddGameToLibraryTests : BaseIntegrationTest
 {
     protected AddGameToLibraryTests(IntegrationTestWebAppFactory factory) : base(factory)

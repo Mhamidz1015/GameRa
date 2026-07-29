@@ -28,6 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\API\GameRa\GameRa.csproj" />
     <ProjectReference Include="..\..\GameRa.Modules.Library.Infrastructure\GameRa.Modules.Library.Infrastructure.csproj" />
   </ItemGroup>
 

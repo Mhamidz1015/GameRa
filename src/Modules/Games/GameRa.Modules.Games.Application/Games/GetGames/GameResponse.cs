@@ -2,6 +2,7 @@
 
 public sealed record GameResponse(
     Guid Id,
+    Guid CategoryId,
     string Title,
     string Description,
     string Developer,

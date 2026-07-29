@@ -523,3 +523,4 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\bin\Debug\net10.0\refs
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\bin\Debug\net10.0\refs\System.Xml.XPath.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\bin\Debug\net10.0\refs\System.Xml.XPath.XDocument.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\bin\Debug\net10.0\refs\WindowsBase.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
