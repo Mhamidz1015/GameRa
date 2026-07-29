@@ -29,7 +29,7 @@ public class GameTests : BaseTest
             Faker.Random.Decimal(1, 200),
             Faker.Internet.Url());
 
-        Game game = result.Value;
+
 
         // Assert
         result.Error.Should().Be(GameErrors.TitleIsEmpty);
@@ -50,7 +50,7 @@ public class GameTests : BaseTest
             Faker.Random.Decimal(1, 200),
             Faker.Internet.Url());
 
-        Game game = result.Value;
+
 
         // Assert
         result.Error.Should().Be(GameErrors.DescriptionIsEmpty);
@@ -72,7 +72,6 @@ public class GameTests : BaseTest
             basePrice,
             Faker.Internet.Url());
 
-        Game game = result.Value;
 
         // Assert
         result.Error.Should().Be(GameErrors.PriceCannotBeNegative);
@@ -94,7 +93,6 @@ public class GameTests : BaseTest
             Faker.Random.Decimal(1, 200),
             Faker.Internet.Url());
 
-        Game game = result.Value;
 
         // Assert
         GameAddedDomainEvent domainEvent =
@@ -119,7 +117,7 @@ public class GameTests : BaseTest
         Result Releaseresult = game.Release();
 
         // Assert
-        result.Error.Should().Be(GameErrors.Released);
+        Releaseresult.Error.Should().Be(GameErrors.Released);
     }
 
     [Fact]
@@ -136,7 +134,7 @@ public class GameTests : BaseTest
         Result Releaseresult = game.Release();
 
         // Assert
-        result.Error.Should().Be(GameErrors.Released);
+        Releaseresult.Error.Should().Be(GameErrors.Released);
     }
 
     // ─────────────────────────────────────────────
@@ -178,7 +176,7 @@ public class GameTests : BaseTest
         Result Delistresult = game.Delist();
 
         // Assert
-        result.Error.Should().Be(GameErrors.AlreadyDelisted);
+        Delistresult.Error.Should().Be(GameErrors.AlreadyDelisted);
     }
 
     // ─────────────────────────────────────────────

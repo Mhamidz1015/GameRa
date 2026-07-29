@@ -39,7 +39,7 @@ public class OrderTests : BaseTest
         Result orderesult = order.CompleteOrder();
 
         // Assert
-        result.Error.Should().Be(OrderErrors.OrderHasIssues);
+        orderesult.Error.Should().Be(OrderErrors.OrderHasIssues);
     }
 
     [Fact]

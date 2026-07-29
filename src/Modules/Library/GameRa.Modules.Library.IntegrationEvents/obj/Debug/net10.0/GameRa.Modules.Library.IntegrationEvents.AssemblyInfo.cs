@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameRa.Modules.Library.IntegrationEvents")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1b7861d75d10fa072cfe62fdab7bc4c956ad231")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fcc89436e26f896383a42f0bd073c112c5a3aa2d")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameRa.Modules.Library.IntegrationEvents")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameRa.Modules.Library.IntegrationEvents")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

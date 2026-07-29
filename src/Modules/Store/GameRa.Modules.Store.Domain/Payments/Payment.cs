@@ -25,7 +25,7 @@ public sealed class Payment : Entity
 
     public DateTime? RefundedAtUtc { get; private set; }
 
-    public static Payment Create(Order order, Guid transactionId, decimal amount, string currency)
+    public static Result<Payment> Create(Order order, Guid transactionId, decimal amount, string currency)
     {
         var payment = new Payment
         {
@@ -39,12 +39,12 @@ public sealed class Payment : Entity
 
         payment.Raise(new PaymentCreatedDomainEvent(payment.Id));
 
-        return payment;
+        return Result.Success(payment);
     }
 
     public Result Refund(decimal refundAmount)
     {
-        if (AmountRefunded.HasValue && AmountRefunded == Amount)
+        if (AmountRefunded.HasValue && AmountRefunded >= Amount)
         {
             return Result.Failure(PaymentErrors.AlreadyRefunded);
         }
@@ -54,17 +54,12 @@ public sealed class Payment : Entity
             return Result.Failure(PaymentErrors.NotEnoughFunds);
         }
 
-        AmountRefunded += refundAmount;
+        AmountRefunded = (AmountRefunded ?? 0) + refundAmount;
 
         if (Amount == AmountRefunded)
         {
             Raise(new PaymentRefundedDomainEvent(Id, TransactionId, refundAmount));
         }
-        else
-        {
-            Raise(new PaymentPartiallyRefundedDomainEvent(Id, TransactionId, refundAmount));
-        }
-
         return Result.Success();
     }
 }

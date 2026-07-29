@@ -58,13 +58,16 @@ internal sealed class CreateOrderCommandHandler(
 
         PaymentResponse paymentResponse = await paymentService.ChargeAsync(order.TotalPrice, order.Currency);
 
-        var payment = Payment.Create(
+        Result<Payment> paymentResult = Payment.Create(
             order,
             paymentResponse.TransactionId,
             paymentResponse.Amount,
             paymentResponse.Currency);
 
-        paymentRepository.Insert(payment);
+        if (paymentResult.IsFailure)
+            return Result.Failure(paymentResult.Error);
+
+        paymentRepository.Insert(paymentResult.Value);
 
         await unitOfWork.SaveChangesAsync(cancellationToken);
 

@@ -48,7 +48,7 @@ public class UserTests : BaseTest
         Modules.Users.Domain.Users.User user = CreateDefaultUser();
 
         // Act
-        user.Update(user.Username);
+        user.Update(Faker.Internet.UserName());
 
         // Assert
         UserProfileUpdatedDomainEvent domainEvent =

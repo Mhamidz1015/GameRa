@@ -48,7 +48,7 @@ public class LibraryItemsTests : BaseTest
         Result libraryItemResult = libraryItem.Archive();
 
         // Assert
-        result.Error.Should().Be(LibraryItemErrors.AlreadyArchived);
+        libraryItemResult.Error.Should().Be(LibraryItemErrors.AlreadyArchived);
     }
 
     // ─────────────────────────────────────────────

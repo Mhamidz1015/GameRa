@@ -14,8 +14,11 @@ public sealed class Category : Entity
 
     public bool IsArchived { get; private set; }
 
-    public static Category Create(string name)
+    public static Result<Category> Create(string name)
     {
+        if (string.IsNullOrWhiteSpace(name))
+            return Result.Failure<Category>(CategoryErrors.NameIsEmpty);
+
         var category = new Category
         {
             Id = Guid.NewGuid(),
@@ -25,7 +28,7 @@ public sealed class Category : Entity
 
         category.Raise(new CategoryCreatedDomainEvent(category.Id));
 
-        return category;
+        return Result.Success(category);
     }
 
     public void Archive()
