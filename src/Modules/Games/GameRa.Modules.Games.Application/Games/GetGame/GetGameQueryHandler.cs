@@ -1,15 +1,19 @@
-﻿using System.Data.Common;
-using Dapper;
+﻿using Dapper;
 using GameRa.Common.Application.Data;
+using GameRa.Common.Application.Messaging;
+using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Games.Domain.Games;
 using MediatR;
+using System.Data.Common;
 
 namespace GameRa.Modules.Games.Application.Games.GetGame;
 
 internal sealed class GetGameQueryHandler(IDbConnectionFactory dbConnectionFactory)
-    : IRequestHandler<GetGameQuery, GameResponse?>
+   : IQueryHandler<GetGameQuery, GameResponse?>
 {
-    public async Task<GameResponse?> Handle(GetGameQuery request, CancellationToken cancellationToken)
+    public async Task<Result<GameResponse?>> Handle(
+        GetGameQuery request,
+        CancellationToken cancellationToken)
     {
         await using DbConnection connection = await dbConnectionFactory.OpenConnectionAsync();
 
@@ -20,15 +24,21 @@ internal sealed class GetGameQueryHandler(IDbConnectionFactory dbConnectionFacto
                  title AS {nameof(GameResponse.Title)},
                  description AS {nameof(GameResponse.Description)},
                  developer AS {nameof(GameResponse.Developer)},
-                 releaseDate AS {nameof(GameResponse.ReleaseDate)},
-                 baseprice AS {nameof(GameResponse.Baseprice)},
-                 CoverImageUrl AS {nameof(GameResponse.Coverimgageurl)}
+                 release_date AS {nameof(GameResponse.ReleaseDate)},
+                 base_price AS {nameof(GameResponse.Baseprice)},
+                 cover_image_url AS {nameof(GameResponse.Coverimgageurl)}
              FROM Games.Games
-             WHERE id = GameId
+             WHERE id = @GameId
              """;
 
-        GameResponse? game = await connection.QuerySingleOrDefaultAsync<GameResponse>(sql, request);
+        GameResponse? game =await connection.QuerySingleOrDefaultAsync<GameResponse>(sql, request);
 
-        return game;
+        if (game is null)
+        {
+            return Result.Failure<GameResponse?>(
+                GameErrors.NotFound(request.GameId));
+        }
+
+        return Result.Success<GameResponse?>(game);
     }
 }

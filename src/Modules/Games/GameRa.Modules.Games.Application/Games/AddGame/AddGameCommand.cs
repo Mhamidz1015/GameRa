@@ -1,4 +1,5 @@
 ﻿using GameRa.Common.Application.Messaging;
+using GameRa.Modules.Games.Domain.Categories;
 
 namespace GameRa.Modules.Games.Application.Games.AddGame;
 

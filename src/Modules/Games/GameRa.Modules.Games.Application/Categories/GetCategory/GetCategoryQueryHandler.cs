@@ -20,7 +20,7 @@ internal sealed class GetCategoryQueryHandler(IDbConnectionFactory dbConnectionF
                  id AS {nameof(CategoryResponse.Id)},
                  name AS {nameof(CategoryResponse.Name)},
                  is_archived AS {nameof(CategoryResponse.IsArchived)}
-             FROM events.categories
+             FROM games.categories
              WHERE id = @CategoryId
              """;
 

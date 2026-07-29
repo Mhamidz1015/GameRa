@@ -6,6 +6,7 @@ internal sealed class AddGameCommandValidator : AbstractValidator<AddGameCommand
 {
     public AddGameCommandValidator()
     {
+        RuleFor(c => c.CategoryId).NotEmpty();
         RuleFor(c => c.Title).NotEmpty();
         RuleFor(c => c.Description).NotEmpty();
         RuleFor(c => c.Developer).NotEmpty();

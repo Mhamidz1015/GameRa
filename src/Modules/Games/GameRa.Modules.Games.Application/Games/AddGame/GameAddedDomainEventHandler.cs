@@ -28,6 +28,7 @@ internal sealed class GameAddedDomainEventHandler(ISender sender, IEventBus even
                 domainEvent.Id,
                 domainEvent.OccurredOnUtc,
                 result.Value.Id,
+                result.Value.CategoryId,
                 result.Value.Title,
                 result.Value.Description,
                 result.Value.Developer,

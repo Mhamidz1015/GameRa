@@ -162,7 +162,7 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
                         .HasColumnType("numeric")
                         .HasColumnName("base_price");
 
-                    b.Property<Guid?>("CategoryId")
+                    b.Property<Guid>("CategoryId")
                         .HasColumnType("uuid")
                         .HasColumnName("category_id");
 
@@ -208,6 +208,8 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
                     b.HasOne("GameRa.Modules.Games.Domain.Categories.Category", null)
                         .WithMany()
                         .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
                         .HasConstraintName("fk_games_categories_category_id");
                 });
 #pragma warning restore 612, 618

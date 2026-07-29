@@ -21,7 +21,7 @@ public class AddGamesTests : BaseIntegrationTest
         var categoryId = Guid.NewGuid();
 
         var command = new AddGameCommand(
-            categoryId,
+                categoryId,
                 Faker.Commerce.ProductName(),
                 Faker.Lorem.Sentence(),
                 Faker.Company.CompanyName(),

@@ -2,6 +2,7 @@
 using Bogus.DataSets;
 using FluentAssertions;
 using GameRa.Common.Domain.Abstractions;
+using GameRa.Modules.Games.Domain.Categories;
 using GameRa.Modules.Games.Domain.Games;
 using GameRa.Modules.Games.UnitTests.Abstractions;
 
@@ -22,6 +23,7 @@ public class GameTests : BaseTest
 
         // Act
         Result<Game> result = Game.Create(
+            Guid.NewGuid(),
             title,
             Faker.Lorem.Sentence(),
             Faker.Company.CompanyName(),
@@ -43,6 +45,7 @@ public class GameTests : BaseTest
 
         // Act
         Result<Game> result = Game.Create(
+            Guid.NewGuid(),
             Faker.Commerce.ProductName(),
             description,
             Faker.Company.CompanyName(),
@@ -65,6 +68,7 @@ public class GameTests : BaseTest
 
         // Act
         Result<Game> result = Game.Create(
+            Guid.NewGuid(),
             Faker.Commerce.ProductName(),
             Faker.Lorem.Sentence(),
             Faker.Company.CompanyName(),
@@ -86,6 +90,7 @@ public class GameTests : BaseTest
     {
         // Act
         Result<Game> result = Game.Create(
+            Guid.NewGuid(),
             Faker.Commerce.ProductName(),
             Faker.Lorem.Sentence(),
             Faker.Company.CompanyName(),
@@ -225,6 +230,7 @@ public class GameTests : BaseTest
 
     private Game CreateDefaultGame() =>
         Game.Create(
+            Guid.NewGuid(),
             Faker.Commerce.ProductName(),
             Faker.Lorem.Sentence(),
             Faker.Company.CompanyName(),

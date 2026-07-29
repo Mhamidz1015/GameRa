@@ -22,7 +22,7 @@ internal sealed class GetCategoriesQueryHandler(IDbConnectionFactory dbConnectio
                  id AS {nameof(CategoryResponse.Id)},
                  name AS {nameof(CategoryResponse.Name)},
                  is_archived AS {nameof(CategoryResponse.IsArchived)}
-             FROM events.categories
+             FROM games.categories
              """;
 
         List<CategoryResponse> categories = (await connection.QueryAsync<CategoryResponse>(sql, request)).AsList();

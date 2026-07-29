@@ -1,4 +1,5 @@
 ﻿using GameRa.Common.Domain.Abstractions;
+using GameRa.Modules.Games.Domain.Categories;
 
 namespace GameRa.Modules.Games.Domain.Games;
 
@@ -23,14 +24,16 @@ public sealed class Game : Entity
     public string CoverImageUrl { get; private set; }
 
     public GameStatus Status { get; private set; }
+    public Guid CategoryId { get; private set; }
 
     public static Result<Game> Create(
-    string title,
-    string description,
-    string developer,
-    DateTime releaseDate,
-    decimal basePrice,
-    string coverImageUrl)
+        Guid categoryId,
+        string title,
+        string description,
+        string developer,
+        DateTime releaseDate,
+        decimal basePrice,
+        string coverImageUrl)
     {
         if (string.IsNullOrWhiteSpace(title))
             return Result.Failure<Game>(GameErrors.TitleIsEmpty);
@@ -44,6 +47,7 @@ public sealed class Game : Entity
         var game = new Game
         {
             Id = Guid.NewGuid(),
+            CategoryId = categoryId,
             Title = title,
             Description = description,
             Developer = developer,

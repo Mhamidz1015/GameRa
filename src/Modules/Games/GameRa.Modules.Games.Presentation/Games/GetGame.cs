@@ -1,4 +1,5 @@
-﻿using GameRa.Common.Presentation.Endpoints;
+﻿using GameRa.Common.Domain.Abstractions;
+using GameRa.Common.Presentation.Endpoints;
 using GameRa.Modules.Games.Application.Games.GetGame;
 using GameRa.Modules.Games.Presentation;
 using MediatR;
@@ -14,7 +15,7 @@ internal sealed class GetGame : IEndpoint
     {
         app.MapGet("Game/{id}", async (Guid id, ISender sender) =>
         {
-            GameResponse game = await sender.Send(new GetGameQuery(id));
+            Result<GameResponse?> game = await sender.Send(new GetGameQuery(id));
 
             return game is null ? Results.NotFound() : Results.Ok(game);
         })

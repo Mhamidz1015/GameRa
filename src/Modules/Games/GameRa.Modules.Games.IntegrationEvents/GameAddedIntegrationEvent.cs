@@ -11,6 +11,7 @@ namespace GameRa.Modules.Games.IntegrationEvents
             Guid id,
             DateTime occurredOnUtc,
             Guid gameId,
+            Guid categoryId,
             string title,
             string description,
             string developer,
@@ -19,6 +20,7 @@ namespace GameRa.Modules.Games.IntegrationEvents
             string Coverimageurl)
             : base(id, occurredOnUtc)
         {
+            CategoryId = categoryId;
             GameId = gameId;
             Title = title;
             Description = description;
@@ -29,6 +31,8 @@ namespace GameRa.Modules.Games.IntegrationEvents
         }
 
         public Guid GameId { get; init; }
+
+        public Guid CategoryId { get; init; }
 
         public string Title { get; init; }
 

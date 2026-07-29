@@ -22,9 +22,9 @@ internal sealed class GetGamesQueryHandler(IDbConnectionFactory dbConnectionFact
                  title AS {nameof(GameResponse.Title)},
                  description AS {nameof(GameResponse.Description)},
                  developer AS {nameof(GameResponse.Developer)},
-                 releaseDate AS {nameof(GameResponse.ReleaseDate)},
-                 baseprice AS {nameof(GameResponse.Baseprice)},
-                 CoverImageUrl AS {nameof(GameResponse.Coverimgageurl)}
+                 release_date AS {nameof(GameResponse.ReleaseDate)},
+                 base_price AS {nameof(GameResponse.Baseprice)},
+                 cover_image_url AS {nameof(GameResponse.Coverimgageurl)}
              FROM Games.Games
              """;
 
