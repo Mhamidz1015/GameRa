@@ -17,7 +17,7 @@ public class UpdateUserTests : BaseIntegrationTest
     public static readonly TheoryData<UpdateUserCommand> InvalidCommands = new()
     {
         new UpdateUserCommand(Guid.Empty, Faker.Internet.UserName()),
-        new UpdateUserCommand(Guid.NewGuid(), Faker.Internet.UserName())
+        new UpdateUserCommand(Guid.NewGuid(), string.Empty)
     };
 
     [Theory]

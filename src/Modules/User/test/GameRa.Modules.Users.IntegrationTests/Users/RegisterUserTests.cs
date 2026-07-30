@@ -51,7 +51,7 @@ public class RegisterUserTests : BaseIntegrationTest
         var request = new Presentation.Users.RegisterUser.Request
         {
             Email = "create@test.com",
-            Password = Faker.Internet.Password(),
+            Password = "Test1234!",
             Username = Faker.Internet.UserName()
         };
 
@@ -69,11 +69,15 @@ public class RegisterUserTests : BaseIntegrationTest
         var request = new Presentation.Users.RegisterUser.Request
         {
             Email = "token@test.com",
-            Password = Faker.Internet.Password(),
+            Password = "Test1234!",
             Username = Faker.Internet.UserName()
         };
 
-        await HttpClient.PostAsJsonAsync("users/register", request);
+        var registerResponse = await HttpClient.PostAsJsonAsync("users/register", request);
+        var registerBody = await registerResponse.Content.ReadAsStringAsync();
+
+        if (!registerResponse.IsSuccessStatusCode)
+            throw new Exception($"Register failed: {registerResponse.StatusCode} - {registerBody}");
 
         // Act
         string accessToken = await GetAccessTokenAsync(request.Email, request.Password);

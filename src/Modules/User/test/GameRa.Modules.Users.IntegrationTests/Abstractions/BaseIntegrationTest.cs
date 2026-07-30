@@ -48,26 +48,28 @@ public abstract class BaseIntegrationTest : IDisposable
 
         var authRequestParameters = new KeyValuePair<string, string>[]
         {
-            new("client_id", _options.PublicClientId),
-            new("scope", "openid"),
-            new("grant_type", "password"),
-            new("username", email),
-            new("password", password)
+        new("client_id", _options.PublicClientId),
+        new("scope", "openid"),
+        new("grant_type", "password"),
+        new("username", email),
+        new("password", password)
         };
 
         using var authRequestContent = new FormUrlEncodedContent(authRequestParameters);
-
         using var authRequest = new HttpRequestMessage(HttpMethod.Post, new Uri(_options.TokenUrl));
         authRequest.Content = authRequestContent;
 
         using HttpResponseMessage authorizationResponse = await client.SendAsync(authRequest);
 
-        authorizationResponse.EnsureSuccessStatusCode();
+        string responseBody = await authorizationResponse.Content.ReadAsStringAsync();
+
+        if (!authorizationResponse.IsSuccessStatusCode)
+            throw new Exception($"Token failed: {authorizationResponse.StatusCode} - {responseBody}");
 
         AuthToken authToken = await authorizationResponse.Content.ReadFromJsonAsync<AuthToken>();
-
         return authToken!.AccessToken;
     }
+
 
     internal sealed class AuthToken
     {

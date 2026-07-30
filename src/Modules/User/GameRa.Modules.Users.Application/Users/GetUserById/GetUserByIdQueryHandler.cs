@@ -18,7 +18,7 @@ internal sealed class GetUserByIdQueryHandler(IDbConnectionFactory dbConnectionF
              SELECT
                  id AS {nameof(UserResponse.Id)},
                  email AS {nameof(UserResponse.Email)},
-                 user_name AS {nameof(UserResponse.Username)},
+                 username AS {nameof(UserResponse.Username)},
                  created_on_utc AS {nameof(UserResponse.CreatedOnUtc)}
              FROM users.users
              WHERE id = @UserId

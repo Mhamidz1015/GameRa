@@ -100,6 +100,7 @@ public class ModuleTests : BaseTest
             .ShouldBeSuccessful();
     }
 
+    [Fact]
     public void LibraryItemsModule_ShouldNotHaveDependencyOn_AnyOtherModule()
     {
         string[] otherModules = [UsersNamespace, GamesNamespace, StoreNamespace];

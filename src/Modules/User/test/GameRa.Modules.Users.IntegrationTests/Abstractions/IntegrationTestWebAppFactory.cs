@@ -23,7 +23,7 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
         .Build();
 
     private readonly KeycloakContainer _keycloakContainer = new KeycloakBuilder()
-        .WithImage("quay.io/keycloak/keycloak:latest")
+        .WithImage("keycloak/keycloak:latest")
         .WithResourceMapping(
             new FileInfo("gamera-realm-export.json"),
             new FileInfo("/opt/keycloak/data/import/realm.json"))
@@ -51,6 +51,9 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
             {
                 o.AdminUrl = $"{keycloakAddress}admin/realms/gamera/";
                 o.TokenUrl = $"{keyCloakRealmUrl}/protocol/openid-connect/token";
+                o.PublicClientId = "gamera-public-client";
+                o.ConfidentialClientId = "gamera-confidential-client";
+                o.ConfidentialClientSecret = "PzotcrvZRF9BHCKcUxdKfHWlIPECG49k";
             });
         });
     }

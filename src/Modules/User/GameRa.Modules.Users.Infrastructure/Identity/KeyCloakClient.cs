@@ -16,24 +16,19 @@ internal sealed class KeyCloakClient(HttpClient httpClient)
         return ExtractIdentityIdFromLocationHeader(httpResponseMessage);
     }
 
-    private static string ExtractIdentityIdFromLocationHeader(
-        HttpResponseMessage httpResponseMessage)
+    private static string ExtractIdentityIdFromLocationHeader(HttpResponseMessage httpResponseMessage)
     {
         const string usersSegmentName = "users/";
 
         string? locationHeader = httpResponseMessage.Headers.Location?.PathAndQuery;
 
         if (locationHeader is null)
-        {
             throw new InvalidOperationException("Location header is null");
-        }
 
         int userSegmentValueIndex = locationHeader.IndexOf(
             usersSegmentName,
             StringComparison.InvariantCultureIgnoreCase);
 
-        string identityId = locationHeader.Substring(userSegmentValueIndex + usersSegmentName.Length);
-
-        return identityId;
+        return locationHeader.Substring(userSegmentValueIndex + usersSegmentName.Length);
     }
 }
