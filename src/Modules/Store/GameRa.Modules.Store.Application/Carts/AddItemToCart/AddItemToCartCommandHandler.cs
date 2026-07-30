@@ -30,8 +30,7 @@ internal sealed class AddItemToCartCommandHandler(
         var cartItem = new CartItem
         {
             GameId = request.GameId,
-            Price = game.BasePrice,
-            Currency = game.Currency
+            Price = game.BasePrice
         };
 
         await cartService.AddItemAsync(request.CustomerId, cartItem, cancellationToken);

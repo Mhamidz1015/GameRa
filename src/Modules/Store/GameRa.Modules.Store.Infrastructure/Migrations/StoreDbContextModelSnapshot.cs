@@ -170,11 +170,6 @@ namespace GameRa.Modules.Store.Infrastructure.Migrations
                         .HasColumnType("text")
                         .HasColumnName("cover_image_url");
 
-                    b.Property<string>("Currency")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("currency");
-
                     b.Property<bool>("Delisteed")
                         .HasColumnType("boolean")
                         .HasColumnName("delisteed");
@@ -246,11 +241,6 @@ namespace GameRa.Modules.Store.Infrastructure.Migrations
                     b.Property<Guid>("Id")
                         .HasColumnType("uuid")
                         .HasColumnName("id");
-
-                    b.Property<string>("Currency")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("currency");
 
                     b.Property<Guid>("GameId")
                         .HasColumnType("uuid")

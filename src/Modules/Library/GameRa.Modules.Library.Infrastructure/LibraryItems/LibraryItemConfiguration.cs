@@ -10,6 +10,8 @@ internal sealed class LibraryItemConfiguration : IEntityTypeConfiguration<Librar
     {
         builder.HasKey(c => c.Id);
 
+        builder.Property(c => c.GametitleSnapshot); 
+
         builder.Property(c => c.UserId).IsRequired();
 
         builder.Property(c => c.GameId).IsRequired();

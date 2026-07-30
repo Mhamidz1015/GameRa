@@ -19,10 +19,10 @@ internal sealed class CheckGameOwnershipQueryHandler(IDbConnectionFactory dbConn
         SELECT EXISTS
         (
             SELECT 1
-            FROM LibraryItems.LibraryItems
-            WHERE UserId = @UserId
-              AND GameId = @GameId
-              AND IsArchived = false
+            FROM libraryitem.library_items
+            WHERE user_id = @UserId
+              AND game_id = @GameId
+              AND is_archived = false
         );
         """;
 

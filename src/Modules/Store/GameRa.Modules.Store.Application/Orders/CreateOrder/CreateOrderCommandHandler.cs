@@ -51,7 +51,7 @@ internal sealed class CreateOrderCommandHandler(
                 return Result.Failure(GameErrors.NotFound(cartItem.GameId));
             }
 
-            order.AddItem(game, cartItem.Price, game.Currency);
+            order.AddItem(game, cartItem.Price);
         }
 
         orderRepository.Insert(order);

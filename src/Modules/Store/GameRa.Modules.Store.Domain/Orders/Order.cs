@@ -43,14 +43,13 @@ public sealed class Order : Entity
         return order;
     }
 
-    public void AddItem(Game game, decimal price, string currency)
+    public void AddItem(Game game, decimal price)
     {
-        var orderItem = OrderItem.Create(Id, game, price, currency);
+        var orderItem = OrderItem.Create(Id, game, price);
 
         _orderItems.Add(orderItem);
 
         TotalPrice = _orderItems.Sum(o => o.Price);
-        Currency = currency;
     }
 
     public Result CompleteOrder()

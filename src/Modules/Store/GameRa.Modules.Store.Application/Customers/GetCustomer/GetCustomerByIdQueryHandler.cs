@@ -19,7 +19,7 @@ internal sealed class GetCustomerByIdQueryHandler(IDbConnectionFactory dbConnect
              SELECT
                  id AS {nameof(CustomerResponse.Id)},
                  email AS {nameof(CustomerResponse.Email)},
-                 first_name AS {nameof(CustomerResponse.Username)},
+                 username AS {nameof(CustomerResponse.Username)}
              FROM Store.customers
              WHERE id = @CustomerId
              """;

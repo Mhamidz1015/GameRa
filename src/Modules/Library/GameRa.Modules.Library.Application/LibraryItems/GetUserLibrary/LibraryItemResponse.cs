@@ -8,6 +8,5 @@ namespace GameRa.Modules.Library.Application.LibraryItems.GetUserLibrary;
             Guid Id,
             Guid GameId,
             string GameTitleSnapshot,
-            DateTime AcquiredOnUtc,
             bool IsArchived);
        

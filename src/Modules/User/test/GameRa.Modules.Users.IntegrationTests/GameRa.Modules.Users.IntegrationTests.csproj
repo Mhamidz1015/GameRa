@@ -32,6 +32,12 @@
     <ProjectReference Include="..\..\GameRa.Modules.Users.Infrastructure\GameRa.Modules.Users.Infrastructure.csproj" />
   </ItemGroup>
 
+	<ItemGroup>
+		<None Update="gamera-realm-export.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
   <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>

@@ -18,8 +18,6 @@ public sealed class Game : Entity
 
     public decimal BasePrice { get; private set; }
 
-    public string Currency {  get; private set; }
-
     public string CoverImageUrl { get; private set; }
 
     public bool Delisteed { get; private set; }

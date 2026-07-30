@@ -9,7 +9,7 @@ namespace GameRa.Modules.Library.IntegrationTests.LibraryItems;
 
 public class CheckGameOwnershipTests : BaseIntegrationTest
 {
-    protected CheckGameOwnershipTests(IntegrationTestWebAppFactory factory) : base(factory)
+    public CheckGameOwnershipTests(IntegrationTestWebAppFactory factory) : base(factory)
     {
     }
 

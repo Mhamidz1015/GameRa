@@ -10,7 +10,7 @@ namespace GameRa.Modules.Library.IntegrationTests.LibraryItems;
 
 public class ArchivedLibraryItemTests : BaseIntegrationTest
 {
-    protected ArchivedLibraryItemTests(IntegrationTestWebAppFactory factory) : base(factory)
+    public ArchivedLibraryItemTests(IntegrationTestWebAppFactory factory) : base(factory)
     {
     }
 

@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
 using GameRa.Common.Domain.Abstractions;
-using GameRa.Modules.Games.Application.Games.DelistGame;
+using GameRa.Modules.Store.Application.Games.DelistGame;
 using GameRa.Modules.Games.Domain.Games;
 using GameRa.Modules.Store.IntegrationTests.Abstractions;
 

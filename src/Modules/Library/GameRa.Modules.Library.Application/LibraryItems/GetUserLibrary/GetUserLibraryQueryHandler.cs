@@ -20,12 +20,11 @@ internal sealed class GetUserLibraryQueryHandler(IDbConnectionFactory dbConnecti
         string sql = """
         SELECT
             id AS Id,
-            gameid AS GameId,
-            gametitlesnapshot AS GameTitleSnapshot,
-            acquiredonutc AS AcquiredOnUtc,
+            game_id AS GameId,
+            gametitle_snapshot AS GameTitleSnapshot,
             is_archived AS IsArchived
-        FROM LibraryItems.LibraryItems
-        WHERE UserId = @UserId
+        FROM libraryitem.library_items
+        WHERE user_id = @UserId
         """;
 
         switch (request.Filter)
@@ -39,8 +38,6 @@ internal sealed class GetUserLibraryQueryHandler(IDbConnectionFactory dbConnecti
             case LibraryFilter.All:
                 break;
         }
-
-        sql += " ORDER BY acquiredonutc DESC";
 
         IReadOnlyCollection<LibraryItemResponse> items =(
             await connection.QueryAsync<LibraryItemResponse>(

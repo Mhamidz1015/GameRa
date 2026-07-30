@@ -8,7 +8,7 @@ namespace GameRa.Modules.Library.IntegrationTests.LibraryItems;
 
 public class AddGameToLibraryTests : BaseIntegrationTest
 {
-    protected AddGameToLibraryTests(IntegrationTestWebAppFactory factory) : base(factory)
+    public AddGameToLibraryTests(IntegrationTestWebAppFactory factory) : base(factory)
     {
     }
 

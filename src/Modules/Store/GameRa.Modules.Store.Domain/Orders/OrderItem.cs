@@ -18,17 +18,14 @@ public sealed class OrderItem
 
     public decimal Price { get; private set; }
 
-    public string Currency { get; private set; }
-
-    internal static OrderItem Create(Guid orderId,Game game, decimal unitPrice, string currency)
+    internal static OrderItem Create(Guid orderId,Game game, decimal unitPrice)
     {
         var orderItem = new OrderItem
         {
             Id = Guid.NewGuid(),
             OrderId = orderId,
             GameId = game.Id,
-            UnitPrice = unitPrice,
-            Currency = currency
+            UnitPrice = unitPrice
         };
 
         return orderItem;
