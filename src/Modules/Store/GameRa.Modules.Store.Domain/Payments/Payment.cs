@@ -17,15 +17,13 @@ public sealed class Payment : Entity
 
     public decimal Amount { get; private set; }
 
-    public string Currency { get; private set; }
-
     public decimal? AmountRefunded { get; private set; }
 
     public DateTime CreatedAtUtc { get; private set; }
 
     public DateTime? RefundedAtUtc { get; private set; }
 
-    public static Result<Payment> Create(Order order, Guid transactionId, decimal amount, string currency)
+    public static Result<Payment> Create(Order order, Guid transactionId, decimal amount)
     {
         var payment = new Payment
         {
@@ -33,7 +31,6 @@ public sealed class Payment : Entity
             OrderId = order.Id,
             TransactionId = transactionId,
             Amount = amount,
-            Currency = currency,
             CreatedAtUtc = DateTime.UtcNow
         };
 

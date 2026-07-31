@@ -9,6 +9,4 @@ public sealed class OrderItemModel
     public decimal UnitPrice { get; init; }
 
     public decimal Price { get; init; }
-
-    public string Currency { get; init; }
 }

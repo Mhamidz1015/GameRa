@@ -53,7 +53,7 @@ internal sealed class IdempotentIntegrationEventHandler<TIntegrationEvent>(
     {
         const string sql =
             """
-            INSERT INTO gaems.inbox_message_consumers(inbox_message_id, name)
+            INSERT INTO games.inbox_message_consumers(inbox_message_id, name)
             VALUES (@InboxMessageId, @Name)
             """;
 

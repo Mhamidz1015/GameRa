@@ -26,8 +26,7 @@ internal sealed class GetOrderQueryHandler(IDbConnectionFactory dbConnectionFact
                  oi.order_id AS {nameof(OrderItemResponse.OrderId)},
                  oi.game_id AS {nameof(OrderItemResponse.GameId)},
                  oi.unit_price AS {nameof(OrderItemResponse.UnitPrice)},
-                 oi.price AS {nameof(OrderItemResponse.Price)},
-                 oi.currency AS {nameof(OrderItemResponse.Currency)}
+                 oi.price AS {nameof(OrderItemResponse.Price)}
              FROM store.orders o
              JOIN store.order_items oi ON oi.order_id = o.id
              WHERE o.id = @OrderId

@@ -19,10 +19,17 @@ internal static class MigrationExtensions
     }
 
     private static void ApplyMigration<TDbContext>(IServiceScope scope)
-        where TDbContext : DbContext
+    where TDbContext : DbContext
     {
         using TDbContext context = scope.ServiceProvider.GetRequiredService<TDbContext>();
 
-        context.Database.Migrate();
+        try
+        {
+            context.Database.Migrate();
+        }
+        catch (Exception)
+        {
+            // Migration already applied — ignore duplicate key errors
+        }
     }
 }

@@ -56,13 +56,12 @@ internal sealed class CreateOrderCommandHandler(
 
         orderRepository.Insert(order);
 
-        PaymentResponse paymentResponse = await paymentService.ChargeAsync(order.TotalPrice, order.Currency);
+        PaymentResponse paymentResponse = await paymentService.ChargeAsync(order.TotalPrice);
 
         Result<Payment> paymentResult = Payment.Create(
             order,
             paymentResponse.TransactionId,
-            paymentResponse.Amount,
-            paymentResponse.Currency);
+            paymentResponse.Amount);
 
         if (paymentResult.IsFailure)
             return Result.Failure(paymentResult.Error);

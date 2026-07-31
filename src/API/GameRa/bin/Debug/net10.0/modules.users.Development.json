@@ -1,7 +1,7 @@
 {
   "Users": {
     "Outbox": {
-      "IntervalInSeconds": 15,
+      "IntervalInSeconds": 5,
       "BatchSize": 20
     },
     "Inbox": {

@@ -5,5 +5,4 @@ public sealed record OrderItemResponse(
     Guid OrderId,
     Guid GameId,
     decimal UnitPrice,
-    decimal Price,
-    string Currency);
+    decimal Price);

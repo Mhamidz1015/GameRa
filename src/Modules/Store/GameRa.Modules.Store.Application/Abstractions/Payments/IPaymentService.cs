@@ -2,7 +2,7 @@
 
 public interface IPaymentService
 {
-    Task<PaymentResponse> ChargeAsync(decimal amount, string currency);
+    Task<PaymentResponse> ChargeAsync(decimal amount);
 
     Task RefundAsync(Guid transactionId, decimal amount);
 }

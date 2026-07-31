@@ -1,7 +1,6 @@
 ﻿using FluentAssertions;
 using GameRa.Common.Domain.Abstractions;
 using GameRa.IntegrationTests.Abstractions;
-using GameRa.Modules.Games.Domain.Categories;
 using GameRa.Modules.Store.Application.Carts.AddItemToCart;
 using GameRa.Modules.Store.Application.Customers.GetCustomer;
 using GameRa.Modules.Users.Application.Users.RegisterUser;

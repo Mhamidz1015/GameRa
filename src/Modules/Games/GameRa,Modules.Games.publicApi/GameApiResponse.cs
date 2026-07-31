@@ -3,5 +3,4 @@
 public sealed record GameApiResponse(
     Guid GameId,
     string Name,
-    decimal Price,
-    string Currencyy);
+    decimal Price);

@@ -20,8 +20,6 @@ public sealed class Order : Entity
 
     public decimal TotalPrice { get; private set; }
 
-    public string Currency { get; private set; }
-
     public bool OrderCompleted { get; private set; }
 
     public DateTime CreatedAtUtc { get; private set; }

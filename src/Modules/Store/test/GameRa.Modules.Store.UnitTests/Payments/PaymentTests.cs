@@ -24,8 +24,7 @@ public class PaymentTests : BaseTest
         Result<Payment> result = Payment.Create(
             order,
             Guid.NewGuid(),
-            Faker.Random.Decimal(),
-            Faker.Random.String(3));
+            Faker.Random.Decimal());
 
         //Assert
         PaymentCreatedDomainEvent domainEvent =
@@ -50,8 +49,7 @@ public class PaymentTests : BaseTest
         Result<Payment> paymentResult = Payment.Create(
             order,
             Guid.NewGuid(),
-            amount,
-            Faker.Random.String(3));
+            amount);
 
         Payment payment = paymentResult.Value;
 
