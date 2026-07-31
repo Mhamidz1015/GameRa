@@ -1,6 +1,6 @@
 {
   "id": "c49566ab-d506-4134-8107-6fccfc32dee2",
-  "realm": "evently",
+  "realm": "gamera",
   "notBefore": 0,
   "defaultSignatureAlgorithm": "RS256",
   "revokeRefreshToken": false,
@@ -48,7 +48,7 @@
     "realm": [
       {
         "id": "75fcf684-9463-4276-8827-a28036787b50",
-        "name": "default-roles-evently",
+        "name": "default-roles-gamera",
         "description": "${role_default-roles}",
         "composite": true,
         "composites": {
@@ -288,7 +288,7 @@
           "attributes": {}
         }
       ],
-      "evently-public-client": [],
+      "gamera-public-client": [],
       "security-admin-console": [],
       "admin-cli": [],
       "account-console": [],
@@ -387,13 +387,13 @@
           "attributes": {}
         }
       ],
-      "evently-confidential-client": []
+      "gamera-confidential-client": []
     }
   },
   "groups": [],
   "defaultRole": {
     "id": "75fcf684-9463-4276-8827-a28036787b50",
-    "name": "default-roles-evently",
+    "name": "default-roles-gamera",
     "description": "${role_default-roles}",
     "composite": true,
     "clientRole": false,
@@ -438,15 +438,15 @@
   "users": [
     {
       "id": "e6fc0a9a-c466-43b7-93df-ff40eb3c0540",
-      "username": "service-account-evently-confidential-client",
+      "username": "service-account-gamera-confidential-client",
       "emailVerified": false,
       "createdTimestamp": 1711135296803,
       "enabled": true,
       "totp": false,
-      "serviceAccountClientId": "evently-confidential-client",
+      "serviceAccountClientId": "gamera-confidential-client",
       "disableableCredentialTypes": [],
       "requiredActions": [],
-      "realmRoles": [ "default-roles-evently" ],
+      "realmRoles": [ "default-roles-gamera" ],
       "clientRoles": {
         "realm-management": [ "manage-users" ]
       },
@@ -474,12 +474,12 @@
       "clientId": "account",
       "name": "${client_account}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/evently/account/",
+      "baseUrl": "/realms/gamera/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
-      "redirectUris": [ "/realms/evently/account/*" ],
+      "redirectUris": [ "/realms/gamera/account/*" ],
       "webOrigins": [],
       "notBefore": 0,
       "bearerOnly": false,
@@ -516,12 +516,12 @@
       "clientId": "account-console",
       "name": "${client_account-console}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/evently/account/",
+      "baseUrl": "/realms/gamera/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
-      "redirectUris": [ "/realms/evently/account/*" ],
+      "redirectUris": [ "/realms/gamera/account/*" ],
       "webOrigins": [],
       "notBefore": 0,
       "bearerOnly": false,
@@ -646,7 +646,7 @@
     },
     {
       "id": "452660b1-2fb8-4255-b843-c5a64f9ca566",
-      "clientId": "evently-confidential-client",
+      "clientId": "gamera-confidential-client",
       "name": "",
       "description": "",
       "rootUrl": "",
@@ -751,7 +751,7 @@
         "resources": [
           {
             "name": "Default Resource",
-            "type": "urn:evently-admin-client:resources:default",
+            "type": "urn:gamera-admin-client:resources:default",
             "ownerManagedAccess": false,
             "attributes": {},
             "_id": "c4b67c60-3740-4d48-999c-830869bf6ea9",
@@ -767,7 +767,7 @@
             "logic": "POSITIVE",
             "decisionStrategy": "UNANIMOUS",
             "config": {
-              "defaultResourceType": "urn:evently-admin-client:resources:default"
+              "defaultResourceType": "urn:gamera-admin-client:resources:default"
             }
           }
         ],
@@ -777,7 +777,7 @@
     },
     {
       "id": "fce4061f-a534-45a6-b8ef-79671426bb7b",
-      "clientId": "evently-public-client",
+      "clientId": "gamera-public-client",
       "name": "",
       "description": "",
       "rootUrl": "",
@@ -868,12 +868,12 @@
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
       "rootUrl": "${authAdminUrl}",
-      "baseUrl": "/admin/evently/console/",
+      "baseUrl": "/admin/gamera/console/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
-      "redirectUris": [ "/admin/evently/console/*" ],
+      "redirectUris": [ "/admin/gamera/console/*" ],
       "webOrigins": [ "+" ],
       "notBefore": 0,
       "bearerOnly": false,

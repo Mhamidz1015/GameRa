@@ -63,6 +63,7 @@
   </Folder>
   <Folder Name="/Test/">
     <Project Path="test/GameRa.ArchitectureTests/GameRa.ArchitectureTests.csproj" />
+    <Project Path="test/GameRa.IntegrationTests/GameRa.IntegrationTests/GameRa.IntegrationTests.csproj" Id="fdf949ba-d69a-4356-a932-f44147e7e293" />
   </Folder>
   <Project Path="docker-compose.dcproj">
     <Build />

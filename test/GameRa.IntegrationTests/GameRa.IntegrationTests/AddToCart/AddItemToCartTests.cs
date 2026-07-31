@@ -47,7 +47,7 @@ public sealed class AddItemToCartTests : BaseIntegrationTest
         CustomerResponse customer = customerResult.Value;
         var gameId = Guid.NewGuid();
 
-        await Sender.AddGameAsync(Guid.NewGuid());
+        await Sender.AddGameAsync(gameId);
 
         Result result = await Sender.Send(new AddItemToCartCommand(customer.Id, gameId));
 

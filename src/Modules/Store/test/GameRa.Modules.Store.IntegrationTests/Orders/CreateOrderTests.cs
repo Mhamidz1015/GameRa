@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
 using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Store.Application.Carts;
+using GameRa.Modules.Store.Application.Carts.AddItemToCart;
 using GameRa.Modules.Store.Application.Orders.CreateOrder;
 using GameRa.Modules.Store.Domain.Customers;
 using GameRa.Modules.Store.IntegrationTests.Abstractions;
@@ -40,5 +41,28 @@ public class CreateOrderTests : BaseIntegrationTest
 
         //Assert
         result.Error.Should().Be(CartErrors.Empty);
+    }
+
+    [Fact]
+    public async Task Should_ReturnSuccess_WhenCartHasItems()
+    {
+        // Arrange
+        await CleanDatabaseAsync();
+
+        Guid customerId = await Sender.CreateCustomerAsync(Guid.NewGuid());
+        Guid gameId = Guid.NewGuid();
+
+        await Sender.AddGameAsync(gameId);
+
+        Result addItemResult = await Sender.Send( new AddItemToCartCommand(customerId, gameId));
+        addItemResult.IsSuccess.Should().BeTrue();
+
+        var command = new CreateOrderCommand(customerId);
+
+        // Act
+        Result result = await Sender.Send(command);
+
+        // Assert
+        result.IsSuccess.Should().BeTrue();
     }
 }
