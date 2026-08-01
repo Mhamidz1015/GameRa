@@ -11,6 +11,7 @@ using GameRa.Modules.Library.Infrastructure.Database;
 using GameRa.Modules.Library.Infrastructure.Inbox;
 using GameRa.Modules.Library.Infrastructure.LibraryItems;
 using GameRa.Modules.Library.Infrastructure.Outbox;
+using GameRa.Modules.Store.IntegrationEvents;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
@@ -40,6 +41,7 @@ public static class LibraryItemModule
     public static void ConfigureConsumers(IRegistrationConfigurator registrationConfigurator)
     {
         registrationConfigurator.AddConsumer<IntegrationEventConsumer<GameAddedIntegrationEvent>>();
+        registrationConfigurator.AddConsumer<IntegrationEventConsumer<OrderCompletedIntegrationEvent>>();
     }
 
     private static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)

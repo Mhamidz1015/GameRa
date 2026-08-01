@@ -233,6 +233,19 @@
         "runtime": {
           "bin/placeholder/GameRa.Modules.Store.Domain.dll": {}
         }
+      },
+      "GameRa.Modules.Store.IntegrationEvents/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GameRa.Modules.Store.IntegrationEvents.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameRa.Modules.Store.IntegrationEvents.dll": {}
+        }
       }
     }
   },
@@ -568,12 +581,18 @@
       "type": "project",
       "path": "../GameRa.Modules.Store.Domain/GameRa.Modules.Store.Domain.csproj",
       "msbuildProject": "../GameRa.Modules.Store.Domain/GameRa.Modules.Store.Domain.csproj"
+    },
+    "GameRa.Modules.Store.IntegrationEvents/1.0.0": {
+      "type": "project",
+      "path": "../GameRa.Modules.Store.IntegrationEvents/GameRa.Modules.Store.IntegrationEvents.csproj",
+      "msbuildProject": "../GameRa.Modules.Store.IntegrationEvents/GameRa.Modules.Store.IntegrationEvents.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "GameRa.Common.Application >= 1.0.0",
-      "GameRa.Modules.Store.Domain >= 1.0.0"
+      "GameRa.Modules.Store.Domain >= 1.0.0",
+      "GameRa.Modules.Store.IntegrationEvents >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -614,6 +633,9 @@
             },
             "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.Domain\\GameRa.Modules.Store.Domain.csproj": {
               "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.Domain\\GameRa.Modules.Store.Domain.csproj"
+            },
+            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.IntegrationEvents\\GameRa.Modules.Store.IntegrationEvents.csproj": {
+              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.IntegrationEvents\\GameRa.Modules.Store.IntegrationEvents.csproj"
             }
           }
         }

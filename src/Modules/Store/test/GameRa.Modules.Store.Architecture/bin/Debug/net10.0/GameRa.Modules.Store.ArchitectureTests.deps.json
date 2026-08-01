@@ -759,7 +759,8 @@
       "GameRa.Modules.Store.Application/1.0.0": {
         "dependencies": {
           "GameRa.Common.Application": "1.0.0",
-          "GameRa.Modules.Store.Domain": "1.0.0"
+          "GameRa.Modules.Store.Domain": "1.0.0",
+          "GameRa.Modules.Store.IntegrationEvents": "1.0.0"
         },
         "runtime": {
           "GameRa.Modules.Store.Application.dll": {
@@ -787,6 +788,17 @@
         },
         "runtime": {
           "GameRa.Modules.Store.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GameRa.Modules.Store.IntegrationEvents/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
+        "runtime": {
+          "GameRa.Modules.Store.IntegrationEvents.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1176,6 +1188,11 @@
       "sha512": ""
     },
     "GameRa.Modules.Store.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Store.IntegrationEvents/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

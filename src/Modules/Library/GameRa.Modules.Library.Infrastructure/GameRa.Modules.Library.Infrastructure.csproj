@@ -14,6 +14,7 @@
     <ProjectReference Include="..\..\..\Common\GameRa.Common.Infrastructure\GameRa.Common.Infrastructure.csproj" />
     <ProjectReference Include="..\..\..\Common\GameRa.Common.Presentation\GameRa.Common.Presentation.csproj" />
     <ProjectReference Include="..\..\Games\GameRa.Modules.Games.IntegrationEvents\GameRa.Modules.Games.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\..\Store\GameRa.Modules.Store.IntegrationEvents\GameRa.Modules.Store.IntegrationEvents.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Library.Application\GameRa.Modules.Library.Application.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Library.Domain\GameRa.Modules.Library.Domain.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Library.Presentation\GameRa.Modules.Library.Presentation.csproj" />

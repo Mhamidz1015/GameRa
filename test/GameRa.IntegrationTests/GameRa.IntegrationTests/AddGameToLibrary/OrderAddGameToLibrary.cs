@@ -8,7 +8,7 @@ using GameRa.Modules.Store.Application.Games.AddGame;
 using GameRa.Modules.Store.Application.Orders.CreateOrder;
 using GameRa.Modules.Users.Application.Users.RegisterUser;
 
-namespace GameRa.IntegrationTests.Orders;
+namespace GameRa.IntegrationTests.AddGameToLibrary;
 
 public sealed class OrderTests : BaseIntegrationTest
 {

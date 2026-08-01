@@ -18,3 +18,5 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Stor
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Application\obj\Debug\net10.0\refint\GameRa.Modules.Store.Application.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Application\obj\Debug\net10.0\GameRa.Modules.Store.Application.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Application\obj\Debug\net10.0\ref\GameRa.Modules.Store.Application.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Application\bin\Debug\net10.0\GameRa.Modules.Store.IntegrationEvents.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\GameRa.Modules.Store.Application\bin\Debug\net10.0\GameRa.Modules.Store.IntegrationEvents.pdb
