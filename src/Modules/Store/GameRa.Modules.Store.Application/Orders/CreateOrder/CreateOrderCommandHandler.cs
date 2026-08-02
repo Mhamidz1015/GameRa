@@ -68,6 +68,11 @@ internal sealed class CreateOrderCommandHandler(
 
         paymentRepository.Insert(paymentResult.Value);
 
+        Result completeResult = order.CompleteOrder();
+
+        if (completeResult.IsFailure)
+            return Result.Failure(completeResult.Error);
+
         await unitOfWork.SaveChangesAsync(cancellationToken);
 
         await transaction.CommitAsync(cancellationToken);

@@ -3,6 +3,7 @@ using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Infrastructure.Outbox;
 using GameRa.Common.Presentation.Endpoints;
 using GameRa.Modules.Games.IntegrationEvents;
+using GameRa.Modules.Store.IntegrationEvents;
 using GameRa.Modules.Library.Application.Abstractions.Authentication;
 using GameRa.Modules.Library.Application.Abstractions.Data;
 using GameRa.Modules.Library.Domain.LibraryItems;
@@ -40,6 +41,7 @@ public static class LibraryItemModule
     public static void ConfigureConsumers(IRegistrationConfigurator registrationConfigurator)
     {
         registrationConfigurator.AddConsumer<IntegrationEventConsumer<GameAddedIntegrationEvent>>();
+        registrationConfigurator.AddConsumer<IntegrationEventConsumer<OrderCompletedIntegrationEvent>>();
     }
 
     private static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)

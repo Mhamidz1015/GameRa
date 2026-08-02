@@ -35,6 +35,12 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
         Environment.SetEnvironmentVariable("ConnectionStrings:Database", _dbContainer.GetConnectionString());
         Environment.SetEnvironmentVariable("ConnectionStrings:Cache", _redisContainer.GetConnectionString());
 
+        Environment.SetEnvironmentVariable("Users:Outbox:IntervalInSeconds", "1");
+        Environment.SetEnvironmentVariable("Store:Outbox:IntervalInSeconds", "1");
+        Environment.SetEnvironmentVariable("Store:Inbox:IntervalInSeconds", "1");
+        Environment.SetEnvironmentVariable("LibraryItem:Outbox:IntervalInSeconds", "1");
+        Environment.SetEnvironmentVariable("LibraryItem:Inbox:IntervalInSeconds", "1");
+
         string keycloakAddress = _keycloakContainer.GetBaseAddress();
         string keyCloakRealmUrl = $"{keycloakAddress}realms/gamera";
 
@@ -63,6 +69,9 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
         await _dbContainer.StartAsync();
         await _redisContainer.StartAsync();
         await _keycloakContainer.StartAsync();
+
+        // این خط TestServer رو start می‌کنه تا Quartz hosted services اجرا بشن
+        _ = CreateClient();
     }
 
     public new async Task DisposeAsync()

@@ -62,11 +62,17 @@ public sealed class OrderTests : BaseIntegrationTest
 
         // Wait for game to appear in Library
         Result<IReadOnlyCollection<LibraryItemResponse>> libraryResult = await Poller.WaitAsync(
-            TimeSpan.FromSeconds(15),
+            TimeSpan.FromSeconds(30),
             async () =>
             {
                 var query = new GetUserLibraryQuery(userId);
-                return await Sender.Send(query);
+                Result<IReadOnlyCollection<LibraryItemResponse>> result = await Sender.Send(query);
+
+                if (result.IsFailure || !result.Value.Any(x => x.GameId == gameId))
+                    return Result.Failure<IReadOnlyCollection<LibraryItemResponse>>(
+                        Error.Failure("Library.Empty", "Game not in library yet"));
+
+                return result;
             });
 
         // Assert
