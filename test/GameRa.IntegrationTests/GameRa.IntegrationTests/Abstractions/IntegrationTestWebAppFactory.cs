@@ -69,8 +69,6 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
         await _dbContainer.StartAsync();
         await _redisContainer.StartAsync();
         await _keycloakContainer.StartAsync();
-
-        // این خط TestServer رو start می‌کنه تا Quartz hosted services اجرا بشن
         _ = CreateClient();
     }
 

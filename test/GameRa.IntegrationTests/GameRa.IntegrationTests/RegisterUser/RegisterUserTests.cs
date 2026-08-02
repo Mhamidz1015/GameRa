@@ -73,6 +73,6 @@ public sealed class RegisterUserTests : BaseIntegrationTest
 
         // Assert
         LibraryResult.IsSuccess.Should().BeTrue();
-        LibraryResult.Value.Should().NotBeNull();
+        LibraryResult.Value.Should().NotBeEmpty();
     }
 }
