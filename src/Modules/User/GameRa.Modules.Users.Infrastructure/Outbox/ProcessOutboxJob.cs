@@ -3,9 +3,10 @@ using System.Data.Common;
 using Dapper;
 using GameRa.Common.Application.Clock;
 using GameRa.Common.Application.Data;
+using GameRa.Common.Application.Messaging;
 using GameRa.Common.Domain.Abstractions;
+using GameRa.Common.Infrastructure.Outbox;
 using GameRa.Common.Infrastructure.Serialization;
-using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -44,9 +45,15 @@ internal sealed class ProcessOutboxJob(
 
                 using IServiceScope scope = serviceScopeFactory.CreateScope();
 
-                IPublisher publisher = scope.ServiceProvider.GetRequiredService<IPublisher>();
+                IEnumerable<IDomainEventHandler> domainEventHandlers = DomainEventHandlersFactory.GetHandlers(
+                    domainEvent.GetType(),
+                    scope.ServiceProvider,
+                    Application.AssemblyReference.Assembly);
 
-                await publisher.Publish(domainEvent);
+                foreach (IDomainEventHandler domainEventHandler in domainEventHandlers)
+                {
+                    await domainEventHandler.Handle(domainEvent);
+                }
             }
             catch (Exception caughtException)
             {
@@ -60,6 +67,64 @@ internal sealed class ProcessOutboxJob(
             }
 
             await UpdateOutboxMessageAsync(connection, transaction, outboxMessage, exception);
+        }
+
+        await transaction.CommitAsync();
+
+        logger.LogInformation("{Module} - Completed processing outbox messages", ModuleName);
+    }
+
+    private async Task<IReadOnlyList<OutboxMessageResponse>> GetOutboxMessagesAsync(
+        IDbConnection connection,
+        IDbTransaction transaction)
+    {
+        string sql =
+            $"""
+             SELECT
+                id AS {nameof(OutboxMessageResponse.Id)},
+                content AS {nameof(OutboxMessageResponse.Content)}
+             FROM users.outbox_messages
+             WHERE processed_on_utc IS NULL
+             ORDER BY occurred_on_utc
+             LIMIT {outboxOptions.Value.BatchSize}
+             FOR UPDATE
+             """;
+
+        IEnumerable<OutboxMessageResponse> outboxMessages = await connection.QueryAsync<OutboxMessageResponse>(
+            sql,
+            transaction: transaction);
+
+        return outboxMessages.ToList();
+    }
+
+    private async Task UpdateOutboxMessageAsync(
+        IDbConnection connection,
+        IDbTransaction transaction,
+        OutboxMessageResponse outboxMessage,
+        Exception? exception)
+    {
+        const string sql =
+            """
+            UPDATE users.outbox_messages
+            SET processed_on_utc = @ProcessedOnUtc,
+                error = @Error
+            WHERE id = @Id
+            """;
+
+        await connection.ExecuteAsync(
+            sql,
+            new
+            {
+                outboxMessage.Id,
+                ProcessedOnUtc = dateTimeProvider.UtcNow,
+                Error = exception?.ToString()
+            },
+            transaction: transaction);
+    }
+
+    internal sealed record OutboxMessageResponse(Guid Id, string Content);
+}
+
         }
 
         await transaction.CommitAsync();
