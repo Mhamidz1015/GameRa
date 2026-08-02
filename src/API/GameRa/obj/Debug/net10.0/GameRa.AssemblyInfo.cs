@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameRa")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11d7e99abd4e2741abed40d2d478e3fa1a5dce56")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+776f672fc94e51a7d50584f4904e5aa3ba662648")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameRa")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameRa")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
