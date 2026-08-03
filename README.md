@@ -8,11 +8,11 @@ Enterprise Backend built with ASP.NET Core, Domain-Driven Design, Modular Monoli
 
 <p>
 
-![.NET](https://img.shields.io/badge/.NET-9-512BD4?style=for-the-badge&logo=dotnet)
+![.NET](https://img.shields.io/badge/.NET-10-512BD4?style=for-the-badge&logo=dotnet)
 ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis)
-![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq)
+![MassTransit](https://img.shields.io/badge/MassTransit-FF6600?style=for-the-badge)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker)
 
 </p>
@@ -55,6 +55,26 @@ Rather than focusing only on business features, this project emphasizes clean ar
 - Unit Testing
 - Integration Testing
 - Docker Support
+
+---
+
+# 📦 Modules
+
+| Module  | Responsibility                                      |
+|---------|-----------------------------------------------------|
+| Users   | User registration, authentication, profile management |
+| Games   | Game catalog, categories, game management           |
+| Store   | Shopping cart, orders, payments, customer management |
+| Library | User's purchased games, archiving                   |
+
+Each module follows **Clean Architecture** with four layers:
+
+```
+Domain → Application → Infrastructure → Presentation
+```
+
+Modules communicate exclusively through **Integration Events** — never via direct references.
+
 ---
 
 # 🏛 Architecture
@@ -73,11 +93,13 @@ GameRa is designed as an Enterprise Backend application following modern softwar
 
 ### Communication Patterns
 
-- Domain Events
-- Integration Events
+- Domain Events (in-memory, intra-module)
+- Integration Events (cross-module via MassTransit)
 - Asynchronous Messaging
 
 ---
+
+```
                 HTTP Request
                      │
                      ▼
@@ -98,6 +120,8 @@ GameRa is designed as an Enterprise Backend application following modern softwar
                      │
                      ▼
                PostgreSQL
+```
+
 ---
 
 # 🏗 Design Patterns
@@ -124,6 +148,7 @@ The project implements several Enterprise Design Patterns.
 - Inbox Pattern
 - Outbox Pattern
 - Options Pattern
+
 ---
 
 # ⚙ Tech Stack
@@ -136,9 +161,9 @@ The project implements several Enterprise Design Patterns.
 | ORM | Entity Framework Core, Dapper |
 | Database | PostgreSQL |
 | Cache | Redis |
-| Messaging | RabbitMQ, MassTransit |
+| Messaging | MassTransit (InMemory) |
 | Background Processing | Quartz.NET |
-| Authentication | Keycloak, ASP.NET Identity, JWT, OAuth2, OpenID Connect |
+| Authentication | Keycloak, JWT, OAuth2, OpenID Connect |
 | Testing | xUnit, FluentAssertions, Bogus, Testcontainers for .NET |
 | Logging | Serilog |
 | Containerization | Docker, Docker Compose |
@@ -147,72 +172,52 @@ The project implements several Enterprise Design Patterns.
 
 # 🔄 CQRS Flow
 
+```
 Client
-
-↓
-
+  ↓
 API Endpoint
-
-↓
-
+  ↓
 MediatR
-
-↓
-
+  ↓
 Command / Query
-
-↓
-
+  ↓
 Handler
-
-↓
-
+  ↓
 Repository
-
-↓
-
+  ↓
 Database
+```
 
 ---
 
 # 🔄 Event Flow
 
-```text
-Business Action
-
-↓
-
-Domain Event
-
-↓
-
-Outbox
-
-↓
-
-Background Processor
-
-↓
-
-RabbitMQ
-
-↓
-
-Inbox
-
-↓
-
-Consumer
-
-↓
-
-Integration Event
-
-↓
-
-Target Module
 ```
+Business Action
+  ↓
+Domain Event raised in memory
+  ↓
+SaveChanges → Outbox Table (same transaction)
+  ↓
+Quartz.NET Background Job
+  ↓
+Domain Event Handler
+  ↓
+MassTransit (InMemory transport)
+  ↓
+Inbox Table (target module)
+  ↓
+Quartz.NET Background Job
+  ↓
+Integration Event Handler
+  ↓
+Target Module Command
+```
+
+This guarantees **at-least-once delivery** and **exactly-once processing** via idempotency checks.
+
 ---
+
 # 🔐 Authentication & Identity
 
 Authentication and Authorization are implemented using an external Identity Provider.
@@ -220,7 +225,6 @@ Authentication and Authorization are implemented using an external Identity Prov
 Technologies:
 
 - Keycloak
-- ASP.NET Identity
 - JWT Bearer Authentication
 - OAuth2
 - OpenID Connect
@@ -228,47 +232,73 @@ Technologies:
 This approach separates identity management from business modules while improving scalability, maintainability and security.
 
 ---
+
 # 📡 Messaging
 
-GameRa uses asynchronous communication between modules.
+GameRa uses asynchronous communication between modules via **MassTransit** with InMemory transport.
 
-Technologies:
-
-- RabbitMQ
-- MassTransit
-- Integration Events
-- Domain Events
-- Inbox Pattern
-- Outbox Pattern
+- Integration Events carry data across module boundaries
+- Each module has its own Inbox to receive events
+- Each module has its own Outbox to publish domain events
+- Idempotency is enforced — duplicate messages are safely ignored
 
 ---
+
 # ⏰ Background Jobs
 
 GameRa uses Quartz.NET to execute scheduled background jobs.
 
-Typical scenarios include:
+Each module runs two jobs:
 
-- Processing Outbox Messages
-- Cleaning Expired Data
-- Scheduled Synchronization
-- Periodic Maintenance Jobs
+| Job | Responsibility |
+|-----|---------------|
+| ProcessOutboxJob | Reads domain events from outbox and dispatches handlers |
+| ProcessInboxJob | Reads integration events from inbox and dispatches handlers |
+
 ---
 
-# 🚀 Running Project
+# 🚀 Running the Project
 
-Clone repository
+### Prerequisites
 
+- [.NET 10 SDK](https://dotnet.microsoft.com/download)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
+
+### With Docker Compose
+
+```bash
 git clone https://github.com/Mhamidz1015/GameRa.git
-Restore packages
+cd GameRa
+docker-compose up --build
+```
 
+This starts all required services automatically:
+- PostgreSQL
+- Redis
+- Keycloak (with pre-configured realm)
+- GameRa API
+
+### Running Locally
+
+```bash
+# 1. Start infrastructure services
+docker-compose up postgres redis keycloak
+
+# 2. Restore packages
 dotnet restore
-Run migrations
 
+# 3. Run migrations
 dotnet ef database update
-Run application
 
-dotnet run
+# 4. Run application
+dotnet run --project src/API/GameRa
+```
+
+> ⚠️ Keycloak must be running and configured before starting the API.
+> The realm configuration is imported automatically via Docker.
+
 ---
+
 # 🧪 Testing
 
 GameRa follows different testing strategies to ensure code quality.
@@ -276,40 +306,51 @@ GameRa follows different testing strategies to ensure code quality.
 ### Unit Testing
 
 - xUnit
-- Domain Tests
-- Application Tests
+- Domain aggregate tests
+- Business rule validation
 
-### Integration Testing
+### Integration Testing (per module)
 
-- ASP.NET Core Integration Tests
-- End-to-End API Tests
-- Database Integration Tests
+- Testcontainers for .NET (PostgreSQL)
+- Real database, no mocks
+- Command and Query handler tests
 
-The testing approach helps verify business logic, API endpoints and module interactions.
+### System Integration Testing
+
+- Full end-to-end cross-module tests
+- Testcontainers (PostgreSQL + Redis + Keycloak)
+- Verifies event propagation between modules (Outbox → MassTransit → Inbox)
+
+```bash
+# Run all tests
+dotnet test
+
+# Run only integration tests
+dotnet test test/GameRa.IntegrationTests
+```
 
 ---
 
 # 📈 Future Improvements
 
-- Payment Gateway
+- Payment Gateway Integration
 - Notification Service
 - Wishlist
-- Discounts
-- Coupons
+- Discounts & Coupons
 - Recommendation Engine
 - Search Service
 - Admin Dashboard
-- CDN Integration
-- File Storage
 
 ---
+
 # 💾 Infrastructure
 
-- PostgreSQL
-- Redis
-- Docker
-- Docker Compose
+- PostgreSQL — persistent storage per module (separate schemas)
+- Redis — distributed caching
+- Docker & Docker Compose — containerized local environment
+
 ---
+
 # 🛠 Engineering Principles
 
 - SOLID
@@ -318,7 +359,9 @@ The testing approach helps verify business logic, API endpoints and module inter
 - High Cohesion
 - Low Coupling
 - Fail Fast
+
 ---
+
 # 📚 Enterprise Concepts Demonstrated
 
 This project demonstrates the implementation of several enterprise backend concepts, including:
@@ -347,5 +390,4 @@ Hamidreza Zahedi
 
 Backend Developer (.NET)
 
-GitHub:
-https://github.com/Mhamidz1015
+GitHub: https://github.com/Mhamidz1015
