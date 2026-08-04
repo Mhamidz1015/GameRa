@@ -12,7 +12,13 @@
   </Folder>
   <Folder Name="/src/Modules/" />
   <Folder Name="/src/Modules/Discounts/">
+    <Project Path="src/Modules/Discounts/GameRa.Modules.Discounts.Application/GameRa.Modules.Discounts.Application.csproj" Id="d0604f95-5a5c-4513-a5ed-b78b95857a81" />
     <Project Path="src/Modules/Discounts/GameRa.Modules.Discounts.Domain/GameRa.Modules.Discounts.Domain.csproj" Id="c702bb52-5431-45e4-a4ae-cfa156fe6bd3" />
+    <Project Path="src/Modules/Discounts/GameRa.Modules.Discounts.Infrastructure/GameRa.Modules.Discounts.Infrastructure.csproj" Id="67686ad8-29b4-43d4-9161-a0f955fbdb78" />
+    <Project Path="src/Modules/Discounts/GameRa.Modules.Discounts.Presentation/GameRa.Modules.Discounts.Presentation.csproj" Id="b3be173b-b922-4f8b-b6a6-a4c687b2c601" />
+  </Folder>
+  <Folder Name="/src/Modules/Discounts/test/">
+    <Project Path="src/Modules/Discounts/test/GameRa.Modules.Discounts.ArchitectureTests/GameRa.Modules.Discounts.ArchitectureTests.csproj" Id="42fc4c12-8314-411f-8ee1-3811435001cc" />
   </Folder>
   <Folder Name="/src/Modules/Games/">
     <Project Path="src/Modules/Games/GameRa,Modules.Games.publicApi/GameRa,Modules.Games.publicApi.csproj" />
@@ -40,7 +46,13 @@
     <Project Path="src/Modules/Library/test/GameRa.Modules.Library.UnitTests/GameRa.Modules.Library.UnitTests.csproj" Id="836826ef-2be0-43bd-b6a8-dd5e8bb0a808" />
   </Folder>
   <Folder Name="/src/Modules/Reviews/">
+    <Project Path="src/Modules/Reviews/GameRa.Modules.Reviews.Application/GameRa.Modules.Reviews.Application.csproj" Id="c98eefc2-f631-4454-8d0e-ecc3c74dca77" />
     <Project Path="src/Modules/Reviews/GameRa.Modules.Reviews.Domain/GameRa.Modules.Reviews.Domain.csproj" Id="ca2e341c-2953-4c85-9910-fe56a90aa85f" />
+    <Project Path="src/Modules/Reviews/GameRa.Modules.Reviews.Infrastructure/GameRa.Modules.Reviews.Infrastructure.csproj" Id="a0c6091c-6446-4e9c-9378-7416d08293f5" />
+    <Project Path="src/Modules/Reviews/GameRa.Modules.Reviews.Presentation/GameRa.Modules.Reviews.Presentation.csproj" Id="a3add79d-4e1e-44b3-81d6-e94e1676029a" />
+  </Folder>
+  <Folder Name="/src/Modules/Reviews/test/">
+    <Project Path="src/Modules/Reviews/test/GameRa.Modules.Reviews.ArchitectureTests/GameRa.Modules.Reviews.ArchitectureTests.csproj" Id="71928a94-cfa6-46fd-9e64-61b664da6821" />
   </Folder>
   <Folder Name="/src/Modules/Store/">
     <Project Path="src/Modules/Store/GameRa.Modules.Store.Application/GameRa.Modules.Store.Application.csproj" />
