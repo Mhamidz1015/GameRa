@@ -1,15 +1,12 @@
-﻿
-namespace GameRa.Modules.Reviews.Domain;
+﻿namespace GameRa.Modules.Reviews.Domain;
 
 public interface IReviewRepository
 {
-    Task<Review?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
+    Task<Review?> GetAsync(Guid reviewId, CancellationToken cancellationToken = default);
 
-    Task<List<Review>> GetByGameIdAsync(Guid gameId, CancellationToken cancellationToken = default);
+    Task<bool> ExistsByGameAndUserAsync(Guid gameId, Guid userId, CancellationToken cancellationToken = default);
 
-    void Add(Review review);
-
-    void Update(Review review);
+    void Insert(Review review);
 
     void Remove(Review review);
 }

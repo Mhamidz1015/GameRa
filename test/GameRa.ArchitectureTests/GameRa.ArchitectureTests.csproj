@@ -24,6 +24,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\API\GameRa\GameRa.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Discounts\GameRa.Modules.Discounts.Infrastructure\GameRa.Modules.Discounts.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Reviews\GameRa.Modules.Reviews.Domain\GameRa.Modules.Reviews.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Reviews\GameRa.Modules.Reviews.Infrastructure\GameRa.Modules.Reviews.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

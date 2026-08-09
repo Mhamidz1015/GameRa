@@ -17,10 +17,9 @@ internal sealed class OrderCompletedDomainEventHandler(
     : DomainEventHandler<OrderCompletedDomainEvent>
 {
     public override async Task Handle(
-        OrderCompletedDomainEvent notification,
-        CancellationToken cancellationToken = default)
+    OrderCompletedDomainEvent notification,
+    CancellationToken cancellationToken = default)
     {
-
         Result<OrderResponse> result = await sender.Send(
             new GetOrderQuery(notification.OrderId),
             cancellationToken);
@@ -31,6 +30,8 @@ internal sealed class OrderCompletedDomainEventHandler(
         }
 
         OrderResponse order = result.Value;
+
+        var games = new List<OrderCompletedGameModel>();
 
         foreach (OrderItemResponse orderItem in order.OrderItems)
         {
@@ -43,14 +44,21 @@ internal sealed class OrderCompletedDomainEventHandler(
                     GameErrors.NotFound(orderItem.GameId));
             }
 
-            await eventBus.PublishAsync(
-                new OrderCompletedIntegrationEvent(
-                    notification.Id,
-                    notification.OccurredOnUtc,
-                    order.CustomerId,
-                    game.Id,
-                    game.Title),
-                cancellationToken);
+            games.Add(new OrderCompletedGameModel
+            {
+                GameId = game.Id,
+                GameTitle = game.Title,
+                FinalPrice = orderItem.Price
+            });
+        }
+
+        await eventBus.PublishAsync(
+            new OrderCompletedIntegrationEvent(
+                notification.Id,
+                notification.OccurredOnUtc,
+                order.CustomerId,
+                games),
+            cancellationToken);
+    
         }
     }
-}

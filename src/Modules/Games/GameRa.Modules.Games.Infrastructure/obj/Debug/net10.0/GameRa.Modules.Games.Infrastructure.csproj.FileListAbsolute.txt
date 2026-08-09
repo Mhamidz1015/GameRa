@@ -28,3 +28,9 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\GameRa.Modules.Game
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\GameRa.Modules.Games.Infrastructure\obj\Debug\net10.0\refint\GameRa.Modules.Games.Infrastructure.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\GameRa.Modules.Games.Infrastructure\obj\Debug\net10.0\GameRa.Modules.Games.Infrastructure.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\GameRa.Modules.Games.Infrastructure\obj\Debug\net10.0\ref\GameRa.Modules.Games.Infrastructure.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\GameRa.Modules.Games.Infrastructure\bin\Debug\net10.0\GameRa.Modules.Games.PublicApi.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\GameRa.Modules.Games.Infrastructure\bin\Debug\net10.0\GameRa.Modules.Games.PublicApi.pdb
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\GameRa.Modules.Games.Infrastructure\bin\Debug\net10.0\GameRa.Modules.Discounts.IntegrationEvents.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\GameRa.Modules.Games.Infrastructure\bin\Debug\net10.0\GameRa.Modules.Reviews.IntegrationEvents.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\GameRa.Modules.Games.Infrastructure\bin\Debug\net10.0\GameRa.Modules.Discounts.IntegrationEvents.pdb
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\GameRa.Modules.Games.Infrastructure\bin\Debug\net10.0\GameRa.Modules.Reviews.IntegrationEvents.pdb

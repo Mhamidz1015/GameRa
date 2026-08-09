@@ -1,5 +1,4 @@
-﻿using GameRa.Common.Application.Data;
-using GameRa.Common.Application.Messaging;
+﻿using GameRa.Common.Application.Messaging;
 using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Infrastructure.Outbox;
 using GameRa.Common.Presentation.Endpoints;
@@ -11,6 +10,7 @@ using GameRa.Modules.Games.Infrastructure.Database;
 using GameRa.Modules.Games.Infrastructure.Games;
 using GameRa.Modules.Games.Infrastructure.Inbox;
 using GameRa.Modules.Games.Infrastructure.Outbox;
+using GameRa.Modules.Games.PublicApi;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Configuration;
@@ -52,6 +52,7 @@ public static class GamesModule
 
         services.AddScoped<IGameRepository, GameRepository>();
         services.AddScoped<ICategoryRepository, CategoryRepository>();
+        services.AddScoped<IGamesApi, GamesApi>();
 
         services.Configure<OutboxOptions>(configuration.GetSection("Games:Outbox"));
 

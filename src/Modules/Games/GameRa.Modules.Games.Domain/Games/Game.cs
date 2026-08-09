@@ -24,7 +24,31 @@ public sealed class Game : Entity
     public string CoverImageUrl { get; private set; }
 
     public GameStatus Status { get; private set; }
+
     public Guid CategoryId { get; private set; }
+
+    // Read model fields — updated via Integration Events
+    public decimal? ActiveDiscountAmount { get; private set; }
+
+    public bool? IsDiscountPercentage { get; private set; }
+
+    public double AverageRating { get; private set; }
+
+    public int TotalReviews { get; private set; }
+
+    public decimal CurrentPrice
+    {
+        get
+        {
+            if (ActiveDiscountAmount is null)
+                return BasePrice;
+
+            if (IsDiscountPercentage == true)
+                return BasePrice - (BasePrice * ActiveDiscountAmount.Value / 100);
+
+            return Math.Max(0, BasePrice - ActiveDiscountAmount.Value);
+        }
+    }
 
     public static Result<Game> Create(
         Guid categoryId,
@@ -60,32 +84,59 @@ public sealed class Game : Entity
 
         return Result.Success(game);
     }
+
     public Result Release()
     {
         if (Status != GameStatus.ComingSoon)
-        {
             return Result.Failure(GameErrors.Released);
-        }
 
         Status = GameStatus.Released;
-
         Raise(new GameReleasedDomainEvent(Id));
 
         return Result.Success();
     }
+
     public Result Delist()
     {
         if (Status == GameStatus.Delisted)
-        {
             return Result.Failure(GameErrors.AlreadyDelisted);
-        }
 
         Status = GameStatus.Delisted;
-
         Raise(new GameDelistedDomainEvent(Id));
 
         return Result.Success();
-
     }
 
+    public void ApplyDiscount(decimal amount, bool isPercentage)
+    {
+        ActiveDiscountAmount = amount;
+        IsDiscountPercentage = isPercentage;
+    }
+
+    public void RemoveDiscount()
+    {
+        ActiveDiscountAmount = null;
+        IsDiscountPercentage = null;
+    }
+
+    public void UpdateRating(int newRating)
+    {
+        double totalScore = AverageRating * TotalReviews + newRating;
+        TotalReviews++;
+        AverageRating = totalScore / TotalReviews;
+    }
+
+    public void RemoveRating(int oldRating)
+    {
+        if (TotalReviews <= 1)
+        {
+            AverageRating = 0;
+            TotalReviews = 0;
+            return;
+        }
+
+        double totalScore = AverageRating * TotalReviews - oldRating;
+        TotalReviews--;
+        AverageRating = totalScore / TotalReviews;
+    }
 }

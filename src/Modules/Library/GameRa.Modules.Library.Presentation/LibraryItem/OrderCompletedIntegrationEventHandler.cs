@@ -10,21 +10,25 @@ namespace GameRa.Modules.Library.Presentation.LibraryItem;
 internal sealed class OrderCompletedIntegrationEventHandler(ISender sender)
     : IntegrationEventHandler<OrderCompletedIntegrationEvent>
 {
-    public override async Task Handle(OrderCompletedIntegrationEvent integrationEvent,
+    public override async Task Handle(
+        OrderCompletedIntegrationEvent integrationEvent,
         CancellationToken cancellationToken = default)
     {
-        Result result = await sender.Send(
-            new AddGameToLibraryCommand(
-                integrationEvent.CustomerId,
-                integrationEvent.GameId,
-                integrationEvent.GameTitle),
-            cancellationToken);
-
-        if (result.IsFailure)
+        foreach (OrderCompletedGameModel game in integrationEvent.Games)
         {
-            throw new GameRaException(
-                nameof(AddGameToLibraryCommand),
-                result.Error);
+            Result result = await sender.Send(
+                new AddGameToLibraryCommand(
+                    integrationEvent.CustomerId,
+                    game.GameId,
+                    game.GameTitle),
+                cancellationToken);
+
+            if (result.IsFailure)
+            {
+                throw new GameRaException(
+                    nameof(AddGameToLibraryCommand),
+                    result.Error);
+            }
         }
     }
 }

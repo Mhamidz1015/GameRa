@@ -1,5 +1,5 @@
 ﻿using GameRa.Modules.Games.Infrastructure;
-using GameRa.Modules.Store.Domain.Games;
+using GameRa.Modules.Games.Domain.Games;
 using System.Reflection;
 
 namespace GameRa.Modules.Games.Architecture_.Abstractions;

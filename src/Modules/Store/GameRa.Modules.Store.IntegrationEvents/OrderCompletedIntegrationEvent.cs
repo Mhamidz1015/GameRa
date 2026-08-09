@@ -8,18 +8,13 @@ public sealed class OrderCompletedIntegrationEvent : IntegrationEvent
         Guid id,
         DateTime occurredOnUtc,
         Guid customerId,
-        Guid gameId,
-        string gametitle)
+        List<OrderCompletedGameModel> games)
         : base(id, occurredOnUtc)
     {
         CustomerId = customerId;
-        GameId = gameId;
-        GameTitle = gametitle;
+        Games = games;
     }
 
     public Guid CustomerId { get; init; }
-
-    public Guid GameId { get; init; }
-
-    public string GameTitle { get; init; }
+    public List<OrderCompletedGameModel> Games { get; init; }
 }

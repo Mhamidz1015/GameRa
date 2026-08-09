@@ -9,7 +9,9 @@
       "GameRa.Modules.Games.Presentation/1.0.0": {
         "dependencies": {
           "GameRa.Common.Presentation": "1.0.0",
+          "GameRa.Modules.Discounts.IntegrationEvents": "1.0.0",
           "GameRa.Modules.Games.Application": "1.0.0",
+          "GameRa.Modules.Reviews.IntegrationEvents": "1.0.0",
           "Swashbuckle.AspNetCore.Swagger": "10.2.3"
         },
         "runtime": {
@@ -188,6 +190,17 @@
           }
         }
       },
+      "GameRa.Modules.Discounts.IntegrationEvents/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
+        "runtime": {
+          "GameRa.Modules.Discounts.IntegrationEvents.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "GameRa.Modules.Games.Application/1.0.0": {
         "dependencies": {
           "GameRa.Common.Application": "1.0.0",
@@ -218,6 +231,17 @@
         },
         "runtime": {
           "GameRa.Modules.Games.IntegrationEvents.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GameRa.Modules.Reviews.IntegrationEvents/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
+        "runtime": {
+          "GameRa.Modules.Reviews.IntegrationEvents.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -344,6 +368,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "GameRa.Modules.Discounts.IntegrationEvents/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "GameRa.Modules.Games.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -355,6 +384,11 @@
       "sha512": ""
     },
     "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Reviews.IntegrationEvents/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -6,7 +6,9 @@ public sealed class OrderItemModel
 
     public Guid OrderId { get; init; }
 
+    public Guid GameId { get; init; }
+
     public decimal UnitPrice { get; init; }
 
-    public decimal Price { get; init; }
+    public decimal FinalPrice { get; init; }
 }

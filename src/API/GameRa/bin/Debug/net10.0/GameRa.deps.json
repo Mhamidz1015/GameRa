@@ -42,8 +42,10 @@
           "AspNetCore.HealthChecks.UI.Client": "9.0.0",
           "AspNetCore.HealthChecks.Uris": "9.0.0",
           "GameRa.Common.Infrastructure": "1.0.0",
+          "GameRa.Modules.Discounts.Infrastructure": "1.0.0",
           "GameRa.Modules.Games.Infrastructure": "1.0.0",
           "GameRa.Modules.Library.Infrastructure": "1.0.0",
+          "GameRa.Modules.Reviews.Infrastructure": "1.0.0",
           "GameRa.Modules.Store.Infrastructure": "1.0.0",
           "GameRa.Modules.Users.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.9",
@@ -1520,6 +1522,96 @@
           "GameRa.Common.Presentation.dll": {}
         }
       },
+      "GameRa.Modules.Discounts.Application/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0",
+          "GameRa.Modules.Discounts.Domain": "1.0.0",
+          "GameRa.Modules.Games.PublicApi": "1.0.0"
+        },
+        "runtime": {
+          "GameRa.Modules.Discounts.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "GameRa.Modules.Discounts.Application.dll": {}
+        }
+      },
+      "GameRa.Modules.Discounts.Domain/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "GameRa.Modules.Discounts.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "GameRa.Modules.Discounts.Domain.dll": {}
+        }
+      },
+      "GameRa.Modules.Discounts.Infrastructure/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Infrastructure": "1.0.0",
+          "GameRa.Common.Presentation": "1.0.0",
+          "GameRa.Modules.Discounts.Application": "1.0.0",
+          "GameRa.Modules.Discounts.Presentation": "1.0.0",
+          "GameRa.Modules.Discounts.PublicApi": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.9"
+        },
+        "runtime": {
+          "GameRa.Modules.Discounts.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "GameRa.Modules.Discounts.Infrastructure.dll": {}
+        }
+      },
+      "GameRa.Modules.Discounts.IntegrationEvents/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
+        "runtime": {
+          "GameRa.Modules.Discounts.IntegrationEvents.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "GameRa.Modules.Discounts.IntegrationEvents.dll": {}
+        }
+      },
+      "GameRa.Modules.Discounts.Presentation/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Presentation": "1.0.0",
+          "GameRa.Modules.Discounts.Application": "1.0.0",
+          "MediatR": "14.1.0"
+        },
+        "runtime": {
+          "GameRa.Modules.Discounts.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "GameRa.Modules.Discounts.Presentation.dll": {}
+        }
+      },
+      "GameRa.Modules.Discounts.PublicApi/1.0.0": {
+        "runtime": {
+          "GameRa.Modules.Discounts.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "GameRa.Modules.Discounts.PublicApi.dll": {}
+        }
+      },
       "GameRa.Modules.Games.Application/1.0.0": {
         "dependencies": {
           "GameRa.Common.Application": "1.0.0",
@@ -1557,6 +1649,7 @@
           "GameRa.Common.Infrastructure": "1.0.0",
           "GameRa.Modules.Games.Application": "1.0.0",
           "GameRa.Modules.Games.Presentation": "1.0.0",
+          "GameRa.Modules.Games.PublicApi": "1.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.2"
         },
         "runtime": {
@@ -1586,7 +1679,9 @@
       "GameRa.Modules.Games.Presentation/1.0.0": {
         "dependencies": {
           "GameRa.Common.Presentation": "1.0.0",
+          "GameRa.Modules.Discounts.IntegrationEvents": "1.0.0",
           "GameRa.Modules.Games.Application": "1.0.0",
+          "GameRa.Modules.Reviews.IntegrationEvents": "1.0.0",
           "Swashbuckle.AspNetCore.Swagger": "10.2.3"
         },
         "runtime": {
@@ -1665,6 +1760,84 @@
         },
         "compile": {
           "GameRa.Modules.Library.Presentation.dll": {}
+        }
+      },
+      "GameRa.Modules.Reviews.Application/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "12.1.1",
+          "GameRa.Common.Application": "1.0.0",
+          "GameRa.Modules.Reviews.Domain": "1.0.0"
+        },
+        "runtime": {
+          "GameRa.Modules.Reviews.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "GameRa.Modules.Reviews.Application.dll": {}
+        }
+      },
+      "GameRa.Modules.Reviews.Domain/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Domain": "1.0.0"
+        },
+        "runtime": {
+          "GameRa.Modules.Reviews.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "GameRa.Modules.Reviews.Domain.dll": {}
+        }
+      },
+      "GameRa.Modules.Reviews.Infrastructure/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Infrastructure": "1.0.0",
+          "GameRa.Modules.Reviews.Application": "1.0.0",
+          "GameRa.Modules.Reviews.Domain": "1.0.0",
+          "GameRa.Modules.Reviews.Presentation": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.9"
+        },
+        "runtime": {
+          "GameRa.Modules.Reviews.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "GameRa.Modules.Reviews.Infrastructure.dll": {}
+        }
+      },
+      "GameRa.Modules.Reviews.IntegrationEvents/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
+        "runtime": {
+          "GameRa.Modules.Reviews.IntegrationEvents.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "GameRa.Modules.Reviews.IntegrationEvents.dll": {}
+        }
+      },
+      "GameRa.Modules.Reviews.Presentation/1.0.0": {
+        "dependencies": {
+          "GameRa.Common.Presentation": "1.0.0",
+          "GameRa.Modules.Reviews.Application": "1.0.0",
+          "MediatR": "14.1.0"
+        },
+        "runtime": {
+          "GameRa.Modules.Reviews.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "GameRa.Modules.Reviews.Presentation.dll": {}
         }
       },
       "GameRa.Modules.Store.Application/1.0.0": {
@@ -1820,6 +1993,14 @@
         },
         "compile": {
           "GameRa.Modules.Users.Presentation.dll": {}
+        }
+      },
+      "GameRa.Modules.Games.PublicApi.Reference/1.0.0.0": {
+        "runtime": {
+          "GameRa.Modules.Games.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Microsoft.AspNetCore.Antiforgery/10.0.0.0": {
@@ -3678,6 +3859,9 @@
       },
       "SonarAnalyzer.CSharp/10.27.0.140913": {
         "compileOnly": true
+      },
+      "GameRa.Modules.Games.PublicApi/1.0.0": {
+        "compileOnly": true
       }
     }
   },
@@ -4190,6 +4374,36 @@
       "serviceable": false,
       "sha512": ""
     },
+    "GameRa.Modules.Discounts.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Discounts.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Discounts.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Discounts.IntegrationEvents/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Discounts.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Discounts.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "GameRa.Modules.Games.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4231,6 +4445,31 @@
       "sha512": ""
     },
     "GameRa.Modules.Library.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Reviews.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Reviews.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Reviews.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Reviews.IntegrationEvents/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Reviews.Presentation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -4282,6 +4521,11 @@
     },
     "GameRa.Modules.Users.Presentation/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Games.PublicApi.Reference/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
@@ -5854,6 +6098,11 @@
       "sha512": "sha512-cxk12QjN9io1SjN36B1QO+9dRf+ek2CGfQGsOWtHBojE35cKchKJod48raxZwe47jHhzmAUO4AJSh7+hF0GS4g==",
       "path": "sonaranalyzer.csharp/10.27.0.140913",
       "hashPath": "sonaranalyzer.csharp.10.27.0.140913.nupkg.sha512"
+    },
+    "GameRa.Modules.Games.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

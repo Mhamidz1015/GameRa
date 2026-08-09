@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\GameRa.Common.Domain\GameRa.Common.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

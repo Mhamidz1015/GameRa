@@ -15,18 +15,20 @@
     <Project Path="src/Modules/Discounts/GameRa.Modules.Discounts.Application/GameRa.Modules.Discounts.Application.csproj" Id="d0604f95-5a5c-4513-a5ed-b78b95857a81" />
     <Project Path="src/Modules/Discounts/GameRa.Modules.Discounts.Domain/GameRa.Modules.Discounts.Domain.csproj" Id="c702bb52-5431-45e4-a4ae-cfa156fe6bd3" />
     <Project Path="src/Modules/Discounts/GameRa.Modules.Discounts.Infrastructure/GameRa.Modules.Discounts.Infrastructure.csproj" Id="67686ad8-29b4-43d4-9161-a0f955fbdb78" />
+    <Project Path="src/Modules/Discounts/GameRa.Modules.Discounts.IntegrationEvents/GameRa.Modules.Discounts.IntegrationEvents.csproj" Id="c91bb12d-221d-4264-9df6-83dfe1473d2e" />
     <Project Path="src/Modules/Discounts/GameRa.Modules.Discounts.Presentation/GameRa.Modules.Discounts.Presentation.csproj" Id="b3be173b-b922-4f8b-b6a6-a4c687b2c601" />
+    <Project Path="src/Modules/Discounts/GameRa.Modules.Discounts.PublicApi/GameRa.Modules.Discounts.PublicApi.csproj" Id="9b4dbffb-c99d-460a-8de5-c81919dcd6ad" />
   </Folder>
   <Folder Name="/src/Modules/Discounts/test/">
     <Project Path="src/Modules/Discounts/test/GameRa.Modules.Discounts.ArchitectureTests/GameRa.Modules.Discounts.ArchitectureTests.csproj" Id="42fc4c12-8314-411f-8ee1-3811435001cc" />
   </Folder>
   <Folder Name="/src/Modules/Games/">
-    <Project Path="src/Modules/Games/GameRa,Modules.Games.publicApi/GameRa,Modules.Games.publicApi.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Application/GameRa.Modules.Games.Application.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Infrastructure/GameRa.Modules.Games.Infrastructure.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.IntegrationEvents/GameRa.Modules.Games.IntegrationEvents.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj" />
+    <Project Path="src/Modules/Games/GameRa.Modules.Games.PublicApi/GameRa.Modules.Games.PublicApi.csproj" />
   </Folder>
   <Folder Name="/src/Modules/Games/test/">
     <Project Path="src/Modules/Games/test/GameRa.Modules.Games.Architecture/GameRa.Modules.Games.ArchitectureTests.csproj" Id="8067ea1a-dbe7-4d6d-905f-111aaf9bba58" />
@@ -49,6 +51,7 @@
     <Project Path="src/Modules/Reviews/GameRa.Modules.Reviews.Application/GameRa.Modules.Reviews.Application.csproj" Id="c98eefc2-f631-4454-8d0e-ecc3c74dca77" />
     <Project Path="src/Modules/Reviews/GameRa.Modules.Reviews.Domain/GameRa.Modules.Reviews.Domain.csproj" Id="ca2e341c-2953-4c85-9910-fe56a90aa85f" />
     <Project Path="src/Modules/Reviews/GameRa.Modules.Reviews.Infrastructure/GameRa.Modules.Reviews.Infrastructure.csproj" Id="a0c6091c-6446-4e9c-9378-7416d08293f5" />
+    <Project Path="src/Modules/Reviews/GameRa.Modules.Reviews.IntegrationEvents/GameRa.Modules.Reviews.IntegrationEvents.csproj" Id="9ed72fe9-9019-4818-a545-97234a0df390" />
     <Project Path="src/Modules/Reviews/GameRa.Modules.Reviews.Presentation/GameRa.Modules.Reviews.Presentation.csproj" Id="a3add79d-4e1e-44b3-81d6-e94e1676029a" />
   </Folder>
   <Folder Name="/src/Modules/Reviews/test/">
