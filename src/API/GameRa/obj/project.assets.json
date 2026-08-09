@@ -4761,8 +4761,8 @@
     },
     "GameRa.Modules.Games.PublicApi/1.0.0": {
       "type": "project",
-      "path": "../../Modules/Games/GameRa,Modules.Games.publicApi/GameRa.Modules.Games.PublicApi.csproj",
-      "msbuildProject": "../../Modules/Games/GameRa,Modules.Games.publicApi/GameRa.Modules.Games.PublicApi.csproj"
+      "path": "../../Modules/Games/GameRa.Modules.Games.PublicApi/GameRa.Modules.Games.PublicApi.csproj",
+      "msbuildProject": "../../Modules/Games/GameRa.Modules.Games.PublicApi/GameRa.Modules.Games.PublicApi.csproj"
     },
     "GameRa.Modules.Library.Application/1.0.0": {
       "type": "project",

@@ -1694,6 +1694,17 @@
           "GameRa.Modules.Games.Presentation.dll": {}
         }
       },
+      "GameRa.Modules.Games.PublicApi/1.0.0": {
+        "runtime": {
+          "GameRa.Modules.Games.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "GameRa.Modules.Games.PublicApi.dll": {}
+        }
+      },
       "GameRa.Modules.Library.Application/1.0.0": {
         "dependencies": {
           "GameRa.Common.Application": "1.0.0",
@@ -1993,14 +2004,6 @@
         },
         "compile": {
           "GameRa.Modules.Users.Presentation.dll": {}
-        }
-      },
-      "GameRa.Modules.Games.PublicApi.Reference/1.0.0.0": {
-        "runtime": {
-          "GameRa.Modules.Games.PublicApi.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
         }
       },
       "Microsoft.AspNetCore.Antiforgery/10.0.0.0": {
@@ -3859,9 +3862,6 @@
       },
       "SonarAnalyzer.CSharp/10.27.0.140913": {
         "compileOnly": true
-      },
-      "GameRa.Modules.Games.PublicApi/1.0.0": {
-        "compileOnly": true
       }
     }
   },
@@ -4429,6 +4429,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "GameRa.Modules.Games.PublicApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "GameRa.Modules.Library.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4521,11 +4526,6 @@
     },
     "GameRa.Modules.Users.Presentation/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "GameRa.Modules.Games.PublicApi.Reference/1.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
@@ -6098,11 +6098,6 @@
       "sha512": "sha512-cxk12QjN9io1SjN36B1QO+9dRf+ek2CGfQGsOWtHBojE35cKchKJod48raxZwe47jHhzmAUO4AJSh7+hF0GS4g==",
       "path": "sonaranalyzer.csharp/10.27.0.140913",
       "hashPath": "sonaranalyzer.csharp.10.27.0.140913.nupkg.sha512"
-    },
-    "GameRa.Modules.Games.PublicApi/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }
