@@ -1445,6 +1445,7 @@
         "dependencies": {
           "GameRa.Common.Application": "1.0.0",
           "GameRa.Modules.Discounts.Domain": "1.0.0",
+          "GameRa.Modules.Discounts.IntegrationEvents": "1.0.0",
           "GameRa.Modules.Games.PublicApi": "1.0.0"
         },
         "compile": {
@@ -1683,7 +1684,8 @@
         "dependencies": {
           "FluentValidation": "12.1.1",
           "GameRa.Common.Application": "1.0.0",
-          "GameRa.Modules.Reviews.Domain": "1.0.0"
+          "GameRa.Modules.Reviews.Domain": "1.0.0",
+          "GameRa.Modules.Reviews.IntegrationEvents": "1.0.0"
         },
         "compile": {
           "bin/placeholder/GameRa.Modules.Reviews.Application.dll": {}
@@ -1783,6 +1785,7 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "GameRa.Common.Infrastructure": "1.0.0",
+          "GameRa.Modules.Discounts.PublicApi": "1.0.0",
           "GameRa.Modules.Store.Application": "1.0.0",
           "GameRa.Modules.Store.Presentation": "1.0.0"
         },

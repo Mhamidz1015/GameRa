@@ -745,6 +745,14 @@
           }
         }
       },
+      "GameRa.Modules.Discounts.PublicApi/1.0.0": {
+        "runtime": {
+          "GameRa.Modules.Discounts.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
         "dependencies": {
           "GameRa.Common.Application": "1.0.0"
@@ -783,6 +791,7 @@
       "GameRa.Modules.Store.Infrastructure/1.0.0": {
         "dependencies": {
           "GameRa.Common.Infrastructure": "1.0.0",
+          "GameRa.Modules.Discounts.PublicApi": "1.0.0",
           "GameRa.Modules.Store.Application": "1.0.0",
           "GameRa.Modules.Store.Presentation": "1.0.0"
         },
@@ -1168,6 +1177,11 @@
       "sha512": ""
     },
     "GameRa.Common.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Discounts.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

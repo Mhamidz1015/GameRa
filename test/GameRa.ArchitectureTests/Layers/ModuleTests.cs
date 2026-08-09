@@ -24,10 +24,10 @@ public class ModuleTests : BaseTest
         string[] otherModules = [GamesNamespace, StoreNamespace, LibraryNamespace, DiscountsNamespace, ReviewsNamespace];
         string[] integrationEventsModules =
         [
-            GamesIntegrationEventsNamespace,
+            GamesIntegrationEventsNamespace,GamesPublicApi,
             StoreIntegrationEventsNamespace,
             LibraryIntegrationEventsNamespace,
-            DiscountsIntegrationEventsNamespace,
+            DiscountsIntegrationEventsNamespace,DiscountsPublicApi,
             ReviewsIntegrationEventsNamespace,
 
         ];
@@ -58,7 +58,7 @@ public class ModuleTests : BaseTest
             UsersIntegrationEventsNamespace,
             StoreIntegrationEventsNamespace,
             LibraryIntegrationEventsNamespace,
-            DiscountsIntegrationEventsNamespace,
+            DiscountsIntegrationEventsNamespace,DiscountsPublicApi,
             ReviewsIntegrationEventsNamespace,
         ];
 
@@ -85,10 +85,10 @@ public class ModuleTests : BaseTest
         string[] otherModules = [GamesNamespace, UsersNamespace, LibraryNamespace, DiscountsNamespace, ReviewsNamespace];
         string[] integrationEventsModules =
         [
-            GamesIntegrationEventsNamespace,
+            GamesIntegrationEventsNamespace,GamesPublicApi,
             UsersIntegrationEventsNamespace,
             LibraryIntegrationEventsNamespace,
-            DiscountsIntegrationEventsNamespace,
+            DiscountsIntegrationEventsNamespace,DiscountsPublicApi,
             ReviewsIntegrationEventsNamespace,
 
         ];
@@ -114,12 +114,12 @@ public class ModuleTests : BaseTest
     public void LibraryItemsModule_ShouldNotHaveDependencyOn_AnyOtherModule()
     {
         string[] otherModules = [UsersNamespace, GamesNamespace, StoreNamespace, DiscountsNamespace, ReviewsNamespace];
-        string[] integrationEventsModules = 
+        string[] integrationEventsModulesAndPublicsApi = 
             [
             UsersIntegrationEventsNamespace,
-            GamesIntegrationEventsNamespace,
+            GamesIntegrationEventsNamespace,GamesPublicApi,
             StoreIntegrationEventsNamespace,
-            DiscountsIntegrationEventsNamespace,
+            DiscountsIntegrationEventsNamespace,DiscountsPublicApi,
             ReviewsIntegrationEventsNamespace,
             ];
 
@@ -133,7 +133,7 @@ public class ModuleTests : BaseTest
 
         Types.InAssemblies(LibraryAssemblies)
             .That()
-            .DoNotHaveDependencyOnAny(integrationEventsModules)
+            .DoNotHaveDependencyOnAny(integrationEventsModulesAndPublicsApi)
             .Should()
             .NotHaveDependencyOnAny(otherModules)
             .GetResult()
@@ -146,8 +146,11 @@ public class ModuleTests : BaseTest
         string[] otherModules = [UsersNamespace, GamesNamespace, StoreNamespace];
         string[] integrationEventsModules = [
             UsersIntegrationEventsNamespace,
-            GamesIntegrationEventsNamespace,
-            StoreIntegrationEventsNamespace];
+            GamesIntegrationEventsNamespace,GamesPublicApi,
+            StoreIntegrationEventsNamespace,
+            LibraryIntegrationEventsNamespace,
+            ReviewsIntegrationEventsNamespace
+            ];
 
         List<Assembly> DiscountsAssemblies =
         [
@@ -172,8 +175,11 @@ public class ModuleTests : BaseTest
         string[] otherModules = [UsersNamespace, GamesNamespace, StoreNamespace];
         string[] integrationEventsModules = [
             UsersIntegrationEventsNamespace,
-            GamesIntegrationEventsNamespace,
-            StoreIntegrationEventsNamespace];
+            GamesIntegrationEventsNamespace,GamesPublicApi,
+            StoreIntegrationEventsNamespace,
+            LibraryIntegrationEventsNamespace,
+            DiscountsIntegrationEventsNamespace,DiscountsPublicApi,
+            ];
 
         List<Assembly> ReviewsAssemblies =
         [

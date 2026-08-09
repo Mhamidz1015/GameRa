@@ -865,6 +865,16 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "GameRa.Modules.Discounts.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/GameRa.Modules.Discounts.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameRa.Modules.Discounts.PublicApi.dll": {}
+        }
+      },
       "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -2102,6 +2112,11 @@
       "path": "../../../Common/GameRa.Common.Presentation/GameRa.Common.Presentation.csproj",
       "msbuildProject": "../../../Common/GameRa.Common.Presentation/GameRa.Common.Presentation.csproj"
     },
+    "GameRa.Modules.Discounts.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../../Discounts/GameRa.Modules.Discounts.PublicApi/GameRa.Modules.Discounts.PublicApi.csproj",
+      "msbuildProject": "../../Discounts/GameRa.Modules.Discounts.PublicApi/GameRa.Modules.Discounts.PublicApi.csproj"
+    },
     "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
       "type": "project",
       "path": "../../Games/GameRa.Modules.Games.IntegrationEvents/GameRa.Modules.Games.IntegrationEvents.csproj",
@@ -2136,6 +2151,7 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "GameRa.Common.Infrastructure >= 1.0.0",
+      "GameRa.Modules.Discounts.PublicApi >= 1.0.0",
       "GameRa.Modules.Store.Application >= 1.0.0",
       "GameRa.Modules.Store.Presentation >= 1.0.0"
     ]
@@ -2175,6 +2191,9 @@
           "projectReferences": {
             "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Common\\GameRa.Common.Infrastructure\\GameRa.Common.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Common\\GameRa.Common.Infrastructure\\GameRa.Common.Infrastructure.csproj"
+            },
+            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Discounts\\GameRa.Modules.Discounts.PublicApi\\GameRa.Modules.Discounts.PublicApi.csproj": {
+              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Discounts\\GameRa.Modules.Discounts.PublicApi\\GameRa.Modules.Discounts.PublicApi.csproj"
             },
             "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.Application\\GameRa.Modules.Store.Application.csproj": {
               "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.Application\\GameRa.Modules.Store.Application.csproj"

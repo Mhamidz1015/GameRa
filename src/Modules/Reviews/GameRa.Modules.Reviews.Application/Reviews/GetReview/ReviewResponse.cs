@@ -7,4 +7,5 @@ public sealed record ReviewResponse(
     int Rating,
     string Comment,
     DateTime CreatedAtUtc,
-    DateTime? UpdatedAtUtc);
+    DateTime? UpdatedAtUtc,
+    bool IsVerifiedPurchase);

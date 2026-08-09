@@ -2325,6 +2325,9 @@
               "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Discounts\\GameRa.Modules.Discounts.Domain\\GameRa.Modules.Discounts.Domain.csproj": {
                 "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Discounts\\GameRa.Modules.Discounts.Domain\\GameRa.Modules.Discounts.Domain.csproj"
               },
+              "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Discounts\\GameRa.Modules.Discounts.IntegrationEvents\\GameRa.Modules.Discounts.IntegrationEvents.csproj": {
+                "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Discounts\\GameRa.Modules.Discounts.IntegrationEvents\\GameRa.Modules.Discounts.IntegrationEvents.csproj"
+              },
               "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.PublicApi\\GameRa.Modules.Games.PublicApi.csproj": {
                 "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.PublicApi\\GameRa.Modules.Games.PublicApi.csproj"
               }
@@ -8095,6 +8098,9 @@
               },
               "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Reviews\\GameRa.Modules.Reviews.Domain\\GameRa.Modules.Reviews.Domain.csproj": {
                 "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Reviews\\GameRa.Modules.Reviews.Domain\\GameRa.Modules.Reviews.Domain.csproj"
+              },
+              "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Reviews\\GameRa.Modules.Reviews.IntegrationEvents\\GameRa.Modules.Reviews.IntegrationEvents.csproj": {
+                "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Reviews\\GameRa.Modules.Reviews.IntegrationEvents\\GameRa.Modules.Reviews.IntegrationEvents.csproj"
               }
             }
           }
@@ -10554,6 +10560,9 @@
             "projectReferences": {
               "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Common\\GameRa.Common.Infrastructure\\GameRa.Common.Infrastructure.csproj": {
                 "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Common\\GameRa.Common.Infrastructure\\GameRa.Common.Infrastructure.csproj"
+              },
+              "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Discounts\\GameRa.Modules.Discounts.PublicApi\\GameRa.Modules.Discounts.PublicApi.csproj": {
+                "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Discounts\\GameRa.Modules.Discounts.PublicApi\\GameRa.Modules.Discounts.PublicApi.csproj"
               },
               "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.Application\\GameRa.Modules.Store.Application.csproj": {
                 "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Store\\GameRa.Modules.Store.Application\\GameRa.Modules.Store.Application.csproj"

@@ -1304,6 +1304,16 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "GameRa.Modules.Discounts.PublicApi/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/GameRa.Modules.Discounts.PublicApi.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameRa.Modules.Discounts.PublicApi.dll": {}
+        }
+      },
       "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -1350,6 +1360,7 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "GameRa.Common.Infrastructure": "1.0.0",
+          "GameRa.Modules.Discounts.PublicApi": "1.0.0",
           "GameRa.Modules.Store.Application": "1.0.0",
           "GameRa.Modules.Store.Presentation": "1.0.0"
         },
@@ -3098,6 +3109,11 @@
       "type": "project",
       "path": "../../../../Common/GameRa.Common.Presentation/GameRa.Common.Presentation.csproj",
       "msbuildProject": "../../../../Common/GameRa.Common.Presentation/GameRa.Common.Presentation.csproj"
+    },
+    "GameRa.Modules.Discounts.PublicApi/1.0.0": {
+      "type": "project",
+      "path": "../../../Discounts/GameRa.Modules.Discounts.PublicApi/GameRa.Modules.Discounts.PublicApi.csproj",
+      "msbuildProject": "../../../Discounts/GameRa.Modules.Discounts.PublicApi/GameRa.Modules.Discounts.PublicApi.csproj"
     },
     "GameRa.Modules.Games.IntegrationEvents/1.0.0": {
       "type": "project",

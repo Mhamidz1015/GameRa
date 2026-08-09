@@ -156,3 +156,5 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\obj\Debug\net10.0\ref\GameRa.Modules.Store.ArchitectureTests.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Store.IntegrationEvents.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Store.IntegrationEvents.pdb
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Discounts.PublicApi.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Discounts.PublicApi.pdb

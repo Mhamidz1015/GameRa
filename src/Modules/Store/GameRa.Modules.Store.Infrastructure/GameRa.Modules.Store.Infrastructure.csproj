@@ -8,6 +8,7 @@
 
   <ItemGroup>
 	  <ProjectReference Include="..\..\..\Common\GameRa.Common.Infrastructure\GameRa.Common.Infrastructure.csproj" />
+	  <ProjectReference Include="..\..\Discounts\GameRa.Modules.Discounts.PublicApi\GameRa.Modules.Discounts.PublicApi.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Store.Application\GameRa.Modules.Store.Application.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Store.Presentation\GameRa.Modules.Store.Presentation.csproj" />
   </ItemGroup>

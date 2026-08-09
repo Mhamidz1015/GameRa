@@ -7,6 +7,7 @@ public abstract class BaseTest
 
     protected const string GamesNamespace = "GameRa.Modules.Games";
     protected const string GamesIntegrationEventsNamespace = "GameRa.Modules.Games.IntegrationEvents";
+    protected const string GamesPublicApi = "GameRa.Modules.Games.PublicApi";
 
     protected const string StoreNamespace = "GameRa.Modules.Store";
     protected const string StoreIntegrationEventsNamespace = "GameRa.Modules.Store.IntegrationEvents";
@@ -16,6 +17,7 @@ public abstract class BaseTest
 
     protected const string DiscountsNamespace = "GameRa.Modules.Discounts";
     protected const string DiscountsIntegrationEventsNamespace = "GameRa.Modules.Discounts.IntegrationEvents";
+    protected const string DiscountsPublicApi = "GameRa.Modules.Discounts.PublicApi";
 
     protected const string ReviewsNamespace = "GameRa.Modules.Reviews";
     protected const string ReviewsIntegrationEventsNamespace = "GameRa.Modules.Reviews.IntegrationEvents";

@@ -10,6 +10,7 @@
     <ProjectReference Include="..\..\..\Common\GameRa.Common.Application\GameRa.Common.Application.csproj" />
     <ProjectReference Include="..\..\Games\GameRa.Modules.Games.PublicApi\GameRa.Modules.Games.PublicApi.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Discounts.Domain\GameRa.Modules.Discounts.Domain.csproj" />
+    <ProjectReference Include="..\GameRa.Modules.Discounts.IntegrationEvents\GameRa.Modules.Discounts.IntegrationEvents.csproj" />
   </ItemGroup>
 
 </Project>

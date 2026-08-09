@@ -80,6 +80,6 @@ public sealed class Review : Entity
 
     public void Delete()
     {
-        Raise(new ReviewDeletedDomainEvent(ReviewId));
+        Raise(new ReviewDeletedDomainEvent(ReviewId, GameId, Rating));
     }
 }

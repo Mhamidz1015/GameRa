@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\GameRa.Common.Application\GameRa.Common.Application.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Reviews.Domain\GameRa.Modules.Reviews.Domain.csproj" />
+    <ProjectReference Include="..\GameRa.Modules.Reviews.IntegrationEvents\GameRa.Modules.Reviews.IntegrationEvents.csproj" />
   </ItemGroup>
 
 </Project>
