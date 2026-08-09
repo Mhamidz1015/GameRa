@@ -453,6 +453,19 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "GameRa.Modules.Discounts.IntegrationEvents/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GameRa.Modules.Discounts.IntegrationEvents.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameRa.Modules.Discounts.IntegrationEvents.dll": {}
+        }
+      },
       "GameRa.Modules.Games.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -492,6 +505,19 @@
         },
         "runtime": {
           "bin/placeholder/GameRa.Modules.Games.IntegrationEvents.dll": {}
+        }
+      },
+      "GameRa.Modules.Reviews.IntegrationEvents/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "GameRa.Common.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GameRa.Modules.Reviews.IntegrationEvents.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GameRa.Modules.Reviews.IntegrationEvents.dll": {}
         }
       }
     }
@@ -1134,6 +1160,11 @@
       "path": "../../../Common/GameRa.Common.Presentation/GameRa.Common.Presentation.csproj",
       "msbuildProject": "../../../Common/GameRa.Common.Presentation/GameRa.Common.Presentation.csproj"
     },
+    "GameRa.Modules.Discounts.IntegrationEvents/1.0.0": {
+      "type": "project",
+      "path": "../../Discounts/GameRa.Modules.Discounts.IntegrationEvents/GameRa.Modules.Discounts.IntegrationEvents.csproj",
+      "msbuildProject": "../../Discounts/GameRa.Modules.Discounts.IntegrationEvents/GameRa.Modules.Discounts.IntegrationEvents.csproj"
+    },
     "GameRa.Modules.Games.Application/1.0.0": {
       "type": "project",
       "path": "../GameRa.Modules.Games.Application/GameRa.Modules.Games.Application.csproj",
@@ -1148,12 +1179,19 @@
       "type": "project",
       "path": "../GameRa.Modules.Games.IntegrationEvents/GameRa.Modules.Games.IntegrationEvents.csproj",
       "msbuildProject": "../GameRa.Modules.Games.IntegrationEvents/GameRa.Modules.Games.IntegrationEvents.csproj"
+    },
+    "GameRa.Modules.Reviews.IntegrationEvents/1.0.0": {
+      "type": "project",
+      "path": "../../Reviews/GameRa.Modules.Reviews.IntegrationEvents/GameRa.Modules.Reviews.IntegrationEvents.csproj",
+      "msbuildProject": "../../Reviews/GameRa.Modules.Reviews.IntegrationEvents/GameRa.Modules.Reviews.IntegrationEvents.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
       "GameRa.Common.Presentation >= 1.0.0",
+      "GameRa.Modules.Discounts.IntegrationEvents >= 1.0.0",
       "GameRa.Modules.Games.Application >= 1.0.0",
+      "GameRa.Modules.Reviews.IntegrationEvents >= 1.0.0",
       "Swashbuckle.AspNetCore.Swagger >= 10.2.3"
     ]
   },
@@ -1193,8 +1231,14 @@
             "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Common\\GameRa.Common.Presentation\\GameRa.Common.Presentation.csproj": {
               "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Common\\GameRa.Common.Presentation\\GameRa.Common.Presentation.csproj"
             },
+            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Discounts\\GameRa.Modules.Discounts.IntegrationEvents\\GameRa.Modules.Discounts.IntegrationEvents.csproj": {
+              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Discounts\\GameRa.Modules.Discounts.IntegrationEvents\\GameRa.Modules.Discounts.IntegrationEvents.csproj"
+            },
             "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Application\\GameRa.Modules.Games.Application.csproj": {
               "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Application\\GameRa.Modules.Games.Application.csproj"
+            },
+            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Reviews\\GameRa.Modules.Reviews.IntegrationEvents\\GameRa.Modules.Reviews.IntegrationEvents.csproj": {
+              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Reviews\\GameRa.Modules.Reviews.IntegrationEvents\\GameRa.Modules.Reviews.IntegrationEvents.csproj"
             }
           }
         }

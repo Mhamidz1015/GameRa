@@ -1,17 +1,19 @@
-using GameRa.Extensions;
-using GameRa.Middleware;
 using GameRa.Common.Application;
 using GameRa.Common.Infrastructure;
+using GameRa.Common.Infrastructure.Configuration;
 using GameRa.Common.Presentation.Endpoints;
+using GameRa.Extensions;
+using GameRa.Middleware;
+using GameRa.Modules.Discounts.Infrastructure;
 using GameRa.Modules.Games.Infrastructure;
+using GameRa.Modules.Library.Infrastructure;
+using GameRa.Modules.Reviews.Infrastructure;
 using GameRa.Modules.Store.Infrastructure;
 using GameRa.Modules.Users.Infrastructure;
-using GameRa.Modules.Library.Infrastructure;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Serilog;
 using System.Reflection;
-using GameRa.Common.Infrastructure.Configuration;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -27,7 +29,9 @@ Assembly[] moduleApplicationAssemblies = [
     GameRa.Modules.Users.Application.AssemblyReference.Assembly,
     GameRa.Modules.Games.Application.AssemblyReference.Assembly,
     GameRa.Modules.Store.Application.AssemblyReference.Assembly,
-    GameRa.Modules.Library.Application.AssemblyReference.Assembly];
+    GameRa.Modules.Library.Application.AssemblyReference.Assembly,
+    GameRa.Modules.Reviews.Application.AssemblyReference.Assembly,
+    GameRa.Modules.Discounts.Application.AssemblyReference.Assembly];
 
 builder.Services.AddApplication(moduleApplicationAssemblies);
 
@@ -49,7 +53,8 @@ builder.Services.AddHealthChecks()
     .AddRedis(redisConnectionString)
     .AddKeyCloak(keyCloakHealthUrl);
 
-builder.Configuration.AddModuleConfiguration(["users", "games", "store" , "LibraryItem"]);
+builder.Configuration.AddModuleConfiguration(
+    ["users", "games", "store" , "LibraryItem" , "Reviews" , "Discounts"]);
 
 builder.Services.AddGamesModule(builder.Configuration);
 
@@ -58,6 +63,10 @@ builder.Services.AddUsersModule(builder.Configuration);
 builder.Services.AddStoreModule(builder.Configuration);
 
 builder.Services.AddLibraryItemModule(builder.Configuration);
+
+builder.Services.AddReviewsModule(builder.Configuration);
+
+builder.Services.AddDiscountsModule(builder.Configuration);
 
 WebApplication app = builder.Build();
 

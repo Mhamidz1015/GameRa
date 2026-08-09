@@ -35,6 +35,7 @@ internal sealed class AddGameCommandHandler(IGameRepository GameRepository,
             return Result.Failure<Guid>(result.Error);
 
         GameRepository.Insert(result.Value);
+
         await unitOfWork.SaveChangesAsync(cancellationToken);
 
         return result.Value.Id;

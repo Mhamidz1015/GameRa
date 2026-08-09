@@ -34,8 +34,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common\GameRa.Common.Infrastructure\GameRa.Common.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Modules\Discounts\GameRa.Modules.Discounts.Infrastructure\GameRa.Modules.Discounts.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Modules\Games\GameRa.Modules.Games.Infrastructure\GameRa.Modules.Games.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Modules\Library\GameRa.Modules.Library.Infrastructure\GameRa.Modules.Library.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Modules\Reviews\GameRa.Modules.Reviews.Infrastructure\GameRa.Modules.Reviews.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Modules\Store\GameRa.Modules.Store.Infrastructure\GameRa.Modules.Store.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Modules\User\GameRa.Modules.Users.Infrastructure\GameRa.Modules.Users.Infrastructure.csproj" />
   </ItemGroup>

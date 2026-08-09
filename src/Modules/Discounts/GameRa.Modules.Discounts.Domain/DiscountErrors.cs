@@ -8,6 +8,19 @@ public static class DiscountErrors
         "Discount.NotFound",
         $"The discount with the specified identifier {discountId} was not found.");
 
+    public static Error CodeNotFound(string code) => Error.NotFound(
+        "Discount.CodeNotFound",
+        $"The discount with the code '{code}' was not found.");
+
+    public static Error CodeAlreadyExists(string code) => Error.Conflict(
+        "Discount.CodeAlreadyExists",
+        $"A discount with the code '{code}' already exists.");
+
+    public static Error GameNotFound(Guid gameId) => Error.NotFound(
+        "Discount.GameNotFound",
+        $"The game with identifier {gameId} was not found.");
+    
+
     public static readonly Error InvalidCode = Error.Problem(
         "Discount.InvalidCode",
         "The discount code is invalid or empty.");

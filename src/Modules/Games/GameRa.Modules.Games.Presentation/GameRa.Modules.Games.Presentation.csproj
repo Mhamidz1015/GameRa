@@ -12,6 +12,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\GameRa.Common.Presentation\GameRa.Common.Presentation.csproj" />
+    <ProjectReference Include="..\..\Discounts\GameRa.Modules.Discounts.IntegrationEvents\GameRa.Modules.Discounts.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\..\Reviews\GameRa.Modules.Reviews.IntegrationEvents\GameRa.Modules.Reviews.IntegrationEvents.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Games.Application\GameRa.Modules.Games.Application.csproj" />
   </ItemGroup>
 

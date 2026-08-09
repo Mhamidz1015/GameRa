@@ -9,6 +9,10 @@ using GameRa.Modules.Users.Infrastructure;
 using Microsoft.Extensions.DependencyModel;
 using NetArchTest.Rules;
 using System.Reflection;
+using GameRa.Modules.Discounts.Infrastructure;
+using GameRa.Modules.Discounts.Domain;
+using GameRa.Modules.Reviews.Domain;
+using GameRa.Modules.Reviews.Infrastructure;
 
 namespace GameRa.ArchitectureTests.Layers;
 
@@ -145,9 +149,9 @@ public class ModuleTests : BaseTest
             GamesIntegrationEventsNamespace,
             StoreIntegrationEventsNamespace];
 
-        List<Assembly> attendanceAssemblies =
+        List<Assembly> DiscountsAssemblies =
         [
-            typeof(Discounts).Assembly,
+            typeof(Discount).Assembly,
             Modules.Discounts.Application.AssemblyReference.Assembly,
             Modules.Discounts.Presentation.AssemblyReference.Assembly,
             typeof(DiscountsModule).Assembly
@@ -173,10 +177,10 @@ public class ModuleTests : BaseTest
 
         List<Assembly> ReviewsAssemblies =
         [
-            typeof(Reviews).Assembly,
+            typeof(Review).Assembly,
             Modules.Reviews.Application.AssemblyReference.Assembly,
             Modules.Reviews.Presentation.AssemblyReference.Assembly,
-            typeof(ReviewsItemModule).Assembly
+            typeof(ReviewsModule).Assembly
         ];
 
         Types.InAssemblies(ReviewsAssemblies)

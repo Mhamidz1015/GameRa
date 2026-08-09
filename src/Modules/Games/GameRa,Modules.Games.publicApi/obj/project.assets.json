@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa,Modules.Games.publicApi\\GameRa,Modules.Games.publicApi.csproj",
-      "projectName": "GameRa,Modules.Games.publicApi",
-      "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa,Modules.Games.publicApi\\GameRa,Modules.Games.publicApi.csproj",
+      "projectUniqueName": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa,Modules.Games.publicApi\\GameRa.Modules.Games.PublicApi.csproj",
+      "projectName": "GameRa.Modules.Games.PublicApi",
+      "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa,Modules.Games.publicApi\\GameRa.Modules.Games.PublicApi.csproj",
       "packagesPath": "C:\\Users\\ROSE PC\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa,Modules.Games.publicApi\\obj\\",
       "projectStyle": "PackageReference",

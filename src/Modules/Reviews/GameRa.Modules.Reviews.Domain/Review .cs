@@ -22,11 +22,14 @@ public sealed class Review : Entity
 
     public DateTime? UpdatedAtUtc { get; private set; }
 
+    public bool IsVerifiedPurchase { get; private set; }
+
     public static Result<Review> Create(
         Guid gameId,
         Guid userId,
         int rating,
-        string comment)
+        string comment,
+        bool isVerifiedPurchase)
     {
         if (rating is < 1 or > 5)
         {
@@ -45,6 +48,7 @@ public sealed class Review : Entity
             UserId = userId,
             Rating = rating,
             Comment = comment,
+            IsVerifiedPurchase = isVerifiedPurchase,
             CreatedAtUtc = DateTime.UtcNow
         };
 
