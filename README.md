@@ -66,8 +66,8 @@ Rather than focusing only on business features, this project emphasizes clean ar
 | Games   | Game catalog, categories, game management           |
 | Store   | Shopping cart, orders, payments, customer management |
 | Library | User's purchased games, archiving                   |
-| Review | Game reviews, ratings, lifecycle management          |
-| Discount | Discount codes, percentage/fixed discounts, game pricing |
+| Reviews | Game reviews, ratings, lifecycle management         |
+| Discounts | Discount codes, percentage/fixed discounts, game pricing |
 
 Each module follows **Clean Architecture** with four layers:
 
