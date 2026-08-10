@@ -3,7 +3,7 @@ using GameRa.Modules.Games.Application.Abstractions.Data;
 using GameRa.Modules.Games.Domain.Games;
 using GameRa.Modules.Reviews.IntegrationEvents;
 
-namespace GameRa.Modules.Games.Presentation.IntegrationEvents;
+namespace GameRa.Modules.Games.Presentation.IntegrationEvent;
 
 internal sealed class ReviewDeletedIntegrationEventHandler(
     IGameRepository gameRepository,

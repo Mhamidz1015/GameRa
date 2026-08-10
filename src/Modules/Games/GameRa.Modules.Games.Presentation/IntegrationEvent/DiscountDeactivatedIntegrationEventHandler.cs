@@ -3,7 +3,7 @@ using GameRa.Modules.Discounts.IntegrationEvents;
 using GameRa.Modules.Games.Application.Abstractions.Data;
 using GameRa.Modules.Games.Domain.Games;
 
-namespace GameRa.Modules.Games.Presentation.IntegrationEvents;
+namespace GameRa.Modules.Games.Presentation.IntegrationEvent;
 
 internal sealed class DiscountDeactivatedIntegrationEventHandler(
     IGameRepository gameRepository,

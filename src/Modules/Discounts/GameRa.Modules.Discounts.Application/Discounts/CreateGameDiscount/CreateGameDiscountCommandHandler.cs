@@ -2,7 +2,7 @@
 using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Discounts.Application.Abstractions.Data;
 using GameRa.Modules.Discounts.Domain;
-using GameRa.Modules.Games.PublicApi;
+using GameRa_Modules.Games.publicApi;
 
 namespace GameRa.Modules.Discounts.Application.Discounts.CreateGameDiscount;
 

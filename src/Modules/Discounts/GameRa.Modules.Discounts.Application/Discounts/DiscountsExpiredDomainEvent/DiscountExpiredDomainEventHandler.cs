@@ -7,7 +7,7 @@ using GameRa.Modules.Discounts.Domain;
 using GameRa.Modules.Discounts.IntegrationEvents;
 using MediatR;
 
-namespace GameRa.Modules.Discounts.Application.Discounts.ExpireDiscount;
+namespace GameRa.Modules.Discounts.Application.Discounts.DiscountsExpiredDomainEvent;
 
 internal sealed class DiscountExpiredDomainEventHandler(ISender sender, IEventBus eventBus)
     : DomainEventHandler<DiscountExpiredDomainEvent>

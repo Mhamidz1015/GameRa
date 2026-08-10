@@ -19,7 +19,8 @@ internal sealed class CreateReview : IEndpoint
                 request.GameId,
                 request.UserId,
                 request.Rating,
-                request.Comment);
+                request.Comment,
+                request.VerifiedPurchase);
 
             Result<Guid> result = await sender.Send(command);
 
@@ -31,8 +32,13 @@ internal sealed class CreateReview : IEndpoint
     internal sealed class Request
     {
         public Guid GameId { get; init; }
+
         public Guid UserId { get; init; }
+
         public int Rating { get; init; }
+
         public string Comment { get; init; }
+
+        public bool VerifiedPurchase { get; init; }
     }
 }

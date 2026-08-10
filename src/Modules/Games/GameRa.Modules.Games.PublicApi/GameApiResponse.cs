@@ -1,4 +1,4 @@
-﻿namespace GameRa.Modules.Games.PublicApi;
+﻿namespace GameRa_Modules.Games.publicApi;
 
 public sealed record GameApiResponse(
     Guid GameId,

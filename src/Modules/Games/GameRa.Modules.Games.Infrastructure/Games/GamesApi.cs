@@ -1,6 +1,6 @@
 ﻿using GameRa.Modules.Games.Domain.Games;
 using GameRa.Modules.Games.Infrastructure.Database;
-using GameRa.Modules.Games.PublicApi;
+using GameRa_Modules.Games.publicApi;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameRa.Modules.Games.Infrastructure.Games;

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameRa.ArchitectureTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de9c30f5bc0401bbd6d47a8201294472fd2387c1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+36662e172425452af38de3bcf02bd165f9f525b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameRa.ArchitectureTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameRa.ArchitectureTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

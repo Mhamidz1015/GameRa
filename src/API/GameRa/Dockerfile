@@ -41,6 +41,7 @@ COPY ["src/Modules/Games/GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain
 COPY ["src/Modules/Games/GameRa.Modules.Games.Infrastructure/GameRa.Modules.Games.Infrastructure.csproj","src/Modules/Games/GameRa.Modules.Games.Infrastructure/"]
 COPY ["src/Modules/Games/GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj","src/Modules/Games/GameRa.Modules.Games.Presentation/"]
 COPY ["src/Modules/Games/GameRa.Modules.Games.IntegrationEvents/GameRa.Modules.Games.IntegrationEvents.csproj","src/Modules/Games/GameRa.Modules.Games.IntegrationEvents/"]
+COPY ["src/Modules/Games/GameRa.Modules.Games.PublicApi/GameRa.Modules.Games.PublicApi.csproj","src/Modules/Games/GameRa.Modules.Games.PublicApi/"]
 
 # ----------------------------
 # Store
@@ -72,6 +73,27 @@ COPY ["src/Modules/Library/GameRa.Modules.Library.Domain/GameRa.Modules.Library.
 COPY ["src/Modules/Library/GameRa.Modules.Library.Infrastructure/GameRa.Modules.Library.Infrastructure.csproj","src/Modules/Library/GameRa.Modules.Library.Infrastructure/"]
 COPY ["src/Modules/Library/GameRa.Modules.Library.Presentation/GameRa.Modules.Library.Presentation.csproj","src/Modules/Library/GameRa.Modules.Library.Presentation/"]
 COPY ["src/Modules/Library/GameRa.Modules.Library.IntegrationEvents/GameRa.Modules.Library.IntegrationEvents.csproj","src/Modules/Library/GameRa.Modules.Library.IntegrationEvents/"]
+
+# ----------------------------
+# Discounts
+# ----------------------------
+
+COPY ["src/Modules/Discounts/GameRa.Modules.Discounts.Application/GameRa.Modules.Discounts.Application.csproj","src/Modules/Discounts/GameRa.Modules.Discounts.Application/"]
+COPY ["src/Modules/Discounts/GameRa.Modules.Discounts.Domain/GameRa.Modules.Discounts.Domain.csproj","src/Modules/Discounts/GameRa.Modules.Discounts.Domain/"]
+COPY ["src/Modules/Discounts/GameRa.Modules.Discounts.Infrastructure/GameRa.Modules.Discounts.Infrastructure.csproj","src/Modules/Discounts/GameRa.Modules.Discounts.Infrastructure/"]
+COPY ["src/Modules/Discounts/GameRa.Modules.Discounts.Presentation/GameRa.Modules.Discounts.Presentation.csproj","src/Modules/Discounts/GameRa.Modules.Discounts.Presentation/"]
+COPY ["src/Modules/Discounts/GameRa.Modules.Discounts.IntegrationEvents/GameRa.Modules.Discounts.IntegrationEvents.csproj","src/Modules/Discounts/GameRa.Modules.Discounts.IntegrationEvents/"]
+COPY ["src/Modules/Discounts/GameRa.Modules.Discounts.PublicApi/GameRa.Modules.Discounts.PublicApi.csproj","src/Modules/Discounts/GameRa.Modules.Discounts.PublicApi/"]
+
+# ----------------------------
+# Reviews
+# ----------------------------
+
+COPY ["src/Modules/Reviews/GameRa.Modules.Reviews.Application/GameRa.Modules.Reviews.Application.csproj","src/Modules/Reviews/GameRa.Modules.Reviews.Application/"]
+COPY ["src/Modules/Reviews/GameRa.Modules.Reviews.Domain/GameRa.Modules.Reviews.Domain.csproj","src/Modules/Reviews/GameRa.Modules.Reviews.Domain/"]
+COPY ["src/Modules/Reviews/GameRa.Modules.Reviews.Infrastructure/GameRa.Modules.Reviews.Infrastructure.csproj","src/Modules/Reviews/GameRa.Modules.Reviews.Infrastructure/"]
+COPY ["src/Modules/Reviews/GameRa.Modules.Reviews.Presentation/GameRa.Modules.Reviews.Presentation.csproj","src/Modules/Reviews/GameRa.Modules.Reviews.Presentation/"]
+COPY ["src/Modules/Reviews/GameRa.Modules.Reviews.IntegrationEvents/GameRa.Modules.Reviews.IntegrationEvents.csproj","src/Modules/Reviews/GameRa.Modules.Reviews.IntegrationEvents/"]
 
 RUN dotnet restore "src/API/GameRa/GameRa.csproj"
 
@@ -106,5 +128,7 @@ COPY --from=build /src/src/API/GameRa/modules.games.json .
 COPY --from=build /src/src/API/GameRa/modules.LibraryItem.json .
 COPY --from=build /src/src/API/GameRa/modules.store.json .
 COPY --from=build /src/src/API/GameRa/modules.users.json .
+COPY --from=build /src/src/API/GameRa/modules.Discounts.json .
+COPY --from=build /src/src/API/GameRa/modules.Reviews.json .
 
 ENTRYPOINT ["dotnet","GameRa.dll"]
