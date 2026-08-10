@@ -336,10 +336,8 @@ dotnet test test/GameRa.IntegrationTests
 - Payment Gateway Integration
 - Notification Service
 - Wishlist
-- Discounts & Coupons
 - Recommendation Engine
 - Search Service
-- Admin Dashboard
 
 ---
 
