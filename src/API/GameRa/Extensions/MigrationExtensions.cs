@@ -1,5 +1,7 @@
-﻿using GameRa.Modules.Games.Infrastructure.Database;
+﻿using GameRa.Modules.Discounts.Infrastructure.Database;
+using GameRa.Modules.Games.Infrastructure.Database;
 using GameRa.Modules.Library.Infrastructure.Database;
+using GameRa.Modules.Reviews.Infrastructure.Database;
 using GameRa.Modules.Store.Infrastructure.Database;
 using GameRa.Modules.Users.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +18,8 @@ internal static class MigrationExtensions
         ApplyMigration<UsersDbContext>(scope);
         ApplyMigration<LibraryItemDbContext>(scope);
         ApplyMigration<StoreDbContext>(scope);
+        ApplyMigration<DiscountDbContext>(scope);
+        ApplyMigration<ReviewsDbContext>(scope);
     }
 
     private static void ApplyMigration<TDbContext>(IServiceScope scope)
