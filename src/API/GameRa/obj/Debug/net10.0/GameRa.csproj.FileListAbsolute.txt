@@ -551,3 +551,4 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\bin\Debug\net10.0\Game
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\bin\Debug\net10.0\GameRa.Modules.Discounts.IntegrationEvents.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\bin\Debug\net10.0\GameRa.Modules.Discounts.PublicApi.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\bin\Debug\net10.0\GameRa.Modules.Reviews.IntegrationEvents.pdb
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\API\GameRa\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

@@ -38,7 +38,7 @@ namespace GameRa.IntegrationTests.ReviewsRattingAndLifecycle
 
             // Assert — (5+1+4+4)/4 = 3.5
             result.IsSuccess.Should().BeTrue();
-            result.Value.AverageRating.Should().BeApproximately(3.5, 0.01);
+            result.Value.AverageRating.Should().Be(3.5m);
             result.Value.TotalReviews.Should().Be(4);
         }
 
@@ -94,7 +94,7 @@ namespace GameRa.IntegrationTests.ReviewsRattingAndLifecycle
             // Average should be (5+3+1)/3 = 3
             Result<AverageRatingResponse> avgBefore = await Sender.Send(
                 new GetAverageRatingByGameIdQuery(gameId));
-            avgBefore.Value.AverageRating.Should().BeApproximately(3.0, 0.01);
+            avgBefore.Value.AverageRating.Should().Be(3.0m);
 
             // Delete one review
             await Sender.DeleteReviewAsync(review3, userId3);

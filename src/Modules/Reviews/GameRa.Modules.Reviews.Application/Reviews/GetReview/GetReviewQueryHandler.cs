@@ -17,7 +17,7 @@ internal sealed class GetReviewQueryHandler(IDbConnectionFactory dbConnectionFac
         const string sql =
             $"""
              SELECT
-                 id AS {nameof(ReviewResponse.ReviewId)},
+                 review_id AS {nameof(ReviewResponse.ReviewId)},
                  game_id AS {nameof(ReviewResponse.GameId)},
                  user_id AS {nameof(ReviewResponse.UserId)},
                  rating AS {nameof(ReviewResponse.Rating)},
