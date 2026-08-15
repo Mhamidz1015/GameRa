@@ -28,6 +28,7 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
     {
         await _dbContainer.StartAsync();
         await _redisContainer.StartAsync();
+        _ = CreateClient();
     }
 
     public new async Task DisposeAsync()

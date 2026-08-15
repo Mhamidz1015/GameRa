@@ -15,11 +15,11 @@ internal sealed class CreateGameDiscountCommandHandler(
     public async Task<Result<Guid>> Handle(CreateGameDiscountCommand request, CancellationToken cancellationToken)
     {
 
-        bool gameExists = await gamesApi.GameExistsAsync(request.GameId, cancellationToken);
-        if (!gameExists)
-        {
-            return Result.Failure<Guid>(DiscountErrors.GameNotFound(request.GameId));
-        }
+        //bool gameExists = await gamesApi.GameExistsAsync(request.GameId, cancellationToken);
+        //if (!gameExists)
+        //{
+        //    return Result.Failure<Guid>(DiscountErrors.GameNotFound(request.GameId));
+        //}
 
         bool codeExists = await discountRepository.ExistsByCodeAsync(request.Code, cancellationToken);
 

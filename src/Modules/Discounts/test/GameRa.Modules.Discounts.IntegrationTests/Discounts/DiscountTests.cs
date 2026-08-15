@@ -1,11 +1,6 @@
 ﻿using FluentAssertions;
 using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Discounts.IntegrationTests.Abstractions;
-using GameRa.Modules.Discounts.Application.Discounts.ActivateDiscount;
-using GameRa.Modules.Discounts.Application.Discounts.CreateCategoryDiscount;
-using GameRa.Modules.Discounts.Application.Discounts.CreateGameDiscount;
-using GameRa.Modules.Discounts.Application.Discounts.CreateGlobalDiscount;
-using GameRa.Modules.Discounts.Application.Discounts.DeactivateDiscount;
 using GameRa.Modules.Discounts.Application.Discounts.GetActiveDiscountsForGame;
 using GameRa.Modules.Discounts.Application.Discounts.GetDiscount;
 using GameRa.Modules.Discounts.Application.Discounts.GetDiscountByCode;

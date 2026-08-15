@@ -126,10 +126,12 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Common.Domain.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Common.Infrastructure.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Common.Presentation.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Discounts.PublicApi.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Games.IntegrationEvents.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Store.Application.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Store.Domain.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Store.Infrastructure.dll
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Store.IntegrationEvents.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Store.Presentation.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Users.IntegrationEvents.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Store.Domain.pdb
@@ -138,8 +140,10 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Common.Domain.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Common.Infrastructure.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Common.Presentation.pdb
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Discounts.PublicApi.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Games.IntegrationEvents.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Store.Application.pdb
+C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Store.IntegrationEvents.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Store.Presentation.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Users.IntegrationEvents.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\obj\Debug\net10.0\GameRa.Modules.Store.ArchitectureTests.csproj.AssemblyReference.cache
@@ -154,7 +158,3 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\obj\Debug\net10.0\GameRa.Modules.Store.ArchitectureTests.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\obj\Debug\net10.0\GameRa.Modules.Store.ArchitectureTests.genruntimeconfig.cache
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\obj\Debug\net10.0\ref\GameRa.Modules.Store.ArchitectureTests.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Store.IntegrationEvents.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Store.IntegrationEvents.pdb
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Discounts.PublicApi.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Store\test\GameRa.Modules.Store.Architecture\bin\Debug\net10.0\GameRa.Modules.Discounts.PublicApi.pdb

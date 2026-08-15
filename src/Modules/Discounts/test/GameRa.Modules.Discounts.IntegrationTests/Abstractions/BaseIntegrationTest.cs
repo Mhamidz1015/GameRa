@@ -25,11 +25,11 @@ public abstract class BaseIntegrationTest : IDisposable
     {
         await DbContext.Database.ExecuteSqlRawAsync(
             """
-            DELETE FROM discount.inbox_message_consumers;
-            DELETE FROM discount.inbox_messages;
-            DELETE FROM discount.outbox_message_consumers;
-            DELETE FROM discount.outbox_messages;
-            DELETE FROM discount.discount;
+            DELETE FROM discounts.inbox_message_consumers;
+            DELETE FROM discounts.inbox_messages;
+            DELETE FROM discounts.outbox_message_consumers;
+            DELETE FROM discounts.outbox_messages;
+            DELETE FROM discounts.discount;
             """);
     }
 

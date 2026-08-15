@@ -74,8 +74,8 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-
     app.ApplyMigrations();
+    
 }
 
 app.MapHealthChecks("health", new HealthCheckOptions

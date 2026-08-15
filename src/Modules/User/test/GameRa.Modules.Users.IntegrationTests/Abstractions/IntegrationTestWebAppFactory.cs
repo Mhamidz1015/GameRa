@@ -63,6 +63,7 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
         await _dbContainer.StartAsync();
         await _redisContainer.StartAsync();
         await _keycloakContainer.StartAsync();
+        _ = CreateClient();
     }
 
     public new async Task DisposeAsync()
