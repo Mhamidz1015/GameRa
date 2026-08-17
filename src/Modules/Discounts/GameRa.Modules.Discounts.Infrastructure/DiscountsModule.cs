@@ -1,11 +1,9 @@
-﻿using GameRa.Common.Application.Data;
-using GameRa.Common.Application.Messaging;
+﻿using GameRa.Common.Application.Messaging;
 using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Infrastructure.Outbox;
 using GameRa.Common.Presentation.Endpoints;
 using GameRa.Modules.Discounts.Application.Abstractions.Data;
 using GameRa.Modules.Discounts.Domain;
-using GameRa.Modules.Discounts.PublicApi;
 using GameRa.Modules.Discounts.Infrastructure.Database;
 using GameRa.Modules.Discounts.Infrastructure.Discounts;
 using GameRa.Modules.Discounts.Infrastructure.Inbox;
@@ -49,7 +47,6 @@ public static class DiscountsModule
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<DiscountDbContext>());
 
         services.AddScoped<IDiscountRepository, DiscountRepository>();
-        services.AddScoped<IDiscountsApi, DiscountsApi>();
 
         services.Configure<OutboxOptions>(configuration.GetSection("Discounts:Outbox"));
 

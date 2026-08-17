@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "t59qEsk6g9o=",
+  "dgSpecHash": "xqkwtyw/Pqo=",
   "success": true,
   "projectFilePath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Infrastructure\\GameRa.Modules.Games.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -40,5 +40,15 @@
     "C:\\Users\\ROSE PC\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\10.2.3\\swashbuckle.aspnetcore.swagger.10.2.3.nupkg.sha512",
     "C:\\Users\\ROSE PC\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.0.1\\system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Infrastructure\\GameRa.Modules.Games.Infrastructure.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Infrastructure\\GameRa.Modules.Games.Infrastructure.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

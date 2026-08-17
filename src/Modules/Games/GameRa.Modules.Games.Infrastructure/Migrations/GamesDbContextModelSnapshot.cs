@@ -158,8 +158,18 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
                         .HasColumnType("uuid")
                         .HasColumnName("id");
 
+                    b.Property<decimal?>("ActiveDiscountAmount")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("numeric(18,2)")
+                        .HasColumnName("active_discount_amount");
+
+                    b.Property<double>("AverageRating")
+                        .HasColumnType("double precision")
+                        .HasColumnName("average_rating");
+
                     b.Property<decimal>("BasePrice")
-                        .HasColumnType("numeric")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("numeric(18,2)")
                         .HasColumnName("base_price");
 
                     b.Property<Guid>("CategoryId")
@@ -168,18 +178,25 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
 
                     b.Property<string>("CoverImageUrl")
                         .IsRequired()
-                        .HasColumnType("text")
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)")
                         .HasColumnName("cover_image_url");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("text")
+                        .HasMaxLength(2000)
+                        .HasColumnType("character varying(2000)")
                         .HasColumnName("description");
 
                     b.Property<string>("Developer")
                         .IsRequired()
-                        .HasColumnType("text")
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)")
                         .HasColumnName("developer");
+
+                    b.Property<bool?>("IsDiscountPercentage")
+                        .HasColumnType("boolean")
+                        .HasColumnName("is_discount_percentage");
 
                     b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("timestamp with time zone")
@@ -191,8 +208,13 @@ namespace GameRa.Modules.Games.Infrastructure.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("text")
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)")
                         .HasColumnName("title");
+
+                    b.Property<int>("TotalReviews")
+                        .HasColumnType("integer")
+                        .HasColumnName("total_reviews");
 
                     b.HasKey("Id")
                         .HasName("pk_games");

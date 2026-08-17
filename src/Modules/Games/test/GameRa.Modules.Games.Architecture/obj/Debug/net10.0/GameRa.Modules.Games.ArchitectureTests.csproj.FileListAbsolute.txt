@@ -134,7 +134,6 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules.Games.Architecture\bin\Debug\net10.0\GameRa.Modules.Games.Infrastructure.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules.Games.Architecture\bin\Debug\net10.0\GameRa.Modules.Games.IntegrationEvents.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules.Games.Architecture\bin\Debug\net10.0\GameRa.Modules.Games.Presentation.dll
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules.Games.Architecture\bin\Debug\net10.0\GameRa.Modules.Games.PublicApi.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules.Games.Architecture\bin\Debug\net10.0\GameRa.Modules.Reviews.IntegrationEvents.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules.Games.Architecture\bin\Debug\net10.0\GameRa.Modules.Store.Domain.dll
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules.Games.Architecture\bin\Debug\net10.0\GameRa.Common.Application.pdb
@@ -148,7 +147,6 @@ C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules.Games.Architecture\bin\Debug\net10.0\GameRa.Modules.Games.Domain.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules.Games.Architecture\bin\Debug\net10.0\GameRa.Modules.Games.IntegrationEvents.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules.Games.Architecture\bin\Debug\net10.0\GameRa.Modules.Games.Presentation.pdb
-C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules.Games.Architecture\bin\Debug\net10.0\GameRa.Modules.Games.PublicApi.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules.Games.Architecture\bin\Debug\net10.0\GameRa.Modules.Reviews.IntegrationEvents.pdb
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules.Games.Architecture\obj\Debug\net10.0\GameRa.Modules.Games.ArchitectureTests.csproj.AssemblyReference.cache
 C:\Users\ROSE PC\source\repos\GamRa\GameRa\src\Modules\Games\test\GameRa.Modules.Games.Architecture\obj\Debug\net10.0\GameRa.Modules.Games.ArchitectureTests.GeneratedMSBuildEditorConfig.editorconfig

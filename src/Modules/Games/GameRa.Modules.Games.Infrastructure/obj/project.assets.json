@@ -671,16 +671,6 @@
           "bin/placeholder/GameRa.Modules.Games.Presentation.dll": {}
         }
       },
-      "GameRa.Modules.Games.PublicApi/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "compile": {
-          "bin/placeholder/GameRa.Modules.Games.PublicApi.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GameRa.Modules.Games.PublicApi.dll": {}
-        }
-      },
       "GameRa.Modules.Reviews.IntegrationEvents/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -1459,11 +1449,6 @@
       "path": "../GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj",
       "msbuildProject": "../GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj"
     },
-    "GameRa.Modules.Games.PublicApi/1.0.0": {
-      "type": "project",
-      "path": "../GameRa.Modules.Games.PublicApi/GameRa.Modules.Games.PublicApi.csproj",
-      "msbuildProject": "../GameRa.Modules.Games.PublicApi/GameRa.Modules.Games.PublicApi.csproj"
-    },
     "GameRa.Modules.Reviews.IntegrationEvents/1.0.0": {
       "type": "project",
       "path": "../../Reviews/GameRa.Modules.Reviews.IntegrationEvents/GameRa.Modules.Reviews.IntegrationEvents.csproj",
@@ -1477,7 +1462,6 @@
       "GameRa.Common.Infrastructure >= 1.0.0",
       "GameRa.Modules.Games.Application >= 1.0.0",
       "GameRa.Modules.Games.Presentation >= 1.0.0",
-      "GameRa.Modules.Games.PublicApi >= 1.0.0",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 10.0.2"
     ]
   },
@@ -1522,9 +1506,6 @@
             },
             "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj": {
               "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.Presentation\\GameRa.Modules.Games.Presentation.csproj"
-            },
-            "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.PublicApi\\GameRa.Modules.Games.PublicApi.csproj": {
-              "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\src\\Modules\\Games\\GameRa.Modules.Games.PublicApi\\GameRa.Modules.Games.PublicApi.csproj"
             }
           }
         }
@@ -1995,5 +1976,13 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

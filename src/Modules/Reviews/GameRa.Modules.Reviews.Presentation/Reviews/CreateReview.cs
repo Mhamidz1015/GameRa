@@ -19,8 +19,7 @@ internal sealed class CreateReview : IEndpoint
                 request.GameId,
                 request.UserId,
                 request.Rating,
-                request.Comment,
-                request.VerifiedPurchase);
+                request.Comment);
 
             Result<Guid> result = await sender.Send(command);
 

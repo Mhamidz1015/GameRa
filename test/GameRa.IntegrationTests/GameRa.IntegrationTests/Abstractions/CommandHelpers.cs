@@ -97,8 +97,7 @@ internal static class CommandHelpers
             gameId,
             userId,
             rating,
-            faker.Lorem.Sentence(),
-            isVerifiedPurchase));
+            faker.Lorem.Sentence()));
 
         result.IsSuccess.Should().BeTrue();
     }
@@ -116,8 +115,7 @@ internal static class CommandHelpers
             gameId,
             userId,
             rating,
-            faker.Lorem.Sentence(),
-            isVerifiedPurchase));
+            faker.Lorem.Sentence()));
 
         result.IsSuccess.Should().BeTrue();
 

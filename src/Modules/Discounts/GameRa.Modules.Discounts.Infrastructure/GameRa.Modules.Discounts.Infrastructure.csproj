@@ -15,7 +15,6 @@
     <ProjectReference Include="..\..\..\Common\GameRa.Common.Presentation\GameRa.Common.Presentation.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Discounts.Application\GameRa.Modules.Discounts.Application.csproj" />
     <ProjectReference Include="..\GameRa.Modules.Discounts.Presentation\GameRa.Modules.Discounts.Presentation.csproj" />
-    <ProjectReference Include="..\GameRa.Modules.Discounts.PublicApi\GameRa.Modules.Discounts.PublicApi.csproj" />
   </ItemGroup>
 
 </Project>

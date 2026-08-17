@@ -809,7 +809,6 @@
           "GameRa.Common.Infrastructure": "1.0.0",
           "GameRa.Modules.Games.Application": "1.0.0",
           "GameRa.Modules.Games.Presentation": "1.0.0",
-          "GameRa.Modules.Games.PublicApi": "1.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.2"
         },
         "runtime": {
@@ -840,14 +839,6 @@
         },
         "runtime": {
           "GameRa.Modules.Games.Presentation.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "GameRa.Modules.Games.PublicApi/1.0.0": {
-        "runtime": {
-          "GameRa.Modules.Games.PublicApi.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1258,11 +1249,6 @@
       "sha512": ""
     },
     "GameRa.Modules.Games.Presentation/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "GameRa.Modules.Games.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

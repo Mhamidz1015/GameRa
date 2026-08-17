@@ -24,10 +24,10 @@ public class ModuleTests : BaseTest
         string[] otherModules = [GamesNamespace, StoreNamespace, LibraryNamespace, DiscountsNamespace, ReviewsNamespace];
         string[] integrationEventsModules =
         [
-            GamesIntegrationEventsNamespace,GamesPublicApi,
+            GamesIntegrationEventsNamespace,
             StoreIntegrationEventsNamespace,
             LibraryIntegrationEventsNamespace,
-            DiscountsIntegrationEventsNamespace,DiscountsPublicApi,
+            DiscountsIntegrationEventsNamespace,
             ReviewsIntegrationEventsNamespace,
 
         ];
@@ -58,7 +58,7 @@ public class ModuleTests : BaseTest
             UsersIntegrationEventsNamespace,
             StoreIntegrationEventsNamespace,
             LibraryIntegrationEventsNamespace,
-            DiscountsIntegrationEventsNamespace,DiscountsPublicApi,
+            DiscountsIntegrationEventsNamespace,
             ReviewsIntegrationEventsNamespace,
         ];
 
@@ -85,10 +85,10 @@ public class ModuleTests : BaseTest
         string[] otherModules = [GamesNamespace, UsersNamespace, LibraryNamespace, DiscountsNamespace, ReviewsNamespace];
         string[] integrationEventsModules =
         [
-            GamesIntegrationEventsNamespace,GamesPublicApi,
+            GamesIntegrationEventsNamespace,
             UsersIntegrationEventsNamespace,
             LibraryIntegrationEventsNamespace,
-            DiscountsIntegrationEventsNamespace,DiscountsPublicApi,
+            DiscountsIntegrationEventsNamespace,
             ReviewsIntegrationEventsNamespace,
 
         ];
@@ -117,9 +117,9 @@ public class ModuleTests : BaseTest
         string[] integrationEventsModulesAndPublicsApi = 
             [
             UsersIntegrationEventsNamespace,
-            GamesIntegrationEventsNamespace,GamesPublicApi,
+            GamesIntegrationEventsNamespace,
             StoreIntegrationEventsNamespace,
-            DiscountsIntegrationEventsNamespace,DiscountsPublicApi,
+            DiscountsIntegrationEventsNamespace,
             ReviewsIntegrationEventsNamespace,
             ];
 
@@ -143,10 +143,10 @@ public class ModuleTests : BaseTest
     [Fact]
     public void DiscountsModule_ShouldNotHaveDependencyOn_AnyOtherModule()
     {
-        string[] otherModules = [UsersNamespace, GamesNamespace, StoreNamespace];
+        string[] otherModules = [UsersNamespace, GamesNamespace, StoreNamespace, LibraryNamespace, ReviewsNamespace];
         string[] integrationEventsModules = [
             UsersIntegrationEventsNamespace,
-            GamesIntegrationEventsNamespace,GamesPublicApi,
+            GamesIntegrationEventsNamespace,
             StoreIntegrationEventsNamespace,
             LibraryIntegrationEventsNamespace,
             ReviewsIntegrationEventsNamespace
@@ -172,13 +172,13 @@ public class ModuleTests : BaseTest
     [Fact]
     public void ReviewsModule_ShouldNotHaveDependencyOn_AnyOtherModule()
     {
-        string[] otherModules = [UsersNamespace, GamesNamespace, StoreNamespace];
+        string[] otherModules = [UsersNamespace, GamesNamespace, StoreNamespace, LibraryNamespace, DiscountsNamespace];
         string[] integrationEventsModules = [
             UsersIntegrationEventsNamespace,
-            GamesIntegrationEventsNamespace,GamesPublicApi,
+            GamesIntegrationEventsNamespace,
             StoreIntegrationEventsNamespace,
             LibraryIntegrationEventsNamespace,
-            DiscountsIntegrationEventsNamespace,DiscountsPublicApi,
+            DiscountsIntegrationEventsNamespace,
             ];
 
         List<Assembly> ReviewsAssemblies =

@@ -1,9 +1,9 @@
-﻿using GameRa.Common.Application.Data;
-using GameRa.Common.Infrastructure.Inbox;
+﻿using GameRa.Common.Infrastructure.Inbox;
 using GameRa.Common.Infrastructure.Outbox;
 using GameRa.Modules.Games.Application.Abstractions.Data;
 using GameRa.Modules.Games.Domain.Categories;
 using GameRa.Modules.Games.Domain.Games;
+using GameRa.Modules.Games.Infrastructure.Categories;
 using GameRa.Modules.Games.Infrastructure.Games;
 using Microsoft.EntityFrameworkCore;
 

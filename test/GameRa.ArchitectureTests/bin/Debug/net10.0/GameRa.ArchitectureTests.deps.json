@@ -991,8 +991,7 @@
         "dependencies": {
           "GameRa.Common.Application": "1.0.0",
           "GameRa.Modules.Discounts.Domain": "1.0.0",
-          "GameRa.Modules.Discounts.IntegrationEvents": "1.0.0",
-          "GameRa.Modules.Games.PublicApi": "1.0.0"
+          "GameRa.Modules.Discounts.IntegrationEvents": "1.0.0"
         },
         "runtime": {
           "GameRa.Modules.Discounts.Application.dll": {
@@ -1018,7 +1017,6 @@
           "GameRa.Common.Presentation": "1.0.0",
           "GameRa.Modules.Discounts.Application": "1.0.0",
           "GameRa.Modules.Discounts.Presentation": "1.0.0",
-          "GameRa.Modules.Discounts.PublicApi": "1.0.0",
           "Microsoft.EntityFrameworkCore": "10.0.9"
         },
         "runtime": {
@@ -1047,14 +1045,6 @@
         },
         "runtime": {
           "GameRa.Modules.Discounts.Presentation.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "GameRa.Modules.Discounts.PublicApi/1.0.0": {
-        "runtime": {
-          "GameRa.Modules.Discounts.PublicApi.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1091,7 +1081,6 @@
           "GameRa.Common.Infrastructure": "1.0.0",
           "GameRa.Modules.Games.Application": "1.0.0",
           "GameRa.Modules.Games.Presentation": "1.0.0",
-          "GameRa.Modules.Games.PublicApi": "1.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.2"
         },
         "runtime": {
@@ -1122,14 +1111,6 @@
         },
         "runtime": {
           "GameRa.Modules.Games.Presentation.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "GameRa.Modules.Games.PublicApi/1.0.0": {
-        "runtime": {
-          "GameRa.Modules.Games.PublicApi.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1247,6 +1228,7 @@
         "dependencies": {
           "GameRa.Common.Presentation": "1.0.0",
           "GameRa.Modules.Reviews.Application": "1.0.0",
+          "GameRa.Modules.Store.IntegrationEvents": "1.0.0",
           "MediatR": "14.1.0"
         },
         "runtime": {
@@ -1283,7 +1265,6 @@
       "GameRa.Modules.Store.Infrastructure/1.0.0": {
         "dependencies": {
           "GameRa.Common.Infrastructure": "1.0.0",
-          "GameRa.Modules.Discounts.PublicApi": "1.0.0",
           "GameRa.Modules.Store.Application": "1.0.0",
           "GameRa.Modules.Store.Presentation": "1.0.0"
         },
@@ -1377,6 +1358,22 @@
         },
         "runtime": {
           "GameRa.Modules.Users.Presentation.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GameRa.Modules.Discounts.PublicApi/1.0.0.0": {
+        "runtime": {
+          "GameRa.Modules.Discounts.PublicApi.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "GameRa.Modules.Games.PublicApi/1.0.0.0": {
+        "runtime": {
+          "GameRa.Modules.Games.PublicApi.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1895,11 +1892,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "GameRa.Modules.Discounts.PublicApi/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "GameRa.Modules.Games.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1921,11 +1913,6 @@
       "sha512": ""
     },
     "GameRa.Modules.Games.Presentation/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "GameRa.Modules.Games.PublicApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -2022,6 +2009,16 @@
     },
     "GameRa.Modules.Users.Presentation/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Discounts.PublicApi/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GameRa.Modules.Games.PublicApi/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

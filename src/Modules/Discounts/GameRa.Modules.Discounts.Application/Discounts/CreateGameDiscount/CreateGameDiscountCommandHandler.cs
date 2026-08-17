@@ -2,25 +2,16 @@
 using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Discounts.Application.Abstractions.Data;
 using GameRa.Modules.Discounts.Domain;
-using GameRa_Modules.Games.publicApi;
 
 namespace GameRa.Modules.Discounts.Application.Discounts.CreateGameDiscount;
 
 internal sealed class CreateGameDiscountCommandHandler(
     IDiscountRepository discountRepository,
-    IUnitOfWork unitOfWork,
-    IGamesApi gamesApi)
+    IUnitOfWork unitOfWork)
     : ICommandHandler<CreateGameDiscountCommand, Guid>
 {
     public async Task<Result<Guid>> Handle(CreateGameDiscountCommand request, CancellationToken cancellationToken)
     {
-
-        //bool gameExists = await gamesApi.GameExistsAsync(request.GameId, cancellationToken);
-        //if (!gameExists)
-        //{
-        //    return Result.Failure<Guid>(DiscountErrors.GameNotFound(request.GameId));
-        //}
-
         bool codeExists = await discountRepository.ExistsByCodeAsync(request.Code, cancellationToken);
 
         if (codeExists)

@@ -9,6 +9,8 @@ using GameRa.Modules.Reviews.Infrastructure.Database;
 using GameRa.Modules.Reviews.Infrastructure.Inbox;
 using GameRa.Modules.Reviews.Infrastructure.Outbox;
 using GameRa.Modules.Reviews.Infrastructure.Reviews;
+using GameRa.Modules.Store.IntegrationEvents;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Configuration;
@@ -32,6 +34,11 @@ public static class ReviewsModule
         services.AddInfrastructure(configuration);
 
         return services;
+    }
+
+    public static void ConfigureConsumers(IRegistrationConfigurator registrationConfigurator)
+    {
+        registrationConfigurator.AddConsumer<IntegrationEventConsumer<OrderCompletedIntegrationEvent>>();
     }
 
     private static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)

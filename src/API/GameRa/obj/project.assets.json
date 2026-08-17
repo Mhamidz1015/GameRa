@@ -1445,8 +1445,7 @@
         "dependencies": {
           "GameRa.Common.Application": "1.0.0",
           "GameRa.Modules.Discounts.Domain": "1.0.0",
-          "GameRa.Modules.Discounts.IntegrationEvents": "1.0.0",
-          "GameRa.Modules.Games.PublicApi": "1.0.0"
+          "GameRa.Modules.Discounts.IntegrationEvents": "1.0.0"
         },
         "compile": {
           "bin/placeholder/GameRa.Modules.Discounts.Application.dll": {}
@@ -1476,7 +1475,6 @@
           "GameRa.Common.Presentation": "1.0.0",
           "GameRa.Modules.Discounts.Application": "1.0.0",
           "GameRa.Modules.Discounts.Presentation": "1.0.0",
-          "GameRa.Modules.Discounts.PublicApi": "1.0.0",
           "Microsoft.EntityFrameworkCore": "10.0.9"
         },
         "compile": {
@@ -1512,16 +1510,6 @@
         },
         "runtime": {
           "bin/placeholder/GameRa.Modules.Discounts.Presentation.dll": {}
-        }
-      },
-      "GameRa.Modules.Discounts.PublicApi/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "compile": {
-          "bin/placeholder/GameRa.Modules.Discounts.PublicApi.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GameRa.Modules.Discounts.PublicApi.dll": {}
         }
       },
       "GameRa.Modules.Games.Application/1.0.0": {
@@ -1561,7 +1549,6 @@
           "GameRa.Common.Infrastructure": "1.0.0",
           "GameRa.Modules.Games.Application": "1.0.0",
           "GameRa.Modules.Games.Presentation": "1.0.0",
-          "GameRa.Modules.Games.PublicApi": "1.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.2"
         },
         "compile": {
@@ -1602,16 +1589,6 @@
         },
         "runtime": {
           "bin/placeholder/GameRa.Modules.Games.Presentation.dll": {}
-        }
-      },
-      "GameRa.Modules.Games.PublicApi/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "compile": {
-          "bin/placeholder/GameRa.Modules.Games.PublicApi.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/GameRa.Modules.Games.PublicApi.dll": {}
         }
       },
       "GameRa.Modules.Library.Application/1.0.0": {
@@ -1743,6 +1720,7 @@
         "dependencies": {
           "GameRa.Common.Presentation": "1.0.0",
           "GameRa.Modules.Reviews.Application": "1.0.0",
+          "GameRa.Modules.Store.IntegrationEvents": "1.0.0",
           "MediatR": "14.1.0"
         },
         "compile": {
@@ -1785,7 +1763,6 @@
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "GameRa.Common.Infrastructure": "1.0.0",
-          "GameRa.Modules.Discounts.PublicApi": "1.0.0",
           "GameRa.Modules.Store.Application": "1.0.0",
           "GameRa.Modules.Store.Presentation": "1.0.0"
         },
@@ -4732,11 +4709,6 @@
       "path": "../../Modules/Discounts/GameRa.Modules.Discounts.Presentation/GameRa.Modules.Discounts.Presentation.csproj",
       "msbuildProject": "../../Modules/Discounts/GameRa.Modules.Discounts.Presentation/GameRa.Modules.Discounts.Presentation.csproj"
     },
-    "GameRa.Modules.Discounts.PublicApi/1.0.0": {
-      "type": "project",
-      "path": "../../Modules/Discounts/GameRa.Modules.Discounts.PublicApi/GameRa.Modules.Discounts.PublicApi.csproj",
-      "msbuildProject": "../../Modules/Discounts/GameRa.Modules.Discounts.PublicApi/GameRa.Modules.Discounts.PublicApi.csproj"
-    },
     "GameRa.Modules.Games.Application/1.0.0": {
       "type": "project",
       "path": "../../Modules/Games/GameRa.Modules.Games.Application/GameRa.Modules.Games.Application.csproj",
@@ -4761,11 +4733,6 @@
       "type": "project",
       "path": "../../Modules/Games/GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj",
       "msbuildProject": "../../Modules/Games/GameRa.Modules.Games.Presentation/GameRa.Modules.Games.Presentation.csproj"
-    },
-    "GameRa.Modules.Games.PublicApi/1.0.0": {
-      "type": "project",
-      "path": "../../Modules/Games/GameRa.Modules.Games.PublicApi/GameRa.Modules.Games.PublicApi.csproj",
-      "msbuildProject": "../../Modules/Games/GameRa.Modules.Games.PublicApi/GameRa.Modules.Games.PublicApi.csproj"
     },
     "GameRa.Modules.Library.Application/1.0.0": {
       "type": "project",
@@ -5439,5 +5406,13 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

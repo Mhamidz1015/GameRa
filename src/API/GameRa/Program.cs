@@ -41,7 +41,8 @@ string redisConnectionString = builder.Configuration.GetConnectionStringOrThrow(
 builder.Services.AddInfrastructure(
     [
         StoreModule.ConfigureConsumers,
-        LibraryItemModule.ConfigureConsumers
+        LibraryItemModule.ConfigureConsumers,
+        ReviewsModule.ConfigureConsumers
     ],
     databaseConnectionString,
     redisConnectionString);

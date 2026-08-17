@@ -6,5 +6,4 @@ public sealed record CreateReviewCommand(
     Guid GameId,
     Guid UserId,
     int Rating,
-    string Comment,
-    bool verifiedPurchase) : ICommand<Guid>;
+    string Comment) : ICommand<Guid>;
