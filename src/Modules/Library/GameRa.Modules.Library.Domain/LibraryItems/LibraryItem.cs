@@ -19,6 +19,7 @@ public sealed class LibraryItem : Entity
 
     public bool IsArchived { get; private set; }
 
+    public bool IsFavorite { get; private set; }
 
     public static LibraryItem Create(
         Guid userid,
@@ -47,6 +48,12 @@ public sealed class LibraryItem : Entity
         IsArchived = true;
         Raise(new LibraryItemArchivedDomainEvent(Id));
        
+        return Result.Success();
+    }
+
+    public Result ToggleFavorite()
+    {
+        IsFavorite = !IsFavorite;
         return Result.Success();
     }
 }

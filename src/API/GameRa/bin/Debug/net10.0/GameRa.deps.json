@@ -1984,22 +1984,6 @@
           "GameRa.Modules.Users.Presentation.dll": {}
         }
       },
-      "GameRa.Modules.Discounts.PublicApi/1.0.0.0": {
-        "runtime": {
-          "GameRa.Modules.Discounts.PublicApi.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "GameRa.Modules.Games.PublicApi/1.0.0.0": {
-        "runtime": {
-          "GameRa.Modules.Games.PublicApi.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "Microsoft.AspNetCore.Antiforgery/10.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Antiforgery.dll": {}
@@ -4510,16 +4494,6 @@
     },
     "GameRa.Modules.Users.Presentation/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "GameRa.Modules.Discounts.PublicApi/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "GameRa.Modules.Games.PublicApi/1.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

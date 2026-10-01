@@ -63,4 +63,21 @@ public sealed class Order : Entity
 
         return Result.Success();
     }
+
+    public Result Refund()
+    {
+        if (!OrderCompleted)
+            return Result.Failure(OrderErrors.NotCompleted);
+
+        if (Status == OrderStatus.Refunded)
+            return Result.Failure(OrderErrors.AlreadyRefunded);
+
+        Status = OrderStatus.Refunded;
+
+        Raise(new OrderRefundedDomainEvent(Id, CustomerId,
+            _orderItems.Select(i => i.GameId).ToList()));
+
+        return Result.Success();
+    }
+
 }

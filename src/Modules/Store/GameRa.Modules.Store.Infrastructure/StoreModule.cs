@@ -19,6 +19,7 @@ using GameRa.Modules.Store.Infrastructure.Inbox;
 using GameRa.Modules.Store.Infrastructure.Orders;
 using GameRa.Modules.Store.Infrastructure.Outbox;
 using GameRa.Modules.Store.Infrastructure.Payments;
+using GameRa.Modules.Store.IntegrationEvents;
 using GameRa.Modules.Users.IntegrationEvents;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
@@ -50,6 +51,8 @@ public static class StoreModule
         registrationConfigurator.AddConsumer<IntegrationEventConsumer<UserRegisteredIntegrationEvent>>();
         registrationConfigurator.AddConsumer<IntegrationEventConsumer<UserProfileUpdatedIntegrationEvent>>();
         registrationConfigurator.AddConsumer<IntegrationEventConsumer<GameAddedIntegrationEvent>>();
+        registrationConfigurator.AddConsumer<IntegrationEventConsumer<GameDelistedIntegrationEvent>>();
+        registrationConfigurator.AddConsumer<IntegrationEventConsumer<OrderRefundedIntegrationEvent>>();
     }
 
     private static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)

@@ -8,6 +8,7 @@ using GameRa.Modules.Discounts.Infrastructure;
 using GameRa.Modules.Games.Infrastructure;
 using GameRa.Modules.Library.Infrastructure;
 using GameRa.Modules.Reviews.Infrastructure;
+using GameRa.Modules.Store.Domain.Games;
 using GameRa.Modules.Store.Infrastructure;
 using GameRa.Modules.Users.Infrastructure;
 using HealthChecks.UI.Client;
@@ -42,7 +43,8 @@ builder.Services.AddInfrastructure(
     [
         StoreModule.ConfigureConsumers,
         LibraryItemModule.ConfigureConsumers,
-        ReviewsModule.ConfigureConsumers
+        ReviewsModule.ConfigureConsumers,
+        GamesModule.ConfigureConsumers
     ],
     databaseConnectionString,
     redisConnectionString);

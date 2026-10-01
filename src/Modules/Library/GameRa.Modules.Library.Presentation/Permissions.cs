@@ -2,4 +2,5 @@
 
 internal static class Permissions
 {
+    internal const string GetLibrary = "library:read";
 }

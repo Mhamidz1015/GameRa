@@ -43,7 +43,20 @@ public sealed class Game : Entity
         return game;
     }
 
-   
+    public void Release(
+        string title,
+        string description,
+        string developer,
+        decimal basePrice,
+        string coverImageUrl)
+    {
+        Title = title;
+        Description = description;
+        Developer = developer;
+        BasePrice = basePrice;
+        CoverImageUrl = coverImageUrl;
+    }
+
     public void Delist()
     {
         if (Delisteed)

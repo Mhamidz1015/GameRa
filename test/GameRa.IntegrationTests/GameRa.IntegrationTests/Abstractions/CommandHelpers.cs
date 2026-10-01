@@ -10,6 +10,7 @@ using GameRa.Modules.Store.Application.Carts.AddItemToCart;
 using GameRa.Modules.Store.Application.Customers.CreateCustomer;
 using GameRa.Modules.Store.Application.Games.AddGame;
 using GameRa.Modules.Store.Application.Orders.CreateOrder;
+using GameRa.Modules.Store.Application.Orders.GetOrdersByCustomerId;
 using GameRa.Modules.Users.Application.Users.RegisterUser;
 using MediatR;
 
@@ -75,13 +76,16 @@ internal static class CommandHelpers
         result.IsSuccess.Should().BeTrue();
     }
 
-    internal static async Task CreateOrderAsync(
-        this ISender sender,
-        Guid userId)
+    internal static async Task<Guid> CreateOrderAsync(this ISender sender, Guid customerId)
     {
-        Result result = await sender.Send(new CreateOrderCommand(userId));
-
+        Result result = await sender.Send(new CreateOrderCommand(customerId));
         result.IsSuccess.Should().BeTrue();
+
+        Result<IReadOnlyCollection<OrderSummaryResponse>> orders =
+            await sender.Send(new GetOrdersByCustomerIdQuery(customerId));
+        orders.IsSuccess.Should().BeTrue();
+
+        return orders.Value.First().Id;
     }
 
     internal static async Task CreateReviewAsync(

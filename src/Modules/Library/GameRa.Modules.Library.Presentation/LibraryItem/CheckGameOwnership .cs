@@ -26,7 +26,7 @@ namespace GameRa.Modules.Library.Presentation.LibraryItem
 
                     return result.Match(Results.Ok, ApiResults.Problem);
                 })
-                .RequireAuthorization()
+                .RequireAuthorization(Permissions.GetLibrary)
                 .WithTags(Tags.Library);
         }
     }

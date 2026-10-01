@@ -101,15 +101,5 @@
     "C:\\Users\\ROSE PC\\.nuget\\packages\\xunit.extensibility.execution\\2.9.3\\xunit.extensibility.execution.2.9.3.nupkg.sha512",
     "C:\\Users\\ROSE PC\\.nuget\\packages\\xunit.runner.visualstudio\\3.1.5\\xunit.runner.visualstudio.3.1.5.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "projectPath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\test\\GameRa.ArchitectureTests\\GameRa.ArchitectureTests.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\ROSE PC\\source\\repos\\GamRa\\GameRa\\test\\GameRa.ArchitectureTests\\GameRa.ArchitectureTests.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }

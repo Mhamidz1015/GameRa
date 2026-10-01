@@ -39,6 +39,7 @@ public static class ReviewsModule
     public static void ConfigureConsumers(IRegistrationConfigurator registrationConfigurator)
     {
         registrationConfigurator.AddConsumer<IntegrationEventConsumer<OrderCompletedIntegrationEvent>>();
+        registrationConfigurator.AddConsumer<IntegrationEventConsumer<OrderRefundedIntegrationEvent>>();
     }
 
     private static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)

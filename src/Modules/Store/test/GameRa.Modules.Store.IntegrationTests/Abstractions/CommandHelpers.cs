@@ -1,9 +1,12 @@
 ﻿using Bogus;
-using GameRa.Common.Domain.Abstractions;
-using GameRa.Modules.Store.Application.Customers.CreateCustomer;
-using MediatR;
 using FluentAssertions;
+using GameRa.Common.Domain.Abstractions;
+using GameRa.Modules.Store.Application.Carts.AddItemToCart;
+using GameRa.Modules.Store.Application.Customers.CreateCustomer;
 using GameRa.Modules.Store.Application.Games.AddGame;
+using GameRa.Modules.Store.Application.Orders.CreateOrder;
+using GameRa.Modules.Store.Application.Orders.GetOrdersByCustomerId;
+using MediatR;
 
 namespace GameRa.Modules.Store.IntegrationTests.Abstractions;
 
@@ -38,5 +41,27 @@ internal static class CommandHelpers
             faker.Internet.Url()));
 
         result.IsSuccess.Should().BeTrue();
+    }
+
+    internal static async Task AddItemToCartAsync(
+        this ISender sender,
+        Guid userId,
+        Guid gameId)
+    {
+        Result result = await sender.Send(new AddItemToCartCommand(userId, gameId));
+
+        result.IsSuccess.Should().BeTrue();
+    }
+
+    internal static async Task<Guid> CreateOrderAsync(this ISender sender, Guid customerId)
+    {
+        Result result = await sender.Send(new CreateOrderCommand(customerId));
+        result.IsSuccess.Should().BeTrue();
+
+        Result<IReadOnlyCollection<OrderSummaryResponse>> orders =
+            await sender.Send(new GetOrdersByCustomerIdQuery(customerId));
+        orders.IsSuccess.Should().BeTrue();
+
+        return orders.Value.First().Id;
     }
 }

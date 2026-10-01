@@ -27,6 +27,7 @@ internal sealed class CreateGlobalDiscount : IEndpoint
 
             return result.Match(Results.Ok, ApiResults.Problem);
         })
+        .RequireAuthorization(Permissions.CreateDiscount)
         .WithTags(Tags.Discounts);
     }
 

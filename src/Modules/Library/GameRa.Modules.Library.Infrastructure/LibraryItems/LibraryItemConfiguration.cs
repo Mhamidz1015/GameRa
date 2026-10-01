@@ -19,6 +19,8 @@ internal sealed class LibraryItemConfiguration : IEntityTypeConfiguration<Librar
         builder.Property(x => x.IsArchived)
             .IsRequired();
 
+        builder.Property(l => l.IsFavorite).IsRequired().HasDefaultValue(false);
+
         builder.HasIndex(x => new
         {
             x.UserId,

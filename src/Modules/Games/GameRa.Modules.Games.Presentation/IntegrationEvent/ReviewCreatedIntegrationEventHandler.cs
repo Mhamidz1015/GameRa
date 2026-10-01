@@ -1,23 +1,26 @@
 ﻿using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Modules.Games.Application.Abstractions.Data;
-using GameRa.Modules.Games.Domain.Games;
+using GameRa.Common.Application.Exceptions;
+using GameRa.Common.Application.MessagingEventBus;
+using GameRa.Common.Domain.Abstractions;
+using GameRa.Modules.Games.Application.Games.UpdateGameRating;
 using GameRa.Modules.Reviews.IntegrationEvents;
+using MediatR;
 
-namespace GameRa.Modules.Games.Presentation.IntegrationEvent;
+namespace GameRa.Modules.Games.Presentation.Games;
 
-internal sealed class ReviewCreatedIntegrationEventHandler(
-    IGameRepository gameRepository,
-    IUnitOfWork unitOfWork)
+internal sealed class ReviewCreatedIntegrationEventHandler(ISender sender)
     : IntegrationEventHandler<ReviewCreatedIntegrationEvent>
 {
     public override async Task Handle(
         ReviewCreatedIntegrationEvent integrationEvent,
         CancellationToken cancellationToken = default)
     {
-        Game? game = await gameRepository.GetAsync(integrationEvent.GameId, cancellationToken);
-        if (game is null) return;
+        Result result = await sender.Send(
+            new UpdateGameRatingCommand(integrationEvent.GameId, "add", integrationEvent.Rating),
+            cancellationToken);
 
-        game.UpdateRating(integrationEvent.Rating);
-        await unitOfWork.SaveChangesAsync(cancellationToken);
+        if (result.IsFailure)
+            throw new GameRaException(nameof(UpdateGameRatingCommand), result.Error);
     }
 }

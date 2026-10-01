@@ -31,14 +31,11 @@ public sealed class Review : Entity
         string comment,
         bool isVerifiedPurchase)
     {
-        if (rating is < 1 or > 5)
-        {
-            return Result.Failure<Review>(ReviewErrors.InvalidRating);
-        }
+        Result validation = Validate(rating, comment);
 
-        if (string.IsNullOrWhiteSpace(comment))
+        if (validation.IsFailure)
         {
-            return Result.Failure<Review>(ReviewErrors.CommentRequired);
+            return Result.Failure<Review>(validation.Error);
         }
 
         var review = new Review
@@ -59,6 +56,31 @@ public sealed class Review : Entity
 
     public Result Update(int rating, string comment)
     {
+        Result validation = Validate(rating, comment);
+
+        if (validation.IsFailure)
+        {
+            return validation;
+        }
+
+        int oldRating = Rating;
+
+        Rating = rating;
+        Comment = comment;
+        UpdatedAtUtc = DateTime.UtcNow;
+
+        Raise(new ReviewUpdatedDomainEvent(ReviewId, GameId, oldRating, Rating));
+
+        return Result.Success();
+    }
+
+    public void Delete()
+    {
+        Raise(new ReviewDeletedDomainEvent(ReviewId, GameId, Rating));
+    }
+
+    private static Result Validate(int rating, string comment)
+    {
         if (rating is < 1 or > 5)
         {
             return Result.Failure(ReviewErrors.InvalidRating);
@@ -69,17 +91,6 @@ public sealed class Review : Entity
             return Result.Failure(ReviewErrors.CommentRequired);
         }
 
-        Rating = rating;
-        Comment = comment;
-        UpdatedAtUtc = DateTime.UtcNow;
-
-        Raise(new ReviewUpdatedDomainEvent(ReviewId));
-
         return Result.Success();
-    }
-
-    public void Delete()
-    {
-        Raise(new ReviewDeletedDomainEvent(ReviewId, GameId, Rating));
     }
 }

@@ -1,4 +1,5 @@
-﻿using GameRa.Common.Domain.Abstractions;
+﻿using GameRa.Common.Application.Caching;
+using GameRa.Common.Domain.Abstractions;
 using GameRa.Common.Presentation.Endpoints;
 using GameRa.Common.Presentation.Results;
 using GameRa.Modules.Reviews.Application.Reviews.DeleteReview;
@@ -13,12 +14,19 @@ internal sealed class DeleteReview : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapDelete("reviews/{id}", async (Guid id, Guid userId, ISender sender) =>
+        app.MapDelete("reviews/{id}", async (Guid id, Guid userId, Guid gameId, ISender sender, ICacheService cacheService) =>
         {
             Result result = await sender.Send(new DeleteReviewCommand(id, userId));
 
+            if (result.IsSuccess)
+            {
+                await cacheService.RemoveAsync($"reviews:game:{gameId}");
+                await cacheService.RemoveAsync($"reviews:rating:{gameId}");
+            }
+
             return result.Match(() => Results.NoContent(), ApiResults.Problem);
         })
+        .RequireAuthorization(Permissions.DeleteReview)
         .WithTags(Tags.Reviews);
     }
 }

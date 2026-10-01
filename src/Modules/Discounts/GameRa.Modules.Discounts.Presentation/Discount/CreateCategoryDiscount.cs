@@ -28,6 +28,7 @@ internal sealed class CreateCategoryDiscount : IEndpoint
 
             return result.Match(Results.Ok, ApiResults.Problem);
         })
+        .RequireAuthorization(Permissions.CreateDiscount)
         .WithTags(Tags.Discounts);
     }
 

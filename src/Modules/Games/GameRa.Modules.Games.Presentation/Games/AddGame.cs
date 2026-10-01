@@ -1,4 +1,5 @@
-﻿using GameRa.Common.Domain.Abstractions;
+﻿using GameRa.Common.Application.Caching;
+using GameRa.Common.Domain.Abstractions;
 using GameRa.Common.Presentation.Endpoints;
 using GameRa.Modules.Games.Application.Games.AddGame;
 using MediatR;
@@ -10,9 +11,9 @@ namespace GameRa.Modules.Games.Presentation.Games;
 
 internal sealed class AddGame : IEndpoint
 {
-    public  void MapEndpoint(IEndpointRouteBuilder app)
+    public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("Games", async (Request request, ISender sender) =>
+        app.MapPost("Games", async (Request request, ISender sender, ICacheService cacheService) =>
         {
             var command = new AddGameCommand(
                 request.CategoryId,
@@ -24,29 +25,33 @@ internal sealed class AddGame : IEndpoint
                 request.CoverImageUrl);
 
             Result<Guid> result = await sender.Send(command);
+
+            if (result.IsSuccess)
+                await cacheService.RemoveAsync("games");
+
             if (result.IsFailure)
                 return Results.BadRequest(result.Error);
 
-            Guid gameId = result.Value;
-
-            return Results.Ok(gameId);
+            return Results.Ok(result.Value);
         })
+        .RequireAuthorization(Permissions.AddGame)
         .WithTags(Tags.Games);
     }
 
     internal sealed class Request
     {
-       public string Title { get; private set; }
+        public string Title { get; private set; }
 
         public string Description { get; private set; }
 
-        public  string Developer { get; private set; }
+        public string Developer { get; private set; }
 
         public DateTime ReleaseDate { get; private set; }
 
         public decimal BasePrice { get; private set; }
 
         public string CoverImageUrl { get; private set; }
+
         public Guid CategoryId { get; private set; }
     }
 }

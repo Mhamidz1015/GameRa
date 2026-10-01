@@ -19,6 +19,7 @@ internal sealed class DeactivateDiscount : IEndpoint
 
             return result.Match(() => Results.Ok(), ApiResults.Problem);
         })
+        .RequireAuthorization(Permissions.UpdateDiscount)
         .WithTags(Tags.Discounts);
     }
 }
