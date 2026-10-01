@@ -3,6 +3,7 @@ using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Store.Application.Wishlist.AddToWishlist;
 using GameRa.Modules.Store.Application.Wishlist.GetWishlist;
 using GameRa.Modules.Store.Application.Wishlist.RemoveFromWishlist;
+using GameRa.Modules.Store.Domain.Wishlist;
 using GameRa.Modules.Store.IntegrationTests.Abstractions;
 
 namespace GameRa.Modules.Store.IntegrationTests.Wishlists;

@@ -2,7 +2,7 @@
 using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Games.IntegrationEvents;
-using GameRa.Modules.Store.Application.Games.ReleaseGame;
+using GameRa.Modules.Store.Application.Games.ReleaseGameInStore;
 using MediatR;
 
 namespace GameRa.Modules.Store.Presentation.Games;

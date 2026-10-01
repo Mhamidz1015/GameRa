@@ -79,6 +79,11 @@ public sealed class Review : Entity
         Raise(new ReviewDeletedDomainEvent(ReviewId, GameId, Rating));
     }
 
+    public void RevokeVerifiedPurchase()
+    {
+        IsVerifiedPurchase = false;
+    }
+
     private static Result Validate(int rating, string comment)
     {
         if (rating is < 1 or > 5)

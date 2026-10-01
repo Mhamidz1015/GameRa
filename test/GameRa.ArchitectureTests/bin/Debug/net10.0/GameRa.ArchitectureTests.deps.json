@@ -1288,6 +1288,7 @@
       },
       "GameRa.Modules.Store.Presentation/1.0.0": {
         "dependencies": {
+          "GameRa.Common.Infrastructure": "1.0.0",
           "GameRa.Common.Presentation": "1.0.0",
           "GameRa.Modules.Games.IntegrationEvents": "1.0.0",
           "GameRa.Modules.Store.Application": "1.0.0",

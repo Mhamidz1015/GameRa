@@ -1,7 +1,6 @@
 ﻿using GameRa.Common.Application.Messaging;
 using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Store.Application.Abstractions.Data;
-using GameRa.Modules.Store.Application.Wishlist.AddToWishlist;
 using GameRa.Modules.Store.Domain.Wishlist;
 
 namespace GameRa.Modules.Store.Application.Wishlist.RemoveFromWishlist;

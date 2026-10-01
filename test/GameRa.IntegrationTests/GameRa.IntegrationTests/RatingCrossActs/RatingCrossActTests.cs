@@ -4,7 +4,6 @@ using GameRa.IntegrationTests.Abstractions;
 using GameRa.Modules.Games.Application.Games.GetGame;
 using GameRa.Modules.Reviews.Application.Reviews.CreateReview;
 using GameRa.Modules.Reviews.Application.Reviews.DeleteReview;
-using GameRa.Modules.Reviews.Application.Reviews.UpdateReview;
 
 namespace GameRa.IntegrationTests.RatingCrossActs;
 
@@ -16,64 +15,42 @@ public sealed class RatingCrossActTests : BaseIntegrationTest
     public async Task ReviewCreated_ShouldUpdateGameAverageRating()
     {
         // Arrange
-        Guid gameId = Faker.Random.Guid();
-        await Sender.AddGameAsync(gameId);
+        Guid gameId = await Sender.CreateGameInGamesModuleAsync();
 
         // Act
-        await Sender.Send(new CreateReviewCommand(gameId, Faker.Random.Guid(), 4, "Good game"));
+        Result<Guid> review = await Sender.Send(
+            new CreateReviewCommand(gameId, Faker.Random.Guid(), 4, "Good game"));
 
-        // Poll تا rating آپدیت بشه
-        Result<GameResponse> gameResult = await Poller.WaitAsync(TimeSpan.FromSeconds(30), async () =>
-        {
-            Result<GameResponse?> g = await Sender.Send(new GetGameQuery(gameId));
+        review.IsSuccess.Should().BeTrue();
 
-            if (g.IsFailure || g.Value is null || g.Value.TotalReviews < 1)
-                return Result.Failure<GameResponse>(
-                    Error.Failure("Rating.NotUpdated", "Rating not updated yet"));
-
-            return Result.Success(g.Value);
-        });
+        Result<GameResponse> game = await WaitForGameAsync(gameId, g => g.TotalReviews == 1);
 
         // Assert
-        gameResult.IsSuccess.Should().BeTrue();
-        gameResult.Value.AverageRating.Should().Be(4);
-        gameResult.Value.TotalReviews.Should().Be(1);
+        game.IsSuccess.Should().BeTrue();
+        game.Value.TotalReviews.Should().Be(1);
+        game.Value.AverageRating.Should().BeApproximately(4, 0.001);
     }
 
     [Fact]
     public async Task ReviewDeleted_ShouldUpdateGameAverageRating()
     {
         // Arrange
-        Guid gameId = Faker.Random.Guid();
+        Guid gameId = await Sender.CreateGameInGamesModuleAsync();
         Guid userId = Faker.Random.Guid();
-        await Sender.AddGameAsync(gameId);
 
-        Result<Guid> reviewResult = await Sender.Send(
+        Result<Guid> review = await Sender.Send(
             new CreateReviewCommand(gameId, userId, 5, "Amazing"));
 
-        // Wait for rating update
-        await Poller.WaitAsync(TimeSpan.FromSeconds(30), async () =>
-        {
-            Result<GameResponse?> g = await Sender.Send(new GetGameQuery(gameId));
-            if (g.Value?.TotalReviews < 1)
-                return Result.Failure<GameResponse?>(Error.Failure("x", "x"));
-            return g;
-        });
+        review.IsSuccess.Should().BeTrue();
 
-        // Act — delete review
-        await Sender.Send(new DeleteReviewCommand(reviewResult.Value, userId));
+        Result<GameResponse> afterCreate = await WaitForGameAsync(gameId, g => g.TotalReviews == 1);
+        afterCreate.IsSuccess.Should().BeTrue();
 
-        // Poll تا rating به صفر برگرده
-        Result<GameResponse> afterDelete = await Poller.WaitAsync(TimeSpan.FromSeconds(30), async () =>
-        {
-            Result<GameResponse?> g = await Sender.Send(new GetGameQuery(gameId));
+        // Act
+        Result deleteResult = await Sender.Send(new DeleteReviewCommand(review.Value, userId));
+        deleteResult.IsSuccess.Should().BeTrue();
 
-            if (g.IsFailure || g.Value?.TotalReviews != 0)
-                return Result.Failure<GameResponse>(
-                    Error.Failure("Rating.NotUpdated", "Rating not updated yet"));
-
-            return Result.Success(g.Value);
-        });
+        Result<GameResponse> afterDelete = await WaitForGameAsync(gameId, g => g.TotalReviews == 0);
 
         // Assert
         afterDelete.IsSuccess.Should().BeTrue();
@@ -85,27 +62,38 @@ public sealed class RatingCrossActTests : BaseIntegrationTest
     public async Task MultipleReviews_ShouldCalculateCorrectAverage()
     {
         // Arrange
-        Guid gameId = Faker.Random.Guid();
-        await Sender.AddGameAsync(gameId);
+        Guid gameId = await Sender.CreateGameInGamesModuleAsync();
 
-        await Sender.Send(new CreateReviewCommand(gameId, Faker.Random.Guid(), 4, "Good"));
-        await Sender.Send(new CreateReviewCommand(gameId, Faker.Random.Guid(), 2, "Bad"));
-        await Sender.Send(new CreateReviewCommand(gameId, Faker.Random.Guid(), 3, "Okay"));
-
-        // Poll تا همه ۳ review پروسس بشن
-        Result<GameResponse> gameResult = await Poller.WaitAsync(TimeSpan.FromSeconds(30), async () =>
+        // Act
+        foreach ((int rating, string comment) in new[] { (4, "Good"), (2, "Bad"), (3, "Okay") })
         {
-            Result<GameResponse?> g = await Sender.Send(new GetGameQuery(gameId));
+            Result<Guid> review = await Sender.Send(
+                new CreateReviewCommand(gameId, Faker.Random.Guid(), rating, comment));
 
-            if (g.IsFailure || g.Value?.TotalReviews < 3)
-                return Result.Failure<GameResponse>(
-                    Error.Failure("Rating.NotUpdated", "Rating not updated yet"));
+            review.IsSuccess.Should().BeTrue();
+        }
 
-            return Result.Success(g.Value);
-        });
+        Result<GameResponse> game = await WaitForGameAsync(gameId, g => g.TotalReviews == 3);
 
         // Assert
-        gameResult.Value.AverageRating.Should().Be(3.0m);
-        gameResult.Value.TotalReviews.Should().Be(3);
+        game.IsSuccess.Should().BeTrue();
+        game.Value.TotalReviews.Should().Be(3);
+        game.Value.AverageRating.Should().BeApproximately(3.0, 0.001);
+    }
+
+    private Task<Result<GameResponse>> WaitForGameAsync(Guid gameId, Func<GameResponse, bool> condition)
+    {
+        return Poller.WaitAsync(TimeSpan.FromSeconds(30), async () =>
+        {
+            Result<GameResponse?> result = await Sender.Send(new GetGameQuery(gameId));
+
+            if (result.IsFailure || result.Value is null || !condition(result.Value))
+            {
+                return Result.Failure<GameResponse>(
+                    Error.Failure("Rating.NotUpdated", "Rating not updated yet"));
+            }
+
+            return Result.Success(result.Value);
+        });
     }
 }

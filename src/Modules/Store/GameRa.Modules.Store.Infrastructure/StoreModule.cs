@@ -52,7 +52,6 @@ public static class StoreModule
         registrationConfigurator.AddConsumer<IntegrationEventConsumer<UserProfileUpdatedIntegrationEvent>>();
         registrationConfigurator.AddConsumer<IntegrationEventConsumer<GameAddedIntegrationEvent>>();
         registrationConfigurator.AddConsumer<IntegrationEventConsumer<GameDelistedIntegrationEvent>>();
-        registrationConfigurator.AddConsumer<IntegrationEventConsumer<OrderRefundedIntegrationEvent>>();
     }
 
     private static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)

@@ -7,7 +7,7 @@ using GameRa.Modules.Games.Application.Games.UpdateGameRating;
 using GameRa.Modules.Reviews.IntegrationEvents;
 using MediatR;
 
-namespace GameRa.Modules.Games.Presentation.Games;
+namespace GameRa.Modules.Games.Presentation.IntegrationEvent;
 
 internal sealed class ReviewCreatedIntegrationEventHandler(ISender sender)
     : IntegrationEventHandler<ReviewCreatedIntegrationEvent>

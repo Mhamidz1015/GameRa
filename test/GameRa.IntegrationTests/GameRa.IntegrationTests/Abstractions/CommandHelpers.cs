@@ -4,6 +4,8 @@ using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Discounts.Application.Discounts.CreateGameDiscount;
 using GameRa.Modules.Discounts.Application.Discounts.CreateGlobalDiscount;
 using GameRa.Modules.Discounts.Domain;
+using GameRa.Modules.Games.Application.Categories.CreateCategory;
+using GamesAddGameCommand = GameRa.Modules.Games.Application.Games.AddGame.AddGameCommand;
 using GameRa.Modules.Reviews.Application.Reviews.CreateReview;
 using GameRa.Modules.Reviews.Application.Reviews.DeleteReview;
 using GameRa.Modules.Store.Application.Carts.AddItemToCart;
@@ -178,5 +180,28 @@ internal static class CommandHelpers
         result.IsSuccess.Should().BeTrue();
 
         return code;
+    }
+
+    internal static async Task<Guid> CreateGameInGamesModuleAsync(this ISender sender)
+    {
+        var faker = new Faker();
+
+        Result<Guid> category = await sender.Send(
+            new CreateCategoryCommand($"cat-{Guid.NewGuid():N}"));
+
+        category.IsSuccess.Should().BeTrue();
+
+        Result<Guid> game = await sender.Send(new GamesAddGameCommand(
+            category.Value,
+            faker.Commerce.ProductName(),
+            faker.Lorem.Sentence(),
+            faker.Company.CompanyName(),
+            DateTime.UtcNow.AddMonths(-1),
+            faker.Random.Decimal(10, 200),
+            faker.Internet.Url()));
+
+        game.IsSuccess.Should().BeTrue();
+
+        return game.Value;
     }
 }

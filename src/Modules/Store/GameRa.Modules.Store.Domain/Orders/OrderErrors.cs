@@ -17,4 +17,8 @@ public static class OrderErrors
     public static readonly Error AlreadyRefunded = Error.Problem(
         "Orders.AlreadyRefunded",
         "The order was already Refunded");
+
+    public static readonly Error Forbidden = Error.Problem(
+        "Orders.Forbidden",
+        "The order does not belong to this customer");
 }

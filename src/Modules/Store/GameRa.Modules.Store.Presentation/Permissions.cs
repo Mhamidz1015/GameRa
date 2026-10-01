@@ -11,4 +11,6 @@ internal static class Permissions
 
     internal const string ManageWishlist = "wishlist:manage";
 
+    internal const string RefundOrder = "orders:refund";
+
 }

@@ -7,7 +7,7 @@ using GameRa.Modules.Reviews.Domain;
 using GameRa.Modules.Reviews.IntegrationEvents;
 using MediatR;
 
-namespace GameRa.Modules.Reviews.Presentation.Reviews;
+namespace GameRa.Modules.Reviews.Application.Reviews.UpdateReview;
 
 internal sealed class ReviewUpdatedDomainEventHandler(
     ISender sender,

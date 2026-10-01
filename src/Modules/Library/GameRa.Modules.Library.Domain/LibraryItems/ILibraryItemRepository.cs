@@ -12,4 +12,6 @@ public interface ILibraryItemRepository
         CancellationToken cancellationToken = default);
 
     void Insert(LibraryItem libraryItem);
+
+    void Remove(LibraryItem libraryItem);
 }

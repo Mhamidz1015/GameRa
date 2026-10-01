@@ -25,4 +25,9 @@ internal sealed class LibraryItemRepository(LibraryItemDbContext context) : ILib
     {
         context.LibraryItems.Add(libraryItem);
     }
+    public void Remove(LibraryItem libraryItem)
+    {
+        context.LibraryItems.Remove(libraryItem);
+    }
+
 }

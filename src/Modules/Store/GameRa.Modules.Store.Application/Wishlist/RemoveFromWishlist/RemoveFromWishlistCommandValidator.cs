@@ -1,7 +1,6 @@
 ﻿using FluentValidation;
-using GameRa.Modules.Store.Application.Wishlist.RemoveFromWishlist;
 
-namespace GameRa.Modules.Store.Application.Wishlists.RemoveFromWishlist;
+namespace GameRa.Modules.Store.Application.Wishlist.RemoveFromWishlist;
 
 internal sealed class RemoveFromWishlistCommandValidator : AbstractValidator<RemoveFromWishlistCommand>
 {

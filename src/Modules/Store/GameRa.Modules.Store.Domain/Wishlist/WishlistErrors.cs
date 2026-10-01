@@ -1,6 +1,6 @@
 ﻿using GameRa.Common.Domain.Abstractions;
 
-namespace GameRa.Modules.Store.Application.Wishlist.AddToWishlist
+namespace GameRa.Modules.Store.Domain.Wishlist
 {
     public static class WishlistErrors
     {

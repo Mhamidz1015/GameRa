@@ -1,7 +1,6 @@
 ﻿using FluentValidation;
-using GameRa.Modules.Store.Application.Wishlist.AddToWishlist;
 
-namespace GameRa.Modules.Store.Application.Wishlists.AddToWishlist;
+namespace GameRa.Modules.Store.Application.Wishlist.AddToWishlist;
 
 internal sealed class AddToWishlistCommandValidator : AbstractValidator<AddToWishlistCommand>
 {

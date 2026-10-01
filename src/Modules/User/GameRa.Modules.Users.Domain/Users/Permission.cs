@@ -14,6 +14,8 @@ public sealed class Permission
     public static readonly Permission RemoveFromCart = new("carts:remove");
     public static readonly Permission GetOrders = new("orders:read");
     public static readonly Permission CreateOrder = new("orders:create");
+    public static readonly Permission RefundOrder = new("orders:refund");
+
 
     public Permission(string code)
     {

@@ -19,4 +19,19 @@ internal sealed class VerifiedPurchaseRepository(ReviewsDbContext context) : IVe
     {
         context.VerifiedPurchases.Add(purchase);
     }
+
+    public async Task<VerifiedPurchase?> GetAsync(
+    Guid gameId,
+    Guid userId,
+    CancellationToken cancellationToken = default)
+    {
+        return await context.VerifiedPurchases
+            .FirstOrDefaultAsync(v => v.GameId == gameId && v.UserId == userId, cancellationToken);
+    }
+
+    public void Remove(VerifiedPurchase purchase)
+    {
+        context.VerifiedPurchases.Remove(purchase);
+    }
+
 }

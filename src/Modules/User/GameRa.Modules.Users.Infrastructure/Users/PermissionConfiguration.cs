@@ -26,7 +26,9 @@ internal sealed class PermissionConfiguration : IEntityTypeConfiguration<Permiss
             Permission.AddToCart,
             Permission.RemoveFromCart,
             Permission.GetOrders,
-            Permission.CreateOrder);
+            Permission.CreateOrder,
+            Permission.CreateOrder,
+            Permission.RefundOrder);
 
         builder
             .HasMany<Role>()
@@ -45,6 +47,8 @@ internal sealed class PermissionConfiguration : IEntityTypeConfiguration<Permiss
                     CreateRolePermission(Role.Member, Permission.RemoveFromCart),
                     CreateRolePermission(Role.Member, Permission.GetOrders),
                     CreateRolePermission(Role.Member, Permission.CreateOrder),
+                    CreateRolePermission(Role.Member, Permission.CreateOrder),
+                    CreateRolePermission(Role.Member, Permission.RefundOrder),
                     // Admin permissions
                     CreateRolePermission(Role.Administrator, Permission.GetUser),
                     CreateRolePermission(Role.Administrator, Permission.ModifyUser),
@@ -57,7 +61,9 @@ internal sealed class PermissionConfiguration : IEntityTypeConfiguration<Permiss
                     CreateRolePermission(Role.Administrator, Permission.AddToCart),
                     CreateRolePermission(Role.Administrator, Permission.RemoveFromCart),
                     CreateRolePermission(Role.Administrator, Permission.GetOrders),
-                    CreateRolePermission(Role.Administrator, Permission.CreateOrder));
+                    CreateRolePermission(Role.Administrator, Permission.CreateOrder),
+                    CreateRolePermission(Role.Administrator, Permission.CreateOrder),
+                    CreateRolePermission(Role.Administrator, Permission.RefundOrder));
             });
     }
 

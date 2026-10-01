@@ -8,4 +8,6 @@ public sealed record GameResponse(
     string Developer,
     DateTime ReleaseDate,
     decimal Baseprice,
-    string Coverimgageurl);
+    string Coverimgageurl,
+    double AverageRating,
+    int TotalReviews);

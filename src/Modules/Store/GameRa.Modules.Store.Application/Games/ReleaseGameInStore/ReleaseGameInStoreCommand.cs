@@ -1,6 +1,6 @@
 ﻿using GameRa.Common.Application.Messaging;
 
-namespace GameRa.Modules.Store.Application.Games.ReleaseGame;
+namespace GameRa.Modules.Store.Application.Games.ReleaseGameInStore;
 
 public sealed record ReleaseGameInStoreCommand(
     Guid GameId,

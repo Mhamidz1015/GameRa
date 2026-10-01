@@ -3,7 +3,7 @@ using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Store.Application.Abstractions.Data;
 using GameRa.Modules.Store.Domain.Games;
 
-namespace GameRa.Modules.Store.Application.Games.ReleaseGame;
+namespace GameRa.Modules.Store.Application.Games.ReleaseGameInStore;
 
 internal sealed class ReleaseGameInStoreCommandHandler(
     IGameRepository gameRepository,

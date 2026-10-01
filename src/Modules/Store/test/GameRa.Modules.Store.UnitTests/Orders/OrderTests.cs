@@ -65,4 +65,54 @@ public class OrderTests : BaseTest
             Faker.Internet.Email(),
             Faker.Internet.UserName()
         );
+
+    [Fact]
+    public void Refund_ShouldReturnFailure_WhenOrderIsNotCompleted()
+    {
+        // Arrange
+        Order order = Order.Create(CreateDefaultCustomer());
+
+        // Act
+        Result result = order.Refund();
+
+        // Assert
+        result.Error.Should().Be(OrderErrors.NotCompleted);
+    }
+
+    [Fact]
+    public void Refund_ShouldReturnFailure_WhenOrderAlreadyRefunded()
+    {
+        // Arrange
+        Order order = Order.Create(CreateDefaultCustomer());
+        order.CompleteOrder();
+        order.Refund();
+
+        // Act
+        Result result = order.Refund();
+
+        // Assert
+        result.Error.Should().Be(OrderErrors.AlreadyRefunded);
+    }
+
+    [Fact]
+    public void Refund_ShouldRaiseDomainEvent_WhenOrderIsCompleted()
+    {
+        // Arrange
+        Order order = Order.Create(CreateDefaultCustomer());
+        order.CompleteOrder();
+
+        // Act
+        Result result = order.Refund();
+
+        // Assert
+        result.IsSuccess.Should().BeTrue();
+        order.Status.Should().Be(OrderStatus.Refunded);
+
+        OrderRefundedDomainEvent domainEvent =
+            AssertDomainEventWasPublished<OrderRefundedDomainEvent>(order);
+
+        domainEvent.OrderId.Should().Be(order.Id);
+        domainEvent.CustomerId.Should().Be(order.CustomerId);
+    }
+
 }

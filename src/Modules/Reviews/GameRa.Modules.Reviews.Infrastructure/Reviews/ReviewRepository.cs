@@ -30,4 +30,14 @@ internal sealed class ReviewRepository(ReviewsDbContext context) : IReviewReposi
     {
         context.Reviews.Remove(review);
     }
+
+    public async Task<Review?> GetByGameAndUserAsync(
+    Guid gameId,
+    Guid userId,
+    CancellationToken cancellationToken = default)
+    {
+        return await context.Reviews
+            .FirstOrDefaultAsync(r => r.GameId == gameId && r.UserId == userId, cancellationToken);
+    }
+
 }

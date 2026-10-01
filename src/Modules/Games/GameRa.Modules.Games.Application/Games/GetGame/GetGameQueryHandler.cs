@@ -18,19 +18,22 @@ internal sealed class GetGameQueryHandler(IDbConnectionFactory dbConnectionFacto
         await using DbConnection connection = await dbConnectionFactory.OpenConnectionAsync();
 
         const string sql =
-            $"""
-             SELECT
-                 id AS {nameof(GameResponse.Id)},
-                 category_id AS {nameof(GameResponse.CategoryId)},
-                 title AS {nameof(GameResponse.Title)},
-                 description AS {nameof(GameResponse.Description)},
-                 developer AS {nameof(GameResponse.Developer)},
-                 release_date AS {nameof(GameResponse.ReleaseDate)},
-                 base_price AS {nameof(GameResponse.Baseprice)},
-                 cover_image_url AS {nameof(GameResponse.Coverimgageurl)}
-             FROM Games.Games
-             WHERE id = @GameId
-             """;
+    $"""
+     SELECT
+         id AS {nameof(GameResponse.Id)},
+         category_id AS {nameof(GameResponse.CategoryId)},
+         title AS {nameof(GameResponse.Title)},
+         description AS {nameof(GameResponse.Description)},
+         developer AS {nameof(GameResponse.Developer)},
+         release_date AS {nameof(GameResponse.ReleaseDate)},
+         base_price AS {nameof(GameResponse.Baseprice)},
+         cover_image_url AS {nameof(GameResponse.Coverimgageurl)},
+         average_rating AS {nameof(GameResponse.AverageRating)},
+         total_reviews AS {nameof(GameResponse.TotalReviews)}
+     FROM Games.Games
+     WHERE id = @GameId
+     """;
+
 
         GameResponse? game =await connection.QuerySingleOrDefaultAsync<GameResponse>(sql, request);
 

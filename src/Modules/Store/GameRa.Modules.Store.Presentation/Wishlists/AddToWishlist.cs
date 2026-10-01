@@ -3,7 +3,6 @@ using GameRa.Common.Domain.Abstractions;
 using GameRa.Common.Presentation.Endpoints;
 using GameRa.Common.Presentation.Results;
 using GameRa.Modules.Store.Application.Wishlist.AddToWishlist;
-using GameRa.Modules.Store.Application.Wishlists.AddToWishlist;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
