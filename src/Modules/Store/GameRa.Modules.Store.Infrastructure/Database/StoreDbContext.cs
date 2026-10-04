@@ -6,10 +6,12 @@ using GameRa.Modules.Store.Domain.Customers;
 using GameRa.Modules.Store.Domain.Games;
 using GameRa.Modules.Store.Domain.Orders;
 using GameRa.Modules.Store.Domain.Payments;
+using GameRa.Modules.Store.Domain.Wishlist;
 using GameRa.Modules.Store.Infrastructure.Customers;
 using GameRa.Modules.Store.Infrastructure.Games;
 using GameRa.Modules.Store.Infrastructure.Orders;
 using GameRa.Modules.Store.Infrastructure.Payments;
+using GameRa.Modules.Store.Infrastructure.Wishlists;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using System.Data.Common;
@@ -28,6 +30,7 @@ public sealed class StoreDbContext(DbContextOptions<StoreDbContext> options)
     internal DbSet<OrderItem> OrderItems { get; set; }
 
     internal DbSet<Payment> Payments { get; set; }
+    internal DbSet<WishlistItem> WishlistItems { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -42,6 +45,7 @@ public sealed class StoreDbContext(DbContextOptions<StoreDbContext> options)
         modelBuilder.ApplyConfiguration(new InboxMessageConfiguration());
         modelBuilder.ApplyConfiguration(new InboxMessageConsumerConfiguration());
         modelBuilder.ApplyConfiguration(new PaymentConfiguration());
+        modelBuilder.ApplyConfiguration(new WishlistItemConfiguration());
     }
 
     public async Task<DbTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default)
@@ -51,6 +55,6 @@ public sealed class StoreDbContext(DbContextOptions<StoreDbContext> options)
             await Database.CurrentTransaction.DisposeAsync();
         }
 
-        return (await Database.BeginTransactionAsync(cancellationToken)).GetDbTransaction();
+        return new EfCoreDbTransaction(await Database.BeginTransactionAsync(cancellationToken));
     }
 }

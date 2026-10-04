@@ -50,11 +50,13 @@ public sealed class FavoriteTests : BaseIntegrationTest
     [Fact]
     public async Task ToggleFavorite_ShouldFail_WhenGameNotInLibrary()
     {
+        Guid gameId = Faker.Random.Guid();
+
         Result result = await Sender.Send(
-            new ToggleFavoriteCommand(Faker.Random.Guid(), Faker.Random.Guid()));
+            new ToggleFavoriteCommand(Faker.Random.Guid(), gameId));
 
         result.IsFailure.Should().BeTrue();
-        result.Error.Should().Be(LibraryItemErrors.NotOwned);
+        result.Error.Should().Be(LibraryItemErrors.NotOwned(gameId));
     }
 
     [Fact]

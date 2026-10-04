@@ -149,6 +149,12 @@ namespace GameRa.Modules.Library.Infrastructure.Migrations
                         .HasColumnType("boolean")
                         .HasColumnName("is_archived");
 
+                    b.Property<bool>("IsFavorite")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false)
+                        .HasColumnName("is_favorite");
+
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid")
                         .HasColumnName("user_id");
@@ -161,6 +167,39 @@ namespace GameRa.Modules.Library.Infrastructure.Migrations
                         .HasDatabaseName("ix_library_items_user_id_game_id");
 
                     b.ToTable("library_items", "libraryitem");
+                });
+
+            modelBuilder.Entity("GameRa.Modules.Library.Domain.LibraryItems.PlaytimeRecord", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<Guid>("GameId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("game_id");
+
+                    b.Property<DateTime>("LastPlayedUtc")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("last_played_utc");
+
+                    b.Property<int>("TotalMinutes")
+                        .HasColumnType("integer")
+                        .HasColumnName("total_minutes");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("user_id");
+
+                    b.HasKey("Id")
+                        .HasName("pk_playtime_records");
+
+                    b.HasIndex("UserId", "GameId")
+                        .IsUnique()
+                        .HasDatabaseName("ix_playtime_records_user_id_game_id");
+
+                    b.ToTable("playtime_records", "libraryitem");
                 });
 #pragma warning restore 612, 618
         }

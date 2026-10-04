@@ -309,6 +309,35 @@ namespace GameRa.Modules.Store.Infrastructure.Migrations
                     b.ToTable("payments", "store");
                 });
 
+            modelBuilder.Entity("GameRa.Modules.Store.Domain.Wishlist.WishlistItem", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<DateTime>("AddedAtUtc")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("added_at_utc");
+
+                    b.Property<Guid>("CustomerId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("customer_id");
+
+                    b.Property<Guid>("GameId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("game_id");
+
+                    b.HasKey("Id")
+                        .HasName("pk_wishlist_items");
+
+                    b.HasIndex("CustomerId", "GameId")
+                        .IsUnique()
+                        .HasDatabaseName("ix_wishlist_items_customer_id_game_id");
+
+                    b.ToTable("wishlist_items", "store");
+                });
+
             modelBuilder.Entity("GameRa.Modules.Store.Domain.Orders.Order", b =>
                 {
                     b.HasOne("GameRa.Modules.Store.Domain.Customers.Customer", null)

@@ -3,7 +3,6 @@ using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Infrastructure.Outbox;
 using GameRa.Common.Presentation.Endpoints;
 using GameRa.Modules.Games.IntegrationEvents;
-using GameRa.Modules.Store.IntegrationEvents;
 using GameRa.Modules.Library.Application.Abstractions.Authentication;
 using GameRa.Modules.Library.Application.Abstractions.Data;
 using GameRa.Modules.Library.Domain.LibraryItems;
@@ -12,6 +11,8 @@ using GameRa.Modules.Library.Infrastructure.Database;
 using GameRa.Modules.Library.Infrastructure.Inbox;
 using GameRa.Modules.Library.Infrastructure.LibraryItems;
 using GameRa.Modules.Library.Infrastructure.Outbox;
+using GameRa.Modules.Library.Infrastructure.Playtime;
+using GameRa.Modules.Store.IntegrationEvents;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
@@ -61,6 +62,8 @@ public static class LibraryItemModule
         services.AddScoped<ILibraryItemRepository, LibraryItemRepository>();
 
         services.AddScoped<ILibraryItemContext, LibraryItemContext>();
+
+        services.AddScoped<IPlaytimeRepository, PlaytimeRepository>();
 
         services.Configure<OutboxOptions>(configuration.GetSection("LibraryItem:Outbox"));
 

@@ -21,8 +21,10 @@ internal sealed class GetUserLibraryQueryHandler(IDbConnectionFactory dbConnecti
         SELECT
             id AS Id,
             game_id AS GameId,
+            user_id AS UserId,
             gametitle_snapshot AS GameTitleSnapshot,
-            is_archived AS IsArchived
+            is_archived AS IsArchived,
+            is_favorite AS IsFavorite
         FROM libraryitem.library_items
         WHERE user_id = @UserId
         """;

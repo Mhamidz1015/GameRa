@@ -28,11 +28,13 @@ public sealed class PlaytimeTests : BaseIntegrationTest
     [Fact]
     public async Task RecordPlaytime_ShouldFail_WhenUserDoesNotOwnGame()
     {
+        Guid gameId = Faker.Random.Guid();
+
         Result result = await Sender.Send(
-            new RecordPlaytimeCommand(Faker.Random.Guid(), Faker.Random.Guid(), 30));
+            new RecordPlaytimeCommand(Faker.Random.Guid(), gameId, 30));
 
         result.IsFailure.Should().BeTrue();
-        result.Error.Should().Be(LibraryItemErrors.NotOwned);
+        result.Error.Should().Be(LibraryItemErrors.NotOwned(gameId));
     }
 
     [Fact]

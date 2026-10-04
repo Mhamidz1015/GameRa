@@ -19,8 +19,8 @@ internal sealed class GetFavoritesQueryHandler(IDbConnectionFactory dbConnection
             $"""
              SELECT
                  l.id AS {nameof(LibraryItemResponse.Id)},
-                 l.user_id AS {nameof(LibraryItemResponse.UserId)},
                  l.game_id AS {nameof(LibraryItemResponse.GameId)},
+                 l.user_id AS {nameof(LibraryItemResponse.UserId)},
                  l.gametitle_snapshot AS {nameof(LibraryItemResponse.GameTitleSnapshot)},
                  l.is_archived AS {nameof(LibraryItemResponse.IsArchived)},
                  l.is_favorite AS {nameof(LibraryItemResponse.IsFavorite)}

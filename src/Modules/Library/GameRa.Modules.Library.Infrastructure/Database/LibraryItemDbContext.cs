@@ -4,6 +4,7 @@ using GameRa.Common.Infrastructure.Outbox;
 using GameRa.Modules.Library.Application.Abstractions.Data;
 using GameRa.Modules.Library.Domain.LibraryItems;
 using GameRa.Modules.Library.Infrastructure.LibraryItems;
+using GameRa.Modules.Library.Infrastructure.Playtime;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameRa.Modules.Library.Infrastructure.Database;
@@ -12,6 +13,7 @@ public sealed class LibraryItemDbContext(DbContextOptions<LibraryItemDbContext> 
     : DbContext(options), IUnitOfWork
 {
     internal DbSet<LibraryItem> LibraryItems { get; set; }
+    internal DbSet<PlaytimeRecord> PlaytimeRecords { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -22,5 +24,6 @@ public sealed class LibraryItemDbContext(DbContextOptions<LibraryItemDbContext> 
         modelBuilder.ApplyConfiguration(new InboxMessageConfiguration());
         modelBuilder.ApplyConfiguration(new InboxMessageConsumerConfiguration());
         modelBuilder.ApplyConfiguration(new LibraryItemConfiguration());
+        modelBuilder.ApplyConfiguration(new PlaytimeRecordConfiguration());
     }
 }

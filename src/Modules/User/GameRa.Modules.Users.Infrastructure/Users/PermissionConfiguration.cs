@@ -27,7 +27,6 @@ internal sealed class PermissionConfiguration : IEntityTypeConfiguration<Permiss
             Permission.RemoveFromCart,
             Permission.GetOrders,
             Permission.CreateOrder,
-            Permission.CreateOrder,
             Permission.RefundOrder);
 
         builder
@@ -47,7 +46,6 @@ internal sealed class PermissionConfiguration : IEntityTypeConfiguration<Permiss
                     CreateRolePermission(Role.Member, Permission.RemoveFromCart),
                     CreateRolePermission(Role.Member, Permission.GetOrders),
                     CreateRolePermission(Role.Member, Permission.CreateOrder),
-                    CreateRolePermission(Role.Member, Permission.CreateOrder),
                     CreateRolePermission(Role.Member, Permission.RefundOrder),
                     // Admin permissions
                     CreateRolePermission(Role.Administrator, Permission.GetUser),
@@ -61,7 +59,6 @@ internal sealed class PermissionConfiguration : IEntityTypeConfiguration<Permiss
                     CreateRolePermission(Role.Administrator, Permission.AddToCart),
                     CreateRolePermission(Role.Administrator, Permission.RemoveFromCart),
                     CreateRolePermission(Role.Administrator, Permission.GetOrders),
-                    CreateRolePermission(Role.Administrator, Permission.CreateOrder),
                     CreateRolePermission(Role.Administrator, Permission.CreateOrder),
                     CreateRolePermission(Role.Administrator, Permission.RefundOrder));
             });

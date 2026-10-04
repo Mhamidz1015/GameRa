@@ -11,6 +11,7 @@ using GameRa.Modules.Store.Domain.Customers;
 using GameRa.Modules.Store.Domain.Games;
 using GameRa.Modules.Store.Domain.Orders;
 using GameRa.Modules.Store.Domain.Payments;
+using GameRa.Modules.Store.Domain.Wishlist;
 using GameRa.Modules.Store.Infrastructure.Authentication;
 using GameRa.Modules.Store.Infrastructure.Customers;
 using GameRa.Modules.Store.Infrastructure.Database;
@@ -19,6 +20,7 @@ using GameRa.Modules.Store.Infrastructure.Inbox;
 using GameRa.Modules.Store.Infrastructure.Orders;
 using GameRa.Modules.Store.Infrastructure.Outbox;
 using GameRa.Modules.Store.Infrastructure.Payments;
+using GameRa.Modules.Store.Infrastructure.Wishlists;
 using GameRa.Modules.Store.IntegrationEvents;
 using GameRa.Modules.Users.IntegrationEvents;
 using MassTransit;
@@ -69,6 +71,7 @@ public static class StoreModule
         services.AddScoped<IGameRepository, GameRepository>();
         services.AddScoped<IOrderRepository, OrderRepository>();
         services.AddScoped<IPaymentRepository, PaymentRepository>();
+        services.AddScoped<IWishlistRepository, WishlistRepository>();
 
         services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<StoreDbContext>());
 

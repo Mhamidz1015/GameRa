@@ -27,6 +27,11 @@ internal sealed class AddItemToCartCommandHandler(
             return Result.Failure(GameErrors.NotFound(request.GameId));
         }
 
+        if (game.Delisteed)
+        {
+            return Result.Failure(GameErrors.Delisted(request.GameId));
+        }
+
         var cartItem = new CartItem
         {
             GameId = request.GameId,
