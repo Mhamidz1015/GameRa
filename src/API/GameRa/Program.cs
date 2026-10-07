@@ -5,6 +5,7 @@ using GameRa.Common.Presentation.Endpoints;
 using GameRa.Extensions;
 using GameRa.Middleware;
 using GameRa.Modules.Discounts.Infrastructure;
+using GameRa.Modules.Distribution.Infrastructure;
 using GameRa.Modules.Games.Infrastructure;
 using GameRa.Modules.Library.Infrastructure;
 using GameRa.Modules.Reviews.Infrastructure;
@@ -32,7 +33,8 @@ Assembly[] moduleApplicationAssemblies = [
     GameRa.Modules.Store.Application.AssemblyReference.Assembly,
     GameRa.Modules.Library.Application.AssemblyReference.Assembly,
     GameRa.Modules.Reviews.Application.AssemblyReference.Assembly,
-    GameRa.Modules.Discounts.Application.AssemblyReference.Assembly];
+    GameRa.Modules.Discounts.Application.AssemblyReference.Assembly,
+    GameRa.Modules.Distribution.Application.AssemblyReference.Assembly];
 
 builder.Services.AddApplication(moduleApplicationAssemblies);
 
@@ -44,7 +46,8 @@ builder.Services.AddInfrastructure(
         StoreModule.ConfigureConsumers,
         LibraryItemModule.ConfigureConsumers,
         ReviewsModule.ConfigureConsumers,
-        GamesModule.ConfigureConsumers
+        GamesModule.ConfigureConsumers,
+        DistributionModule.ConfigureConsumers
     ],
     databaseConnectionString,
     redisConnectionString);
@@ -57,7 +60,7 @@ builder.Services.AddHealthChecks()
     .AddKeyCloak(keyCloakHealthUrl);
 
 builder.Configuration.AddModuleConfiguration(
-    ["users", "games", "store" , "LibraryItem" , "Reviews" , "Discounts"]);
+    ["users", "games", "store" , "LibraryItem" , "Reviews" , "Discounts", "Distribution"]);
 
 builder.Services.AddGamesModule(builder.Configuration);
 
@@ -70,6 +73,8 @@ builder.Services.AddLibraryItemModule(builder.Configuration);
 builder.Services.AddReviewsModule(builder.Configuration);
 
 builder.Services.AddDiscountsModule(builder.Configuration);
+
+builder.Services.AddDistributionModule(builder.Configuration);
 
 WebApplication app = builder.Build();
 

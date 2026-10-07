@@ -193,6 +193,14 @@ namespace GameRa.Modules.Users.Infrastructure.Migrations
                         new
                         {
                             Code = "orders:refund"
+                        },
+                        new
+                        {
+                            Code = "distribution:manage"
+                        },
+                        new
+                        {
+                            Code = "distribution:download"
                         });
                 });
 
@@ -331,6 +339,11 @@ namespace GameRa.Modules.Users.Infrastructure.Migrations
                         },
                         new
                         {
+                            PermissionCode = "distribution:download",
+                            RoleName = "Member"
+                        },
+                        new
+                        {
                             PermissionCode = "users:read",
                             RoleName = "Administrator"
                         },
@@ -392,6 +405,16 @@ namespace GameRa.Modules.Users.Infrastructure.Migrations
                         new
                         {
                             PermissionCode = "orders:refund",
+                            RoleName = "Administrator"
+                        },
+                        new
+                        {
+                            PermissionCode = "distribution:manage",
+                            RoleName = "Administrator"
+                        },
+                        new
+                        {
+                            PermissionCode = "distribution:download",
                             RoleName = "Administrator"
                         });
                 });

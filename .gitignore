@@ -430,3 +430,5 @@ FodyWeavers.xsd
 
 #Docker volumes
 containers/
+# Local MinIO data (Distribution storage)
+.containers/minio/

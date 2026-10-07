@@ -2,7 +2,7 @@
 using GameRa.Common.Application.MessagingEventBus;
 using GameRa.Common.Domain.Abstractions;
 using GameRa.Modules.Games.IntegrationEvents;
-using GameRa.Modules.Store.Application.Carts.RemoveGameFromAllCarts;
+using GameRa.Modules.Store.Application.Games.DelistGame;
 using MediatR;
 
 namespace GameRa.Modules.Store.Presentation.Games;
@@ -15,10 +15,10 @@ internal sealed class GameDelistedIntegrationEventHandler(ISender sender)
         CancellationToken cancellationToken = default)
     {
         Result result = await sender.Send(
-            new RemoveGameFromAllCartsCommand(integrationEvent.GameId),
+            new DelistGameCommand(integrationEvent.GameId),
             cancellationToken);
 
         if (result.IsFailure)
-            throw new GameRaException(nameof(RemoveGameFromAllCartsCommand), result.Error);
+            throw new GameRaException(nameof(DelistGameCommand), result.Error);
     }
 }

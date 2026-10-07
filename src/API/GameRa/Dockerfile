@@ -92,6 +92,16 @@ COPY ["src/Modules/Reviews/GameRa.Modules.Reviews.Infrastructure/GameRa.Modules.
 COPY ["src/Modules/Reviews/GameRa.Modules.Reviews.Presentation/GameRa.Modules.Reviews.Presentation.csproj","src/Modules/Reviews/GameRa.Modules.Reviews.Presentation/"]
 COPY ["src/Modules/Reviews/GameRa.Modules.Reviews.IntegrationEvents/GameRa.Modules.Reviews.IntegrationEvents.csproj","src/Modules/Reviews/GameRa.Modules.Reviews.IntegrationEvents/"]
 
+# ----------------------------
+# Distribution
+# ----------------------------
+
+COPY ["src/Modules/Distribution/GameRa.Modules.Distribution.Application/GameRa.Modules.Distribution.Application.csproj","src/Modules/Distribution/GameRa.Modules.Distribution.Application/"]
+COPY ["src/Modules/Distribution/GameRa.Modules.Distribution.Domain/GameRa.Modules.Distribution.Domain.csproj","src/Modules/Distribution/GameRa.Modules.Distribution.Domain/"]
+COPY ["src/Modules/Distribution/GameRa.Modules.Distribution.Infrastructure/GameRa.Modules.Distribution.Infrastructure.csproj","src/Modules/Distribution/GameRa.Modules.Distribution.Infrastructure/"]
+COPY ["src/Modules/Distribution/GameRa.Modules.Distribution.Presentation/GameRa.Modules.Distribution.Presentation.csproj","src/Modules/Distribution/GameRa.Modules.Distribution.Presentation/"]
+COPY ["src/Modules/Distribution/GameRa.Modules.Distribution.IntegrationEvents/GameRa.Modules.Distribution.IntegrationEvents.csproj","src/Modules/Distribution/GameRa.Modules.Distribution.IntegrationEvents/"]
+
 RUN dotnet restore "src/API/GameRa/GameRa.csproj"
 
 COPY . .
@@ -127,5 +137,6 @@ COPY --from=build /src/src/API/GameRa/modules.store.json .
 COPY --from=build /src/src/API/GameRa/modules.users.json .
 COPY --from=build /src/src/API/GameRa/modules.Discounts.json .
 COPY --from=build /src/src/API/GameRa/modules.Reviews.json .
+COPY --from=build /src/src/API/GameRa/modules.Distribution.json .
 
 ENTRYPOINT ["dotnet","GameRa.dll"]

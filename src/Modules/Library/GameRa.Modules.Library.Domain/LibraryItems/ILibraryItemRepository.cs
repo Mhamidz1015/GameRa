@@ -11,6 +11,10 @@ public interface ILibraryItemRepository
         Guid gameId,
         CancellationToken cancellationToken = default);
 
+    Task<List<LibraryItem>> GetByGameAsync(
+        Guid gameId,
+        CancellationToken cancellationToken = default);
+
     void Insert(LibraryItem libraryItem);
 
     void Remove(LibraryItem libraryItem);

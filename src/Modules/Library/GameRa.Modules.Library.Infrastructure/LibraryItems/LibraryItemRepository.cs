@@ -21,6 +21,11 @@ internal sealed class LibraryItemRepository(LibraryItemDbContext context) : ILib
         return await context.LibraryItems.FirstOrDefaultAsync( x => x.UserId == userId && x.GameId == gameId, cancellationToken);
     }
 
+    public async Task<List<LibraryItem>> GetByGameAsync(Guid gameId, CancellationToken cancellationToken = default)
+    {
+        return await context.LibraryItems.Where(x => x.GameId == gameId).ToListAsync(cancellationToken);
+    }
+
     public void Insert(LibraryItem libraryItem)
     {
         context.LibraryItems.Add(libraryItem);

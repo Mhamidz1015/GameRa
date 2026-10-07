@@ -48,7 +48,7 @@ public class CheckGameOwnershipTests : BaseIntegrationTest
     }
 
     [Fact]
-    public async Task CheckGameOwnership_ShouldReturnFalse_WhenGameIsArchived()
+    public async Task CheckGameOwnership_ShouldReturnTrue_WhenGameIsArchived()
     {
         // Arrange
         Guid userId = Guid.NewGuid();
@@ -63,6 +63,6 @@ public class CheckGameOwnershipTests : BaseIntegrationTest
         Result<bool> result = await Sender.Send(query);
 
         // Assert
-        result.Value.Should().BeFalse();
+        result.Value.Should().BeTrue();
     }
 }

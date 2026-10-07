@@ -1,0 +1,26 @@
+{
+  "Distribution": {
+    "Options": {
+      "MaxFileSizeBytes": 5368709120,
+      "UploadUrlTtl": "01:00:00",
+      "DownloadUrlTtl": "00:15:00",
+      "MaxBatchDownloadUrls": 200
+    },
+    "Storage": {
+      "ServiceUrl": "http://localhost:9000",
+      "Region": "us-east-1",
+      "AccessKey": "minioadmin",
+      "SecretKey": "minioadmin",
+      "BucketName": "gamera-builds",
+      "ForcePathStyle": true
+    },
+    "Outbox": {
+      "IntervalInSeconds": 5,
+      "BatchSize": 20
+    },
+    "Inbox": {
+      "IntervalInSeconds": 5,
+      "BatchSize": 20
+    }
+  }
+}

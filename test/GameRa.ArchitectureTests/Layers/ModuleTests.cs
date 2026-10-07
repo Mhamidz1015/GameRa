@@ -13,6 +13,8 @@ using GameRa.Modules.Discounts.Infrastructure;
 using GameRa.Modules.Discounts.Domain;
 using GameRa.Modules.Reviews.Domain;
 using GameRa.Modules.Reviews.Infrastructure;
+using GameRa.Modules.Distribution.Domain.GameVersions;
+using GameRa.Modules.Distribution.Infrastructure;
 
 namespace GameRa.ArchitectureTests.Layers;
 
@@ -21,7 +23,7 @@ public class ModuleTests : BaseTest
     [Fact]
     public void UsersModule_ShouldNotHaveDependencyOn_AnyOtherModule()
     {
-        string[] otherModules = [GamesNamespace, StoreNamespace, LibraryNamespace, DiscountsNamespace, ReviewsNamespace];
+        string[] otherModules = [GamesNamespace, StoreNamespace, LibraryNamespace, DiscountsNamespace, ReviewsNamespace, DistributionNamespace];
         string[] integrationEventsModules =
         [
             GamesIntegrationEventsNamespace,
@@ -29,6 +31,7 @@ public class ModuleTests : BaseTest
             LibraryIntegrationEventsNamespace,
             DiscountsIntegrationEventsNamespace,
             ReviewsIntegrationEventsNamespace,
+            DistributionIntegrationEventsNamespace
 
         ];
 
@@ -52,7 +55,7 @@ public class ModuleTests : BaseTest
     [Fact]
     public void GamesModule_ShouldNotHaveDependencyOn_AnyOtherModule()
     {
-        string[] otherModules = [UsersNamespace, StoreNamespace, LibraryNamespace, DiscountsNamespace, ReviewsNamespace];
+        string[] otherModules = [UsersNamespace, StoreNamespace, LibraryNamespace, DiscountsNamespace, ReviewsNamespace, DistributionNamespace];
         string[] integrationEventsModules =
         [
             UsersIntegrationEventsNamespace,
@@ -60,6 +63,7 @@ public class ModuleTests : BaseTest
             LibraryIntegrationEventsNamespace,
             DiscountsIntegrationEventsNamespace,
             ReviewsIntegrationEventsNamespace,
+            DistributionIntegrationEventsNamespace
         ];
 
         List<Assembly> gamesAssemblies =
@@ -82,7 +86,7 @@ public class ModuleTests : BaseTest
     [Fact]
     public void StoreModule_ShouldNotHaveDependencyOn_AnyOtherModule()
     {
-        string[] otherModules = [GamesNamespace, UsersNamespace, LibraryNamespace, DiscountsNamespace, ReviewsNamespace];
+        string[] otherModules = [GamesNamespace, UsersNamespace, LibraryNamespace, DiscountsNamespace, ReviewsNamespace, DistributionNamespace];
         string[] integrationEventsModules =
         [
             GamesIntegrationEventsNamespace,
@@ -90,6 +94,7 @@ public class ModuleTests : BaseTest
             LibraryIntegrationEventsNamespace,
             DiscountsIntegrationEventsNamespace,
             ReviewsIntegrationEventsNamespace,
+            DistributionIntegrationEventsNamespace
 
         ];
 
@@ -113,7 +118,7 @@ public class ModuleTests : BaseTest
     [Fact]
     public void LibraryItemsModule_ShouldNotHaveDependencyOn_AnyOtherModule()
     {
-        string[] otherModules = [UsersNamespace, GamesNamespace, StoreNamespace, DiscountsNamespace, ReviewsNamespace];
+        string[] otherModules = [UsersNamespace, GamesNamespace, StoreNamespace, DiscountsNamespace, ReviewsNamespace, DistributionNamespace];
         string[] integrationEventsModulesAndPublicsApi = 
             [
             UsersIntegrationEventsNamespace,
@@ -121,6 +126,7 @@ public class ModuleTests : BaseTest
             StoreIntegrationEventsNamespace,
             DiscountsIntegrationEventsNamespace,
             ReviewsIntegrationEventsNamespace,
+            DistributionIntegrationEventsNamespace
             ];
 
         List<Assembly> LibraryAssemblies =
@@ -143,13 +149,14 @@ public class ModuleTests : BaseTest
     [Fact]
     public void DiscountsModule_ShouldNotHaveDependencyOn_AnyOtherModule()
     {
-        string[] otherModules = [UsersNamespace, GamesNamespace, StoreNamespace, LibraryNamespace, ReviewsNamespace];
+        string[] otherModules = [UsersNamespace, GamesNamespace, StoreNamespace, LibraryNamespace, ReviewsNamespace, DistributionNamespace];
         string[] integrationEventsModules = [
             UsersIntegrationEventsNamespace,
             GamesIntegrationEventsNamespace,
             StoreIntegrationEventsNamespace,
             LibraryIntegrationEventsNamespace,
-            ReviewsIntegrationEventsNamespace
+            ReviewsIntegrationEventsNamespace,
+            DistributionIntegrationEventsNamespace
             ];
 
         List<Assembly> DiscountsAssemblies =
@@ -172,13 +179,14 @@ public class ModuleTests : BaseTest
     [Fact]
     public void ReviewsModule_ShouldNotHaveDependencyOn_AnyOtherModule()
     {
-        string[] otherModules = [UsersNamespace, GamesNamespace, StoreNamespace, LibraryNamespace, DiscountsNamespace];
+        string[] otherModules = [UsersNamespace, GamesNamespace, StoreNamespace, LibraryNamespace, DiscountsNamespace, DistributionNamespace];
         string[] integrationEventsModules = [
             UsersIntegrationEventsNamespace,
             GamesIntegrationEventsNamespace,
             StoreIntegrationEventsNamespace,
             LibraryIntegrationEventsNamespace,
             DiscountsIntegrationEventsNamespace,
+            DistributionIntegrationEventsNamespace
             ];
 
         List<Assembly> ReviewsAssemblies =
@@ -190,6 +198,37 @@ public class ModuleTests : BaseTest
         ];
 
         Types.InAssemblies(ReviewsAssemblies)
+            .That()
+            .DoNotHaveDependencyOnAny(integrationEventsModules)
+            .Should()
+            .NotHaveDependencyOnAny(otherModules)
+            .GetResult()
+            .ShouldBeSuccessful();
+    }
+
+    [Fact]
+    public void DistributionModule_ShouldNotHaveDependencyOn_AnyOtherModule()
+    {
+        string[] otherModules = [UsersNamespace, GamesNamespace, StoreNamespace, LibraryNamespace, DiscountsNamespace, ReviewsNamespace];
+        string[] integrationEventsModules =
+        [
+            UsersIntegrationEventsNamespace,
+            GamesIntegrationEventsNamespace,
+            StoreIntegrationEventsNamespace,
+            LibraryIntegrationEventsNamespace,
+            DiscountsIntegrationEventsNamespace,
+            ReviewsIntegrationEventsNamespace
+        ];
+
+        List<Assembly> distributionAssemblies =
+        [
+            typeof(GameVersion).Assembly,
+            Modules.Distribution.Application.AssemblyReference.Assembly,
+            Modules.Distribution.Presentation.AssemblyReference.Assembly,
+            typeof(DistributionModule).Assembly
+        ];
+
+        Types.InAssemblies(distributionAssemblies)
             .That()
             .DoNotHaveDependencyOnAny(integrationEventsModules)
             .Should()

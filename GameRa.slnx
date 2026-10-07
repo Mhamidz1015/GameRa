@@ -23,6 +23,18 @@
     <Project Path="src/Modules/Discounts/test/GameRa.Modules.Discounts.IntegrationTests/GameRa.Modules.Discounts.IntegrationTests.csproj" Id="4ffe5a26-ceec-421a-b1fe-5905c7bc48a7" />
     <Project Path="src/Modules/Discounts/test/GameRa.Modules.Discounts.UnitTests/GameRa.Modules.Discounts.UnitTests.csproj" Id="17206eaa-8342-4dc1-bf84-fef3268b5f11" />
   </Folder>
+  <Folder Name="/src/Modules/Distribution/">
+    <Project Path="src/Modules/Distribution/GameRa.Modules.Distribution.Application/GameRa.Modules.Distribution.Application.csproj" />
+    <Project Path="src/Modules/Distribution/GameRa.Modules.Distribution.Domain/GameRa.Modules.Distribution.Domain.csproj" />
+    <Project Path="src/Modules/Distribution/GameRa.Modules.Distribution.Infrastructure/GameRa.Modules.Distribution.Infrastructure.csproj" />
+    <Project Path="src/Modules/Distribution/GameRa.Modules.Distribution.IntegrationEvents/GameRa.Modules.Distribution.IntegrationEvents.csproj" />
+    <Project Path="src/Modules/Distribution/GameRa.Modules.Distribution.Presentation/GameRa.Modules.Distribution.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/Distribution/test/">
+    <Project Path="src/Modules/Distribution/test/GameRa.Modules.Distribution.ArchitectureTests/GameRa.Modules.Distribution.ArchitectureTests.csproj" />
+    <Project Path="src/Modules/Distribution/test/GameRa.Modules.Distribution.IntegrationTests/GameRa.Modules.Distribution.IntegrationTests.csproj" />
+    <Project Path="src/Modules/Distribution/test/GameRa.Modules.Distribution.UnitTests/GameRa.Modules.Distribution.UnitTests.csproj" />
+  </Folder>
   <Folder Name="/src/Modules/Games/">
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Application/GameRa.Modules.Games.Application.csproj" />
     <Project Path="src/Modules/Games/GameRa.Modules.Games.Domain/GameRa.Modules.Games.Domain.csproj" />

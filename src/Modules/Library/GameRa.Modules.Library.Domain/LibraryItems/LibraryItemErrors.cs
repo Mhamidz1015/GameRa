@@ -15,4 +15,8 @@ public static class LibraryItemErrors
     public static Error NotOwned(Guid gameId) => Error.NotFound(
         "LibraryItem.NotOwned",
         $"User does not own game with id '{gameId}'.");
+
+    public static readonly Error NotArchived = Error.Problem(
+        "LibraryItem.NotArchived",
+        "This library item is not archived.");
 }

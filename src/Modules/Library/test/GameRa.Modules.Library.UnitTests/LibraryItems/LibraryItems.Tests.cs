@@ -74,6 +74,36 @@ public class LibraryItemsTests : BaseTest
     }
 
     // ─────────────────────────────────────────────
+    // Unarchive
+    // ─────────────────────────────────────────────
+
+    [Fact]
+    public void Unarchive_ShouldReturnFailure_WhenLibraryItemIsNotArchived()
+    {
+        // Arrange
+        LibraryItem libraryItem = CreateDefaultLibraryItem();
+        // Act
+        Result result = libraryItem.Unarchive();
+        // Assert
+        result.IsFailure.Should().BeTrue();
+        result.Error.Should().Be(LibraryItemErrors.NotArchived);
+    }
+    [Fact]
+    public void Unarchive_ShouldRaiseDomainEvent_WhenLibraryItemIsArchived()
+    {
+        // Arrange
+        LibraryItem libraryItem = CreateDefaultLibraryItem();
+        libraryItem.Archive();
+        // Act
+        Result result = libraryItem.Unarchive();
+        // Assert
+        result.IsSuccess.Should().BeTrue();
+        libraryItem.IsArchived.Should().BeFalse();
+        LibraryItemUnarchivedDomainEvent domainEvent =
+            AssertDomainEventWasPublished<LibraryItemUnarchivedDomainEvent>(libraryItem);
+        domainEvent.LibraryId.Should().Be(libraryItem.Id);
+    }
+    // ─────────────────────────────────────────────
     // Helper
     // ─────────────────────────────────────────────
 

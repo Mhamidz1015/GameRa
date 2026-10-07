@@ -22,7 +22,6 @@ internal sealed class CheckGameOwnershipQueryHandler(IDbConnectionFactory dbConn
             FROM libraryitem.library_items
             WHERE user_id = @UserId
               AND game_id = @GameId
-              AND is_archived = false
         );
         """;
 

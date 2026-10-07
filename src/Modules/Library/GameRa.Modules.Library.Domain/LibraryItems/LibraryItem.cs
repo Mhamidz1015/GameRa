@@ -35,7 +35,7 @@ public sealed class LibraryItem : Entity
             IsArchived = false
         };
 
-        libraryitem.Raise(new LibraryItemCreatedDomainEvent(libraryitem.Id));
+        libraryitem.Raise(new LibraryItemCreatedDomainEvent(libraryitem.Id, userid, gameid));
 
         return libraryitem;
     }
@@ -49,6 +49,20 @@ public sealed class LibraryItem : Entity
         Raise(new LibraryItemArchivedDomainEvent(Id));
        
         return Result.Success();
+    }
+
+    public Result Unarchive()
+    {
+        if (!IsArchived)
+            return Result.Failure(LibraryItemErrors.NotArchived);
+        IsArchived = false;
+        Raise(new LibraryItemUnarchivedDomainEvent(Id));
+        return Result.Success();
+    }
+
+    public void Remove()
+    {
+        Raise(new LibraryItemRemovedDomainEvent(Id, UserId, GameId));
     }
 
     public Result ToggleFavorite()

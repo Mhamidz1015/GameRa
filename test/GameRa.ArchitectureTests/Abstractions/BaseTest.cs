@@ -19,4 +19,7 @@ public abstract class BaseTest
 
     protected const string ReviewsNamespace = "GameRa.Modules.Reviews";
     protected const string ReviewsIntegrationEventsNamespace = "GameRa.Modules.Reviews.IntegrationEvents";
+
+    protected const string DistributionNamespace = "GameRa.Modules.Distribution";
+    protected const string DistributionIntegrationEventsNamespace = "GameRa.Modules.Distribution.IntegrationEvents";
 }

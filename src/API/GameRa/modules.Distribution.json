@@ -1,0 +1,26 @@
+{
+  "Distribution": {
+    "Options": {
+      "MaxFileSizeBytes": 5368709120,
+      "UploadUrlTtl": "01:00:00",
+      "DownloadUrlTtl": "00:15:00",
+      "MaxBatchDownloadUrls": 200
+    },
+    "Storage": {
+      "ServiceUrl": "",
+      "Region": "us-east-1",
+      "AccessKey": "",
+      "SecretKey": "",
+      "BucketName": "gamera-builds",
+      "ForcePathStyle": true
+    },
+    "Outbox": {
+      "IntervalInSeconds": 5,
+      "BatchSize": 50
+    },
+    "Inbox": {
+      "IntervalInSeconds": 5,
+      "BatchSize": 50
+    }
+  }
+}

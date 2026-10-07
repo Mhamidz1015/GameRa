@@ -51,6 +51,11 @@ internal sealed class CreateOrderCommandHandler(
                 return Result.Failure(GameErrors.NotFound(cartItem.GameId));
             }
 
+            if (game.Delisteed)
+            {
+                return Result.Failure(GameErrors.Delisted(cartItem.GameId));
+            }
+
             order.AddItem(game, cartItem.Price);
         }
 

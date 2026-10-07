@@ -15,6 +15,8 @@ public sealed class Permission
     public static readonly Permission GetOrders = new("orders:read");
     public static readonly Permission CreateOrder = new("orders:create");
     public static readonly Permission RefundOrder = new("orders:refund");
+    public static readonly Permission ManageDistribution = new("distribution:manage");
+    public static readonly Permission DownloadGames = new("distribution:download");
 
 
     public Permission(string code)

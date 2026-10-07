@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using GameRa.Modules.Distribution.Application.Abstractions.Storage;
 using Testcontainers.Keycloak;
 using Testcontainers.PostgreSql;
 using Testcontainers.Redis;
@@ -42,6 +44,8 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
         Environment.SetEnvironmentVariable("Store:Inbox:IntervalInSeconds", "1");
         Environment.SetEnvironmentVariable("LibraryItem:Outbox:IntervalInSeconds", "1");
         Environment.SetEnvironmentVariable("LibraryItem:Inbox:IntervalInSeconds", "1");
+        Environment.SetEnvironmentVariable("Distribution:Outbox:IntervalInSeconds", "1");
+        Environment.SetEnvironmentVariable("Distribution:Inbox:IntervalInSeconds", "1");
 
         string keycloakAddress = _keycloakContainer.GetBaseAddress();
         string keyCloakRealmUrl = $"{keycloakAddress}realms/gamera";
@@ -55,6 +59,10 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
 
         builder.ConfigureTestServices(services =>
         {
+            services.RemoveAll<IFileStorage>();
+            services.AddSingleton<FakeFileStorage>();
+            services.AddSingleton<IFileStorage>(sp => sp.GetRequiredService<FakeFileStorage>());
+
             services.Configure<KeyCloakOptions>(o =>
             {
                 o.AdminUrl = $"{keycloakAddress}admin/realms/gamera/";

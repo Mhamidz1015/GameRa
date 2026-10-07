@@ -24,6 +24,7 @@ internal sealed class RemoveGameFromLibraryCommandHandler(
             return Result.Success();
         }
 
+        item.Remove();
         libraryItemRepository.Remove(item);
 
         await unitOfWork.SaveChangesAsync(cancellationToken);

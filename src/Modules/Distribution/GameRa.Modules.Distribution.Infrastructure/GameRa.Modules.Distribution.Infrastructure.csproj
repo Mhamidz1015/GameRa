@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="4.0.104.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\GameRa.Common.Infrastructure\GameRa.Common.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\Common\GameRa.Common.Presentation\GameRa.Common.Presentation.csproj" />
+    <ProjectReference Include="..\..\Games\GameRa.Modules.Games.IntegrationEvents\GameRa.Modules.Games.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\..\Library\GameRa.Modules.Library.IntegrationEvents\GameRa.Modules.Library.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\GameRa.Modules.Distribution.Application\GameRa.Modules.Distribution.Application.csproj" />
+    <ProjectReference Include="..\GameRa.Modules.Distribution.Presentation\GameRa.Modules.Distribution.Presentation.csproj" />
+  </ItemGroup>
+
+</Project>
